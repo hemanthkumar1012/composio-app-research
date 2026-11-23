@@ -7,14 +7,48 @@ A multi-agent pipeline that researches whether an app can become an AI-agent too
 - **Publish everything in one step:** `bash scripts/publish.sh` (public repo → GitHub Pages → first live sweep of all 100 apps)
 - **Dataset for agents:** `docs/data.json` · `docs/llms.txt` · `data/apps_final.json`
 
+## Results at a glance
+
+| | |
+|---|---|
+| Apps researched | **100** across 10 categories, every field with evidence URLs |
+| Already Composio toolkits | **81** (checked live against composio.dev); **19** are not |
+| Buildable today, no human gate | **58** · self-serve: **70** (48 free, 22 trial or credits) |
+| Official vendor MCP server | **56** (3 of them only search docs) |
+| Accuracy, round 1 (20 apps, 93 fields) | 90.3% closed-book → 96.8% after web research → 100% after fixes |
+| Accuracy, untouched holdout (10 apps, 42 fields) | 92.9% → **100% (42/42)** |
+| Live sweep in GitHub Actions | 131/132 evidence links readable (5 via headless browser) |
+| Human queue | 10 items the agent could not settle on its own |
+
+## What I would do next for Composio
+
+1. **Build now (5):** LiveAgent, Vonage, systeme.io, SE Ranking, Reducto: not yet in the catalogue, but self-serve and documented.
+2. **Build with a workaround (5):** WooCommerce and Magento (per-store base URL), Squarespace and Ecwid (paid plan for credentials), Binance (financial-risk review).
+3. **Partnership outreach (8):** DealCloud, Gladly, Salesforce Commerce Cloud, Amazon Selling Partner, Waterfall.io (customer or partner-only), fanbasis, Paygent Connect, iPayX (no public docs). Each app's drawer has an outreach draft.
+4. **Ship as a skill (1):** Sherlock is a local CLI, not a hosted API.
+
+Product calls: make API-key auth first-class (74/100 accept a static key, 30 only that); run app review for Meta, Google, Slack and Intuit as one programme (11 apps); position toolkits against docs-only vendor MCPs (Twilio, BigCommerce, Vonage); keep the scheduled sweep running to catch doc drift.
+
+## Brief checklist
+
+| The brief asked for | Where it is |
+|---|---|
+| 100 apps: category, one-liner, auth, self-serve vs gated, API surface, existing MCP, verdict, blocker, evidence | Explorer view, app drawers, `data/apps_final.json`, CSV/JSON in the Data view |
+| Patterns, insight over a raw table | Overview: 7 findings, flow diagram, heat map, blocker clusters, "What I would do next" |
+| An agent or pipeline, ideally with Composio | `agent/` (Gemini researcher, blind verifier, claim judge, human router); Composio catalogue check; optional Composio search tools |
+| Where a human was needed | Verification view: human spot-check queue; Honesty notes below |
+| Verification loops on a sample, accuracy moving up | Verification view: seeded round 1 and untouched holdout, 7 loops, field-level grid |
+| The agent's mistakes shown | Corrections log (Data view) and "What the first live run caught" |
+| One HTML page, live link, repo with README | `docs/index.html` on GitHub Pages, this repo |
+
 ## The app (docs/index.html)
 
 | View | What you can do |
 |---|---|
-| Overview | KPI tiles, six headline patterns, a category → credentials → verdict flow diagram, a clickable category × verdict heat map, blocker clusters. Everything clicks through to the matching apps. |
+| Overview | KPI tiles, seven headline patterns, a category → credentials → verdict flow diagram, a clickable category × verdict heat map, blocker clusters, an action plan for the 19 catalogue gaps and a brief checklist. Everything clicks through to the matching apps. |
 | Explorer | Faceted filters with live counts, search with highlighting, sortable table or cards, compare up to 3 apps, filtered CSV export. Each app opens a drawer: field-by-field change history from the closed-book draft, evidence, verification status, human-check status, a draft Composio auth config, and an outreach email for gated apps. |
 | Planner | Weighted build-queue ranking (credential access, auth simplicity, existing MCP, API breadth, evidence strength) with presets, live re-ranking, sprint grouping and rank movement. |
-| Verification | Round-1 sample and holdout, pass 1 → pass 2 → final, with a field-level grid that animates misses turning into matches; per-field accuracy, confidence calibration, the five loops, the human queue. |
+| Verification | Round-1 sample and holdout, pass 1 → pass 2 → final, with a field-level grid that animates misses turning into matches; per-field accuracy, confidence calibration, the seven loops, the live sweep, the human queue. |
 | Agent | The pipeline diagram, a replay of the recorded research trace for any app, and live streaming from the local server. |
 | Data | JSON/CSV download or copy, field definitions, the full corrections log. |
 

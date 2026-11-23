@@ -163,3 +163,6 @@ footer{color:var(--muted);font-size:13px;padding:14px 0 40px;border-top:1px soli
 @media (max-width:640px){.brand small{display:none}.tabs{order:3;flex-basis:100%;padding-bottom:6px}.tab kbd{display:none}}
 @media (max-width:900px){.explorer,.planner{grid-template-columns:1fr}.facets{position:static;max-height:none}.rank{grid-template-columns:30px 1fr 90px 46px}.rank .delta{display:none}h1{font-size:28px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.nx h3{margin:0 0 6px} .nx p{margin:6px 0} .nxl{margin:6px 0 0;padding-left:18px} .nxl li{margin:6px 0}
+.tbl.brief{width:100%;border-collapse:collapse;font-size:13.5px} .tbl.brief th,.tbl.brief td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top} .tbl.brief th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)} .tbl.brief .pill{white-space:normal}

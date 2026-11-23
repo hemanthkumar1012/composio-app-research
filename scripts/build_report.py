@@ -181,10 +181,57 @@ data = {"meta": {"generated": today.isoformat(), "author": AUTHOR, "repo": REPO}
         "verification": {k: V[k] for k in ("round1", "holdout")}, "human": human, "changes": S["changes"], "mcp_confirmed": mcp_conf}
 
 template = (WEB / "index.html").read_text(encoding="utf-8")
+
+# ---------- "What I would do next" + brief checklist (data-driven) ----------
+def _next_and_brief(apps):
+    import ast as _ast
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from pipeline import BLOCKER as _BL
+    blk = {i: k for k, v in _BL.items() for i in v}
+    def gap(a):
+        c = a.get("composio")
+        if isinstance(c, str):
+            try: c = _ast.literal_eval(c)
+            except Exception: c = {}
+        return not (c or {}).get("found")
+    g = [a for a in apps if gap(a)]
+    link = lambda a: f'<a href="#app-{a["id"]}">{e(a["app"])}</a>'
+    def grp(verdict):
+        return [a for a in g if a["verdict"] == verdict]
+    def items(lst, why=False):
+        return ", ".join(link(a) + (f' <span class="muted small">({e(blk.get(a["id"], ""))})</span>' if why else "") for a in lst)
+    tiers = [("good", f"1 · Build now ({len(grp('ready'))})", "Missing from the Composio catalogue, but self-serve and documented. Lowest effort, fastest catalogue growth.", items(grp("ready"))),
+             ("warn", f"2 · Build with a workaround ({len(grp('caveat'))})", "Buildable once the auth config handles the catch: a per-store base URL, a paid plan for test credentials, or financial-risk review.", items(grp("caveat"), True)),
+             ("bad", f"3 · Start partnership outreach ({len(grp('outreach'))})", "Engineering is not the blocker. Each app's drawer has a ready outreach email draft.", items(grp("outreach"), True)),
+             ("violet", f"4 · Ship as a skill ({len(grp('wrap'))})", "Not a hosted API: wrap the CLI as an agent skill instead of a toolkit.", items(grp("wrap")))]
+    cards = "".join(f'<div class="card nx" style="border-top:4px solid var(--{c})"><h3>{t}</h3><p class="small muted">{d}</p><p class="small">{x}</p></div>' for c, t, d, x in tiers)
+    product = """<div class="card" style="margin-top:14px"><h3>Product calls the data supports</h3><ul class="small nxl">
+<li><b>Make API-key auth first-class in the toolkit factory.</b> 74 of 100 apps accept a static key and 30 accept only that, so OAuth-first tooling leaves a third of the list behind.</li>
+<li><b>Treat app review as one programme, not 11 tickets.</b> Meta, Google, Slack and Intuit gate 11 apps behind the same kind of review; batching submissions and reusing scopes and privacy docs saves weeks.</li>
+<li><b>Position toolkits against docs-only vendor MCPs.</b> Twilio, BigCommerce and Vonage ship MCP servers that only search documentation. Agents still need the action layer, which is what a Composio toolkit is.</li>
+<li><b>Keep the sweep running.</b> The live sweep re-checks the registry, the catalogue and every evidence link on a schedule, so doc drift and new vendor MCPs surface without re-doing the research.</li>
+<li><b>Scaling to 1,000 apps:</b> about 9 model calls per app (the 10-app holdout needs about 90), cached and rate-limited, with a blind verifier. Human time goes only to the review queue (10 of 100 apps here).</li></ul></div>"""
+    rows = [("100 apps across 10 categories, with category and one-liner", "#explorer", "App explorer, plus CSV/JSON in Data", "done"),
+            ("Auth methods", "#explorer", "Explorer facets and the Auth mix chart", "done"),
+            ("Self-serve vs gated", "#overview", "How credentials are obtained, explorer facet", "done"),
+            ("API surface and existing MCP", "#explorer", "Explorer columns; MCP checked against the official MCP Registry", "done · 24 MCP claims flagged for a page read"),
+            ("Buildability verdict and blocker", "#overview", "Flow, heat map and What blocks the others", "done"),
+            ("Evidence URLs", "#explorer", "Every app drawer; 131/132 links live-checked", "done"),
+            ("Patterns, insight over a table", "#overview", "Patterns across the 100 (7 findings) and this section", "done"),
+            ("Agent or pipeline, ideally with Composio", "#agent", "Gemini agent with blind verifier and judge; Composio catalogue check; optional Composio search tools", "done"),
+            ("Where a human was needed", "#verification", "Human spot-check queue (10 items) and Limits", "done"),
+            ("Verification on a sample, accuracy moving up", "#verification", "Round 1: 90.3% → 96.8% → 100%. Holdout: 92.9% → 100%", "done · live Gemini self-eval pending (free-tier quota)"),
+            ("Show the agent's mistakes", "#verification", "Corrections log and What the first live run caught", "done"),
+            ("One HTML page, live link, repo with README", "#data", "This page on GitHub Pages; repo and README linked in Data", "done")]
+    tr = "".join(f'<tr><td>{e(a)}</td><td><a href="{h}">{e(w)}</a></td><td><span class="pill" style="background:color-mix(in srgb,var(--{"warn" if "pending" in st or "flagged" in st else "good"}) 16%,transparent);color:var(--{"warn" if "pending" in st or "flagged" in st else "good"})">{e(st)}</span></td></tr>' for a, h, w, st in rows)
+    brief = f'<div class="card" style="overflow-x:auto"><table class="tbl brief"><thead><tr><th>The brief asked for</th><th>Where it is</th><th>Status</th></tr></thead><tbody>{tr}</tbody></table></div>'
+    return f'<div class="grid g2">{cards}</div>{product}', brief
+
+NEXT_HTML, BRIEF_HTML = _next_and_brief(json.loads((ROOT / "data" / "apps_final.json").read_text()))
 vals = {"CSS":(WEB / "app.css").read_text(), "JS": (WEB / "app.js").read_text(),
              "DATA": json.dumps(data, separators=(",", ":")).replace("</", "<\\/"),
              "AUTHOR": e(AUTHOR), "DATE": today.strftime("%d %b %Y").upper(), "REPO": REPO, "REPO_SHORT": REPO.replace("https://", ""),
-             "OVERVIEW_LEDE": e(OVERVIEW_LEDE), "VER_LEDE": e(VER_LEDE), "NOT_READY": str(100 - ver.get("ready", 0)),
+             "OVERVIEW_LEDE": e(OVERVIEW_LEDE), "VER_LEDE": e(VER_LEDE), "NOT_READY": str(100 - ver.get("ready", 0)), "NEXT": NEXT_HTML, "BRIEF": BRIEF_HTML,
              "LOOPS": LOOPS, "LIMITS": LIMITS, "HUMAN_LIST": HUMAN_LIST, "RUNTIME_NOTE": RUNTIME, "SCHEMA": SCHEMA, "NOSCRIPT": NOSCRIPT, "SWEEP": SWEEP, "LLMEVAL": LLMEVAL}
 import re  # noqa: E402
 missing = set(re.findall(r"\{\{([A-Z_]+)\}\}", template)) - set(vals)
