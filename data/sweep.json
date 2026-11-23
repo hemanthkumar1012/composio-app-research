@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-23T11:14:55Z",
+  "generated": "2026-11-23T11:42:15Z",
   "runner": "github-actions",
-  "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45163176382",
+  "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45167215834",
   "browser_rendered": 5
  },
  "apps": {
@@ -65,7 +65,7 @@
     {
      "url": "https://developers.hubspot.com/docs/api/overview",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 2806
     },
     {
@@ -116,7 +116,7 @@
     {
      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 3636
     },
     {
@@ -277,7 +277,7 @@
     {
      "url": "https://www.zoho.com/crm/developer/docs/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 3620
     }
    ],
@@ -309,7 +309,7 @@
     {
      "url": "https://developer.close.com/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 2998
     },
     {
@@ -323,18 +323,7 @@
     "query": "Close",
     "vendor_entries": [
      "city.close/close-api",
-     "com.close/close-mcp",
-     "io.github.closedloop-ai-org/closedloop-ai",
-     "io.github.closelookventure/closelook-intelligence",
-     "io.github.closermethod/content-hooks-mcp",
-     "io.github.closermethod/content-repurposing-mcp",
-     "io.github.closermethod/creator-deals-mcp",
-     "io.github.closermethod/newsletter-growth-mcp",
-     "io.github.closermethod/outbound-engine-mcp",
-     "io.github.closermethod/outreach-deliverability-mcp",
-     "io.github.closermethod/personal-brand-mcp",
-     "io.github.closermethod/social-media-manager-mcp",
-     "io.github.closermethod/ugc-brief-mcp"
+     "com.close/close-mcp"
     ],
     "other_entries": [
      "ai.salescloser/salescloser",
@@ -352,6 +341,17 @@
      "io.github.Evozim/b2b-lead-closer-mcp",
      "io.github.Evozim/salescloser-ai",
      "io.github.FreeGuy-AI/closeread-verify",
+     "io.github.closedloop-ai-org/closedloop-ai",
+     "io.github.closelookventure/closelook-intelligence",
+     "io.github.closermethod/content-hooks-mcp",
+     "io.github.closermethod/content-repurposing-mcp",
+     "io.github.closermethod/creator-deals-mcp",
+     "io.github.closermethod/newsletter-growth-mcp",
+     "io.github.closermethod/outbound-engine-mcp",
+     "io.github.closermethod/outreach-deliverability-mcp",
+     "io.github.closermethod/personal-brand-mcp",
+     "io.github.closermethod/social-media-manager-mcp",
+     "io.github.closermethod/ugc-brief-mcp",
      "io.github.disclose/lookup-disclose-io",
      "io.github.dylanc1317-create/leadcloser-mcp"
     ]
@@ -386,11 +386,10 @@
    ],
    "registry": {
     "query": "Copper",
-    "vendor_entries": [
-     "io.github.copperline-labs/rendex-mcp"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "dev.cotlet/copper-crm",
+     "io.github.copperline-labs/rendex-mcp",
      "io.github.kurpeeren/copperflow",
      "io.usefulapi/copper"
     ]
@@ -459,7 +458,7 @@
     {
      "url": "https://developer.zendesk.com/api-reference/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 3274
     },
     {
@@ -590,7 +589,7 @@
     {
      "url": "https://dev.frontapp.com",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 10471
     },
     {
@@ -657,7 +656,7 @@
     {
      "url": "https://docs.usepylon.com/pylon-docs/developer/api.md",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 3272
     }
    ],
@@ -831,7 +830,7 @@
     {
      "url": "https://developers.gorgias.com/docs/authentication",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 4309
     }
    ],
@@ -866,7 +865,7 @@
     {
      "url": "https://developer.gladly.com/rest/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 151575
     }
    ],
@@ -993,7 +992,7 @@
     {
      "url": "https://www.zoho.com/cliq/help/restapi/v2/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 272517
     }
    ],
@@ -1114,7 +1113,7 @@
     {
      "url": "https://docs.discord.com/developers/reference",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 24208
     }
    ],
@@ -1434,7 +1433,7 @@
     {
      "url": "https://marketplace.gohighlevel.com/docs/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 2118
     },
     {
@@ -1674,9 +1673,7 @@
    ],
    "registry": {
     "query": "Threads",
-    "vendor_entries": [
-     "io.github.threadsnoop/reddit"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "ai.agentapigate/threads-instagram-truthsocial-linkedin-posts-mcp",
      "ai.agentapihub/threads-instagram-truthsocial-linkedin-posts-mcp",
@@ -1689,7 +1686,8 @@
      "io.github.Digital-Threads/token-pilot",
      "io.github.abdulrahimiqbal/dreamthreads",
      "io.github.lergassy/threads",
-     "io.github.saulius876-lgtm/threads-search"
+     "io.github.saulius876-lgtm/threads-search",
+     "io.github.threadsnoop/reddit"
     ]
    },
    "catalog": {
@@ -1817,7 +1815,7 @@
      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
      "status": 200,
      "robots_ok": true,
-     "chars": 5866
+     "chars": 5870
     },
     {
      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
@@ -1857,7 +1855,7 @@
     "Basic": false,
     "Other": false
    },
-   "evidence_chars": 29903
+   "evidence_chars": 29907
   },
   "43": {
    "id": 43,
@@ -1866,7 +1864,7 @@
     {
      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 44311
     }
    ],
@@ -1945,13 +1943,12 @@
    ],
    "registry": {
     "query": "Magento",
-    "vendor_entries": [
-     "watch.magento/magento-watch"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "com.insightfulpipe/magento",
      "io.github.juan-cinto-infracommerce/magento-cloud",
-     "io.github.michalper/mcp-magento-audit"
+     "io.github.michalper/mcp-magento-audit",
+     "watch.magento/magento-watch"
     ]
    },
    "catalog": {
@@ -1984,7 +1981,7 @@
     {
      "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 4193
     }
    ],
@@ -2021,7 +2018,7 @@
     {
      "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 4124
     }
    ],
@@ -2094,7 +2091,7 @@
     {
      "url": "https://developer-docs.amazon.com/sp-api",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 6134
     }
    ],
@@ -2215,7 +2212,7 @@
     {
      "url": "https://seranking.com/api.html",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 21967
     }
    ],
@@ -2296,10 +2293,10 @@
    ],
    "registry": {
     "query": "MrScraper",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
      "io.github.mrscraper-com/mrscraper-mcp"
-    ],
-    "other_entries": []
+    ]
    },
    "catalog": {
     "found": "mrscraper",
@@ -2399,7 +2396,7 @@
     {
      "url": "https://brightdata.com",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 13249
     }
    ],
@@ -2515,18 +2512,17 @@
    ],
    "registry": {
     "query": "Clay",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
+     "app.clayware/clayware",
+     "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
+     "io.github.albemarlestudio/clayre",
      "io.github.clay-swartz/pennyrail",
      "io.github.claymore666/ccu-mcp",
      "io.github.claymore666/debmatic-mcp",
      "io.github.clayseal/clayseal",
      "io.github.clayton/docdiffai",
-     "io.github.claytono/go-unifi-mcp"
-    ],
-    "other_entries": [
-     "app.clayware/clayware",
-     "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
-     "io.github.albemarlestudio/clayre",
+     "io.github.claytono/go-unifi-mcp",
      "io.github.grayclayton/aetre-mcp",
      "io.github.vincentzhang15/claycut"
     ]
@@ -2627,7 +2623,8 @@
    ],
    "registry": {
     "query": "Vercel",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
      "app.vercel.agent-permissions-index/agent-permissions-index",
      "app.vercel.agent-shopping-tracker/feed",
      "app.vercel.agent-svg-registry/mcp",
@@ -2660,8 +2657,7 @@
      "app.vercel.ora-x402-gateway/sensations-mergulho",
      "app.vercel.pass-through-tax-rules/pass-through-tax-rules",
      "app.vercel.personalized-gifts-guide/gift-catalog"
-    ],
-    "other_entries": []
+    ]
    },
    "catalog": {
     "found": "vercel",
@@ -2693,7 +2689,8 @@
    ],
    "registry": {
     "query": "Netlify",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
      "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
      "app.netlify.agent-kb-y83q/kb",
      "app.netlify.agent-rescue-desk/production-triage",
@@ -2711,8 +2708,7 @@
      "app.netlify.thechesscoach/chess-coach",
      "app.netlify.uncork/uncork",
      "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
-    ],
-    "other_entries": []
+    ]
    },
    "catalog": {
     "found": "netlify_mcp",
@@ -2742,7 +2738,7 @@
     {
      "url": "https://developers.cloudflare.com/api",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 408085
     }
    ],
@@ -2848,10 +2844,10 @@
    "app": "Neo4j",
    "links": [
     {
-     "url": "https://neo4j.com/docs/api",
-     "status": 404,
-     "robots_ok": false,
-     "chars": 8399
+     "url": "https://neo4j.com/docs/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5714
     }
    ],
    "registry": {
@@ -2881,7 +2877,7 @@
     "Basic": false,
     "OAuth2": false
    },
-   "evidence_chars": 8399
+   "evidence_chars": 5714
   },
   "67": {
    "id": 67,
@@ -3257,19 +3253,18 @@
     {
      "url": "https://developers.asana.com/docs/authentication",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 6329
     }
    ],
    "registry": {
     "query": "Asana",
-    "vendor_entries": [
-     "io.github.asanabrial/estigia",
-     "io.github.asanabrial/leteo"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "com.mcparmory/asana",
      "com.supersaasanalytics/analytics",
+     "io.github.asanabrial/estigia",
+     "io.github.asanabrial/leteo",
      "io.github.hasanaydin7/neuralng",
      "io.github.jtalk22/asana-mcp-server",
      "io.github.pipeworx-io/asana",
@@ -3302,7 +3297,7 @@
     {
      "url": "https://developer.monday.com",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 4769
     }
    ],
@@ -3394,9 +3389,7 @@
    ],
    "registry": {
     "query": "Coda",
-    "vendor_entries": [
-     "io.github.codapult/guard"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "app.codaphone/mcp",
      "com.codaurl/mcp",
@@ -3405,6 +3398,7 @@
      "io.github.ChocoData-com/amazon-scraper-api-mcp",
      "io.github.ajemba/codasms-mcp",
      "io.github.albertescoda/tennis-control",
+     "io.github.codapult/guard",
      "io.github.harshitAgr/codabench-mcp",
      "io.github.nkpar/coda",
      "io.github.sepehr071/codal-mcp",
@@ -3476,7 +3470,7 @@
     {
      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 9268
     }
    ],
@@ -3630,14 +3624,14 @@
    ],
    "registry": {
     "query": "Binance",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
      "io.github.Alejandrehl/kainext-binance-mcp",
      "io.github.Evozim/binance-orderbook-mcp",
      "io.github.KumailQazi/krmaazha-binance-mcp",
      "io.github.junct-bot/binance-mcp",
      "io.github.mrfentmen/binance-market-mcp"
-    ],
-    "other_entries": []
+    ]
    },
    "catalog": {
     "found": null,
@@ -3664,7 +3658,7 @@
     {
      "url": "https://docs.nmi.com",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 1004
     }
    ],
@@ -3712,11 +3706,11 @@
    ],
    "registry": {
     "query": "iPayX",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
      "io.github.Ipayx-stellar/fx-audit",
      "io.github.iPAYX-Technologies/mcp-fx-audit"
-    ],
-    "other_entries": []
+    ]
    },
    "catalog": {
     "found": null,
@@ -3791,15 +3785,14 @@
    ],
    "registry": {
     "query": "Xero",
-    "vendor_entries": [
-     "io.github.Xerolo44/rpgmaker-mv-mcp"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "com.getboxkite/xero-backup-export",
      "com.kipper/xero",
      "com.pilot.meridian/xero-connector",
      "io.github.Servosity/xero-mcp",
      "io.github.WYRE-AI/xero-mcp",
+     "io.github.Xerolo44/rpgmaker-mv-mcp",
      "io.github.asklokesh/xero-mcp-server",
      "io.github.codespar/mcp-xero",
      "io.github.mindstone/mcp-server-xero",
@@ -3868,15 +3861,13 @@
     {
      "url": "https://docs.ramp.com",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 914
     }
    ],
    "registry": {
     "query": "Ramp",
-    "vendor_entries": [
-     "io.github.Ramp-Jet/mothermachine"
-    ],
+    "vendor_entries": [],
     "other_entries": [
      "ai.adramp/google-ads",
      "com.mcparmory/ramp",
@@ -3891,7 +3882,8 @@
      "dev.cotlet/workramp",
      "dev.rampify/rampify-mcp",
      "io.github.CloudCorpRecords/diagramport",
-     "io.github.KevinRabun/FedRAMP20xMCP"
+     "io.github.KevinRabun/FedRAMP20xMCP",
+     "io.github.Ramp-Jet/mothermachine"
     ]
    },
    "catalog": {
@@ -3917,8 +3909,9 @@
     {
      "url": "https://pitchbook.com",
      "status": 403,
-     "robots_ok": false,
-     "chars": 58
+     "robots_ok": true,
+     "chars": 58,
+     "browser_error": "ERROR Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://pitchbook.com/\", waiting until \"networkidle\"\n"
     }
    ],
    "registry": {
@@ -3996,7 +3989,7 @@
     {
      "url": "https://claude.com/marketplace/connectors/otter-ai",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 6034
     }
    ],
@@ -4050,8 +4043,7 @@
    "registry": {
     "query": "Fathom",
     "vendor_entries": [
-     "ai.fathom.api/mcp",
-     "io.github.fathomise/mailfathom"
+     "ai.fathom.api/mcp"
     ],
     "other_entries": [
      "ai.qompass/fathom",
@@ -4059,6 +4051,7 @@
      "dev.fly.fathom-lab-door/fathom",
      "io.github.CYAN-ECLIPSE-TECHNOLOGIES-LLC/fathom",
      "io.github.agencyenterprise/fathom-mcp-server",
+     "io.github.fathomise/mailfathom",
      "io.github.mindstone/mcp-server-fathom",
      "io.github.sadri-dridi/fathom-m",
      "io.github.sadri-dridi/fathom-to-m",
@@ -4178,19 +4171,18 @@
    ],
    "registry": {
     "query": "Devin",
-    "vendor_entries": [
+    "vendor_entries": [],
+    "other_entries": [
+     "io.devinbox/devinbox",
+     "io.github.AzalHoseinian/devinsight-mcp",
      "io.github.DevInder1/tridentchain-security",
      "io.github.DevinoSolutions/upapi-mcp",
+     "io.github.Icaro0310/devin-memory",
      "io.github.devin-lemcke/canusign-mcp-server",
      "io.github.devinmlowe/engram",
      "io.github.devinwang/app-store-connect-mcp",
      "io.github.devinwang/cloak-browser-mcp",
      "io.github.devinwang/google-play-developer-mcp"
-    ],
-    "other_entries": [
-     "io.devinbox/devinbox",
-     "io.github.AzalHoseinian/devinsight-mcp",
-     "io.github.Icaro0310/devin-memory"
     ]
    },
    "catalog": {
@@ -4220,7 +4212,7 @@
     {
      "url": "https://higgsfield.ai/cli",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 8748
     }
    ],
@@ -4300,7 +4292,7 @@
     {
      "url": "https://transcriptapi.com/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 14722
     }
    ],
@@ -4333,7 +4325,7 @@
     {
      "url": "https://developers.grain.com/",
      "status": 200,
-     "robots_ok": false,
+     "robots_ok": true,
      "chars": 1508
     }
    ],

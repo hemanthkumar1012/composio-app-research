@@ -783,6 +783,11 @@
     "id": 89,
     "app": "Ramp",
     "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 90,
+    "app": "PitchBook",
+    "rule": "evidence link broken in live sweep"
    }
   ]
  },
@@ -1118,166 +1123,22 @@
  },
  "sweep": {
   "meta": {
-   "generated": "2026-11-23T11:14:55Z",
+   "generated": "2026-11-23T11:42:15Z",
    "runner": "github-actions",
-   "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45163176382",
+   "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45167215834",
    "browser_rendered": 5
   },
-  "links_total": 102,
-  "links_ok": 102,
-  "broken": [],
-  "robots_blocked": [
-   {
-    "id": 2,
-    "app": "HubSpot",
-    "url": "https://developers.hubspot.com/docs/api/overview"
-   },
-   {
-    "id": 3,
-    "app": "Pipedrive",
-    "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication"
-   },
-   {
-    "id": 7,
-    "app": "Zoho CRM",
-    "url": "https://www.zoho.com/crm/developer/docs/"
-   },
-   {
-    "id": 8,
-    "app": "Close",
-    "url": "https://developer.close.com/"
-   },
-   {
-    "id": 11,
-    "app": "Zendesk",
-    "url": "https://developer.zendesk.com/api-reference/"
-   },
-   {
-    "id": 14,
-    "app": "Front",
-    "url": "https://dev.frontapp.com"
-   },
-   {
-    "id": 15,
-    "app": "Pylon",
-    "url": "https://docs.usepylon.com/pylon-docs/developer/api.md"
-   },
-   {
-    "id": 19,
-    "app": "Gorgias",
-    "url": "https://developers.gorgias.com/docs/authentication"
-   },
-   {
-    "id": 20,
-    "app": "Gladly",
-    "url": "https://developer.gladly.com/rest/"
-   },
-   {
-    "id": 23,
-    "app": "Zoho Cliq",
-    "url": "https://www.zoho.com/cliq/help/restapi/v2/"
-   },
-   {
-    "id": 26,
-    "app": "Discord",
-    "url": "https://docs.discord.com/developers/reference"
-   },
-   {
-    "id": 34,
-    "app": "GoHighLevel",
-    "url": "https://marketplace.gohighlevel.com/docs/"
-   },
-   {
-    "id": 43,
-    "app": "BigCommerce",
-    "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
-   },
-   {
-    "id": 46,
-    "app": "Squarespace",
-    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions"
-   },
-   {
-    "id": 47,
-    "app": "Ecwid",
-    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md"
-   },
-   {
-    "id": 49,
-    "app": "Amazon Selling Partner",
-    "url": "https://developer-docs.amazon.com/sp-api"
-   },
-   {
-    "id": 52,
-    "app": "SE Ranking",
-    "url": "https://seranking.com/api.html"
-   },
-   {
-    "id": 57,
-    "app": "Bright Data",
-    "url": "https://brightdata.com"
-   },
-   {
-    "id": 64,
-    "app": "Cloudflare",
-    "url": "https://developers.cloudflare.com/api"
-   },
-   {
-    "id": 66,
-    "app": "Neo4j",
-    "url": "https://neo4j.com/docs/api"
-   },
-   {
-    "id": 75,
-    "app": "Asana",
-    "url": "https://developers.asana.com/docs/authentication"
-   },
-   {
-    "id": 76,
-    "app": "Monday.com",
-    "url": "https://developer.monday.com"
-   },
-   {
-    "id": 80,
-    "app": "Harvest",
-    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
-   },
-   {
-    "id": 84,
-    "app": "Paygent Connect",
-    "url": "https://docs.nmi.com"
-   },
-   {
-    "id": 89,
-    "app": "Ramp",
-    "url": "https://docs.ramp.com"
-   },
+  "links_total": 132,
+  "links_ok": 131,
+  "broken": [
    {
     "id": 90,
     "app": "PitchBook",
-    "url": "https://pitchbook.com"
-   },
-   {
-    "id": 92,
-    "app": "Otter AI",
-    "url": "https://claude.com/marketplace/connectors/otter-ai"
-   },
-   {
-    "id": 97,
-    "app": "higgsfield",
-    "url": "https://higgsfield.ai/cli"
-   },
-   {
-    "id": 99,
-    "app": "YouTube Transcript",
-    "url": "https://transcriptapi.com/"
-   },
-   {
-    "id": 100,
-    "app": "Grain",
-    "url": "https://developers.grain.com/"
+    "url": "https://pitchbook.com",
+    "status": 403
    }
   ],
+  "robots_blocked": [],
   "browser_read": [
    {
     "id": 24,
