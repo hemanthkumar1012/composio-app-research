@@ -660,5 +660,43 @@
    "id": 91,
    "app": "NotebookLM"
   }
- ]
+ ],
+ "composio": {
+  "in_catalogue": 81,
+  "checked": 100,
+  "net_new_ready": [
+   {
+    "id": 16,
+    "app": "LiveAgent"
+   },
+   {
+    "id": 30,
+    "app": "Vonage"
+   },
+   {
+    "id": 37,
+    "app": "systeme.io"
+   },
+   {
+    "id": 52,
+    "app": "SE Ranking"
+   },
+   {
+    "id": 95,
+    "app": "Reducto"
+   }
+  ],
+  "by_category": {
+   "CRM & Sales": 9,
+   "Support & Helpdesk": 8,
+   "Communications": 9,
+   "Marketing & Social": 9,
+   "Ecommerce": 3,
+   "Data/SEO/Scraping": 7,
+   "Developer & Infra": 10,
+   "Productivity & PM": 10,
+   "Finance & Fintech": 7,
+   "AI & Media-native": 9
+  }
+ }
 }

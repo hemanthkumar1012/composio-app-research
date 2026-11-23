@@ -1,0 +1,4379 @@
+{
+ "meta": {
+  "generated": "2026-11-23T11:14:55Z",
+  "runner": "github-actions",
+  "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45163176382",
+  "browser_rendered": 5
+ },
+ "apps": {
+  "1": {
+   "id": 1,
+   "app": "Salesforce",
+   "links": [
+    {
+     "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3019
+    }
+   ],
+   "registry": {
+    "query": "Salesforce",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.cirra/salesforce-mcp",
+     "ai.smithery/kodey-ai-salesforce-mcp",
+     "ai.smithery/kodey-ai-salesforce-mcp-kodey",
+     "ai.smithery/kodey-ai-salesforce-mcp-minimal",
+     "ai.smithery/kodey-ai-salesforce-mcp-server",
+     "cloud.serpent/salesforce-devops",
+     "com.devart/mcp-salesforce",
+     "com.devart/mcp-salesforcemc",
+     "com.modevc/firm-salesforce-ventures",
+     "dev.workers.selbyventurecap.cf-worker/apollo-salesforce-mapper",
+     "io.github.PranavNagrecha/salesforce-intelligence",
+     "io.github.WYRE-AI/salesforce-mcp",
+     "io.github.ZLeventer/salesforce-marketing-mcp",
+     "io.github.aaronsb/salesforce-cloud",
+     "io.github.mindstone/mcp-server-salesforce",
+     "io.github.pipeworx-io/salesforce",
+     "io.github.semwalajay83-sem/salesforce-metadata-mcp",
+     "io.github.wyre-technology/salesforce-mcp",
+     "io.mtdt/salesforce-devops"
+    ]
+   },
+   "catalog": {
+    "found": "salesforce",
+    "url": "https://composio.dev/toolkits/salesforce",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "salesforce",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 3019
+  },
+  "2": {
+   "id": 2,
+   "app": "HubSpot",
+   "links": [
+    {
+     "url": "https://developers.hubspot.com/docs/api/overview",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 2806
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=hubspot",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 43462
+    }
+   ],
+   "registry": {
+    "query": "HubSpot",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.edgethirteen.www/hubspot-dbv",
+     "com.pronovahq/pronova-sales-hubspot",
+     "dev.wirecat/hubspot-cli",
+     "io.github.Centrify-Internal/hubspot-integrations-mcp",
+     "io.github.M-Pineapple/hubspot-auditor",
+     "io.github.Servosity/hubspot-mcp",
+     "io.github.danielpopamd/hubspot-mcp",
+     "io.github.mindstone/mcp-server-hubspot",
+     "io.github.mrfentmen/hubspot-mcp",
+     "io.github.ohneben/hubspot-mcp",
+     "io.github.pipeworx-io/hubspot"
+    ]
+   },
+   "catalog": {
+    "found": "hubspot",
+    "url": "https://composio.dev/toolkits/hubspot",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "hubspot",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 46269
+  },
+  "3": {
+   "id": 3,
+   "app": "Pipedrive",
+   "links": [
+    {
+     "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3636
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pipedrive",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 44911
+    }
+   ],
+   "registry": {
+    "query": "Pipedrive",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.Servosity/pipedrive-mcp",
+     "io.github.ckalima/pipedrive-mcp-server",
+     "io.github.mmedum/pipedrive-mcp",
+     "io.github.nubiia-dev/mcp-pipedrive",
+     "io.github.pipeworx-io/pipedrive",
+     "io.usefulapi/pipedrive"
+    ]
+   },
+   "catalog": {
+    "found": "pipedrive",
+    "url": "https://composio.dev/toolkits/pipedrive",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "pipedrive",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 48548
+  },
+  "4": {
+   "id": 4,
+   "app": "Attio",
+   "links": [
+    {
+     "url": "https://docs.attio.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1968
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=attio",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 16642
+    }
+   ],
+   "registry": {
+    "query": "Attio",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.smithery/kaszek-kaszek-attio-mcp",
+     "ai.smithery/kesslerio-attio-mcp-server",
+     "ai.smithery/kesslerio-attio-mcp-server-beta",
+     "dev.wirecat/attio-cli",
+     "io.github.kesslerio/attio-mcp-server"
+    ]
+   },
+   "catalog": {
+    "found": "attio",
+    "url": "https://composio.dev/toolkits/attio",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "attio",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
+   "evidence_chars": 18611
+  },
+  "5": {
+   "id": 5,
+   "app": "Twenty",
+   "links": [
+    {
+     "url": "https://docs.twenty.com/developers/introduction",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3045
+    }
+   ],
+   "registry": {
+    "query": "Twenty",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.twentyclubs.mcp/premier-league",
+     "io.github.21-million-wall/twentyone-million",
+     "io.github.h3692/eightytwenty",
+     "io.usefulapi/twenty"
+    ]
+   },
+   "catalog": {
+    "found": "twenty",
+    "url": "https://composio.dev/toolkits/twenty",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "twenty",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false,
+    "OAuth2": true
+   },
+   "evidence_chars": 3045
+  },
+  "6": {
+   "id": 6,
+   "app": "Podio",
+   "links": [
+    {
+     "url": "https://developers.podio.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2284
+    }
+   ],
+   "registry": {
+    "query": "Podio",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "podio",
+    "url": "https://composio.dev/toolkits/podio",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "podio",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 2284
+  },
+  "7": {
+   "id": 7,
+   "app": "Zoho CRM",
+   "links": [
+    {
+     "url": "https://www.zoho.com/crm/developer/docs/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3620
+    }
+   ],
+   "registry": {
+    "query": "Zoho CRM",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "zoho",
+    "url": "https://composio.dev/toolkits/zoho",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "zoho",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 3620
+  },
+  "8": {
+   "id": 8,
+   "app": "Close",
+   "links": [
+    {
+     "url": "https://developer.close.com/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 2998
+    },
+    {
+     "url": "https://www.close.com/pricing",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 21680
+    }
+   ],
+   "registry": {
+    "query": "Close",
+    "vendor_entries": [
+     "city.close/close-api",
+     "com.close/close-mcp",
+     "io.github.closedloop-ai-org/closedloop-ai",
+     "io.github.closelookventure/closelook-intelligence",
+     "io.github.closermethod/content-hooks-mcp",
+     "io.github.closermethod/content-repurposing-mcp",
+     "io.github.closermethod/creator-deals-mcp",
+     "io.github.closermethod/newsletter-growth-mcp",
+     "io.github.closermethod/outbound-engine-mcp",
+     "io.github.closermethod/outreach-deliverability-mcp",
+     "io.github.closermethod/personal-brand-mcp",
+     "io.github.closermethod/social-media-manager-mcp",
+     "io.github.closermethod/ugc-brief-mcp"
+    ],
+    "other_entries": [
+     "ai.salescloser/salescloser",
+     "com.atlasclose/demo",
+     "com.closedmcp/closedmcp",
+     "com.closefinch/closefinch",
+     "com.disclosedby/record",
+     "com.getcloseknit/close-knit",
+     "com.greenercloset/greener-closet",
+     "com.modevc/chart-open-source-vs-closed-ai-models-gap",
+     "com.pclosets/closets",
+     "com.repclose/repclose",
+     "com.sigmaclose/server",
+     "com.virtualcloser/virtual-closer",
+     "io.github.Evozim/b2b-lead-closer-mcp",
+     "io.github.Evozim/salescloser-ai",
+     "io.github.FreeGuy-AI/closeread-verify",
+     "io.github.disclose/lookup-disclose-io",
+     "io.github.dylanc1317-create/leadcloser-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "close",
+    "url": "https://composio.dev/toolkits/close",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "close",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 24679
+  },
+  "9": {
+   "id": 9,
+   "app": "Copper",
+   "links": [
+    {
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4344
+    }
+   ],
+   "registry": {
+    "query": "Copper",
+    "vendor_entries": [
+     "io.github.copperline-labs/rendex-mcp"
+    ],
+    "other_entries": [
+     "dev.cotlet/copper-crm",
+     "io.github.kurpeeren/copperflow",
+     "io.usefulapi/copper"
+    ]
+   },
+   "catalog": {
+    "found": "copper",
+    "url": "https://composio.dev/toolkits/copper",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "copper",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 4344
+  },
+  "10": {
+   "id": 10,
+   "app": "DealCloud",
+   "links": [
+    {
+     "url": "https://api.docs.dealcloud.com/docs/token",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8406
+    },
+    {
+     "url": "https://api.docs.dealcloud.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3312
+    }
+   ],
+   "registry": {
+    "query": "DealCloud",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "dealcloud",
+      "found": false
+     },
+     {
+      "slug": "dealcloud_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 11719
+  },
+  "11": {
+   "id": 11,
+   "app": "Zendesk",
+   "links": [
+    {
+     "url": "https://developer.zendesk.com/api-reference/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3274
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=zendesk",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 36146
+    }
+   ],
+   "registry": {
+    "query": "Zendesk",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.swifteq/zendesk-mcp-server",
+     "dev.cotlet/zendesk",
+     "io.github.fruggr/zendesk-mcp-server"
+    ]
+   },
+   "catalog": {
+    "found": "zendesk",
+    "url": "https://composio.dev/toolkits/zendesk",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "zendesk",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "Basic": false
+   },
+   "evidence_chars": 39421
+  },
+  "12": {
+   "id": 12,
+   "app": "Intercom",
+   "links": [
+    {
+     "url": "https://developers.intercom.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2238
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=intercom",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 10595
+    }
+   ],
+   "registry": {
+    "query": "Intercom",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.MuhammadTalhaMT/intercom",
+     "io.github.iambashar/agent-intercom",
+     "io.github.pipeworx-io/intercom"
+    ]
+   },
+   "catalog": {
+    "found": "intercom",
+    "url": "https://composio.dev/toolkits/intercom",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "intercom",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 12834
+  },
+  "13": {
+   "id": 13,
+   "app": "Freshdesk",
+   "links": [
+    {
+     "url": "https://developers.freshdesk.com/api/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 619084
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=freshdesk",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 35343
+    }
+   ],
+   "registry": {
+    "query": "Freshdesk",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.WYRE-AI/freshdesk-mcp",
+     "io.github.mindstone/mcp-server-freshdesk",
+     "io.github.mrfentmen/freshdesk-mcp",
+     "io.github.pipeworx-io/freshdesk",
+     "io.github.wyre-technology/freshdesk-mcp",
+     "io.usefulapi/freshdesk"
+    ]
+   },
+   "catalog": {
+    "found": "freshdesk",
+    "url": "https://composio.dev/toolkits/freshdesk",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "freshdesk",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": true
+   },
+   "evidence_chars": 654428
+  },
+  "14": {
+   "id": 14,
+   "app": "Front",
+   "links": [
+    {
+     "url": "https://dev.frontapp.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 10471
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=front",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 37106
+    }
+   ],
+   "registry": {
+    "query": "Front",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.clize/storefront",
+     "ai.frontierdesk/desk",
+     "ai.frontmost/frontmost-ai",
+     "ai.servicefront/front-desk",
+     "app.frontierstack/frontierstack",
+     "app.simfuse/esim-storefront",
+     "co.frontierresearch/frontier",
+     "co.pressfront/trace",
+     "com.25karats/storefront",
+     "com.a2awire/data-hacker-news-front-page-tech-news",
+     "com.amfionhq/front-desk-setup",
+     "com.dianarafael/storefront",
+     "com.frontdeskreview/front-desk-review-data",
+     "com.fronterasignal/frontera-signal",
+     "com.frontic/ui",
+     "com.frontiercrown.signer/nostr-signer",
+     "com.frontlatch/gateway",
+     "com.frontofgoal/odds-api",
+     "com.frontrowtickets/frontrowtickets-mcp",
+     "com.frontsentinel/domain-security",
+     "com.frontstat/visibility",
+     "com.jobsfrontrunner/jobs",
+     "com.jpyc-service/ec-storefront",
+     "com.lapxuongtihon/storefront",
+     "com.lowtoxgear/storefront",
+     "com.mareaalcalina/storefront",
+     "com.modernmustardseed/ai-front-door"
+    ]
+   },
+   "catalog": {
+    "found": "front",
+    "url": "https://composio.dev/toolkits/front",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "front",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 47578
+  },
+  "15": {
+   "id": 15,
+   "app": "Pylon",
+   "links": [
+    {
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api.md",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3272
+    }
+   ],
+   "registry": {
+    "query": "Pylon",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.JustinBeckwith/pylon-mcp",
+     "io.pylonseo/pylon-seo"
+    ]
+   },
+   "catalog": {
+    "found": "pylon_mcp",
+    "url": "https://composio.dev/toolkits/pylon_mcp",
+    "kind": "mcp-wrapper",
+    "checked": [
+     {
+      "slug": "pylon",
+      "found": false
+     },
+     {
+      "slug": "pylon_mcp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 3272
+  },
+  "16": {
+   "id": 16,
+   "app": "LiveAgent",
+   "links": [
+    {
+     "url": "https://www.liveagent.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 18573
+    }
+   ],
+   "registry": {
+    "query": "LiveAgent",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "liveagent",
+      "found": false
+     },
+     {
+      "slug": "liveagent_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 18573
+  },
+  "17": {
+   "id": 17,
+   "app": "Plain",
+   "links": [
+    {
+     "url": "https://www.plain.com/docs/graphql/introduction.md",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2611
+    },
+    {
+     "url": "https://www.plain.com/pricing",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8276
+    }
+   ],
+   "registry": {
+    "query": "Plain",
+    "vendor_entries": [
+     "com.plain/mcp",
+     "insurance.plain/mcp"
+    ],
+    "other_entries": [
+     "ai.livecore/voiceover-tts-dubbing-translate-lip-sync-audio-music-sfx-silence-ffmpeg-remotion-capcut-descript-opus-premiere-after-effects-ugc-faceless-explainer-promo-montage-thumbnail-watermark-blur",
+     "ai.plainvoice/mcp",
+     "ai.smithery/plainyogurt21-clintrials-mcp",
+     "ai.smithery/plainyogurt21-sec-edgar-mcp",
+     "app.vercel.automaton-tx-explainer/base-tools",
+     "com.autosecurelogin/colorado-complaint-access",
+     "com.gumballtools/regex-explainer",
+     "com.keepplain/keepplain",
+     "com.plainerror/plainerror",
+     "com.plainfreight/quotes",
+     "com.plainquant/plainquant",
+     "com.plainradar/news",
+     "com.plainrecordlabs/company-jobs-feed",
+     "com.plainrecordlabs/docs-to-markdown",
+     "com.plainrecordlabs/federal-contract-opportunities",
+     "com.plainrecordlabs/official-release-calendar",
+     "com.plainrecordlabs/sec-form-d-funding",
+     "com.plainrecords/us-recalls-food-products-vehicles",
+     "com.plainrouter/mcp",
+     "com.ppftec/bandplain",
+     "dev.changefeed/transaction-explainer",
+     "dev.plainmail/mail",
+     "dev.workers.exportitnow.plainport/plainport",
+     "dev.workers.mike-tusa.plaingrade-api/plaingrade-api",
+     "guide.plainly/mcp",
+     "io.ceadigital/cfpb-consumer-complaints",
+     "io.github.AyodejiOO/plain-ayi"
+    ]
+   },
+   "catalog": {
+    "found": "plain",
+    "url": "https://composio.dev/toolkits/plain",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "plain",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 10888
+  },
+  "18": {
+   "id": 18,
+   "app": "Help Scout",
+   "links": [
+    {
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8490
+    }
+   ],
+   "registry": {
+    "query": "Help Scout",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "help_scout",
+    "url": "https://composio.dev/toolkits/help_scout",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "help_scout",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 8490
+  },
+  "19": {
+   "id": 19,
+   "app": "Gorgias",
+   "links": [
+    {
+     "url": "https://developers.gorgias.com/docs/authentication",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4309
+    }
+   ],
+   "registry": {
+    "query": "Gorgias",
+    "vendor_entries": [],
+    "other_entries": [
+     "dev.cotlet/gorgias"
+    ]
+   },
+   "catalog": {
+    "found": "gorgias",
+    "url": "https://composio.dev/toolkits/gorgias",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "gorgias",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 4309
+  },
+  "20": {
+   "id": 20,
+   "app": "Gladly",
+   "links": [
+    {
+     "url": "https://developer.gladly.com/rest/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 151575
+    }
+   ],
+   "registry": {
+    "query": "Gladly",
+    "vendor_entries": [],
+    "other_entries": [
+     "dev.cotlet/gladly",
+     "io.usefulapi/gladly"
+    ]
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "gladly",
+      "found": false
+     },
+     {
+      "slug": "gladly_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": true
+   },
+   "evidence_chars": 151575
+  },
+  "21": {
+   "id": 21,
+   "app": "Slack",
+   "links": [
+    {
+     "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 20621
+    }
+   ],
+   "registry": {
+    "query": "Slack",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.smithery/smithery-ai-slack",
+     "ai.wakeshift/slackline",
+     "ai.waystation/slack",
+     "co.civai.nova/mcp-slack_android",
+     "com.insightfulpipe/slack",
+     "com.mcparmory/slack",
+     "com.pulsemcp/slack",
+     "io.github.CSOAI-ORG/slack-enterprise-mcp",
+     "io.github.Th3Slack3r/slacking-biz",
+     "io.github.Th3Slack3r/urflrealtor-mcp",
+     "io.github.aaronsb/slack-mcp",
+     "io.github.adelaidasofia/slack-mcp",
+     "io.github.crunchtools/slack",
+     "io.github.fastslack/e2e-runner",
+     "io.github.jtalk22/slack-mcp-server"
+    ]
+   },
+   "catalog": {
+    "found": "slack",
+    "url": "https://composio.dev/toolkits/slack",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "slack",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 20621
+  },
+  "22": {
+   "id": 22,
+   "app": "Twilio",
+   "links": [
+    {
+     "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 19589
+    },
+    {
+     "url": "https://www.twilio.com/docs/ai/mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 7952
+    }
+   ],
+   "registry": {
+    "query": "Twilio",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.codespar/mcp-twilio",
+     "io.github.mrfentmen/twilio-mcp-server",
+     "io.github.pipeworx-io/twilio"
+    ]
+   },
+   "catalog": {
+    "found": "twilio",
+    "url": "https://composio.dev/toolkits/twilio",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "twilio",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": true
+   },
+   "evidence_chars": 27542
+  },
+  "23": {
+   "id": 23,
+   "app": "Zoho Cliq",
+   "links": [
+    {
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 272517
+    }
+   ],
+   "registry": {
+    "query": "Zoho Cliq",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "zoho_cliq",
+    "url": "https://composio.dev/toolkits/zoho_cliq",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "zoho_cliq",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 272517
+  },
+  "24": {
+   "id": 24,
+   "app": "Lark (Larksuite)",
+   "links": [
+    {
+     "url": "https://open.larksuite.com/document/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 16,
+     "browser_chars": 3743
+    }
+   ],
+   "registry": {
+    "query": "Lark",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.meetlark/mcp-server",
+     "com.cuelark/tools",
+     "com.larkella/larkella",
+     "com.splark/splark",
+     "dev.workers.cybermax-tools.cybermax/logolark",
+     "io.github.brandonclark1996-design/toolrank",
+     "io.github.clarkthomas/clearlot",
+     "io.github.devon-clarkk/engraphy",
+     "io.github.getlarkwright/aiops-field-notes-mcp",
+     "io.github.getlarkwright/netip-mcp",
+     "io.github.getlarkwright/netops-field-notes-mcp",
+     "io.github.getlarkwright/secops-field-notes-mcp",
+     "io.github.guidance-ai/guidance-lark-mcp",
+     "io.github.hezeclark/devkits",
+     "io.github.jeremiahclark79-ai/danbooks-mcp",
+     "io.github.mrfentmen/starlark-mcp",
+     "io.github.raclarke1/hiveposts",
+     "io.github.xentoshi/clarke",
+     "io.github.zhitongblog/ziplark",
+     "org.polarka/polarka-agent",
+     "org.scholarkit/student-calculators",
+     "site.chatgpt.larklaon.one-bad-idea/not-work"
+    ]
+   },
+   "catalog": {
+    "found": "lark",
+    "url": "https://composio.dev/toolkits/lark",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "lark",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Other": false,
+    "OAuth2": false
+   },
+   "evidence_chars": 3743
+  },
+  "25": {
+   "id": 25,
+   "app": "Pumble",
+   "links": [
+    {
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4504
+    }
+   ],
+   "registry": {
+    "query": "Pumble",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "pumble",
+    "url": "https://composio.dev/toolkits/pumble",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "pumble",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 4504
+  },
+  "26": {
+   "id": 26,
+   "app": "Discord",
+   "links": [
+    {
+     "url": "https://docs.discord.com/developers/reference",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 24208
+    }
+   ],
+   "registry": {
+    "query": "Discord",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.agentapigate/telegram-discord-twitch-kick-medium-pinterest-mcp",
+     "ai.agentapihub/telegram-discord-twitch-kick-medium-pinterest-mcp",
+     "ai.smithery/Danushkumar-V-mcp-discord",
+     "ai.smithery/sachicali-discordmcp-suite",
+     "app.lasers.guildcontrol/discord",
+     "com.discordservers/search",
+     "com.discordtimestampgen/discord-timestamp",
+     "com.discortics/discord-bot",
+     "dev.cotlet/discord",
+     "io.disdex/discord-servers",
+     "io.github.DasRed/discord-mcp",
+     "io.github.DockerDiscordControl/timergy",
+     "io.github.Oratorian/discord-node-mcp",
+     "io.github.OrygnsCode/discord-mcp",
+     "io.github.PaSympa/discord-mcp",
+     "io.github.TheStreamCode/discord-management-mcp",
+     "io.github.cappyeo/discord-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "discord",
+    "url": "https://composio.dev/toolkits/discord",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "discord",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 24208
+  },
+  "27": {
+   "id": 27,
+   "app": "Telegram",
+   "links": [
+    {
+     "url": "https://core.telegram.org/bots/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 524757
+    }
+   ],
+   "registry": {
+    "query": "Telegram",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.agentapigate/telegram-discord-twitch-kick-medium-pinterest-mcp",
+     "ai.agentapihub/telegram-discord-twitch-kick-medium-pinterest-mcp",
+     "ai.awraiter/telegram",
+     "co.civai.nova/telegram-agent",
+     "com.insightfulpipe/telegram",
+     "com.jojapi/telegram",
+     "com.limzo/telegram-group-stats",
+     "com.sendseven/whatsapp-instagram-telegram-sms-messenger-email",
+     "com.telegramtometatrader/ttmt",
+     "dev.1social/telegram",
+     "io.github.AndreySukhanov/summarix-telegram",
+     "io.github.AnshumanAtrey/telegram-channel-scraper",
+     "io.github.ChatPush/whatsapp-telegram-max-sms",
+     "io.github.GeiserX/telegram-archive-mcp",
+     "io.github.GhostPawJS/telegram",
+     "io.github.JustJuice55/telegram-catalog"
+    ]
+   },
+   "catalog": {
+    "found": "telegram",
+    "url": "https://composio.dev/toolkits/telegram",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "telegram",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 524757
+  },
+  "28": {
+   "id": 28,
+   "app": "WhatsApp Business",
+   "links": [
+    {
+     "url": "https://developers.facebook.com/docs/whatsapp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 12940
+    }
+   ],
+   "registry": {
+    "query": "WhatsApp Business",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "whatsapp",
+    "url": "https://composio.dev/toolkits/whatsapp",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "whatsapp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
+   "evidence_chars": 12940
+  },
+  "29": {
+   "id": 29,
+   "app": "Aircall",
+   "links": [
+    {
+     "url": "https://developers.aircall.io/api-references",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 456479
+    },
+    {
+     "url": "https://aircall.io/pricing/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17869
+    }
+   ],
+   "registry": {
+    "query": "Aircall",
+    "vendor_entries": [],
+    "other_entries": [
+     "dev.cotlet/aircall",
+     "io.usefulapi/aircall"
+    ]
+   },
+   "catalog": {
+    "found": "aircall",
+    "url": "https://composio.dev/toolkits/aircall",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "aircall",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 474349
+  },
+  "30": {
+   "id": 30,
+   "app": "Vonage",
+   "links": [
+    {
+     "url": "https://developer.vonage.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9220
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=vonage",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 723
+    }
+   ],
+   "registry": {
+    "query": "Vonage",
+    "vendor_entries": [
+     "io.github.Vonage/vonage-documentation-mcp"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "vonage",
+      "found": false
+     },
+     {
+      "slug": "vonage_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": false,
+    "Other": true
+   },
+   "evidence_chars": 9944
+  },
+  "31": {
+   "id": 31,
+   "app": "Google Ads",
+   "links": [
+    {
+     "url": "https://developers.google.com/google-ads/api/docs/start",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 12523
+    }
+   ],
+   "registry": {
+    "query": "Google Ads",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "googleads",
+    "url": "https://composio.dev/toolkits/googleads",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "googleads",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 12523
+  },
+  "32": {
+   "id": 32,
+   "app": "Meta Ads",
+   "links": [
+    {
+     "url": "https://developers.facebook.com/docs/marketing-apis",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 26521
+    }
+   ],
+   "registry": {
+    "query": "Meta Ads",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "metaads",
+    "url": "https://composio.dev/toolkits/metaads",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "metaads",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 26521
+  },
+  "33": {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "links": [
+    {
+     "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2675
+    },
+    {
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4353
+    }
+   ],
+   "registry": {
+    "query": "LinkedIn Ads",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "linkedin_ads",
+    "url": "https://composio.dev/toolkits/linkedin_ads",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "linkedin_ads",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 7029
+  },
+  "34": {
+   "id": 34,
+   "app": "GoHighLevel",
+   "links": [
+    {
+     "url": "https://marketplace.gohighlevel.com/docs/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 2118
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=gohighlevel",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3782
+    }
+   ],
+   "registry": {
+    "query": "GoHighLevel",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.makebox.mcp/gohighlevel",
+     "dev.cotlet/gohighlevel"
+    ]
+   },
+   "catalog": {
+    "found": "highlevel",
+    "url": "https://composio.dev/toolkits/highlevel",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "highlevel",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 5901
+  },
+  "35": {
+   "id": 35,
+   "app": "Mailchimp",
+   "links": [
+    {
+     "url": "https://mailchimp.com/developer/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3194
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mailchimp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 108981
+    }
+   ],
+   "registry": {
+    "query": "Mailchimp",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.insightfulpipe/mailchimp",
+     "io.github.asklokesh/mailchimp-mcp-server",
+     "io.github.cyanheads/mailchimp-mcp-server",
+     "io.github.mrfentmen/mailchimp-mcp",
+     "io.github.pipeworx-io/mailchimp",
+     "io.usefulapi/mailchimp"
+    ]
+   },
+   "catalog": {
+    "found": "mailchimp",
+    "url": "https://composio.dev/toolkits/mailchimp",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "mailchimp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 112176
+  },
+  "36": {
+   "id": 36,
+   "app": "Klaviyo",
+   "links": [
+    {
+     "url": "https://developers.klaviyo.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4032
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=klaviyo",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 10392
+    }
+   ],
+   "registry": {
+    "query": "Klaviyo",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.insightfulpipe/klaviyo",
+     "com.mcparmory/klaviyo",
+     "io.github.mrfentmen/klaviyo-mcp",
+     "io.github.pipeworx-io/klaviyo",
+     "io.scalably/klaviyo-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "klaviyo",
+    "url": "https://composio.dev/toolkits/klaviyo",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "klaviyo",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": false
+   },
+   "evidence_chars": 14425
+  },
+  "37": {
+   "id": 37,
+   "app": "systeme.io",
+   "links": [
+    {
+     "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9331
+    }
+   ],
+   "registry": {
+    "query": "systeme.io",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "systeme",
+      "found": false
+     },
+     {
+      "slug": "systeme_io",
+      "found": false
+     },
+     {
+      "slug": "systemeio",
+      "found": false
+     },
+     {
+      "slug": "systeme_io_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 9331
+  },
+  "38": {
+   "id": 38,
+   "app": "Pinterest",
+   "links": [
+    {
+     "url": "https://developers.pinterest.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1676
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pinterest",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 32481
+    }
+   ],
+   "registry": {
+    "query": "Pinterest",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.agentapigate/sec-edgar-crypto-real-estate-pinterest-mcp",
+     "ai.agentapigate/telegram-discord-twitch-kick-medium-pinterest-mcp",
+     "ai.agentapihub/sec-edgar-crypto-real-estate-pinterest-mcp",
+     "ai.agentapihub/telegram-discord-twitch-kick-medium-pinterest-mcp",
+     "com.365pinterest/365-pinterest",
+     "com.getmcpads/pinterest-ads",
+     "com.insightfulpipe/pinterest-ads",
+     "com.insightfulpipe/pinterest-pages",
+     "com.mambabuilt/mcp-pinterest-brand-presence-mapper",
+     "com.pindataapi/pinterest-pins-boards-airbnb-visual-mcp",
+     "com.pindataapi/x402-pinterest-pins-boards-airbnb-mcp",
+     "com.pinpinterest/keywords",
+     "dev.1social/pinterest",
+     "io.github.adkit/pinterest-ads",
+     "io.github.akhilrajesh213/pinterest-trends-scraper",
+     "io.github.cesteral/pinterest-mcp",
+     "io.github.mrfentmen/pinterest-mcp",
+     "io.github.saulius876-lgtm/pinterest",
+     "io.github.sunkimk/pinterest-mcp",
+     "one.aisa/pinterest"
+    ]
+   },
+   "catalog": {
+    "found": "pinterest",
+    "url": "https://composio.dev/toolkits/pinterest",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "pinterest",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 34158
+  },
+  "39": {
+   "id": 39,
+   "app": "Threads (Meta)",
+   "links": [
+    {
+     "url": "https://developers.facebook.com/docs/threads/get-started",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6765
+    }
+   ],
+   "registry": {
+    "query": "Threads",
+    "vendor_entries": [
+     "io.github.threadsnoop/reddit"
+    ],
+    "other_entries": [
+     "ai.agentapigate/threads-instagram-truthsocial-linkedin-posts-mcp",
+     "ai.agentapihub/threads-instagram-truthsocial-linkedin-posts-mcp",
+     "app.threads-mcp/threads",
+     "com.mambabuilt/mcp-threads-keyword-search",
+     "com.mambabuilt/mcp-threads-profile-posts",
+     "com.quarralabs/threads-scraper",
+     "com.redthreadsec/redthread",
+     "dev.1social/threads",
+     "io.github.Digital-Threads/token-pilot",
+     "io.github.abdulrahimiqbal/dreamthreads",
+     "io.github.lergassy/threads",
+     "io.github.saulius876-lgtm/threads-search"
+    ]
+   },
+   "catalog": {
+    "found": "threads",
+    "url": "https://composio.dev/toolkits/threads",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "threads",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 6765
+  },
+  "40": {
+   "id": 40,
+   "app": "SendGrid",
+   "links": [
+    {
+     "url": "https://sendgrid.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9607
+    }
+   ],
+   "registry": {
+    "query": "SendGrid",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.Choppaaahh/sendgrid-mcp-secure",
+     "io.github.Neschadin/sendgrid-mcp",
+     "io.github.codespar/mcp-sendgrid",
+     "io.github.deyikong/sendgrid-mcp",
+     "io.github.pipeworx-io/sendgrid",
+     "io.usefulapi/sendgrid"
+    ]
+   },
+   "catalog": {
+    "found": "sendgrid",
+    "url": "https://composio.dev/toolkits/sendgrid",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "sendgrid",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 9607
+  },
+  "41": {
+   "id": 41,
+   "app": "Shopify",
+   "links": [
+    {
+     "url": "https://shopify.dev/docs/api/admin-graphql",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17519
+    }
+   ],
+   "registry": {
+    "query": "Shopify",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.agentapigate/amazon-product-walmart-shopify-ecommerce-mcp",
+     "ai.agentapihub/amazon-product-walmart-shopify-ecommerce-mcp",
+     "ai.gossiper/shopify-admin-mcp",
+     "app.bestappify/shopify-app-store",
+     "com.b2bprofileapi/b2b-shopify-merchant-company-profile-mcp",
+     "com.hasdata/shopify",
+     "com.insightfulpipe/shopify",
+     "com.mambabuilt/mcp-shopify-app-store-chrome-web-store-listings",
+     "com.mcparmory/shopify-admin",
+     "com.moltlinestudio/shopify",
+     "com.oskivo/shopify",
+     "com.ranovam/shopify-ebay-product-research",
+     "com.rasareka/shopify",
+     "com.shopdataapi/amazon-product-walmart-shopify-mcp",
+     "com.skaidigital/shopify-speed-check",
+     "dev.agentdiet/shopify-intel",
+     "dev.agentdiet/shopify-spy",
+     "dev.datasetworks/shopify-store-products",
+     "dev.pages.wagner-data-services/shopify-catalog-import",
+     "dev.reapx/shopify-stores",
+     "dev.workers.cybermax-tools.cybermax/shopify-scraper",
+     "io.github.A1-x-Tech/mcp-shopify-admin",
+     "io.github.Ivansky1/shopify-csv-catalog-check",
+     "io.github.Monkeydscraping/shopify-catalog-monitor",
+     "io.github.Monkeydscraping/shopify-size-availability-audit",
+     "io.github.PrometheusAgency/shopify-app-store-scraper",
+     "io.github.akhilrajesh213/shopify-mcp-server",
+     "io.github.alex-brecher/shopify-multi-store"
+    ]
+   },
+   "catalog": {
+    "found": "shopify",
+    "url": "https://composio.dev/toolkits/shopify",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "shopify",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 17519
+  },
+  "42": {
+   "id": 42,
+   "app": "WooCommerce",
+   "links": [
+    {
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5866
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 24036
+    }
+   ],
+   "registry": {
+    "query": "WooCommerce",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.addsynapse/woocommerce",
+     "com.insightfulpipe/woocommerce",
+     "dev.cotlet/woocommerce",
+     "io.github.AmitGurbani/mcp-server-woocommerce",
+     "io.github.fxjima/shopify-woocommerce-store-intelligence",
+     "io.github.pipeworx-io/woocommerce",
+     "io.github.sadrmanesh/woocommerce-mcp",
+     "io.github.wppoland/woocommerce-mcp"
+    ]
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "woocommerce",
+      "found": false
+     },
+     {
+      "slug": "woocommerce_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": false,
+    "Other": false
+   },
+   "evidence_chars": 29903
+  },
+  "43": {
+   "id": 43,
+   "app": "BigCommerce",
+   "links": [
+    {
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 44311
+    }
+   ],
+   "registry": {
+    "query": "BigCommerce",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.mrfentmen/bigcommerce-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "bigcommerce",
+    "url": "https://composio.dev/toolkits/bigcommerce",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "bigcommerce",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 44311
+  },
+  "44": {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "links": [
+    {
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6687
+    }
+   ],
+   "registry": {
+    "query": "Salesforce Commerce Cloud",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "salesforce_commerce_cloud",
+      "found": false
+     },
+     {
+      "slug": "salesforcecommercecloud",
+      "found": false
+     },
+     {
+      "slug": "salesforce_commerce_cloud_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 6687
+  },
+  "45": {
+   "id": 45,
+   "app": "Magento (Adobe Commerce)",
+   "links": [
+    {
+     "url": "https://developer.adobe.com/commerce/webapi/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1435
+    }
+   ],
+   "registry": {
+    "query": "Magento",
+    "vendor_entries": [
+     "watch.magento/magento-watch"
+    ],
+    "other_entries": [
+     "com.insightfulpipe/magento",
+     "io.github.juan-cinto-infracommerce/magento-cloud",
+     "io.github.michalper/mcp-magento-audit"
+    ]
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "magento",
+      "found": false
+     },
+     {
+      "slug": "adobe_commerce",
+      "found": false
+     },
+     {
+      "slug": "magento_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "Other": false,
+    "API key": false
+   },
+   "evidence_chars": 1435
+  },
+  "46": {
+   "id": 46,
+   "app": "Squarespace",
+   "links": [
+    {
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4193
+    }
+   ],
+   "registry": {
+    "query": "Squarespace",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.mrfentmen/squarespace-mcp"
+    ]
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "squarespace",
+      "found": false
+     },
+     {
+      "slug": "squarespace_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 4193
+  },
+  "47": {
+   "id": 47,
+   "app": "Ecwid",
+   "links": [
+    {
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4124
+    }
+   ],
+   "registry": {
+    "query": "Ecwid",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.usefulapi/ecwid"
+    ]
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "ecwid",
+      "found": false
+     },
+     {
+      "slug": "ecwid_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
+   "evidence_chars": 4124
+  },
+  "48": {
+   "id": 48,
+   "app": "Gumroad",
+   "links": [
+    {
+     "url": "https://gumroad.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5,
+     "browser_chars": 131044
+    }
+   ],
+   "registry": {
+    "query": "Gumroad",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.marstudio360/gumroad-dna-mcp",
+     "io.usefulapi/gumroad"
+    ]
+   },
+   "catalog": {
+    "found": "gumroad",
+    "url": "https://composio.dev/toolkits/gumroad",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "gumroad",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 131044
+  },
+  "49": {
+   "id": 49,
+   "app": "Amazon Selling Partner",
+   "links": [
+    {
+     "url": "https://developer-docs.amazon.com/sp-api",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 6134
+    }
+   ],
+   "registry": {
+    "query": "Amazon Selling Partner",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "amazon_selling_partner",
+      "found": false
+     },
+     {
+      "slug": "amazon_sp_api",
+      "found": false
+     },
+     {
+      "slug": "amazon_seller",
+      "found": false
+     },
+     {
+      "slug": "amazonsellingpartner",
+      "found": false
+     },
+     {
+      "slug": "amazon_selling_partner_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 6134
+  },
+  "50": {
+   "id": 50,
+   "app": "fanbasis",
+   "links": [
+    {
+     "url": "https://fanbasis.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6573
+    }
+   ],
+   "registry": {
+    "query": "fanbasis",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "fanbasis",
+      "found": false
+     },
+     {
+      "slug": "fanbasis_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 6573
+  },
+  "51": {
+   "id": 51,
+   "app": "DataForSEO",
+   "links": [
+    {
+     "url": "https://docs.dataforseo.com/v3/auth/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 13391
+    },
+    {
+     "url": "https://github.com/dataforseo/mcp-server-typescript",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 13554
+    }
+   ],
+   "registry": {
+    "query": "DataForSEO",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.insightfulpipe/dataforseo",
+     "io.scalably/dataforseo-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "dataforseo",
+    "url": "https://composio.dev/toolkits/dataforseo",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "dataforseo",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": true
+   },
+   "evidence_chars": 26946
+  },
+  "52": {
+   "id": 52,
+   "app": "SE Ranking",
+   "links": [
+    {
+     "url": "https://seranking.com/api.html",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 21967
+    }
+   ],
+   "registry": {
+    "query": "SE Ranking",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "seranking",
+      "found": false
+     },
+     {
+      "slug": "se_ranking",
+      "found": false
+     },
+     {
+      "slug": "se_ranking_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 21967
+  },
+  "53": {
+   "id": 53,
+   "app": "Ahrefs",
+   "links": [
+    {
+     "url": "https://docs.ahrefs.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3516
+    }
+   ],
+   "registry": {
+    "query": "Ahrefs",
+    "vendor_entries": [
+     "com.ahrefs/mcp"
+    ],
+    "other_entries": [
+     "com.jojapi/ahrefs",
+     "com.mcparmory/ahrefs"
+    ]
+   },
+   "catalog": {
+    "found": "ahrefs",
+    "url": "https://composio.dev/toolkits/ahrefs",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "ahrefs",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 3516
+  },
+  "54": {
+   "id": 54,
+   "app": "MrScraper",
+   "links": [
+    {
+     "url": "https://docs.mrscraper.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5730
+    }
+   ],
+   "registry": {
+    "query": "MrScraper",
+    "vendor_entries": [
+     "io.github.mrscraper-com/mrscraper-mcp"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "mrscraper",
+    "url": "https://composio.dev/toolkits/mrscraper",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "mrscraper",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 5730
+  },
+  "55": {
+   "id": 55,
+   "app": "Apify",
+   "links": [
+    {
+     "url": "https://docs.apify.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3989
+    }
+   ],
+   "registry": {
+    "query": "Apify",
+    "vendor_entries": [
+     "com.apify/apify-mcp-server"
+    ],
+    "other_entries": [
+     "ai.xomia/xomiadata-apify-actors"
+    ]
+   },
+   "catalog": {
+    "found": "apify",
+    "url": "https://composio.dev/toolkits/apify",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "apify",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false,
+    "OAuth2": false
+   },
+   "evidence_chars": 3989
+  },
+  "56": {
+   "id": 56,
+   "app": "Firecrawl",
+   "links": [
+    {
+     "url": "https://firecrawl.dev",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 22801
+    }
+   ],
+   "registry": {
+    "query": "Firecrawl",
+    "vendor_entries": [
+     "io.github.firecrawl/firecrawl-mcp-server"
+    ],
+    "other_entries": [
+     "co.civai.nova/mcp-firecrawl",
+     "com.mcparmory/firecrawl",
+     "io.github.Ansarii/firecrawl-stealth-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "firecrawl",
+    "url": "https://composio.dev/toolkits/firecrawl",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "firecrawl",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 22801
+  },
+  "57": {
+   "id": 57,
+   "app": "Bright Data",
+   "links": [
+    {
+     "url": "https://brightdata.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 13249
+    }
+   ],
+   "registry": {
+    "query": "Bright Data",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "brightdata",
+    "url": "https://composio.dev/toolkits/brightdata",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "brightdata",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 13249
+  },
+  "58": {
+   "id": 58,
+   "app": "Sherlock",
+   "links": [
+    {
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 7026
+    }
+   ],
+   "registry": {
+    "query": "Sherlock",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.hostsherlock/mcp",
+     "io.github.FGC-Shreyansh-Chachaundiya/codesherlock-mcp-server",
+     "io.github.jcucci/dotnet-sherlock-mcp"
+    ]
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "sherlock",
+      "found": false
+     },
+     {
+      "slug": "sherlock_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {},
+   "evidence_chars": 7026
+  },
+  "59": {
+   "id": 59,
+   "app": "Waterfall.io",
+   "links": [
+    {
+     "url": "https://www.waterfall.io/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8410
+    }
+   ],
+   "registry": {
+    "query": "Waterfall.io",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "waterfall",
+      "found": false
+     },
+     {
+      "slug": "waterfall_io",
+      "found": false
+     },
+     {
+      "slug": "waterfallio",
+      "found": false
+     },
+     {
+      "slug": "waterfall_io_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 8410
+  },
+  "60": {
+   "id": 60,
+   "app": "Clay",
+   "links": [
+    {
+     "url": "https://www.clay.com/pricing",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 27165
+    }
+   ],
+   "registry": {
+    "query": "Clay",
+    "vendor_entries": [
+     "io.github.clay-swartz/pennyrail",
+     "io.github.claymore666/ccu-mcp",
+     "io.github.claymore666/debmatic-mcp",
+     "io.github.clayseal/clayseal",
+     "io.github.clayton/docdiffai",
+     "io.github.claytono/go-unifi-mcp"
+    ],
+    "other_entries": [
+     "app.clayware/clayware",
+     "com.mambabuilt/mcp-clay-to-instantly-smartlead-push",
+     "io.github.albemarlestudio/clayre",
+     "io.github.grayclayton/aetre-mcp",
+     "io.github.vincentzhang15/claycut"
+    ]
+   },
+   "catalog": {
+    "found": "clay",
+    "url": "https://composio.dev/toolkits/clay",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "clay",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 27165
+  },
+  "61": {
+   "id": 61,
+   "app": "GitHub",
+   "links": [
+    {
+     "url": "https://docs.github.com/rest",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5843
+    }
+   ],
+   "registry": {
+    "query": "GitHub",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.agentapigate/github-huggingface-arxiv-papers-repos-search-api-mcp",
+     "ai.agentapihub/github-huggingface-arxiv-papers-repos-search-api-mcp",
+     "ai.smithery/Hint-Services-obsidian-github-mcp",
+     "ai.smithery/saidsef-mcp-github-pr-issue-analyser",
+     "ai.smithery/smithery-ai-github",
+     "app.tuper/github-repos",
+     "com.a2awire/data-github-changelog-platform-change-announcement",
+     "com.a2awire/data-trending-repository-new-github-repo-discovery",
+     "com.getstarhunt/github-developer-sourcing",
+     "com.githubcard/mcp",
+     "com.mambabuilt/mcp-github-followers-following-export",
+     "com.mambabuilt/mcp-github-organization-signal-scanner",
+     "com.mcparmory/github",
+     "com.robinsonaisystems/github",
+     "com.thenextgennexus/github-mcp-server",
+     "com.usegithubthing/ugt",
+     "dev.agentdiet/github-audit",
+     "dev.reapx/github-repos",
+     "io.github.000safah000-ai/blackhawk-mcp",
+     "io.github.0200project/base-transaction-decoder",
+     "io.github.02inf/opencomment-ai",
+     "io.github.0580iris-lang/x711-gas-station",
+     "io.github.06ketan/medium-ops",
+     "io.github.06ketan/slideshot",
+     "io.github.06ketan/substack-ops",
+     "io.github.076923/vecscope"
+    ]
+   },
+   "catalog": {
+    "found": "github",
+    "url": "https://composio.dev/toolkits/github",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "github",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true,
+    "Other": false
+   },
+   "evidence_chars": 5843
+  },
+  "62": {
+   "id": 62,
+   "app": "Vercel",
+   "links": [
+    {
+     "url": "https://vercel.com/docs/rest-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 74102
+    },
+    {
+     "url": "https://vercel.com/docs/mcp/vercel-mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17296
+    }
+   ],
+   "registry": {
+    "query": "Vercel",
+    "vendor_entries": [
+     "app.vercel.agent-permissions-index/agent-permissions-index",
+     "app.vercel.agent-shopping-tracker/feed",
+     "app.vercel.agent-svg-registry/mcp",
+     "app.vercel.agentready-rho/agentready",
+     "app.vercel.aididwhat/aididwhat",
+     "app.vercel.auditflag-lac/auditflag",
+     "app.vercel.automaton-tx-explainer/base-tools",
+     "app.vercel.axiom-risk-mcp/solana-token-risk",
+     "app.vercel.baselens-api/baselens",
+     "app.vercel.chainshift-preview/korea-sets",
+     "app.vercel.cleanmarket/marketplace",
+     "app.vercel.clearpage-x402/clearpage",
+     "app.vercel.cloakcheck-wheat/cloakcheck",
+     "app.vercel.codigo07/human-verification-peru",
+     "app.vercel.control-your-tesla/control-your-tesla",
+     "app.vercel.exploitwatch-kappa/exploitwatch",
+     "app.vercel.filingcheck-bot/filingcheck",
+     "app.vercel.flightsweeper-webmcp/public",
+     "app.vercel.fork-for-agents/fork",
+     "app.vercel.gouda-studios-agent-tools/gouda-studios-agent-tools",
+     "app.vercel.groundtruth-ruby/groundtruth",
+     "app.vercel.humancard-registry/human-registry",
+     "app.vercel.indo-news-api/indonesia-news",
+     "app.vercel.indo-news-api/news",
+     "app.vercel.interesting-concepts-ventures/threadkeep",
+     "app.vercel.jestsprout/jestsprout",
+     "app.vercel.krankenkasse-copilot/krankenkasse-copilot",
+     "app.vercel.mare-liberum/sea",
+     "app.vercel.olothea-research/olothea",
+     "app.vercel.ora-x402-gateway/sensations-mergulho",
+     "app.vercel.pass-through-tax-rules/pass-through-tax-rules",
+     "app.vercel.personalized-gifts-guide/gift-catalog"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "vercel",
+    "url": "https://composio.dev/toolkits/vercel",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "vercel",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 91399
+  },
+  "63": {
+   "id": 63,
+   "app": "Netlify",
+   "links": [
+    {
+     "url": "https://docs.netlify.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 32666
+    }
+   ],
+   "registry": {
+    "query": "Netlify",
+    "vendor_entries": [
+     "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
+     "app.netlify.agent-kb-y83q/kb",
+     "app.netlify.agent-rescue-desk/production-triage",
+     "app.netlify.automatom-x402/web-data-toolkit",
+     "app.netlify.chaincheck-api/chaincheck",
+     "app.netlify.clify-dev/clify",
+     "app.netlify.gleaming-cassata-d41682/lion-mcp",
+     "app.netlify.japan-data-mcp/japan-data-mcp",
+     "app.netlify.kitchen-pass/chef",
+     "app.netlify.meinlem/nexo",
+     "app.netlify.meinlem2/nexo",
+     "app.netlify.micropay-test-suite/micropay-test-suite",
+     "app.netlify.shigoto-dogu/order-eval",
+     "app.netlify.tenderdelta/tenders",
+     "app.netlify.thechesscoach/chess-coach",
+     "app.netlify.uncork/uncork",
+     "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "netlify_mcp",
+    "url": "https://composio.dev/toolkits/netlify_mcp",
+    "kind": "mcp-wrapper",
+    "checked": [
+     {
+      "slug": "netlify",
+      "found": false
+     },
+     {
+      "slug": "netlify_mcp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 32666
+  },
+  "64": {
+   "id": 64,
+   "app": "Cloudflare",
+   "links": [
+    {
+     "url": "https://developers.cloudflare.com/api",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 408085
+    }
+   ],
+   "registry": {
+    "query": "Cloudflare",
+    "vendor_entries": [
+     "com.cloudflare.mcp/mcp"
+    ],
+    "other_entries": [
+     "com.jojapi/bypass-cloudflare-api",
+     "com.jojapi/cloudflare-solver",
+     "com.trycloudflare.annotated-lot-operational-tourism/kai-agi",
+     "com.trycloudflare.barrier-sought-lbs-reader/quotes",
+     "com.trycloudflare.candy-josh-writers-balance/yultrace-audit",
+     "com.trycloudflare.candy-josh-writers-balance/yultrace-bounty-feed",
+     "com.trycloudflare.clients-involving-billion-headers/agent-web-actions",
+     "com.trycloudflare.clients-involving-billion-headers/ai-video-generator",
+     "com.trycloudflare.configurations-resource-newport-leaders/uptime-marketplace",
+     "com.trycloudflare.doe-calculation-consists-ipod/quotes",
+     "com.trycloudflare.electron-quality-edge-chapter/ghost",
+     "com.trycloudflare.emails-ship-peninsula-deliver/registry-verifier-target-a",
+     "com.trycloudflare.emails-ship-peninsula-deliver/registry-verifier-target-b",
+     "com.trycloudflare.expanded-oven-hardwood-cheque/trc20-instruments",
+     "com.trycloudflare.favor-skilled-ben-plugin/prooffetch",
+     "com.trycloudflare.mai-menu-institution-cindy/uptime-marketplace",
+     "com.trycloudflare.managers-backup-dolls-seasons/dime-experiment-tools",
+     "com.trycloudflare.manner-ends-conditional-biggest/uptime-marketplace",
+     "com.trycloudflare.newark-commerce-standards-bye/uptime-marketplace",
+     "com.trycloudflare.plates-spread-materials-optimum/agent-web-actions",
+     "com.trycloudflare.science-vacancies-contribute-recorders/uptime-marketplace",
+     "com.trycloudflare.supporters-result-promo-celebrity/mci-scout",
+     "com.trycloudflare.urgent-clean-occupied-catalogs/yultrace-audit",
+     "com.trycloudflare.urgent-clean-occupied-catalogs/yultrace-bounty-feed",
+     "com.trycloudflare.virtually-badge-trade-university/uptime-marketplace",
+     "dev.workers.apexlabs-cloudflare.pagetext/pagetext",
+     "io.github.ANAMIZED/x402-cloudflare-starter",
+     "io.github.Ayo-Fam/mcp-cloudflare-dns",
+     "io.github.Evozim/cloudflare-turnstile-bypass-mcp",
+     "io.github.SidneyBissoli/senado-br-mcp-cloudflare"
+    ]
+   },
+   "catalog": {
+    "found": "cloudflare",
+    "url": "https://composio.dev/toolkits/cloudflare",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "cloudflare",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 408085
+  },
+  "65": {
+   "id": 65,
+   "app": "Supabase",
+   "links": [
+    {
+     "url": "https://supabase.com/docs",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5175
+    }
+   ],
+   "registry": {
+    "query": "Supabase",
+    "vendor_entries": [
+     "com.supabase/mcp"
+    ],
+    "other_entries": [
+     "ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
+     "ai.smithery/pinion05-supabase-mcp-lite",
+     "ai.waystation/supabase",
+     "io.github.Tthanh2k6/supabase-rls-check",
+     "io.github.mcp-dir/supabase-mcp",
+     "io.github.mrfentmen/supabase-mcp",
+     "io.github.sadri-dridi/supabase-url-shape"
+    ]
+   },
+   "catalog": {
+    "found": "supabase",
+    "url": "https://composio.dev/toolkits/supabase",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "supabase",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 5175
+  },
+  "66": {
+   "id": 66,
+   "app": "Neo4j",
+   "links": [
+    {
+     "url": "https://neo4j.com/docs/api",
+     "status": 404,
+     "robots_ok": false,
+     "chars": 8399
+    }
+   ],
+   "registry": {
+    "query": "Neo4j",
+    "vendor_entries": [
+     "io.github.neo4j-contrib/gds-agent",
+     "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+     "io.github.neo4j-contrib/mcp-neo4j-cypher",
+     "io.github.neo4j-contrib/mcp-neo4j-data-modeling",
+     "io.github.neo4j-contrib/mcp-neo4j-memory",
+     "io.github.neo4j-labs/neo4j-mcp-canary"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "neo4j",
+    "url": "https://composio.dev/toolkits/neo4j",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "neo4j",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Basic": false,
+    "OAuth2": false
+   },
+   "evidence_chars": 8399
+  },
+  "67": {
+   "id": 67,
+   "app": "Snowflake",
+   "links": [
+    {
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 15333
+    },
+    {
+     "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 68264
+    }
+   ],
+   "registry": {
+    "query": "Snowflake",
+    "vendor_entries": [
+     "io.github.Snowflake-Labs/mcp"
+    ],
+    "other_entries": [
+     "io.github.alphaparkinc/genpark-distributed-id-snowflake-generator-skill",
+     "io.github.nsphung/mcp-snowflake-server",
+     "io.github.sadri-dridi/snowflake-ok",
+     "io.github.sadri-dridi/snowflake-seq",
+     "io.github.sadri-dridi/snowflake-shape",
+     "io.github.sadri-dridi/snowflake-ts",
+     "io.github.sadri-dridi/snowflake-ts2",
+     "io.github.sadri-dridi/snowflake-worker"
+    ]
+   },
+   "catalog": {
+    "found": "snowflake",
+    "url": "https://composio.dev/toolkits/snowflake",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "snowflake",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Other": true,
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 83598
+  },
+  "68": {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "links": [
+    {
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 14180
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 561587
+    }
+   ],
+   "registry": {
+    "query": "MongoDB Atlas",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "mongodb",
+    "url": "https://composio.dev/toolkits/mongodb",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "mongodb_atlas",
+      "found": false
+     },
+     {
+      "slug": "mongodb",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Other": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 575768
+  },
+  "69": {
+   "id": 69,
+   "app": "Datadog",
+   "links": [
+    {
+     "url": "https://docs.datadoghq.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17477
+    }
+   ],
+   "registry": {
+    "query": "Datadog",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.mcparmory/datadog",
+     "io.github.TANTIOPE/datadog-mcp",
+     "io.github.us-all/datadog"
+    ]
+   },
+   "catalog": {
+    "found": "datadog",
+    "url": "https://composio.dev/toolkits/datadog",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "datadog",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 17477
+  },
+  "70": {
+   "id": 70,
+   "app": "Sentry",
+   "links": [
+    {
+     "url": "https://docs.sentry.io/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2072
+    }
+   ],
+   "registry": {
+    "query": "Sentry",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.0xpi.sdsentry/sds-lookup",
+     "com.lihaila/dissentry",
+     "com.mcparmory/sentry",
+     "com.regsentry/tracking-inspector",
+     "com.srofia/sentryfi",
+     "io.github.14manj01/camsentry-mcp",
+     "io.github.Humanleap/sentrydock",
+     "io.github.Jackxiaozhiren/datasentry",
+     "io.github.Lihaila/dissentry",
+     "io.github.Roshan6335/mcpsentry",
+     "io.github.bricksentry/bricksentry"
+    ]
+   },
+   "catalog": {
+    "found": "sentry",
+    "url": "https://composio.dev/toolkits/sentry",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "sentry",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false,
+    "OAuth2": false
+   },
+   "evidence_chars": 2072
+  },
+  "71": {
+   "id": 71,
+   "app": "Notion",
+   "links": [
+    {
+     "url": "https://developers.notion.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 7533
+    }
+   ],
+   "registry": {
+    "query": "Notion",
+    "vendor_entries": [
+     "com.notion/mcp"
+    ],
+    "other_entries": [
+     "ai.smithery/smithery-notion",
+     "com.foreverworks/notion",
+     "com.insightfulpipe/notion",
+     "com.mcparmory/notion",
+     "dev.wirecat/notion-cli",
+     "io.github.ai-aviate/better-notion",
+     "io.github.awkoy/notion-mcp-server",
+     "io.github.cphoskins/notion-full-mcp",
+     "io.github.imgul/notion-arena",
+     "io.github.infoinlet-marketplace/mcp-notion",
+     "io.github.misterwigglesworth/easy-notion",
+     "io.github.n24q02m/better-notion-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "notion",
+    "url": "https://composio.dev/toolkits/notion",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "notion",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 7533
+  },
+  "72": {
+   "id": 72,
+   "app": "Airtable",
+   "links": [
+    {
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 44,
+     "browser_chars": 4446
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=airtable",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 31467
+    }
+   ],
+   "registry": {
+    "query": "Airtable",
+    "vendor_entries": [
+     "com.airtable/mcp"
+    ],
+    "other_entries": [
+     "ai.waystation/airtable",
+     "com.insightfulpipe/airtable",
+     "com.mcparmory/airtable",
+     "io.github.Automations-Project/airtable-user-mcp",
+     "io.github.domdomegg/airtable-mcp-server",
+     "io.github.mrfentmen/airtable-mcp",
+     "io.github.pipeworx-io/airtable",
+     "io.github.rashidazarang/airtable-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "airtable",
+    "url": "https://composio.dev/toolkits/airtable",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "airtable",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 35914
+  },
+  "73": {
+   "id": 73,
+   "app": "Linear",
+   "links": [
+    {
+     "url": "https://developers.linear.app",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1601
+    }
+   ],
+   "registry": {
+    "query": "Linear",
+    "vendor_entries": [
+     "app.linear/linear"
+    ],
+    "other_entries": [
+     "co.civai.nova/mcp-linear",
+     "dev.wirecat/linear-cli",
+     "io.github.Evozim/linear-broker",
+     "io.github.adelaidasofia/linear-mcp",
+     "io.github.magurelabs/linear",
+     "io.github.mrfentmen/linear-mcp",
+     "io.github.mrfentmen/linear-programming-mcp",
+     "io.github.pipeworx-io/linear",
+     "io.github.sadri-dridi/linear-id-ok",
+     "io.github.sadri-dridi/linear-id-shape",
+     "io.github.toolwright-adk/linear-bootstrap",
+     "io.usefulapi/linear"
+    ]
+   },
+   "catalog": {
+    "found": "linear",
+    "url": "https://composio.dev/toolkits/linear",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "linear",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 1601
+  },
+  "74": {
+   "id": 74,
+   "app": "Jira",
+   "links": [
+    {
+     "url": "https://developer.atlassian.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 393,
+     "browser_chars": 1337
+    }
+   ],
+   "registry": {
+    "query": "Jira",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.waystation/jira",
+     "com.mcparmory/atlassian-jira",
+     "io.github.EugeneNeverov/productops-jira",
+     "io.github.IamSAL/jira-easy-mcp",
+     "io.github.Kujirafu/agentlore",
+     "io.github.MrRefactoring/atlassian-dc-mcp-jira",
+     "io.github.Servosity/jira-service-management-mcp",
+     "io.github.aaronsb/jira-cloud",
+     "io.github.b1ff/atlassian-dc-mcp-jira"
+    ]
+   },
+   "catalog": {
+    "found": "jira",
+    "url": "https://composio.dev/toolkits/jira",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "jira",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false,
+    "Basic": false
+   },
+   "evidence_chars": 1337
+  },
+  "75": {
+   "id": 75,
+   "app": "Asana",
+   "links": [
+    {
+     "url": "https://developers.asana.com/docs/authentication",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 6329
+    }
+   ],
+   "registry": {
+    "query": "Asana",
+    "vendor_entries": [
+     "io.github.asanabrial/estigia",
+     "io.github.asanabrial/leteo"
+    ],
+    "other_entries": [
+     "com.mcparmory/asana",
+     "com.supersaasanalytics/analytics",
+     "io.github.hasanaydin7/neuralng",
+     "io.github.jtalk22/asana-mcp-server",
+     "io.github.pipeworx-io/asana",
+     "io.github.pouyahasanamreji/continuum",
+     "io.github.sadri-dridi/asana-gid-ok",
+     "io.github.sincekmori/asana-gate"
+    ]
+   },
+   "catalog": {
+    "found": "asana",
+    "url": "https://composio.dev/toolkits/asana",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "asana",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 6329
+  },
+  "76": {
+   "id": 76,
+   "app": "Monday.com",
+   "links": [
+    {
+     "url": "https://developer.monday.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4769
+    }
+   ],
+   "registry": {
+    "query": "Monday.com",
+    "vendor_entries": [
+     "com.monday/monday.com"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "monday",
+    "url": "https://composio.dev/toolkits/monday",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "monday",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": false
+   },
+   "evidence_chars": 4769
+  },
+  "77": {
+   "id": 77,
+   "app": "ClickUp",
+   "links": [
+    {
+     "url": "https://clickup.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 780
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=clickup",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 32716
+    }
+   ],
+   "registry": {
+    "query": "ClickUp",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.smithery/skr-cloudify-clickup-mcp-server-new",
+     "com.mcparmory/clickup",
+     "io.github.KelvinCampelo/clickup-full-mcp",
+     "io.github.cryogenized-spec/clickup-serviteur-mcp",
+     "io.github.cvrt-jh/clickup-mcp",
+     "io.github.helbertparanhos/clickup-mcp-pro",
+     "io.github.naderali2235/YAARClickUpMCP",
+     "io.github.pipeworx-io/clickup",
+     "io.github.retailbox-automation/clickup-mcp",
+     "io.github.taazkareem/clickup",
+     "io.usefulapi/clickup"
+    ]
+   },
+   "catalog": {
+    "found": "clickup",
+    "url": "https://composio.dev/toolkits/clickup",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "clickup",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 33497
+  },
+  "78": {
+   "id": 78,
+   "app": "Coda",
+   "links": [
+    {
+     "url": "https://coda.io/developers/apis/v1",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 142819
+    }
+   ],
+   "registry": {
+    "query": "Coda",
+    "vendor_entries": [
+     "io.github.codapult/guard"
+    ],
+    "other_entries": [
+     "app.codaphone/mcp",
+     "com.codaurl/mcp",
+     "com.iterruptivo.ecodashboard/ecoplaza-mcp",
+     "com.mcparmory/codacy",
+     "io.github.ChocoData-com/amazon-scraper-api-mcp",
+     "io.github.ajemba/codasms-mcp",
+     "io.github.albertescoda/tennis-control",
+     "io.github.harshitAgr/codabench-mcp",
+     "io.github.nkpar/coda",
+     "io.github.sepehr071/codal-mcp",
+     "io.github.vish288/mcp-coda"
+    ]
+   },
+   "catalog": {
+    "found": "coda",
+    "url": "https://composio.dev/toolkits/coda",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "coda",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 142819
+  },
+  "79": {
+   "id": 79,
+   "app": "Smartsheet",
+   "links": [
+    {
+     "url": "https://www.smartsheet.com/developers",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1648
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=smartsheet",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 28679
+    }
+   ],
+   "registry": {
+    "query": "Smartsheet",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.solutionsbradshaw/smartsheet-audit",
+     "io.github.christianclaudio/smartsheet-rm"
+    ]
+   },
+   "catalog": {
+    "found": "smartsheet",
+    "url": "https://composio.dev/toolkits/smartsheet",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "smartsheet",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
+   "evidence_chars": 30328
+  },
+  "80": {
+   "id": 80,
+   "app": "Harvest",
+   "links": [
+    {
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 9268
+    }
+   ],
+   "registry": {
+    "query": "Harvest",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.mapsharvest/maps-harvest",
+     "com.pixharvest/esp32-control",
+     "com.pixharvest/gov-contract-radar",
+     "com.pixharvest/tariff-data",
+     "com.runharvester/mcp",
+     "io.github.AnshumanAtrey/linkedin-harvester",
+     "io.github.AnshumanAtrey/theharvester-osint",
+     "io.github.Evozim/crypto-tax-loss-harvester-mcp",
+     "io.github.MohanVishe/mediaharvest",
+     "io.github.The-Warl0ck/harvest-mcp",
+     "io.github.devkindhq/theharvester-mcp",
+     "io.github.hulin42/keynote-harvest-mcp",
+     "io.github.jjchong5/tidyharvest-data-tools",
+     "io.github.riceharvest/ctxprune"
+    ]
+   },
+   "catalog": {
+    "found": "harvest",
+    "url": "https://composio.dev/toolkits/harvest",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "harvest",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 9268
+  },
+  "81": {
+   "id": 81,
+   "app": "Stripe",
+   "links": [
+    {
+     "url": "https://stripe.com/docs/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9377
+    },
+    {
+     "url": "https://docs.stripe.com/mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 11034
+    }
+   ],
+   "registry": {
+    "query": "Stripe",
+    "vendor_entries": [
+     "com.stripe/mcp"
+    ],
+    "other_entries": [
+     "app.vercel.stripecheckup/stripecheckup",
+     "com.insightfulpipe/stripe",
+     "eu.nordicmcp/stripe",
+     "io.github.CSOAI-ORG/meok-stripe-acp-checkout-mcp",
+     "io.github.CSOAI-ORG/stripe-billing-mcp",
+     "io.github.codespar/mcp-stripe",
+     "io.github.codespar/mcp-stripe-acp",
+     "io.github.friendlygeorge/stripe-mcp-server",
+     "io.github.infoinlet-marketplace/mcp-stripe",
+     "io.github.lordbasilaiassistant-sudo/stripe-analytics",
+     "io.github.mcp-dir/stripe-mcp",
+     "io.github.mrfentmen/stripe-mcp",
+     "io.github.pipeworx-io/stripe_connect",
+     "io.github.rafaelcg/stripekit",
+     "io.github.robinafaruqia/stripe-mcp",
+     "io.github.theluckystrike/stripe-billing"
+    ]
+   },
+   "catalog": {
+    "found": "stripe",
+    "url": "https://composio.dev/toolkits/stripe",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "stripe",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 20412
+  },
+  "82": {
+   "id": 82,
+   "app": "Plaid",
+   "links": [
+    {
+     "url": "https://plaid.com/docs",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5587
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=plaid",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5756
+    }
+   ],
+   "registry": {
+    "query": "Plaid",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.mrfentmen/plaid-mcp",
+     "io.github.pipeworx-io/plaid"
+    ]
+   },
+   "catalog": {
+    "found": "plaid",
+    "url": "https://composio.dev/toolkits/plaid",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "plaid",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "Other": false
+   },
+   "evidence_chars": 11344
+  },
+  "83": {
+   "id": 83,
+   "app": "Binance",
+   "links": [
+    {
+     "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+     "status": 202,
+     "robots_ok": true,
+     "chars": 0,
+     "browser_chars": 33920
+    }
+   ],
+   "registry": {
+    "query": "Binance",
+    "vendor_entries": [
+     "io.github.Alejandrehl/kainext-binance-mcp",
+     "io.github.Evozim/binance-orderbook-mcp",
+     "io.github.KumailQazi/krmaazha-binance-mcp",
+     "io.github.junct-bot/binance-mcp",
+     "io.github.mrfentmen/binance-market-mcp"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "binance",
+      "found": false
+     },
+     {
+      "slug": "binance_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "Other": true
+   },
+   "evidence_chars": 33920
+  },
+  "84": {
+   "id": 84,
+   "app": "Paygent Connect",
+   "links": [
+    {
+     "url": "https://docs.nmi.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 1004
+    }
+   ],
+   "registry": {
+    "query": "Paygent Connect",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "paygent",
+      "found": false
+     },
+     {
+      "slug": "paygent_connect",
+      "found": false
+     },
+     {
+      "slug": "paygentconnect",
+      "found": false
+     },
+     {
+      "slug": "paygent_connect_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 1004
+  },
+  "85": {
+   "id": 85,
+   "app": "iPayX",
+   "links": [
+    {
+     "url": "https://ipayx.ai/docs",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 914
+    }
+   ],
+   "registry": {
+    "query": "iPayX",
+    "vendor_entries": [
+     "io.github.Ipayx-stellar/fx-audit",
+     "io.github.iPAYX-Technologies/mcp-fx-audit"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "ipayx",
+      "found": false
+     },
+     {
+      "slug": "ipayx_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {},
+   "evidence_chars": 914
+  },
+  "86": {
+   "id": 86,
+   "app": "QuickBooks",
+   "links": [
+    {
+     "url": "https://developer.intuit.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 63,
+     "browser_error": "ERROR Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://developer.intuit.com/\", waiting until \"networkidle\"\n"
+    }
+   ],
+   "registry": {
+    "query": "QuickBooks",
+    "vendor_entries": [],
+    "other_entries": [
+     "ai.logistify/quickbooks-desktop",
+     "ai.ototo/quickbooks",
+     "com.caribooks/quickbooks",
+     "com.devart/mcp-quickbooks",
+     "com.kipper/quickbooks",
+     "com.ledgercrossing/quickbooks-desktop",
+     "com.qubesync/quickbooks-desktop-api",
+     "com.zenofirm/quickbooks-desktop",
+     "io.github.NyxToolsDev/quickbooks-mcp-server",
+     "io.github.Servosity/quickbooks-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "quickbooks",
+    "url": "https://composio.dev/toolkits/quickbooks",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "quickbooks",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 63
+  },
+  "87": {
+   "id": 87,
+   "app": "Xero",
+   "links": [
+    {
+     "url": "https://developer.xero.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4531
+    }
+   ],
+   "registry": {
+    "query": "Xero",
+    "vendor_entries": [
+     "io.github.Xerolo44/rpgmaker-mv-mcp"
+    ],
+    "other_entries": [
+     "com.getboxkite/xero-backup-export",
+     "com.kipper/xero",
+     "com.pilot.meridian/xero-connector",
+     "io.github.Servosity/xero-mcp",
+     "io.github.WYRE-AI/xero-mcp",
+     "io.github.asklokesh/xero-mcp-server",
+     "io.github.codespar/mcp-xero",
+     "io.github.mindstone/mcp-server-xero",
+     "io.github.pipeworx-io/xero",
+     "io.github.ryanzambrano/pixero",
+     "io.github.wyre-technology/xero-mcp",
+     "nz.co.invio/xero"
+    ]
+   },
+   "catalog": {
+    "found": "xero",
+    "url": "https://composio.dev/toolkits/xero",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "xero",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true
+   },
+   "evidence_chars": 4531
+  },
+  "88": {
+   "id": 88,
+   "app": "Brex",
+   "links": [
+    {
+     "url": "https://developer.brex.com/docs/authentication/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2895
+    }
+   ],
+   "registry": {
+    "query": "Brex",
+    "vendor_entries": [],
+    "other_entries": [
+     "io.github.PalabreX/runpay",
+     "io.github.shuji-bonji/s1000d-brex-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "brex",
+    "url": "https://composio.dev/toolkits/brex",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "brex",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": false
+   },
+   "evidence_chars": 2895
+  },
+  "89": {
+   "id": 89,
+   "app": "Ramp",
+   "links": [
+    {
+     "url": "https://docs.ramp.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 914
+    }
+   ],
+   "registry": {
+    "query": "Ramp",
+    "vendor_entries": [
+     "io.github.Ramp-Jet/mothermachine"
+    ],
+    "other_entries": [
+     "ai.adramp/google-ads",
+     "com.mcparmory/ramp",
+     "com.mudko/onramperx",
+     "com.ontoramp/decision-intelligence",
+     "com.ontoramp/governance-assessment",
+     "com.ontoramp/graph-query",
+     "com.ontoramp/knowledge-cartographer",
+     "com.ontoramp/transformation-radar",
+     "com.trampolineparkdata/agent-api",
+     "com.uprampr/marketplace",
+     "dev.cotlet/workramp",
+     "dev.rampify/rampify-mcp",
+     "io.github.CloudCorpRecords/diagramport",
+     "io.github.KevinRabun/FedRAMP20xMCP"
+    ]
+   },
+   "catalog": {
+    "found": "ramp",
+    "url": "https://composio.dev/toolkits/ramp",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "ramp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 914
+  },
+  "90": {
+   "id": 90,
+   "app": "PitchBook",
+   "links": [
+    {
+     "url": "https://pitchbook.com",
+     "status": 403,
+     "robots_ok": false,
+     "chars": 58
+    }
+   ],
+   "registry": {
+    "query": "PitchBook",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "pitchbook",
+    "url": "https://composio.dev/toolkits/pitchbook",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "pitchbook",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 58
+  },
+  "91": {
+   "id": 91,
+   "app": "NotebookLM",
+   "links": [
+    {
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 15602
+    }
+   ],
+   "registry": {
+    "query": "NotebookLM",
+    "vendor_entries": [],
+    "other_entries": [
+     "dev.cotlet/notebooklm",
+     "io.github.Pantheon-Security/notebooklm-mcp-secure",
+     "io.github.mcp-dir/notebooklm-mcp",
+     "io.github.roomi-fields/notebooklm-mcp"
+    ]
+   },
+   "catalog": {
+    "found": "notebook_lm",
+    "url": "https://composio.dev/toolkits/notebook_lm",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "notebooklm",
+      "found": false
+     },
+     {
+      "slug": "notebook_lm",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": false
+   },
+   "evidence_chars": 15602
+  },
+  "92": {
+   "id": 92,
+   "app": "Otter AI",
+   "links": [
+    {
+     "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 18506
+    },
+    {
+     "url": "https://claude.com/marketplace/connectors/otter-ai",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 6034
+    }
+   ],
+   "registry": {
+    "query": "Otter AI",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "otter_ai_mcp",
+    "url": "https://composio.dev/toolkits/otter_ai_mcp",
+    "kind": "mcp-wrapper",
+    "checked": [
+     {
+      "slug": "otter_ai",
+      "found": false
+     },
+     {
+      "slug": "otter",
+      "found": false
+     },
+     {
+      "slug": "otter_ai_mcp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
+   "evidence_chars": 24541
+  },
+  "93": {
+   "id": 93,
+   "app": "Fathom",
+   "links": [
+    {
+     "url": "https://developers.fathom.ai/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1121
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=fathom",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 31043
+    }
+   ],
+   "registry": {
+    "query": "Fathom",
+    "vendor_entries": [
+     "ai.fathom.api/mcp",
+     "io.github.fathomise/mailfathom"
+    ],
+    "other_entries": [
+     "ai.qompass/fathom",
+     "dev.cotlet/fathom-video",
+     "dev.fly.fathom-lab-door/fathom",
+     "io.github.CYAN-ECLIPSE-TECHNOLOGIES-LLC/fathom",
+     "io.github.agencyenterprise/fathom-mcp-server",
+     "io.github.mindstone/mcp-server-fathom",
+     "io.github.sadri-dridi/fathom-m",
+     "io.github.sadri-dridi/fathom-to-m",
+     "io.usefulapi/fathom-analytics"
+    ]
+   },
+   "catalog": {
+    "found": "fathom",
+    "url": "https://composio.dev/toolkits/fathom",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "fathom",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 32165
+  },
+  "94": {
+   "id": 94,
+   "app": "Consensus",
+   "links": [
+    {
+     "url": "https://consensus.app/home/api/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 18093
+    }
+   ],
+   "registry": {
+    "query": "Consensus",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.consensus-analytics/mcp",
+     "com.ryecentral/consensus",
+     "com.tinab/consensus",
+     "io.github.Evozim/consensus-voter-mcp",
+     "io.github.MICONNM/openclaw-consensus-mcp",
+     "io.github.TheStevenJohnstone/ai-consensus",
+     "io.github.adicted07-lang/meridian-consensus",
+     "io.github.alphaparkinc/genpark-multi-agent-borda-voting-consensus-skill",
+     "io.github.masterblaster14/consensus",
+     "net.tipmaster/consensus"
+    ]
+   },
+   "catalog": {
+    "found": "consensus",
+    "url": "https://composio.dev/toolkits/consensus",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "consensus",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 18093
+  },
+  "95": {
+   "id": 95,
+   "app": "Reducto",
+   "links": [
+    {
+     "url": "https://docs.reducto.ai/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3009
+    }
+   ],
+   "registry": {
+    "query": "Reducto",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": null,
+    "checked": [
+     {
+      "slug": "reducto",
+      "found": false
+     },
+     {
+      "slug": "reducto_mcp",
+      "found": false
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": false
+   },
+   "evidence_chars": 3009
+  },
+  "96": {
+   "id": 96,
+   "app": "Devin",
+   "links": [
+    {
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6287
+    },
+    {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 10905
+    }
+   ],
+   "registry": {
+    "query": "Devin",
+    "vendor_entries": [
+     "io.github.DevInder1/tridentchain-security",
+     "io.github.DevinoSolutions/upapi-mcp",
+     "io.github.devin-lemcke/canusign-mcp-server",
+     "io.github.devinmlowe/engram",
+     "io.github.devinwang/app-store-connect-mcp",
+     "io.github.devinwang/cloak-browser-mcp",
+     "io.github.devinwang/google-play-developer-mcp"
+    ],
+    "other_entries": [
+     "io.devinbox/devinbox",
+     "io.github.AzalHoseinian/devinsight-mcp",
+     "io.github.Icaro0310/devin-memory"
+    ]
+   },
+   "catalog": {
+    "found": "devin_mcp",
+    "url": "https://composio.dev/toolkits/devin_mcp",
+    "kind": "mcp-wrapper",
+    "checked": [
+     {
+      "slug": "devin",
+      "found": false
+     },
+     {
+      "slug": "devin_mcp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 17193
+  },
+  "97": {
+   "id": 97,
+   "app": "higgsfield",
+   "links": [
+    {
+     "url": "https://higgsfield.ai/cli",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 8748
+    }
+   ],
+   "registry": {
+    "query": "higgsfield",
+    "vendor_entries": [
+     "app.higgsfield.agentwares/marketplace",
+     "app.higgsfield.mizan-bazar/mizan"
+    ],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "higgsfield",
+    "url": "https://composio.dev/toolkits/higgsfield",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "higgsfield",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": false
+   },
+   "evidence_chars": 8748
+  },
+  "98": {
+   "id": 98,
+   "app": "Mermaid CLI",
+   "links": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9923
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 19452
+    }
+   ],
+   "registry": {
+    "query": "Mermaid CLI",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "mermaid_chart_mcp",
+    "url": "https://composio.dev/toolkits/mermaid_chart_mcp",
+    "kind": "mcp-wrapper",
+    "checked": [
+     {
+      "slug": "mermaid_cli",
+      "found": false
+     },
+     {
+      "slug": "mermaid",
+      "found": false
+     },
+     {
+      "slug": "mermaid_chart_mcp",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {},
+   "evidence_chars": 29376
+  },
+  "99": {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "links": [
+    {
+     "url": "https://transcriptapi.com/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 14722
+    }
+   ],
+   "registry": {
+    "query": "YouTube Transcript",
+    "vendor_entries": [],
+    "other_entries": []
+   },
+   "catalog": {
+    "found": "youtube_transcript",
+    "url": "https://composio.dev/toolkits/youtube_transcript",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "youtube_transcript",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
+   "evidence_chars": 14722
+  },
+  "100": {
+   "id": 100,
+   "app": "Grain",
+   "links": [
+    {
+     "url": "https://developers.grain.com/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 1508
+    }
+   ],
+   "registry": {
+    "query": "Grain",
+    "vendor_entries": [],
+    "other_entries": [
+     "com.grain64.billtrim/billtrim",
+     "com.grain64.clearbar/verdicts",
+     "com.grain64.deskhand/deskhand",
+     "com.grain64.friction/friction",
+     "com.grain64.leaklens/leaklens",
+     "com.grain64.sitecite/sitecite",
+     "com.grain64/clearbar",
+     "com.grain64/friction",
+     "com.purplegrain/api",
+     "com.scriptgrain/scriptgrain",
+     "com.wavegrain/mcp",
+     "fr.grainequipousse/graine-qui-pousse",
+     "io.github.Evozim/chicago-grain-prices-mcp",
+     "io.github.SingleGrain-Team/singlebrain-gateway",
+     "io.github.mrfentmen/grain-mcp",
+     "io.github.pattrnlabs/grain"
+    ]
+   },
+   "catalog": {
+    "found": "grain",
+    "url": "https://composio.dev/toolkits/grain",
+    "kind": "toolkit",
+    "checked": [
+     {
+      "slug": "grain",
+      "found": true
+     }
+    ]
+   },
+   "corroboration": {
+    "API key": true
+   },
+   "evidence_chars": 1508
+  }
+ }
+}

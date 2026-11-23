@@ -40,10 +40,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "salesforce",
+    "url": "https://composio.dev/toolkits/salesforce",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3019
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -81,10 +94,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "hubspot",
+    "url": "https://composio.dev/toolkits/hubspot",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.hubspot.com/docs/api/overview",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 2806
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=hubspot",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 43462
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -131,10 +164,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "pipedrive",
+    "url": "https://composio.dev/toolkits/pipedrive",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3636
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pipedrive",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 44911
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -170,10 +223,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "attio",
+    "url": "https://composio.dev/toolkits/attio",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.attio.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1968
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=attio",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 16642
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -210,10 +283,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "twenty",
+    "url": "https://composio.dev/toolkits/twenty",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.twenty.com/developers/introduction",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3045
+    }
+   ],
+   "corroboration": {
+    "API key": false,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -259,10 +346,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "podio",
+    "url": "https://composio.dev/toolkits/podio",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.podio.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2284
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -297,10 +397,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "zoho",
+    "url": "https://composio.dev/toolkits/zoho",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.zoho.com/crm/developer/docs/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3620
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -338,10 +451,44 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "close",
+    "url": "https://composio.dev/toolkits/close",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "city.close/close-api",
+    "com.close/close-mcp",
+    "io.github.closedloop-ai-org/closedloop-ai",
+    "io.github.closelookventure/closelook-intelligence",
+    "io.github.closermethod/content-hooks-mcp",
+    "io.github.closermethod/content-repurposing-mcp",
+    "io.github.closermethod/creator-deals-mcp",
+    "io.github.closermethod/newsletter-growth-mcp",
+    "io.github.closermethod/outbound-engine-mcp",
+    "io.github.closermethod/outreach-deliverability-mcp",
+    "io.github.closermethod/personal-brand-mcp",
+    "io.github.closermethod/social-media-manager-mcp",
+    "io.github.closermethod/ugc-brief-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developer.close.com/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 2998
+    },
+    {
+     "url": "https://www.close.com/pricing",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 21680
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "trial",
@@ -386,10 +533,26 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "copper",
+    "url": "https://composio.dev/toolkits/copper",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.copperline-labs/rendex-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4344
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -423,7 +586,9 @@
     ]
    },
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "DealCloud",
@@ -445,10 +610,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://api.docs.dealcloud.com/docs/token",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8406
+    },
+    {
+     "url": "https://api.docs.dealcloud.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3312
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "gated",
@@ -505,10 +689,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "zendesk",
+    "url": "https://composio.dev/toolkits/zendesk",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.zendesk.com/api-reference/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3274
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=zendesk",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 36146
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "Basic": false
+   },
    "pass1": {
     "auth": "OAuth2;Basic",
     "access": "trial",
@@ -544,10 +748,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "intercom",
+    "url": "https://composio.dev/toolkits/intercom",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.intercom.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2238
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=intercom",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 10595
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -594,10 +818,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "freshdesk",
+    "url": "https://composio.dev/toolkits/freshdesk",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.freshdesk.com/api/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 619084
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=freshdesk",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 35343
+    }
+   ],
+   "corroboration": {
+    "Basic": true
+   },
    "pass1": {
     "auth": "Basic",
     "access": "trial",
@@ -642,10 +885,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "front",
+    "url": "https://composio.dev/toolkits/front",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://dev.frontapp.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 10471
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=front",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 37106
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -680,10 +943,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "pylon_mcp",
+    "url": "https://composio.dev/toolkits/pylon_mcp",
+    "kind": "mcp-wrapper"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api.md",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 3272
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "gated",
@@ -718,10 +994,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.liveagent.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 18573
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -757,10 +1046,32 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "plain",
+    "url": "https://composio.dev/toolkits/plain",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.plain/mcp",
+    "insurance.plain/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://www.plain.com/docs/graphql/introduction.md",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2611
+    },
+    {
+     "url": "https://www.plain.com/pricing",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8276
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -805,10 +1116,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "help_scout",
+    "url": "https://composio.dev/toolkits/help_scout",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8490
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -843,10 +1167,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "gorgias",
+    "url": "https://composio.dev/toolkits/gorgias",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.gorgias.com/docs/authentication",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4309
+    }
+   ],
+   "corroboration": {
+    "Basic": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "Basic;OAuth2",
     "access": "trial",
@@ -881,10 +1219,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.gladly.com/rest/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 151575
+    }
+   ],
+   "corroboration": {
+    "Basic": true
+   },
    "pass1": {
     "auth": "Basic",
     "access": "gated",
@@ -928,10 +1279,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "slack",
+    "url": "https://composio.dev/toolkits/slack",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 20621
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -969,10 +1333,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "twilio",
+    "url": "https://composio.dev/toolkits/twilio",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 19589
+    },
+    {
+     "url": "https://www.twilio.com/docs/ai/mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 7952
+    }
+   ],
+   "corroboration": {
+    "Basic": true
+   },
    "pass1": {
     "auth": "Basic",
     "access": "trial",
@@ -1028,10 +1411,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "zoho_cliq",
+    "url": "https://composio.dev/toolkits/zoho_cliq",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 272517
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -1068,10 +1464,25 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "lark",
+    "url": "https://composio.dev/toolkits/lark",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://open.larksuite.com/document/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 16,
+     "browser_chars": 3743
+    }
+   ],
+   "corroboration": {
+    "Other": false,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "Other;OAuth2",
     "access": "free",
@@ -1108,10 +1519,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "pumble",
+    "url": "https://composio.dev/toolkits/pumble",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4504
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -1157,10 +1581,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "discord",
+    "url": "https://composio.dev/toolkits/discord",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.discord.com/developers/reference",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 24208
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -1204,10 +1642,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "telegram",
+    "url": "https://composio.dev/toolkits/telegram",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://core.telegram.org/bots/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 524757
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -1242,10 +1693,24 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "whatsapp",
+    "url": "https://composio.dev/toolkits/whatsapp",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.facebook.com/docs/whatsapp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 12940
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "review",
@@ -1281,10 +1746,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "aircall",
+    "url": "https://composio.dev/toolkits/aircall",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.aircall.io/api-references",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 456479
+    },
+    {
+     "url": "https://aircall.io/pricing/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17869
+    }
+   ],
+   "corroboration": {
+    "Basic": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "Basic;OAuth2",
     "access": "trial",
@@ -1330,10 +1815,32 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
+   "registry_vendor": [
+    "io.github.Vonage/vonage-documentation-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developer.vonage.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9220
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=vonage",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 723
+    }
+   ],
+   "corroboration": {
+    "Basic": false,
+    "Other": true
+   },
    "pass1": {
     "auth": "Basic;Other",
     "access": "trial",
@@ -1358,7 +1865,9 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "Google Ads",
@@ -1379,10 +1888,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "googleads",
+    "url": "https://composio.dev/toolkits/googleads",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.google.com/google-ads/api/docs/start",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 12523
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "review",
@@ -1419,10 +1941,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "metaads",
+    "url": "https://composio.dev/toolkits/metaads",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.facebook.com/docs/marketing-apis",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 26521
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "review",
@@ -1458,10 +1993,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "linkedin_ads",
+    "url": "https://composio.dev/toolkits/linkedin_ads",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2675
+    },
+    {
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4353
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "gated",
@@ -1507,10 +2061,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "highlevel",
+    "url": "https://composio.dev/toolkits/highlevel",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://marketplace.gohighlevel.com/docs/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 2118
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=gohighlevel",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3782
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "trial",
@@ -1557,10 +2131,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "mailchimp",
+    "url": "https://composio.dev/toolkits/mailchimp",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://mailchimp.com/developer/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3194
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mailchimp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 108981
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -1596,10 +2190,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "klaviyo",
+    "url": "https://composio.dev/toolkits/klaviyo",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.klaviyo.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4032
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=klaviyo",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 10392
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -1645,10 +2259,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9331
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -1714,10 +2341,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "pinterest",
+    "url": "https://composio.dev/toolkits/pinterest",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.pinterest.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1676
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pinterest",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 32481
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "review",
@@ -1752,10 +2398,25 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "threads",
+    "url": "https://composio.dev/toolkits/threads",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.threadsnoop/reddit"
+   ],
+   "links": [
+    {
+     "url": "https://developers.facebook.com/docs/threads/get-started",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6765
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "review",
@@ -1778,7 +2439,9 @@
     ]
    },
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "SendGrid",
@@ -1799,10 +2462,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "sendgrid",
+    "url": "https://composio.dev/toolkits/sendgrid",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://sendgrid.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9607
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -1837,10 +2513,24 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "shopify",
+    "url": "https://composio.dev/toolkits/shopify",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://shopify.dev/docs/api/admin-graphql",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17519
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -1878,10 +2568,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5866
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 24036
+    }
+   ],
+   "corroboration": {
+    "Basic": false,
+    "Other": false
+   },
    "pass1": {
     "auth": "Basic;Other",
     "access": "free",
@@ -1918,10 +2628,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "bigcommerce",
+    "url": "https://composio.dev/toolkits/bigcommerce",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 44311
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "trial",
@@ -1976,10 +2700,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6687
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "gated",
@@ -2023,10 +2760,26 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
+   "registry_vendor": [
+    "watch.magento/magento-watch"
+   ],
+   "links": [
+    {
+     "url": "https://developer.adobe.com/commerce/webapi/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1435
+    }
+   ],
+   "corroboration": {
+    "Other": false,
+    "API key": false
+   },
    "pass1": {
     "auth": "Other;API key",
     "access": "free",
@@ -2040,7 +2793,9 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "Squarespace",
@@ -2061,10 +2816,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4193
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "paid",
@@ -2099,10 +2868,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4124
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "paid",
@@ -2147,10 +2930,24 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "gumroad",
+    "url": "https://composio.dev/toolkits/gumroad",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://gumroad.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5,
+     "browser_chars": 131044
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -2185,10 +2982,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer-docs.amazon.com/sp-api",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 6134
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "gated",
@@ -2223,10 +3033,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://fanbasis.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6573
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "gated",
@@ -2271,10 +3094,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "dataforseo",
+    "url": "https://composio.dev/toolkits/dataforseo",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.dataforseo.com/v3/auth/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 13391
+    },
+    {
+     "url": "https://github.com/dataforseo/mcp-server-typescript",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 13554
+    }
+   ],
+   "corroboration": {
+    "Basic": true
+   },
    "pass1": {
     "auth": "Basic",
     "access": "trial",
@@ -2319,10 +3161,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://seranking.com/api.html",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 21967
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "paid",
@@ -2387,10 +3242,25 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "ahrefs",
+    "url": "https://composio.dev/toolkits/ahrefs",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.ahrefs/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://docs.ahrefs.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3516
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "paid",
@@ -2434,10 +3304,25 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "mrscraper",
+    "url": "https://composio.dev/toolkits/mrscraper",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.mrscraper-com/mrscraper-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://docs.mrscraper.com/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5730
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -2482,11 +3367,27 @@
     "https://docs.apify.com"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "apify",
+    "url": "https://composio.dev/toolkits/apify",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.apify/apify-mcp-server"
+   ],
+   "links": [
+    {
+     "url": "https://docs.apify.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3989
+    }
+   ],
+   "corroboration": {
+    "API key": false,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -2500,9 +3401,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Firecrawl",
@@ -2522,11 +3421,26 @@
     "https://firecrawl.dev"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "firecrawl",
+    "url": "https://composio.dev/toolkits/firecrawl",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.firecrawl/firecrawl-mcp-server"
+   ],
+   "links": [
+    {
+     "url": "https://firecrawl.dev",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 22801
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -2540,9 +3454,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Bright Data",
@@ -2563,10 +3475,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "brightdata",
+    "url": "https://composio.dev/toolkits/brightdata",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://brightdata.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 13249
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -2603,10 +3528,21 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 7026
+    }
+   ],
+   "corroboration": {},
    "pass1": {
     "auth": "None",
     "access": "na",
@@ -2641,10 +3577,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.waterfall.io/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 8410
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "gated",
@@ -2679,10 +3628,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "clay",
+    "url": "https://composio.dev/toolkits/clay",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.clay-swartz/pennyrail",
+    "io.github.claymore666/ccu-mcp",
+    "io.github.claymore666/debmatic-mcp",
+    "io.github.clayseal/clayseal",
+    "io.github.clayton/docdiffai",
+    "io.github.claytono/go-unifi-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://www.clay.com/pricing",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 27165
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "Other",
     "access": "gated",
@@ -2768,10 +3737,25 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "github",
+    "url": "https://composio.dev/toolkits/github",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.github.com/rest",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5843
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true,
+    "Other": false
+   },
    "pass1": {
     "auth": "OAuth2;API key;Other",
     "access": "free",
@@ -2809,10 +3793,63 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "vercel",
+    "url": "https://composio.dev/toolkits/vercel",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "app.vercel.agent-permissions-index/agent-permissions-index",
+    "app.vercel.agent-shopping-tracker/feed",
+    "app.vercel.agent-svg-registry/mcp",
+    "app.vercel.agentready-rho/agentready",
+    "app.vercel.aididwhat/aididwhat",
+    "app.vercel.auditflag-lac/auditflag",
+    "app.vercel.automaton-tx-explainer/base-tools",
+    "app.vercel.axiom-risk-mcp/solana-token-risk",
+    "app.vercel.baselens-api/baselens",
+    "app.vercel.chainshift-preview/korea-sets",
+    "app.vercel.cleanmarket/marketplace",
+    "app.vercel.clearpage-x402/clearpage",
+    "app.vercel.cloakcheck-wheat/cloakcheck",
+    "app.vercel.codigo07/human-verification-peru",
+    "app.vercel.control-your-tesla/control-your-tesla",
+    "app.vercel.exploitwatch-kappa/exploitwatch",
+    "app.vercel.filingcheck-bot/filingcheck",
+    "app.vercel.flightsweeper-webmcp/public",
+    "app.vercel.fork-for-agents/fork",
+    "app.vercel.gouda-studios-agent-tools/gouda-studios-agent-tools",
+    "app.vercel.groundtruth-ruby/groundtruth",
+    "app.vercel.humancard-registry/human-registry",
+    "app.vercel.indo-news-api/indonesia-news",
+    "app.vercel.indo-news-api/news",
+    "app.vercel.interesting-concepts-ventures/threadkeep",
+    "app.vercel.jestsprout/jestsprout",
+    "app.vercel.krankenkasse-copilot/krankenkasse-copilot",
+    "app.vercel.mare-liberum/sea",
+    "app.vercel.olothea-research/olothea",
+    "app.vercel.ora-x402-gateway/sensations-mergulho",
+    "app.vercel.pass-through-tax-rules/pass-through-tax-rules",
+    "app.vercel.personalized-gifts-guide/gift-catalog"
+   ],
+   "links": [
+    {
+     "url": "https://vercel.com/docs/rest-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 74102
+    },
+    {
+     "url": "https://vercel.com/docs/mcp/vercel-mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17296
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -2856,11 +3893,43 @@
     "https://docs.netlify.com/api"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "netlify_mcp",
+    "url": "https://composio.dev/toolkits/netlify_mcp",
+    "kind": "mcp-wrapper"
+   },
+   "registry_vendor": [
+    "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
+    "app.netlify.agent-kb-y83q/kb",
+    "app.netlify.agent-rescue-desk/production-triage",
+    "app.netlify.automatom-x402/web-data-toolkit",
+    "app.netlify.chaincheck-api/chaincheck",
+    "app.netlify.clify-dev/clify",
+    "app.netlify.gleaming-cassata-d41682/lion-mcp",
+    "app.netlify.japan-data-mcp/japan-data-mcp",
+    "app.netlify.kitchen-pass/chef",
+    "app.netlify.meinlem/nexo",
+    "app.netlify.meinlem2/nexo",
+    "app.netlify.micropay-test-suite/micropay-test-suite",
+    "app.netlify.shigoto-dogu/order-eval",
+    "app.netlify.tenderdelta/tenders",
+    "app.netlify.thechesscoach/chess-coach",
+    "app.netlify.uncork/uncork",
+    "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
+   ],
+   "links": [
+    {
+     "url": "https://docs.netlify.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 32666
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -2874,9 +3943,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Cloudflare",
@@ -2896,11 +3963,26 @@
     "https://developers.cloudflare.com/api"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "cloudflare",
+    "url": "https://composio.dev/toolkits/cloudflare",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.cloudflare.mcp/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developers.cloudflare.com/api",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 408085
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -2914,9 +3996,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Supabase",
@@ -2936,11 +4016,27 @@
     "https://supabase.com/docs"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "supabase",
+    "url": "https://composio.dev/toolkits/supabase",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.supabase/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://supabase.com/docs",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5175
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -2954,9 +4050,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Neo4j",
@@ -2976,11 +4070,32 @@
     "https://neo4j.com/docs/api"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "neo4j",
+    "url": "https://composio.dev/toolkits/neo4j",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.neo4j-contrib/gds-agent",
+    "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+    "io.github.neo4j-contrib/mcp-neo4j-cypher",
+    "io.github.neo4j-contrib/mcp-neo4j-data-modeling",
+    "io.github.neo4j-contrib/mcp-neo4j-memory",
+    "io.github.neo4j-labs/neo4j-mcp-canary"
+   ],
+   "links": [
+    {
+     "url": "https://neo4j.com/docs/api",
+     "status": 404,
+     "robots_ok": false,
+     "chars": 8399
+    }
+   ],
+   "corroboration": {
+    "Basic": false,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "Basic;OAuth2",
     "access": "free",
@@ -2995,7 +4110,7 @@
    "truth": null,
    "human": null,
    "flags": [
-    "official MCP not confirmed by a source read this run"
+    "evidence link broken in live sweep"
    ]
   },
   {
@@ -3018,10 +4133,33 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "snowflake",
+    "url": "https://composio.dev/toolkits/snowflake",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.Snowflake-Labs/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 15333
+    },
+    {
+     "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 68264
+    }
+   ],
+   "corroboration": {
+    "Other": true,
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "Other;OAuth2;API key",
     "access": "trial",
@@ -3067,10 +4205,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "mongodb",
+    "url": "https://composio.dev/toolkits/mongodb",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 14180
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 561587
+    }
+   ],
+   "corroboration": {
+    "Other": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "Other;OAuth2",
     "access": "free",
@@ -3115,10 +4273,24 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "datadog",
+    "url": "https://composio.dev/toolkits/datadog",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.datadoghq.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 17477
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "trial",
@@ -3155,10 +4327,24 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "sentry",
+    "url": "https://composio.dev/toolkits/sentry",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.sentry.io/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2072
+    }
+   ],
+   "corroboration": {
+    "API key": false,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -3194,11 +4380,27 @@
     "https://developers.notion.com"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "notion",
+    "url": "https://composio.dev/toolkits/notion",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.notion/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developers.notion.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 7533
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3212,9 +4414,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Airtable",
@@ -3236,10 +4436,33 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "airtable",
+    "url": "https://composio.dev/toolkits/airtable",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.airtable/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 44,
+     "browser_chars": 4446
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=airtable",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 31467
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3294,11 +4517,27 @@
     "https://developers.linear.app"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "linear",
+    "url": "https://composio.dev/toolkits/linear",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "app.linear/linear"
+   ],
+   "links": [
+    {
+     "url": "https://developers.linear.app",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1601
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3312,9 +4551,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Jira",
@@ -3335,10 +4572,25 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "jira",
+    "url": "https://composio.dev/toolkits/jira",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.atlassian.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 393,
+     "browser_chars": 1337
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false,
+    "Basic": false
+   },
    "pass1": {
     "auth": "OAuth2;Basic",
     "access": "free",
@@ -3375,10 +4627,27 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "asana",
+    "url": "https://composio.dev/toolkits/asana",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.asanabrial/estigia",
+    "io.github.asanabrial/leteo"
+   ],
+   "links": [
+    {
+     "url": "https://developers.asana.com/docs/authentication",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 6329
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3421,11 +4690,27 @@
     "https://developer.monday.com"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "monday",
+    "url": "https://composio.dev/toolkits/monday",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.monday/monday.com"
+   ],
+   "links": [
+    {
+     "url": "https://developer.monday.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 4769
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": false
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3439,9 +4724,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "ClickUp",
@@ -3463,10 +4746,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "clickup",
+    "url": "https://composio.dev/toolkits/clickup",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://clickup.com/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 780
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=clickup",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 32716
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3512,10 +4815,25 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "coda",
+    "url": "https://composio.dev/toolkits/coda",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.codapult/guard"
+   ],
+   "links": [
+    {
+     "url": "https://coda.io/developers/apis/v1",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 142819
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -3529,7 +4847,9 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "Smartsheet",
@@ -3551,10 +4871,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "smartsheet",
+    "url": "https://composio.dev/toolkits/smartsheet",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.smartsheet.com/developers",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1648
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=smartsheet",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 28679
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "trial",
@@ -3589,10 +4929,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "harvest",
+    "url": "https://composio.dev/toolkits/harvest",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 9268
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "free",
@@ -3637,10 +4991,32 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "stripe",
+    "url": "https://composio.dev/toolkits/stripe",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "com.stripe/mcp"
+   ],
+   "links": [
+    {
+     "url": "https://stripe.com/docs/api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9377
+    },
+    {
+     "url": "https://docs.stripe.com/mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 11034
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "free",
@@ -3685,10 +5061,29 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "plaid",
+    "url": "https://composio.dev/toolkits/plaid",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://plaid.com/docs",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5587
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=plaid",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 5756
+    }
+   ],
+   "corroboration": {
+    "Other": false
+   },
    "pass1": {
     "auth": "Other",
     "access": "review",
@@ -3725,10 +5120,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
+   "registry_vendor": [
+    "io.github.Alejandrehl/kainext-binance-mcp",
+    "io.github.Evozim/binance-orderbook-mcp",
+    "io.github.KumailQazi/krmaazha-binance-mcp",
+    "io.github.junct-bot/binance-mcp",
+    "io.github.mrfentmen/binance-market-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+     "status": 202,
+     "robots_ok": true,
+     "chars": 0,
+     "browser_chars": 33920
+    }
+   ],
+   "corroboration": {
+    "Other": true
+   },
    "pass1": {
     "auth": "Other",
     "access": "free",
@@ -3752,7 +5167,9 @@
     ]
    },
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "Paygent Connect",
@@ -3773,10 +5190,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.nmi.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 1004
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "gated",
@@ -3820,10 +5250,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
+   "registry_vendor": [
+    "io.github.Ipayx-stellar/fx-audit",
+    "io.github.iPAYX-Technologies/mcp-fx-audit"
+   ],
+   "links": [
+    {
+     "url": "https://ipayx.ai/docs",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 914
+    }
+   ],
+   "corroboration": {},
    "pass1": {
     "auth": "API key",
     "access": "gated",
@@ -3867,7 +5311,9 @@
     ]
    },
    "human": null,
-   "flags": []
+   "flags": [
+    "registry lists a vendor MCP the row does not call official"
+   ]
   },
   {
    "app": "QuickBooks",
@@ -3888,10 +5334,24 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "quickbooks",
+    "url": "https://composio.dev/toolkits/quickbooks",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.intuit.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 63,
+     "browser_error": "ERROR Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://developer.intuit.com/\", waiting until \"networkidle\"\n"
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "review",
@@ -3927,11 +5387,26 @@
     "https://developer.xero.com"
    ],
    "fetched": false,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "xero",
+    "url": "https://composio.dev/toolkits/xero",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.Xerolo44/rpgmaker-mv-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://developer.xero.com",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 4531
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "free",
@@ -3945,9 +5420,7 @@
    "sample": null,
    "truth": null,
    "human": null,
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "Brex",
@@ -3968,10 +5441,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "brex",
+    "url": "https://composio.dev/toolkits/brex",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developer.brex.com/docs/authentication/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 2895
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "API key;OAuth2",
     "access": "gated",
@@ -4005,11 +5492,26 @@
     "https://docs.ramp.com"
    ],
    "fetched": true,
-   "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "mcp_confirmed": true,
+   "composio": {
+    "found": "ramp",
+    "url": "https://composio.dev/toolkits/ramp",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "io.github.Ramp-Jet/mothermachine"
+   ],
+   "links": [
+    {
+     "url": "https://docs.ramp.com",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 914
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "gated",
@@ -4032,9 +5534,7 @@
     "result": "",
     "checked_by": ""
    },
-   "flags": [
-    "official MCP not confirmed by a source read this run"
-   ]
+   "flags": []
   },
   {
    "app": "PitchBook",
@@ -4055,10 +5555,23 @@
    ],
    "fetched": false,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "pitchbook",
+    "url": "https://composio.dev/toolkits/pitchbook",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://pitchbook.com",
+     "status": 403,
+     "robots_ok": false,
+     "chars": 58
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "gated",
@@ -4081,7 +5594,9 @@
     "result": "",
     "checked_by": ""
    },
-   "flags": []
+   "flags": [
+    "evidence link broken in live sweep"
+   ]
   },
   {
    "app": "NotebookLM",
@@ -4102,10 +5617,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": false,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "notebook_lm",
+    "url": "https://composio.dev/toolkits/notebook_lm",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 15602
+    }
+   ],
+   "corroboration": {
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "gated",
@@ -4141,10 +5669,30 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "otter_ai_mcp",
+    "url": "https://composio.dev/toolkits/otter_ai_mcp",
+    "kind": "mcp-wrapper"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 18506
+    },
+    {
+     "url": "https://claude.com/marketplace/connectors/otter-ai",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 6034
+    }
+   ],
+   "corroboration": {
+    "OAuth2": true,
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2",
     "access": "paid",
@@ -4201,10 +5749,33 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "fathom",
+    "url": "https://composio.dev/toolkits/fathom",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "ai.fathom.api/mcp",
+    "io.github.fathomise/mailfathom"
+   ],
+   "links": [
+    {
+     "url": "https://developers.fathom.ai/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 1121
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=fathom",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 31043
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "free",
@@ -4260,10 +5831,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "consensus",
+    "url": "https://composio.dev/toolkits/consensus",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://consensus.app/home/api/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 18093
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "OAuth2;API key",
     "access": "gated",
@@ -4319,10 +5903,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": null,
+    "url": null,
+    "kind": null
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://docs.reducto.ai/",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 3009
+    }
+   ],
+   "corroboration": {
+    "API key": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -4369,10 +5966,37 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "devin_mcp",
+    "url": "https://composio.dev/toolkits/devin_mcp",
+    "kind": "mcp-wrapper"
+   },
+   "registry_vendor": [
+    "io.github.DevInder1/tridentchain-security",
+    "io.github.DevinoSolutions/upapi-mcp",
+    "io.github.devin-lemcke/canusign-mcp-server",
+    "io.github.devinmlowe/engram",
+    "io.github.devinwang/app-store-connect-mcp",
+    "io.github.devinwang/cloak-browser-mcp",
+    "io.github.devinwang/google-play-developer-mcp"
+   ],
+   "links": [
+    {
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 6287
+    },
+    {
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 10905
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "paid",
@@ -4417,10 +6041,27 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
-   "registry_vendor": [],
+   "composio": {
+    "found": "higgsfield",
+    "url": "https://composio.dev/toolkits/higgsfield",
+    "kind": "toolkit"
+   },
+   "registry_vendor": [
+    "app.higgsfield.agentwares/marketplace",
+    "app.higgsfield.mizan-bazar/mizan"
+   ],
+   "links": [
+    {
+     "url": "https://higgsfield.ai/cli",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 8748
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": false
+   },
    "pass1": {
     "auth": "API key",
     "access": "paid",
@@ -4486,10 +6127,27 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "mermaid_chart_mcp",
+    "url": "https://composio.dev/toolkits/mermaid_chart_mcp",
+    "kind": "mcp-wrapper"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://github.com/mermaid-js/mermaid-cli",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 9923
+    },
+    {
+     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
+     "status": 200,
+     "robots_ok": true,
+     "chars": 19452
+    }
+   ],
+   "corroboration": {},
    "pass1": {
     "auth": "None",
     "access": "na",
@@ -4544,10 +6202,24 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "youtube_transcript",
+    "url": "https://composio.dev/toolkits/youtube_transcript",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://transcriptapi.com/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 14722
+    }
+   ],
+   "corroboration": {
+    "API key": true,
+    "OAuth2": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "trial",
@@ -4603,10 +6275,23 @@
    ],
    "fetched": true,
    "mcp_confirmed": true,
-   "composio": null,
-   "links": null,
-   "corroboration": null,
+   "composio": {
+    "found": "grain",
+    "url": "https://composio.dev/toolkits/grain",
+    "kind": "toolkit"
+   },
    "registry_vendor": [],
+   "links": [
+    {
+     "url": "https://developers.grain.com/",
+     "status": 200,
+     "robots_ok": false,
+     "chars": 1508
+    }
+   ],
+   "corroboration": {
+    "API key": true
+   },
    "pass1": {
     "auth": "API key",
     "access": "paid",
@@ -5296,7 +6981,45 @@
     "id": 91,
     "app": "NotebookLM"
    }
-  ]
+  ],
+  "composio": {
+   "in_catalogue": 81,
+   "checked": 100,
+   "net_new_ready": [
+    {
+     "id": 16,
+     "app": "LiveAgent"
+    },
+    {
+     "id": 30,
+     "app": "Vonage"
+    },
+    {
+     "id": 37,
+     "app": "systeme.io"
+    },
+    {
+     "id": 52,
+     "app": "SE Ranking"
+    },
+    {
+     "id": 95,
+     "app": "Reducto"
+    }
+   ],
+   "by_category": {
+    "CRM & Sales": 9,
+    "Support & Helpdesk": 8,
+    "Communications": 9,
+    "Marketing & Social": 9,
+    "Ecommerce": 3,
+    "Data/SEO/Scraping": 7,
+    "Developer & Infra": 10,
+    "Productivity & PM": 10,
+    "Finance & Fintech": 7,
+    "AI & Media-native": 9
+   }
+  }
  },
  "findings": [
   {
@@ -5351,13 +7074,26 @@
      "official"
     ]
    },
-   "why": "24 were confirmed by a page read this run; the rest are queued pass-1 claims. 3 vendor MCPs (Twilio, BigCommerce, Vonage) only search docs. AI-native apps are MCP-first (9/10): Otter's MCP works on any plan while its REST API is Enterprise-only."
+   "why": "35 were confirmed by a page read this run; the rest are queued pass-1 claims. 3 vendor MCPs (Twilio, BigCommerce, Vonage) only search docs. AI-native apps are MCP-first (9/10): Otter's MCP works on any plan while its REST API is Enterprise-only."
   },
   {
    "big": "90.3% \u2192 100.0%",
    "claim": "field accuracy, closed-book draft \u2192 verified holdout.",
    "filter": null,
    "why": "Half the closed-book misses (6/12) were the MCP field. The agent's confidence was calibrated: 68% of low-confidence rows needed a fix vs 6% of high-confidence ones, so research is routed by confidence."
+  },
+  {
+   "big": "81/100",
+   "claim": "already have a Composio toolkit page.",
+   "filter": {
+    "composio": [
+     "not in catalogue"
+    ],
+    "verdict": [
+     "ready"
+    ]
+   },
+   "why": "Checked live against composio.dev/toolkits in GitHub Actions. 5 apps are buildable today and not yet in the catalogue: that is the real easy-win queue, not the raw 58."
   }
  ],
  "scores": {
@@ -5660,7 +7396,1080 @@
    }
   },
   "fetched_rows": 66,
-  "sweep": null
+  "sweep": {
+   "meta": {
+    "generated": "2026-11-23T11:14:55Z",
+    "runner": "github-actions",
+    "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45163176382",
+    "browser_rendered": 5
+   },
+   "links_total": 132,
+   "links_ok": 130,
+   "broken": [
+    {
+     "id": 66,
+     "app": "Neo4j",
+     "url": "https://neo4j.com/docs/api",
+     "status": 404
+    },
+    {
+     "id": 90,
+     "app": "PitchBook",
+     "url": "https://pitchbook.com",
+     "status": 403
+    }
+   ],
+   "robots_blocked": [
+    {
+     "id": 2,
+     "app": "HubSpot",
+     "url": "https://developers.hubspot.com/docs/api/overview"
+    },
+    {
+     "id": 3,
+     "app": "Pipedrive",
+     "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication"
+    },
+    {
+     "id": 7,
+     "app": "Zoho CRM",
+     "url": "https://www.zoho.com/crm/developer/docs/"
+    },
+    {
+     "id": 8,
+     "app": "Close",
+     "url": "https://developer.close.com/"
+    },
+    {
+     "id": 11,
+     "app": "Zendesk",
+     "url": "https://developer.zendesk.com/api-reference/"
+    },
+    {
+     "id": 14,
+     "app": "Front",
+     "url": "https://dev.frontapp.com"
+    },
+    {
+     "id": 15,
+     "app": "Pylon",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api.md"
+    },
+    {
+     "id": 19,
+     "app": "Gorgias",
+     "url": "https://developers.gorgias.com/docs/authentication"
+    },
+    {
+     "id": 20,
+     "app": "Gladly",
+     "url": "https://developer.gladly.com/rest/"
+    },
+    {
+     "id": 23,
+     "app": "Zoho Cliq",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/"
+    },
+    {
+     "id": 26,
+     "app": "Discord",
+     "url": "https://docs.discord.com/developers/reference"
+    },
+    {
+     "id": 34,
+     "app": "GoHighLevel",
+     "url": "https://marketplace.gohighlevel.com/docs/"
+    },
+    {
+     "id": 43,
+     "app": "BigCommerce",
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    },
+    {
+     "id": 46,
+     "app": "Squarespace",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions"
+    },
+    {
+     "id": 47,
+     "app": "Ecwid",
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md"
+    },
+    {
+     "id": 49,
+     "app": "Amazon Selling Partner",
+     "url": "https://developer-docs.amazon.com/sp-api"
+    },
+    {
+     "id": 52,
+     "app": "SE Ranking",
+     "url": "https://seranking.com/api.html"
+    },
+    {
+     "id": 57,
+     "app": "Bright Data",
+     "url": "https://brightdata.com"
+    },
+    {
+     "id": 64,
+     "app": "Cloudflare",
+     "url": "https://developers.cloudflare.com/api"
+    },
+    {
+     "id": 66,
+     "app": "Neo4j",
+     "url": "https://neo4j.com/docs/api"
+    },
+    {
+     "id": 75,
+     "app": "Asana",
+     "url": "https://developers.asana.com/docs/authentication"
+    },
+    {
+     "id": 76,
+     "app": "Monday.com",
+     "url": "https://developer.monday.com"
+    },
+    {
+     "id": 80,
+     "app": "Harvest",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+    },
+    {
+     "id": 84,
+     "app": "Paygent Connect",
+     "url": "https://docs.nmi.com"
+    },
+    {
+     "id": 89,
+     "app": "Ramp",
+     "url": "https://docs.ramp.com"
+    },
+    {
+     "id": 90,
+     "app": "PitchBook",
+     "url": "https://pitchbook.com"
+    },
+    {
+     "id": 92,
+     "app": "Otter AI",
+     "url": "https://claude.com/marketplace/connectors/otter-ai"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "url": "https://higgsfield.ai/cli"
+    },
+    {
+     "id": 99,
+     "app": "YouTube Transcript",
+     "url": "https://transcriptapi.com/"
+    },
+    {
+     "id": 100,
+     "app": "Grain",
+     "url": "https://developers.grain.com/"
+    }
+   ],
+   "browser_read": [
+    {
+     "id": 24,
+     "app": "Lark",
+     "url": "https://open.larksuite.com/document/",
+     "chars": 3743
+    },
+    {
+     "id": 48,
+     "app": "Gumroad",
+     "url": "https://gumroad.com/api",
+     "chars": 131044
+    },
+    {
+     "id": 72,
+     "app": "Airtable",
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "chars": 4446
+    },
+    {
+     "id": 74,
+     "app": "Jira",
+     "url": "https://developer.atlassian.com",
+     "chars": 1337
+    },
+    {
+     "id": 83,
+     "app": "Binance",
+     "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+     "chars": 33920
+    }
+   ],
+   "catalog": [
+    {
+     "id": 1,
+     "app": "Salesforce",
+     "slug": "salesforce",
+     "kind": "toolkit"
+    },
+    {
+     "id": 2,
+     "app": "HubSpot",
+     "slug": "hubspot",
+     "kind": "toolkit"
+    },
+    {
+     "id": 3,
+     "app": "Pipedrive",
+     "slug": "pipedrive",
+     "kind": "toolkit"
+    },
+    {
+     "id": 4,
+     "app": "Attio",
+     "slug": "attio",
+     "kind": "toolkit"
+    },
+    {
+     "id": 5,
+     "app": "Twenty",
+     "slug": "twenty",
+     "kind": "toolkit"
+    },
+    {
+     "id": 6,
+     "app": "Podio",
+     "slug": "podio",
+     "kind": "toolkit"
+    },
+    {
+     "id": 7,
+     "app": "Zoho CRM",
+     "slug": "zoho",
+     "kind": "toolkit"
+    },
+    {
+     "id": 8,
+     "app": "Close",
+     "slug": "close",
+     "kind": "toolkit"
+    },
+    {
+     "id": 9,
+     "app": "Copper",
+     "slug": "copper",
+     "kind": "toolkit"
+    },
+    {
+     "id": 11,
+     "app": "Zendesk",
+     "slug": "zendesk",
+     "kind": "toolkit"
+    },
+    {
+     "id": 12,
+     "app": "Intercom",
+     "slug": "intercom",
+     "kind": "toolkit"
+    },
+    {
+     "id": 13,
+     "app": "Freshdesk",
+     "slug": "freshdesk",
+     "kind": "toolkit"
+    },
+    {
+     "id": 14,
+     "app": "Front",
+     "slug": "front",
+     "kind": "toolkit"
+    },
+    {
+     "id": 15,
+     "app": "Pylon",
+     "slug": "pylon_mcp",
+     "kind": "mcp-wrapper"
+    },
+    {
+     "id": 17,
+     "app": "Plain",
+     "slug": "plain",
+     "kind": "toolkit"
+    },
+    {
+     "id": 18,
+     "app": "Help Scout",
+     "slug": "help_scout",
+     "kind": "toolkit"
+    },
+    {
+     "id": 19,
+     "app": "Gorgias",
+     "slug": "gorgias",
+     "kind": "toolkit"
+    },
+    {
+     "id": 21,
+     "app": "Slack",
+     "slug": "slack",
+     "kind": "toolkit"
+    },
+    {
+     "id": 22,
+     "app": "Twilio",
+     "slug": "twilio",
+     "kind": "toolkit"
+    },
+    {
+     "id": 23,
+     "app": "Zoho Cliq",
+     "slug": "zoho_cliq",
+     "kind": "toolkit"
+    },
+    {
+     "id": 24,
+     "app": "Lark",
+     "slug": "lark",
+     "kind": "toolkit"
+    },
+    {
+     "id": 25,
+     "app": "Pumble",
+     "slug": "pumble",
+     "kind": "toolkit"
+    },
+    {
+     "id": 26,
+     "app": "Discord",
+     "slug": "discord",
+     "kind": "toolkit"
+    },
+    {
+     "id": 27,
+     "app": "Telegram",
+     "slug": "telegram",
+     "kind": "toolkit"
+    },
+    {
+     "id": 28,
+     "app": "WhatsApp Business",
+     "slug": "whatsapp",
+     "kind": "toolkit"
+    },
+    {
+     "id": 29,
+     "app": "Aircall",
+     "slug": "aircall",
+     "kind": "toolkit"
+    },
+    {
+     "id": 31,
+     "app": "Google Ads",
+     "slug": "googleads",
+     "kind": "toolkit"
+    },
+    {
+     "id": 32,
+     "app": "Meta Ads",
+     "slug": "metaads",
+     "kind": "toolkit"
+    },
+    {
+     "id": 33,
+     "app": "LinkedIn Ads",
+     "slug": "linkedin_ads",
+     "kind": "toolkit"
+    },
+    {
+     "id": 34,
+     "app": "GoHighLevel",
+     "slug": "highlevel",
+     "kind": "toolkit"
+    },
+    {
+     "id": 35,
+     "app": "Mailchimp",
+     "slug": "mailchimp",
+     "kind": "toolkit"
+    },
+    {
+     "id": 36,
+     "app": "Klaviyo",
+     "slug": "klaviyo",
+     "kind": "toolkit"
+    },
+    {
+     "id": 38,
+     "app": "Pinterest",
+     "slug": "pinterest",
+     "kind": "toolkit"
+    },
+    {
+     "id": 39,
+     "app": "Threads (Meta)",
+     "slug": "threads",
+     "kind": "toolkit"
+    },
+    {
+     "id": 40,
+     "app": "SendGrid",
+     "slug": "sendgrid",
+     "kind": "toolkit"
+    },
+    {
+     "id": 41,
+     "app": "Shopify",
+     "slug": "shopify",
+     "kind": "toolkit"
+    },
+    {
+     "id": 43,
+     "app": "BigCommerce",
+     "slug": "bigcommerce",
+     "kind": "toolkit"
+    },
+    {
+     "id": 48,
+     "app": "Gumroad",
+     "slug": "gumroad",
+     "kind": "toolkit"
+    },
+    {
+     "id": 51,
+     "app": "DataForSEO",
+     "slug": "dataforseo",
+     "kind": "toolkit"
+    },
+    {
+     "id": 53,
+     "app": "Ahrefs",
+     "slug": "ahrefs",
+     "kind": "toolkit"
+    },
+    {
+     "id": 54,
+     "app": "MrScraper",
+     "slug": "mrscraper",
+     "kind": "toolkit"
+    },
+    {
+     "id": 55,
+     "app": "Apify",
+     "slug": "apify",
+     "kind": "toolkit"
+    },
+    {
+     "id": 56,
+     "app": "Firecrawl",
+     "slug": "firecrawl",
+     "kind": "toolkit"
+    },
+    {
+     "id": 57,
+     "app": "Bright Data",
+     "slug": "brightdata",
+     "kind": "toolkit"
+    },
+    {
+     "id": 60,
+     "app": "Clay",
+     "slug": "clay",
+     "kind": "toolkit"
+    },
+    {
+     "id": 61,
+     "app": "GitHub",
+     "slug": "github",
+     "kind": "toolkit"
+    },
+    {
+     "id": 62,
+     "app": "Vercel",
+     "slug": "vercel",
+     "kind": "toolkit"
+    },
+    {
+     "id": 63,
+     "app": "Netlify",
+     "slug": "netlify_mcp",
+     "kind": "mcp-wrapper"
+    },
+    {
+     "id": 64,
+     "app": "Cloudflare",
+     "slug": "cloudflare",
+     "kind": "toolkit"
+    },
+    {
+     "id": 65,
+     "app": "Supabase",
+     "slug": "supabase",
+     "kind": "toolkit"
+    },
+    {
+     "id": 66,
+     "app": "Neo4j",
+     "slug": "neo4j",
+     "kind": "toolkit"
+    },
+    {
+     "id": 67,
+     "app": "Snowflake",
+     "slug": "snowflake",
+     "kind": "toolkit"
+    },
+    {
+     "id": 68,
+     "app": "MongoDB Atlas",
+     "slug": "mongodb",
+     "kind": "toolkit"
+    },
+    {
+     "id": 69,
+     "app": "Datadog",
+     "slug": "datadog",
+     "kind": "toolkit"
+    },
+    {
+     "id": 70,
+     "app": "Sentry",
+     "slug": "sentry",
+     "kind": "toolkit"
+    },
+    {
+     "id": 71,
+     "app": "Notion",
+     "slug": "notion",
+     "kind": "toolkit"
+    },
+    {
+     "id": 72,
+     "app": "Airtable",
+     "slug": "airtable",
+     "kind": "toolkit"
+    },
+    {
+     "id": 73,
+     "app": "Linear",
+     "slug": "linear",
+     "kind": "toolkit"
+    },
+    {
+     "id": 74,
+     "app": "Jira",
+     "slug": "jira",
+     "kind": "toolkit"
+    },
+    {
+     "id": 75,
+     "app": "Asana",
+     "slug": "asana",
+     "kind": "toolkit"
+    },
+    {
+     "id": 76,
+     "app": "Monday.com",
+     "slug": "monday",
+     "kind": "toolkit"
+    },
+    {
+     "id": 77,
+     "app": "ClickUp",
+     "slug": "clickup",
+     "kind": "toolkit"
+    },
+    {
+     "id": 78,
+     "app": "Coda",
+     "slug": "coda",
+     "kind": "toolkit"
+    },
+    {
+     "id": 79,
+     "app": "Smartsheet",
+     "slug": "smartsheet",
+     "kind": "toolkit"
+    },
+    {
+     "id": 80,
+     "app": "Harvest",
+     "slug": "harvest",
+     "kind": "toolkit"
+    },
+    {
+     "id": 81,
+     "app": "Stripe",
+     "slug": "stripe",
+     "kind": "toolkit"
+    },
+    {
+     "id": 82,
+     "app": "Plaid",
+     "slug": "plaid",
+     "kind": "toolkit"
+    },
+    {
+     "id": 86,
+     "app": "QuickBooks",
+     "slug": "quickbooks",
+     "kind": "toolkit"
+    },
+    {
+     "id": 87,
+     "app": "Xero",
+     "slug": "xero",
+     "kind": "toolkit"
+    },
+    {
+     "id": 88,
+     "app": "Brex",
+     "slug": "brex",
+     "kind": "toolkit"
+    },
+    {
+     "id": 89,
+     "app": "Ramp",
+     "slug": "ramp",
+     "kind": "toolkit"
+    },
+    {
+     "id": 90,
+     "app": "PitchBook",
+     "slug": "pitchbook",
+     "kind": "toolkit"
+    },
+    {
+     "id": 91,
+     "app": "NotebookLM",
+     "slug": "notebook_lm",
+     "kind": "toolkit"
+    },
+    {
+     "id": 92,
+     "app": "Otter AI",
+     "slug": "otter_ai_mcp",
+     "kind": "mcp-wrapper"
+    },
+    {
+     "id": 93,
+     "app": "Fathom",
+     "slug": "fathom",
+     "kind": "toolkit"
+    },
+    {
+     "id": 94,
+     "app": "Consensus",
+     "slug": "consensus",
+     "kind": "toolkit"
+    },
+    {
+     "id": 96,
+     "app": "Devin",
+     "slug": "devin_mcp",
+     "kind": "mcp-wrapper"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "slug": "higgsfield",
+     "kind": "toolkit"
+    },
+    {
+     "id": 98,
+     "app": "Mermaid CLI",
+     "slug": "mermaid_chart_mcp",
+     "kind": "mcp-wrapper"
+    },
+    {
+     "id": 99,
+     "app": "YouTube Transcript",
+     "slug": "youtube_transcript",
+     "kind": "toolkit"
+    },
+    {
+     "id": 100,
+     "app": "Grain",
+     "slug": "grain",
+     "kind": "toolkit"
+    }
+   ],
+   "catalog_errors": 0,
+   "registry_confirmed": [
+    {
+     "id": 55,
+     "app": "Apify",
+     "entries": [
+      "com.apify/apify-mcp-server"
+     ]
+    },
+    {
+     "id": 56,
+     "app": "Firecrawl",
+     "entries": [
+      "io.github.firecrawl/firecrawl-mcp-server"
+     ]
+    },
+    {
+     "id": 63,
+     "app": "Netlify",
+     "entries": [
+      "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
+      "app.netlify.agent-kb-y83q/kb",
+      "app.netlify.agent-rescue-desk/production-triage",
+      "app.netlify.automatom-x402/web-data-toolkit",
+      "app.netlify.chaincheck-api/chaincheck",
+      "app.netlify.clify-dev/clify",
+      "app.netlify.gleaming-cassata-d41682/lion-mcp",
+      "app.netlify.japan-data-mcp/japan-data-mcp",
+      "app.netlify.kitchen-pass/chef",
+      "app.netlify.meinlem/nexo",
+      "app.netlify.meinlem2/nexo",
+      "app.netlify.micropay-test-suite/micropay-test-suite",
+      "app.netlify.shigoto-dogu/order-eval",
+      "app.netlify.tenderdelta/tenders",
+      "app.netlify.thechesscoach/chess-coach",
+      "app.netlify.uncork/uncork",
+      "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
+     ]
+    },
+    {
+     "id": 64,
+     "app": "Cloudflare",
+     "entries": [
+      "com.cloudflare.mcp/mcp"
+     ]
+    },
+    {
+     "id": 65,
+     "app": "Supabase",
+     "entries": [
+      "com.supabase/mcp"
+     ]
+    },
+    {
+     "id": 66,
+     "app": "Neo4j",
+     "entries": [
+      "io.github.neo4j-contrib/gds-agent",
+      "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+      "io.github.neo4j-contrib/mcp-neo4j-cypher",
+      "io.github.neo4j-contrib/mcp-neo4j-data-modeling",
+      "io.github.neo4j-contrib/mcp-neo4j-memory",
+      "io.github.neo4j-labs/neo4j-mcp-canary"
+     ]
+    },
+    {
+     "id": 71,
+     "app": "Notion",
+     "entries": [
+      "com.notion/mcp"
+     ]
+    },
+    {
+     "id": 73,
+     "app": "Linear",
+     "entries": [
+      "app.linear/linear"
+     ]
+    },
+    {
+     "id": 76,
+     "app": "Monday.com",
+     "entries": [
+      "com.monday/monday.com"
+     ]
+    },
+    {
+     "id": 87,
+     "app": "Xero",
+     "entries": [
+      "io.github.Xerolo44/rpgmaker-mv-mcp"
+     ]
+    },
+    {
+     "id": 89,
+     "app": "Ramp",
+     "entries": [
+      "io.github.Ramp-Jet/mothermachine"
+     ]
+    }
+   ],
+   "registry_vendor_mismatch": [
+    {
+     "id": 9,
+     "app": "Copper",
+     "mcp": "none",
+     "entries": [
+      "io.github.copperline-labs/rendex-mcp"
+     ]
+    },
+    {
+     "id": 30,
+     "app": "Vonage",
+     "mcp": "docs-only",
+     "entries": [
+      "io.github.Vonage/vonage-documentation-mcp"
+     ]
+    },
+    {
+     "id": 39,
+     "app": "Threads (Meta)",
+     "mcp": "none",
+     "entries": [
+      "io.github.threadsnoop/reddit"
+     ]
+    },
+    {
+     "id": 45,
+     "app": "Magento (Adobe Commerce)",
+     "mcp": "none",
+     "entries": [
+      "watch.magento/magento-watch"
+     ]
+    },
+    {
+     "id": 78,
+     "app": "Coda",
+     "mcp": "none",
+     "entries": [
+      "io.github.codapult/guard"
+     ]
+    },
+    {
+     "id": 83,
+     "app": "Binance",
+     "mcp": "none",
+     "entries": [
+      "io.github.Alejandrehl/kainext-binance-mcp",
+      "io.github.Evozim/binance-orderbook-mcp",
+      "io.github.KumailQazi/krmaazha-binance-mcp",
+      "io.github.junct-bot/binance-mcp",
+      "io.github.mrfentmen/binance-market-mcp"
+     ]
+    },
+    {
+     "id": 85,
+     "app": "iPayX",
+     "mcp": "none",
+     "entries": [
+      "io.github.Ipayx-stellar/fx-audit",
+      "io.github.iPAYX-Technologies/mcp-fx-audit"
+     ]
+    }
+   ],
+   "corr_claims": 148,
+   "corr_hits": 106,
+   "uncorroborated": [
+    {
+     "id": 4,
+     "app": "Attio",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 5,
+     "app": "Twenty",
+     "auth": "API key"
+    },
+    {
+     "id": 6,
+     "app": "Podio",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 7,
+     "app": "Zoho CRM",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 11,
+     "app": "Zendesk",
+     "auth": "Basic"
+    },
+    {
+     "id": 16,
+     "app": "LiveAgent",
+     "auth": "API key"
+    },
+    {
+     "id": 24,
+     "app": "Lark",
+     "auth": "Other"
+    },
+    {
+     "id": 24,
+     "app": "Lark",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 27,
+     "app": "Telegram",
+     "auth": "API key"
+    },
+    {
+     "id": 28,
+     "app": "WhatsApp Business",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 30,
+     "app": "Vonage",
+     "auth": "Basic"
+    },
+    {
+     "id": 32,
+     "app": "Meta Ads",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 36,
+     "app": "Klaviyo",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 38,
+     "app": "Pinterest",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 40,
+     "app": "SendGrid",
+     "auth": "API key"
+    },
+    {
+     "id": 42,
+     "app": "WooCommerce",
+     "auth": "Basic"
+    },
+    {
+     "id": 42,
+     "app": "WooCommerce",
+     "auth": "Other"
+    },
+    {
+     "id": 45,
+     "app": "Magento (Adobe Commerce)",
+     "auth": "Other"
+    },
+    {
+     "id": 45,
+     "app": "Magento (Adobe Commerce)",
+     "auth": "API key"
+    },
+    {
+     "id": 47,
+     "app": "Ecwid",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 49,
+     "app": "Amazon Selling Partner",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 50,
+     "app": "fanbasis",
+     "auth": "API key"
+    },
+    {
+     "id": 55,
+     "app": "Apify",
+     "auth": "API key"
+    },
+    {
+     "id": 55,
+     "app": "Apify",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 61,
+     "app": "GitHub",
+     "auth": "Other"
+    },
+    {
+     "id": 66,
+     "app": "Neo4j",
+     "auth": "Basic"
+    },
+    {
+     "id": 66,
+     "app": "Neo4j",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 70,
+     "app": "Sentry",
+     "auth": "API key"
+    },
+    {
+     "id": 70,
+     "app": "Sentry",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 74,
+     "app": "Jira",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 74,
+     "app": "Jira",
+     "auth": "Basic"
+    },
+    {
+     "id": 76,
+     "app": "Monday.com",
+     "auth": "API key"
+    },
+    {
+     "id": 79,
+     "app": "Smartsheet",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 82,
+     "app": "Plaid",
+     "auth": "Other"
+    },
+    {
+     "id": 84,
+     "app": "Paygent Connect",
+     "auth": "API key"
+    },
+    {
+     "id": 86,
+     "app": "QuickBooks",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 88,
+     "app": "Brex",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 89,
+     "app": "Ramp",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 90,
+     "app": "PitchBook",
+     "auth": "API key"
+    },
+    {
+     "id": 91,
+     "app": "NotebookLM",
+     "auth": "OAuth2"
+    },
+    {
+     "id": 95,
+     "app": "Reducto",
+     "auth": "API key"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "auth": "OAuth2"
+    }
+   ]
+  }
  },
  "verification": {
   "round1": {
@@ -6407,5 +9216,5 @@
    "stage": "verify-loops"
   }
  ],
- "mcp_confirmed": 24
+ "mcp_confirmed": 35
 }

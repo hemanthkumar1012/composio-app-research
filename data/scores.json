@@ -680,6 +680,11 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
+    "id": 9,
+    "app": "Copper",
+    "rule": "registry lists a vendor MCP the row does not call official"
+   },
+   {
     "id": 12,
     "app": "Intercom",
     "rule": "official MCP not confirmed by a source read this run"
@@ -700,6 +705,11 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
+    "id": 30,
+    "app": "Vonage",
+    "rule": "registry lists a vendor MCP the row does not call official"
+   },
+   {
     "id": 31,
     "app": "Google Ads",
     "rule": "official MCP not confirmed by a source read this run"
@@ -715,6 +725,11 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
+    "id": 39,
+    "app": "Threads (Meta)",
+    "rule": "registry lists a vendor MCP the row does not call official"
+   },
+   {
     "id": 41,
     "app": "Shopify",
     "rule": "official MCP not confirmed by a source read this run"
@@ -725,14 +740,9 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 55,
-    "app": "Apify",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 56,
-    "app": "Firecrawl",
-    "rule": "official MCP not confirmed by a source read this run"
+    "id": 45,
+    "app": "Magento (Adobe Commerce)",
+    "rule": "registry lists a vendor MCP the row does not call official"
    },
    {
     "id": 57,
@@ -745,24 +755,9 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 63,
-    "app": "Netlify",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 64,
-    "app": "Cloudflare",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 65,
-    "app": "Supabase",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
     "id": 66,
     "app": "Neo4j",
-    "rule": "official MCP not confirmed by a source read this run"
+    "rule": "evidence link broken in live sweep"
    },
    {
     "id": 69,
@@ -775,23 +770,8 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 71,
-    "app": "Notion",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 73,
-    "app": "Linear",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
     "id": 74,
     "app": "Jira",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 76,
-    "app": "Monday.com",
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
@@ -800,9 +780,24 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
+    "id": 78,
+    "app": "Coda",
+    "rule": "registry lists a vendor MCP the row does not call official"
+   },
+   {
     "id": 82,
     "app": "Plaid",
     "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "rule": "registry lists a vendor MCP the row does not call official"
+   },
+   {
+    "id": 85,
+    "app": "iPayX",
+    "rule": "registry lists a vendor MCP the row does not call official"
    },
    {
     "id": 86,
@@ -810,14 +805,9 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 87,
-    "app": "Xero",
-    "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 89,
-    "app": "Ramp",
-    "rule": "official MCP not confirmed by a source read this run"
+    "id": 90,
+    "app": "PitchBook",
+    "rule": "evidence link broken in live sweep"
    }
   ]
  },
@@ -1151,7 +1141,1080 @@
   "med": 45,
   "low": 19
  },
- "sweep": null,
+ "sweep": {
+  "meta": {
+   "generated": "2026-11-23T11:14:55Z",
+   "runner": "github-actions",
+   "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45163176382",
+   "browser_rendered": 5
+  },
+  "links_total": 132,
+  "links_ok": 130,
+  "broken": [
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "url": "https://neo4j.com/docs/api",
+    "status": 404
+   },
+   {
+    "id": 90,
+    "app": "PitchBook",
+    "url": "https://pitchbook.com",
+    "status": 403
+   }
+  ],
+  "robots_blocked": [
+   {
+    "id": 2,
+    "app": "HubSpot",
+    "url": "https://developers.hubspot.com/docs/api/overview"
+   },
+   {
+    "id": 3,
+    "app": "Pipedrive",
+    "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM",
+    "url": "https://www.zoho.com/crm/developer/docs/"
+   },
+   {
+    "id": 8,
+    "app": "Close",
+    "url": "https://developer.close.com/"
+   },
+   {
+    "id": 11,
+    "app": "Zendesk",
+    "url": "https://developer.zendesk.com/api-reference/"
+   },
+   {
+    "id": 14,
+    "app": "Front",
+    "url": "https://dev.frontapp.com"
+   },
+   {
+    "id": 15,
+    "app": "Pylon",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api.md"
+   },
+   {
+    "id": 19,
+    "app": "Gorgias",
+    "url": "https://developers.gorgias.com/docs/authentication"
+   },
+   {
+    "id": 20,
+    "app": "Gladly",
+    "url": "https://developer.gladly.com/rest/"
+   },
+   {
+    "id": 23,
+    "app": "Zoho Cliq",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/"
+   },
+   {
+    "id": 26,
+    "app": "Discord",
+    "url": "https://docs.discord.com/developers/reference"
+   },
+   {
+    "id": 34,
+    "app": "GoHighLevel",
+    "url": "https://marketplace.gohighlevel.com/docs/"
+   },
+   {
+    "id": 43,
+    "app": "BigCommerce",
+    "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+   },
+   {
+    "id": 46,
+    "app": "Squarespace",
+    "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions"
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md"
+   },
+   {
+    "id": 49,
+    "app": "Amazon Selling Partner",
+    "url": "https://developer-docs.amazon.com/sp-api"
+   },
+   {
+    "id": 52,
+    "app": "SE Ranking",
+    "url": "https://seranking.com/api.html"
+   },
+   {
+    "id": 57,
+    "app": "Bright Data",
+    "url": "https://brightdata.com"
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare",
+    "url": "https://developers.cloudflare.com/api"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "url": "https://neo4j.com/docs/api"
+   },
+   {
+    "id": 75,
+    "app": "Asana",
+    "url": "https://developers.asana.com/docs/authentication"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "url": "https://developer.monday.com"
+   },
+   {
+    "id": 80,
+    "app": "Harvest",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+   },
+   {
+    "id": 84,
+    "app": "Paygent Connect",
+    "url": "https://docs.nmi.com"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "url": "https://docs.ramp.com"
+   },
+   {
+    "id": 90,
+    "app": "PitchBook",
+    "url": "https://pitchbook.com"
+   },
+   {
+    "id": 92,
+    "app": "Otter AI",
+    "url": "https://claude.com/marketplace/connectors/otter-ai"
+   },
+   {
+    "id": 97,
+    "app": "higgsfield",
+    "url": "https://higgsfield.ai/cli"
+   },
+   {
+    "id": 99,
+    "app": "YouTube Transcript",
+    "url": "https://transcriptapi.com/"
+   },
+   {
+    "id": 100,
+    "app": "Grain",
+    "url": "https://developers.grain.com/"
+   }
+  ],
+  "browser_read": [
+   {
+    "id": 24,
+    "app": "Lark",
+    "url": "https://open.larksuite.com/document/",
+    "chars": 3743
+   },
+   {
+    "id": 48,
+    "app": "Gumroad",
+    "url": "https://gumroad.com/api",
+    "chars": 131044
+   },
+   {
+    "id": 72,
+    "app": "Airtable",
+    "url": "https://airtable.com/developers/web/api/authentication",
+    "chars": 4446
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "url": "https://developer.atlassian.com",
+    "chars": 1337
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+    "chars": 33920
+   }
+  ],
+  "catalog": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "slug": "salesforce",
+    "kind": "toolkit"
+   },
+   {
+    "id": 2,
+    "app": "HubSpot",
+    "slug": "hubspot",
+    "kind": "toolkit"
+   },
+   {
+    "id": 3,
+    "app": "Pipedrive",
+    "slug": "pipedrive",
+    "kind": "toolkit"
+   },
+   {
+    "id": 4,
+    "app": "Attio",
+    "slug": "attio",
+    "kind": "toolkit"
+   },
+   {
+    "id": 5,
+    "app": "Twenty",
+    "slug": "twenty",
+    "kind": "toolkit"
+   },
+   {
+    "id": 6,
+    "app": "Podio",
+    "slug": "podio",
+    "kind": "toolkit"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM",
+    "slug": "zoho",
+    "kind": "toolkit"
+   },
+   {
+    "id": 8,
+    "app": "Close",
+    "slug": "close",
+    "kind": "toolkit"
+   },
+   {
+    "id": 9,
+    "app": "Copper",
+    "slug": "copper",
+    "kind": "toolkit"
+   },
+   {
+    "id": 11,
+    "app": "Zendesk",
+    "slug": "zendesk",
+    "kind": "toolkit"
+   },
+   {
+    "id": 12,
+    "app": "Intercom",
+    "slug": "intercom",
+    "kind": "toolkit"
+   },
+   {
+    "id": 13,
+    "app": "Freshdesk",
+    "slug": "freshdesk",
+    "kind": "toolkit"
+   },
+   {
+    "id": 14,
+    "app": "Front",
+    "slug": "front",
+    "kind": "toolkit"
+   },
+   {
+    "id": 15,
+    "app": "Pylon",
+    "slug": "pylon_mcp",
+    "kind": "mcp-wrapper"
+   },
+   {
+    "id": 17,
+    "app": "Plain",
+    "slug": "plain",
+    "kind": "toolkit"
+   },
+   {
+    "id": 18,
+    "app": "Help Scout",
+    "slug": "help_scout",
+    "kind": "toolkit"
+   },
+   {
+    "id": 19,
+    "app": "Gorgias",
+    "slug": "gorgias",
+    "kind": "toolkit"
+   },
+   {
+    "id": 21,
+    "app": "Slack",
+    "slug": "slack",
+    "kind": "toolkit"
+   },
+   {
+    "id": 22,
+    "app": "Twilio",
+    "slug": "twilio",
+    "kind": "toolkit"
+   },
+   {
+    "id": 23,
+    "app": "Zoho Cliq",
+    "slug": "zoho_cliq",
+    "kind": "toolkit"
+   },
+   {
+    "id": 24,
+    "app": "Lark",
+    "slug": "lark",
+    "kind": "toolkit"
+   },
+   {
+    "id": 25,
+    "app": "Pumble",
+    "slug": "pumble",
+    "kind": "toolkit"
+   },
+   {
+    "id": 26,
+    "app": "Discord",
+    "slug": "discord",
+    "kind": "toolkit"
+   },
+   {
+    "id": 27,
+    "app": "Telegram",
+    "slug": "telegram",
+    "kind": "toolkit"
+   },
+   {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "slug": "whatsapp",
+    "kind": "toolkit"
+   },
+   {
+    "id": 29,
+    "app": "Aircall",
+    "slug": "aircall",
+    "kind": "toolkit"
+   },
+   {
+    "id": 31,
+    "app": "Google Ads",
+    "slug": "googleads",
+    "kind": "toolkit"
+   },
+   {
+    "id": 32,
+    "app": "Meta Ads",
+    "slug": "metaads",
+    "kind": "toolkit"
+   },
+   {
+    "id": 33,
+    "app": "LinkedIn Ads",
+    "slug": "linkedin_ads",
+    "kind": "toolkit"
+   },
+   {
+    "id": 34,
+    "app": "GoHighLevel",
+    "slug": "highlevel",
+    "kind": "toolkit"
+   },
+   {
+    "id": 35,
+    "app": "Mailchimp",
+    "slug": "mailchimp",
+    "kind": "toolkit"
+   },
+   {
+    "id": 36,
+    "app": "Klaviyo",
+    "slug": "klaviyo",
+    "kind": "toolkit"
+   },
+   {
+    "id": 38,
+    "app": "Pinterest",
+    "slug": "pinterest",
+    "kind": "toolkit"
+   },
+   {
+    "id": 39,
+    "app": "Threads (Meta)",
+    "slug": "threads",
+    "kind": "toolkit"
+   },
+   {
+    "id": 40,
+    "app": "SendGrid",
+    "slug": "sendgrid",
+    "kind": "toolkit"
+   },
+   {
+    "id": 41,
+    "app": "Shopify",
+    "slug": "shopify",
+    "kind": "toolkit"
+   },
+   {
+    "id": 43,
+    "app": "BigCommerce",
+    "slug": "bigcommerce",
+    "kind": "toolkit"
+   },
+   {
+    "id": 48,
+    "app": "Gumroad",
+    "slug": "gumroad",
+    "kind": "toolkit"
+   },
+   {
+    "id": 51,
+    "app": "DataForSEO",
+    "slug": "dataforseo",
+    "kind": "toolkit"
+   },
+   {
+    "id": 53,
+    "app": "Ahrefs",
+    "slug": "ahrefs",
+    "kind": "toolkit"
+   },
+   {
+    "id": 54,
+    "app": "MrScraper",
+    "slug": "mrscraper",
+    "kind": "toolkit"
+   },
+   {
+    "id": 55,
+    "app": "Apify",
+    "slug": "apify",
+    "kind": "toolkit"
+   },
+   {
+    "id": 56,
+    "app": "Firecrawl",
+    "slug": "firecrawl",
+    "kind": "toolkit"
+   },
+   {
+    "id": 57,
+    "app": "Bright Data",
+    "slug": "brightdata",
+    "kind": "toolkit"
+   },
+   {
+    "id": 60,
+    "app": "Clay",
+    "slug": "clay",
+    "kind": "toolkit"
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "slug": "github",
+    "kind": "toolkit"
+   },
+   {
+    "id": 62,
+    "app": "Vercel",
+    "slug": "vercel",
+    "kind": "toolkit"
+   },
+   {
+    "id": 63,
+    "app": "Netlify",
+    "slug": "netlify_mcp",
+    "kind": "mcp-wrapper"
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare",
+    "slug": "cloudflare",
+    "kind": "toolkit"
+   },
+   {
+    "id": 65,
+    "app": "Supabase",
+    "slug": "supabase",
+    "kind": "toolkit"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "slug": "neo4j",
+    "kind": "toolkit"
+   },
+   {
+    "id": 67,
+    "app": "Snowflake",
+    "slug": "snowflake",
+    "kind": "toolkit"
+   },
+   {
+    "id": 68,
+    "app": "MongoDB Atlas",
+    "slug": "mongodb",
+    "kind": "toolkit"
+   },
+   {
+    "id": 69,
+    "app": "Datadog",
+    "slug": "datadog",
+    "kind": "toolkit"
+   },
+   {
+    "id": 70,
+    "app": "Sentry",
+    "slug": "sentry",
+    "kind": "toolkit"
+   },
+   {
+    "id": 71,
+    "app": "Notion",
+    "slug": "notion",
+    "kind": "toolkit"
+   },
+   {
+    "id": 72,
+    "app": "Airtable",
+    "slug": "airtable",
+    "kind": "toolkit"
+   },
+   {
+    "id": 73,
+    "app": "Linear",
+    "slug": "linear",
+    "kind": "toolkit"
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "slug": "jira",
+    "kind": "toolkit"
+   },
+   {
+    "id": 75,
+    "app": "Asana",
+    "slug": "asana",
+    "kind": "toolkit"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "slug": "monday",
+    "kind": "toolkit"
+   },
+   {
+    "id": 77,
+    "app": "ClickUp",
+    "slug": "clickup",
+    "kind": "toolkit"
+   },
+   {
+    "id": 78,
+    "app": "Coda",
+    "slug": "coda",
+    "kind": "toolkit"
+   },
+   {
+    "id": 79,
+    "app": "Smartsheet",
+    "slug": "smartsheet",
+    "kind": "toolkit"
+   },
+   {
+    "id": 80,
+    "app": "Harvest",
+    "slug": "harvest",
+    "kind": "toolkit"
+   },
+   {
+    "id": 81,
+    "app": "Stripe",
+    "slug": "stripe",
+    "kind": "toolkit"
+   },
+   {
+    "id": 82,
+    "app": "Plaid",
+    "slug": "plaid",
+    "kind": "toolkit"
+   },
+   {
+    "id": 86,
+    "app": "QuickBooks",
+    "slug": "quickbooks",
+    "kind": "toolkit"
+   },
+   {
+    "id": 87,
+    "app": "Xero",
+    "slug": "xero",
+    "kind": "toolkit"
+   },
+   {
+    "id": 88,
+    "app": "Brex",
+    "slug": "brex",
+    "kind": "toolkit"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "slug": "ramp",
+    "kind": "toolkit"
+   },
+   {
+    "id": 90,
+    "app": "PitchBook",
+    "slug": "pitchbook",
+    "kind": "toolkit"
+   },
+   {
+    "id": 91,
+    "app": "NotebookLM",
+    "slug": "notebook_lm",
+    "kind": "toolkit"
+   },
+   {
+    "id": 92,
+    "app": "Otter AI",
+    "slug": "otter_ai_mcp",
+    "kind": "mcp-wrapper"
+   },
+   {
+    "id": 93,
+    "app": "Fathom",
+    "slug": "fathom",
+    "kind": "toolkit"
+   },
+   {
+    "id": 94,
+    "app": "Consensus",
+    "slug": "consensus",
+    "kind": "toolkit"
+   },
+   {
+    "id": 96,
+    "app": "Devin",
+    "slug": "devin_mcp",
+    "kind": "mcp-wrapper"
+   },
+   {
+    "id": 97,
+    "app": "higgsfield",
+    "slug": "higgsfield",
+    "kind": "toolkit"
+   },
+   {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "slug": "mermaid_chart_mcp",
+    "kind": "mcp-wrapper"
+   },
+   {
+    "id": 99,
+    "app": "YouTube Transcript",
+    "slug": "youtube_transcript",
+    "kind": "toolkit"
+   },
+   {
+    "id": 100,
+    "app": "Grain",
+    "slug": "grain",
+    "kind": "toolkit"
+   }
+  ],
+  "catalog_errors": 0,
+  "registry_confirmed": [
+   {
+    "id": 55,
+    "app": "Apify",
+    "entries": [
+     "com.apify/apify-mcp-server"
+    ]
+   },
+   {
+    "id": 56,
+    "app": "Firecrawl",
+    "entries": [
+     "io.github.firecrawl/firecrawl-mcp-server"
+    ]
+   },
+   {
+    "id": 63,
+    "app": "Netlify",
+    "entries": [
+     "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
+     "app.netlify.agent-kb-y83q/kb",
+     "app.netlify.agent-rescue-desk/production-triage",
+     "app.netlify.automatom-x402/web-data-toolkit",
+     "app.netlify.chaincheck-api/chaincheck",
+     "app.netlify.clify-dev/clify",
+     "app.netlify.gleaming-cassata-d41682/lion-mcp",
+     "app.netlify.japan-data-mcp/japan-data-mcp",
+     "app.netlify.kitchen-pass/chef",
+     "app.netlify.meinlem/nexo",
+     "app.netlify.meinlem2/nexo",
+     "app.netlify.micropay-test-suite/micropay-test-suite",
+     "app.netlify.shigoto-dogu/order-eval",
+     "app.netlify.tenderdelta/tenders",
+     "app.netlify.thechesscoach/chess-coach",
+     "app.netlify.uncork/uncork",
+     "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
+    ]
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare",
+    "entries": [
+     "com.cloudflare.mcp/mcp"
+    ]
+   },
+   {
+    "id": 65,
+    "app": "Supabase",
+    "entries": [
+     "com.supabase/mcp"
+    ]
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "entries": [
+     "io.github.neo4j-contrib/gds-agent",
+     "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+     "io.github.neo4j-contrib/mcp-neo4j-cypher",
+     "io.github.neo4j-contrib/mcp-neo4j-data-modeling",
+     "io.github.neo4j-contrib/mcp-neo4j-memory",
+     "io.github.neo4j-labs/neo4j-mcp-canary"
+    ]
+   },
+   {
+    "id": 71,
+    "app": "Notion",
+    "entries": [
+     "com.notion/mcp"
+    ]
+   },
+   {
+    "id": 73,
+    "app": "Linear",
+    "entries": [
+     "app.linear/linear"
+    ]
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "entries": [
+     "com.monday/monday.com"
+    ]
+   },
+   {
+    "id": 87,
+    "app": "Xero",
+    "entries": [
+     "io.github.Xerolo44/rpgmaker-mv-mcp"
+    ]
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "entries": [
+     "io.github.Ramp-Jet/mothermachine"
+    ]
+   }
+  ],
+  "registry_vendor_mismatch": [
+   {
+    "id": 9,
+    "app": "Copper",
+    "mcp": "none",
+    "entries": [
+     "io.github.copperline-labs/rendex-mcp"
+    ]
+   },
+   {
+    "id": 30,
+    "app": "Vonage",
+    "mcp": "docs-only",
+    "entries": [
+     "io.github.Vonage/vonage-documentation-mcp"
+    ]
+   },
+   {
+    "id": 39,
+    "app": "Threads (Meta)",
+    "mcp": "none",
+    "entries": [
+     "io.github.threadsnoop/reddit"
+    ]
+   },
+   {
+    "id": 45,
+    "app": "Magento (Adobe Commerce)",
+    "mcp": "none",
+    "entries": [
+     "watch.magento/magento-watch"
+    ]
+   },
+   {
+    "id": 78,
+    "app": "Coda",
+    "mcp": "none",
+    "entries": [
+     "io.github.codapult/guard"
+    ]
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "mcp": "none",
+    "entries": [
+     "io.github.Alejandrehl/kainext-binance-mcp",
+     "io.github.Evozim/binance-orderbook-mcp",
+     "io.github.KumailQazi/krmaazha-binance-mcp",
+     "io.github.junct-bot/binance-mcp",
+     "io.github.mrfentmen/binance-market-mcp"
+    ]
+   },
+   {
+    "id": 85,
+    "app": "iPayX",
+    "mcp": "none",
+    "entries": [
+     "io.github.Ipayx-stellar/fx-audit",
+     "io.github.iPAYX-Technologies/mcp-fx-audit"
+    ]
+   }
+  ],
+  "corr_claims": 148,
+  "corr_hits": 106,
+  "uncorroborated": [
+   {
+    "id": 4,
+    "app": "Attio",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 5,
+    "app": "Twenty",
+    "auth": "API key"
+   },
+   {
+    "id": 6,
+    "app": "Podio",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 11,
+    "app": "Zendesk",
+    "auth": "Basic"
+   },
+   {
+    "id": 16,
+    "app": "LiveAgent",
+    "auth": "API key"
+   },
+   {
+    "id": 24,
+    "app": "Lark",
+    "auth": "Other"
+   },
+   {
+    "id": 24,
+    "app": "Lark",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 27,
+    "app": "Telegram",
+    "auth": "API key"
+   },
+   {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 30,
+    "app": "Vonage",
+    "auth": "Basic"
+   },
+   {
+    "id": 32,
+    "app": "Meta Ads",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 36,
+    "app": "Klaviyo",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 38,
+    "app": "Pinterest",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 40,
+    "app": "SendGrid",
+    "auth": "API key"
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce",
+    "auth": "Basic"
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce",
+    "auth": "Other"
+   },
+   {
+    "id": 45,
+    "app": "Magento (Adobe Commerce)",
+    "auth": "Other"
+   },
+   {
+    "id": 45,
+    "app": "Magento (Adobe Commerce)",
+    "auth": "API key"
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 49,
+    "app": "Amazon Selling Partner",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 50,
+    "app": "fanbasis",
+    "auth": "API key"
+   },
+   {
+    "id": 55,
+    "app": "Apify",
+    "auth": "API key"
+   },
+   {
+    "id": 55,
+    "app": "Apify",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "auth": "Other"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "auth": "Basic"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 70,
+    "app": "Sentry",
+    "auth": "API key"
+   },
+   {
+    "id": 70,
+    "app": "Sentry",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "auth": "Basic"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "auth": "API key"
+   },
+   {
+    "id": 79,
+    "app": "Smartsheet",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 82,
+    "app": "Plaid",
+    "auth": "Other"
+   },
+   {
+    "id": 84,
+    "app": "Paygent Connect",
+    "auth": "API key"
+   },
+   {
+    "id": 86,
+    "app": "QuickBooks",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 88,
+    "app": "Brex",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 90,
+    "app": "PitchBook",
+    "auth": "API key"
+   },
+   {
+    "id": 91,
+    "app": "NotebookLM",
+    "auth": "OAuth2"
+   },
+   {
+    "id": 95,
+    "app": "Reducto",
+    "auth": "API key"
+   },
+   {
+    "id": 97,
+    "app": "higgsfield",
+    "auth": "OAuth2"
+   }
+  ]
+ },
  "conf_vs_corrected": {
   "high": {
    "rows": 36,
