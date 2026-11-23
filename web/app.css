@@ -53,7 +53,7 @@ h3{font:600 16px/1.3 var(--body);margin:0 0 10px} .lede{color:var(--muted);max-w
 /* findings: one colour each */
 .findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:12px;margin:0;padding:0;list-style:none}
 .finding{--k:var(--blue);display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--k);border-radius:12px;padding:16px}
-.finding:nth-child(2){--k:var(--violet)} .finding:nth-child(3){--k:var(--good)} .finding:nth-child(4){--k:var(--bad)} .finding:nth-child(5){--k:var(--orange)} .finding:nth-child(6){--k:var(--pink)}
+.finding:nth-child(2){--k:var(--violet)} .finding:nth-child(3){--k:var(--good)} .finding:nth-child(4){--k:var(--bad)} .finding:nth-child(5){--k:var(--orange)} .finding:nth-child(6){--k:var(--pink)} .finding:nth-child(7){--k:var(--teal)}
 .finding .big{font:600 28px/1 var(--display);color:var(--k);font-variant-numeric:tabular-nums} .finding p{margin:0} .finding .why{color:var(--muted);font-size:14px;flex:1}
 .link{border:0;background:none;color:var(--blue-ink);padding:0;cursor:pointer;font-weight:600;font-size:13.5px;text-align:left} .link:hover{text-decoration:underline}
 /* alluvial */

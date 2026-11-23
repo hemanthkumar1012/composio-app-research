@@ -6912,6 +6912,16 @@
  },
  "findings": [
   {
+   "big": "19/100",
+   "claim": "are not yet Composio toolkits, and only 5 of them can be built today.",
+   "filter": {
+    "composio": [
+     "not in catalogue"
+    ]
+   },
+   "why": "Checked live against composio.dev/toolkits: 81 of 100 already exist. Of the 19 gaps, 5 are build-now (LiveAgent, Vonage, systeme.io, SE Ranking, Reducto), 5 buildable with caveats, 8 need outreach and 1 is a CLI wrap. The remaining work is mostly partnerships, not engineering."
+  },
+  {
    "big": "70/100",
    "claim": "are self-serve.",
    "filter": {
@@ -6970,19 +6980,6 @@
    "claim": "field accuracy, closed-book draft \u2192 verified holdout.",
    "filter": null,
    "why": "Half the closed-book misses (6/12) were the MCP field. The agent's confidence was calibrated: 68% of low-confidence rows needed a fix vs 6% of high-confidence ones, so research is routed by confidence."
-  },
-  {
-   "big": "81/100",
-   "claim": "already have a Composio toolkit page.",
-   "filter": {
-    "composio": [
-     "not in catalogue"
-    ],
-    "verdict": [
-     "ready"
-    ]
-   },
-   "why": "Checked live against composio.dev/toolkits in GitHub Actions. 5 apps are buildable today and not yet in the catalogue: that is the real easy-win queue, not the raw 58."
   }
  ],
  "scores": {

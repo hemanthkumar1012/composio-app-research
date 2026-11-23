@@ -9,7 +9,7 @@ import json
 import pathlib
 import sys
 
-from .research import run
+from .research import run, annotate
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -41,9 +41,12 @@ def evaluate(sample="holdout", backend="gemini", out_dir=None):
     report["valid"] = report["errors"] == 0
     (pathlib.Path(out_dir) / "eval_report.json").write_text(json.dumps(report, indent=1))
     if not report["valid"]:
+        annotate("error", "Eval invalid", f"{report['errors']} of {len(recs)} apps errored; first: " + next(r['error'] for r in recs if 'error' in r)[:600])
         print(f"\nEVAL INVALID: {report['errors']} of {len(recs)} apps errored (first: {next(r['error'] for r in recs if 'error' in r)[:200]})")
         sys.exit(1)   # never publish a score made of errors
     print(f"\n{sample}: {score['acc']}% ({score['correct']}/{score['checked']} fields) with {report['model']}")
+    annotate("notice", "Eval score", f"{sample}: {score['acc']}% ({score['correct']}/{score['checked']}) with {report['model']}; "
+             f"verifier agreement {report['mean_verifier_agreement']}; routed to human {report['routed_to_human']}")
     for m in score["misses"]:
         print(f"  miss  {m['app']:<24} {m['field']:<8} said {m['said']!r:<22} truth {m['truth']!r}")
     return report

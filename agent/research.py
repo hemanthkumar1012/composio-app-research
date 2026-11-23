@@ -17,7 +17,7 @@ import os
 import pathlib
 
 from . import tools
-from .infra import DiskCache, Tracer, retry
+from .infra import DiskCache, RateLimiter, Tracer, retry
 from .prompts import RUBRIC, PASS1, DISCOVER, EXTRACT, JUDGE, BLIND
 from .schema import AppResearch
 
@@ -46,6 +46,14 @@ def resolve_model(gc):
     pool = stable or [n for n in names if "flash" in n and not any(t in n for t in _SKIP)]
     return max(pool, key=ver) if pool else FALLBACK_MODEL
 KEY_FIELDS = ("access", "mcp", "verdict")
+LIMITER = RateLimiter(int(os.getenv("GEMINI_RPM", "8")))   # shared by every model call in the process
+GHA = bool(os.getenv("GITHUB_ACTIONS"))
+
+
+def annotate(level, title, msg):
+    """GitHub workflow annotation (readable through the API even when logs are not)."""
+    if GHA:
+        print(f"::{level} title={title}::" + str(msg).replace("\n", " ")[:900], flush=True)
 
 
 def client():
@@ -69,6 +77,7 @@ class Agent:
     @retry()
     def _gen(self, model, contents, json_mode=False, schema=None):
         from google.genai import types
+        LIMITER.wait()
         cfg = types.GenerateContentConfig(temperature=0, response_mime_type="application/json" if json_mode or schema else None,
                                           response_schema=schema)
         resp = self.gc.models.generate_content(model=model, contents=contents, config=cfg)
@@ -79,7 +88,11 @@ class Agent:
         return self.cache.memo("llm", lambda: self._gen(model, contents, json_mode, schema), model, contents, bool(schema))
 
     def search(self, q):
-        return self.cache.memo("search", lambda: tools.search(q, self.backend, self.gc, self.model), self.backend, q)
+        def go():
+            if self.backend == "gemini":
+                LIMITER.wait()
+            return retry()(tools.search)(q, self.backend, self.gc, self.model)
+        return self.cache.memo("search", go, self.backend, q)
 
     def fetch(self, url):
         return self.cache.memo("fetch", lambda: tools.fetch(url, self.backend), self.backend, url)
@@ -180,6 +193,7 @@ async def run_async(ids=None, backend="gemini", out_dir=None, concurrency=4, emi
     (out / "traces").mkdir(parents=True, exist_ok=True)
     agent = Agent(backend, DiskCache(enabled=cache))
     print(f"model: {agent.model} · verifier: {agent.verifier_model} · backend: {backend}")
+    annotate("notice", "Model", f"{agent.model} (verifier {agent.verifier_model}), backend {backend}, {os.getenv('GEMINI_RPM', '8')} RPM")
     sem = asyncio.Semaphore(concurrency)
     results = []
 
@@ -191,6 +205,7 @@ async def run_async(ids=None, backend="gemini", out_dir=None, concurrency=4, emi
                 rec = await asyncio.to_thread(agent.research, app, tr)
             except Exception as e:  # noqa: BLE001
                 tr.event("final", f"Agent error: {e}", "human")
+                annotate("error", f"App {app['id']} {app['app']}", f"{type(e).__name__}: {e}")
                 rec = {"id": int(app["id"]), "app": app["app"], "error": str(e), "needs_human": True, "human_reasons": [f"agent error: {e}"]}
             (out / f"{int(app['id']):03d}.json").write_text(json.dumps(rec, indent=1))
             print(f"[{rec['id']:>3}] {rec['app']:<28} {'HUMAN: ' + '; '.join(rec['human_reasons']) if rec['needs_human'] else 'ok'}")

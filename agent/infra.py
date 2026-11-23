@@ -51,7 +51,22 @@ def _retryable(exc):
     return name in ("ConnectionError", "Timeout", "ReadTimeout", "ConnectTimeout", "ServerError", "ResourceExhausted")
 
 
-def retry(attempts=4, base=1.5, cap=30):
+class RateLimiter:
+    """Thread-safe spacing of calls to stay under a requests-per-minute budget (free-tier Gemini keys are ~10 RPM)."""
+
+    def __init__(self, rpm):
+        self.gap, self.next, self._lock = 60.0 / max(rpm, 1), 0.0, threading.Lock()
+
+    def wait(self):
+        with self._lock:
+            now = time.time()
+            delay = max(0.0, self.next - now)
+            self.next = max(now, self.next) + self.gap
+        if delay:
+            time.sleep(delay)
+
+
+def retry(attempts=6, base=2.0, cap=60):
     """Exponential backoff with full jitter on rate limits and transient errors only."""
     def deco(fn):
         @functools.wraps(fn)

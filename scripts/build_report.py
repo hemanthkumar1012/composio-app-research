@@ -77,9 +77,13 @@ findings = [
 SW = S.get("sweep")
 if P.get("composio"):
     C = P["composio"]
-    findings.append({"big": f"{C['in_catalogue']}/{C['checked']}", "claim": "already have a Composio toolkit page.",
-                     "filter": {"composio": ["not in catalogue"], "verdict": ["ready"]},
-                     "why": f"Checked live against composio.dev/toolkits in GitHub Actions. {len(C['net_new_ready'])} apps are buildable today and not yet in the catalogue: that is the real easy-win queue, not the raw {ver.get('ready',0)}."})
+    notin = [a for a in apps if a.get("composio") is not None and not a["composio"].get("found")]
+    vc = {v: sum(a["verdict"] == v for a in notin) for v in VERDICT}
+    findings.insert(0, {"big": f"{len(notin)}/100", "claim": "are not yet Composio toolkits, and only "
+                        f"{vc['ready']} of them can be built today.", "filter": {"composio": ["not in catalogue"]},
+                        "why": f"Checked live against composio.dev/toolkits: {C['in_catalogue']} of 100 already exist. Of the {len(notin)} gaps, "
+                               f"{vc['ready']} are build-now ({', '.join(a['app'] for a in notin if a['verdict']=='ready')}), {vc['caveat']} buildable with caveats, "
+                               f"{vc['outreach']} need outreach and {vc['wrap']} is a CLI wrap. The remaining work is mostly partnerships, not engineering."})
 
 # ---------------- static snippets ----------------
 flag_kinds = {}
