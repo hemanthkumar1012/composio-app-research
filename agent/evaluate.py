@@ -37,7 +37,8 @@ def evaluate(sample="holdout", backend="gemini", out_dir=None):
               "per_field": score["per_field"], "misses": score["misses"],
               "mean_verifier_agreement": round(sum(agree) / len(agree), 3) if agree else None,
               "routed_to_human": sum(r["needs_human"] for r in recs),
-              "errors": sum("error" in r for r in recs), "model": next((r.get("model") for r in recs if r.get("model")), None)}
+              "errors": sum("error" in r for r in recs),
+              "model": ", ".join(sorted({m for r in recs for m in r.get("models_used", [])})) or next((r.get("model") for r in recs if r.get("model")), None)}
     report["valid"] = report["errors"] == 0
     (pathlib.Path(out_dir) / "eval_report.json").write_text(json.dumps(report, indent=1))
     if not report["valid"]:

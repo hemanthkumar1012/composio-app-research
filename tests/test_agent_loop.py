@@ -19,7 +19,10 @@ class FakeAgent(research.Agent):
         super().__init__("gemini", DiskCache(enabled=False), gc=object())
         self.verifier_access, self.judge_word = verifier_access, judge
 
-    def _gen(self, model, contents, json_mode=False, schema=None):
+    def _gen_once(self, model, contents, json_mode=False, schema=None):
+        return self._gen_stub(contents)
+
+    def _gen_stub(self, contents):
         if contents.startswith("You are researching"):
             return json.dumps({"auth": ["API key"], "access": "free", "api": "REST", "mcp": "none", "verdict": "caveat", "confidence": "low"})
         if contents.startswith("You are an independent verifier"):
@@ -92,6 +95,23 @@ def test_resolve_model_picks_newest_stable_flash():
     assert research.resolve_model(FakeClient()) == "gemini-3.8-flash"
     os.environ["GEMINI_MODEL"] = "gemini-x"; assert research.resolve_model(FakeClient()) == "gemini-x"; os.environ.pop("GEMINI_MODEL")
     assert research.resolve_model(object()) == research.FALLBACK_MODEL
+
+
+def test_daily_quota_falls_back_to_next_model():
+    class QuotaAgent(FakeAgent):
+        def __init__(self):
+            super().__init__(); self.chain = ["gemini-3.8-flash", "gemini-3.8-flash-lite"]; self.model = self.chain[0]
+            self.verifier_model = self.model; self.calls = []
+        def _gen_once(self, model, contents, json_mode=False, schema=None):
+            self.calls.append(model)
+            if model == "gemini-3.8-flash":
+                raise RuntimeError("429 RESOURCE_EXHAUSTED ... Generate content requests per day limit exceeded on Free Tier")
+            return FakeAgent._gen_stub(self, contents)
+    fake_web()
+    a = QuotaAgent()
+    rec = a.research(APP, Tracer())
+    assert rec["result"]["verdict"] == "ready" and rec["models_used"] == ["gemini-3.8-flash-lite"]
+    assert a.calls.count("gemini-3.8-flash") == 1   # no pointless retries on a daily quota
 
 
 def test_sweep_logic_with_fake_web(tmp=pathlib.Path("/tmp/sweep_test.json")):

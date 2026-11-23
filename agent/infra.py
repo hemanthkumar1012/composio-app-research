@@ -43,7 +43,15 @@ class DiskCache:
         return v if v is not None else self.set(ns, fn(), *parts)
 
 
+def daily_quota(exc):
+    """Free-tier daily quota: retrying is pointless until tomorrow, so callers switch model instead."""
+    m = str(exc).lower()
+    return "resource_exhausted" in m and ("per day" in m or "perday" in m)
+
+
 def _retryable(exc):
+    if daily_quota(exc):
+        return False
     code = getattr(exc, "code", None) or getattr(getattr(exc, "response", None), "status_code", None)
     if code in (408, 409, 425, 429, 500, 502, 503, 504):
         return True

@@ -17,7 +17,7 @@ import os
 import pathlib
 
 from . import tools
-from .infra import DiskCache, RateLimiter, Tracer, retry
+from .infra import DiskCache, RateLimiter, Tracer, daily_quota, retry
 from .prompts import RUBRIC, PASS1, DISCOVER, EXTRACT, JUDGE, BLIND
 from .schema import AppResearch
 
@@ -28,11 +28,13 @@ VERIFIER_MODEL = os.getenv("GEMINI_VERIFIER_MODEL", MODEL)
 _SKIP = ("lite", "image", "tts", "live", "audio", "embedding", "exp", "preview", "thinking", "robotics")
 
 
-def resolve_model(gc):
-    """GEMINI_MODEL if set; otherwise the newest generally available Gemini *Flash* model this key can call.
-    (The first live eval failed because gemini-2.5-flash was retired for new keys; never hard-code a model again.)"""
+def resolve_models(gc):
+    """Ordered fallback chain. GEMINI_MODEL (+ GEMINI_FALLBACK_MODELS) if set; otherwise newest stable Flash, then newest
+    stable Flash-Lite, then other Flash models. Live runs showed why: gemini-2.5-flash was retired for new keys, and a
+    free-tier key ran out of its 20-requests/day Flash quota mid-eval."""
     if os.getenv("GEMINI_MODEL"):
-        return os.environ["GEMINI_MODEL"]
+        extra = [m.strip() for m in os.getenv("GEMINI_FALLBACK_MODELS", "").split(",") if m.strip()]
+        return [os.environ["GEMINI_MODEL"]] + extra
     try:
         names = []
         for m in gc.models.list():
@@ -40,11 +42,17 @@ def resolve_model(gc):
             if "generateContent" in acts:
                 names.append(m.name.split("/")[-1])
     except Exception:  # noqa: BLE001
-        return FALLBACK_MODEL
+        return [FALLBACK_MODEL]
     ver = lambda n: tuple(float(x) for x in re.findall(r"\d+(?:\.\d+)?", n)[:1]) or (0.0,)
-    stable = [n for n in names if re.fullmatch(r"gemini-\d+(?:\.\d+)?-flash", n)]
-    pool = stable or [n for n in names if "flash" in n and not any(t in n for t in _SKIP)]
-    return max(pool, key=ver) if pool else FALLBACK_MODEL
+    flash = sorted((n for n in names if re.fullmatch(r"gemini-\d+(?:\.\d+)?-flash", n)), key=ver, reverse=True)
+    lite = sorted((n for n in names if re.fullmatch(r"gemini-\d+(?:\.\d+)?-flash-lite", n)), key=ver, reverse=True)
+    other = sorted((n for n in names if "flash" in n and n not in flash + lite and not any(t in n for t in _SKIP)), key=ver, reverse=True)
+    chain = flash[:2] + lite[:2] + other[:2]
+    return chain or [FALLBACK_MODEL]
+
+
+def resolve_model(gc):
+    return resolve_models(gc)[0]
 KEY_FIELDS = ("access", "mcp", "verdict")
 LIMITER = RateLimiter(int(os.getenv("GEMINI_RPM", "8")))   # shared by every model call in the process
 GHA = bool(os.getenv("GITHUB_ACTIONS"))
@@ -70,12 +78,38 @@ class Agent:
     def __init__(self, backend="gemini", cache=None, gc=None, model=None):
         self.backend, self.cache = backend, cache or DiskCache()
         self.gc = gc or client()
-        self.model = model or resolve_model(self.gc)
+        self.chain = [model] if model else resolve_models(self.gc)
+        self.model = self.chain[0]
         self.verifier_model = os.getenv("GEMINI_VERIFIER_MODEL", self.model)
+        self.exhausted, self.used, self._mlock = set(), set(), __import__("threading").Lock()
 
-    # ---- model calls (cached + retried) ----
-    @retry()
+    def _live(self, wanted):
+        """The wanted model unless its daily quota is gone; then the next model in the chain."""
+        with self._mlock:
+            if wanted not in self.exhausted:
+                return wanted
+            for m in self.chain:
+                if m not in self.exhausted:
+                    return m
+        raise RuntimeError(f"daily quota exhausted for every model in {self.chain}")
+
+    # ---- model calls (cached, rate-limited, retried, model fallback on daily quota) ----
     def _gen(self, model, contents, json_mode=False, schema=None):
+        while True:
+            m = self._live(model)
+            try:
+                out = self._gen_once(m, contents, json_mode, schema)
+                self.used.add(m)
+                return out
+            except Exception as e:  # noqa: BLE001
+                if not daily_quota(e):
+                    raise
+                with self._mlock:
+                    self.exhausted.add(m)
+                annotate("warning", "Daily quota", f"{m} exhausted; falling back along {self.chain}")
+
+    @retry()
+    def _gen_once(self, model, contents, json_mode=False, schema=None):
         from google.genai import types
         LIMITER.wait()
         cfg = types.GenerateContentConfig(temperature=0, response_mime_type="application/json" if json_mode or schema else None,
@@ -91,7 +125,15 @@ class Agent:
         def go():
             if self.backend == "gemini":
                 LIMITER.wait()
-            return retry()(tools.search)(q, self.backend, self.gc, self.model)
+            m = self._live(self.model)
+            try:
+                return retry()(tools.search)(q, self.backend, self.gc, m)
+            except Exception as e:  # noqa: BLE001
+                if not daily_quota(e):
+                    raise
+                with self._mlock:
+                    self.exhausted.add(m)
+                return retry()(tools.search)(q, self.backend, self.gc, self._live(m))
         return self.cache.memo("search", go, self.backend, q)
 
     def fetch(self, url):
@@ -101,6 +143,7 @@ class Agent:
     def research(self, app, tracer):
         rec = {"id": int(app["id"]), "app": app["app"], "run_at": dt.datetime.utcnow().isoformat() + "Z",
                "model": self.model, "verifier_model": self.verifier_model, "backend": self.backend, "human_reasons": []}
+        rec["model_chain"] = self.chain
         fmt = dict(app=app["app"], hint=app["hint"], category=app["category"], id=app["id"], rubric=RUBRIC)
 
         with tracer.span("draft", "Closed-book draft"):
@@ -109,7 +152,7 @@ class Agent:
 
         hint = app["hint"].split(" ")[0]
         urls = [f"https://{hint}"] if "." in hint else []
-        for q in (DISCOVER.format(**fmt), f"{app['app']} API pricing plan required for API access", f"{app['app']} official MCP server"):
+        for q in (DISCOVER.format(**fmt), f"{app['app']} official MCP server and API pricing plan"):
             hits = self.search(q)
             urls += [h["url"] for h in hits]
             tracer.event("discover", f"Search: {q[:70]}", hits=len(hits))
@@ -165,7 +208,8 @@ class Agent:
 
         # loop C: claim-level judge
         rec["judge"] = []
-        for c in res["claims"]:
+        key_claims = sorted(res["claims"], key=lambda c: (c["field"] not in KEY_FIELDS, not c.get("supported")))[:3]
+        for c in key_claims:
             text = pages.get(c["url"]) or ""
             if not text:
                 continue
@@ -181,6 +225,7 @@ class Agent:
             rec["human_reasons"].append("no vendor page could be fetched")
 
         rec["result"] = res
+        rec["models_used"] = sorted(self.used)
         rec["needs_human"] = bool(rec["human_reasons"])
         tracer.event("final", f"Final: {res['verdict']} · access {res['access']} · MCP {res['mcp']}",
                      "human" if rec["needs_human"] else "ok", values={k: res[k] for k in ("auth", "access", "api", "mcp", "verdict")},
@@ -193,7 +238,7 @@ async def run_async(ids=None, backend="gemini", out_dir=None, concurrency=4, emi
     (out / "traces").mkdir(parents=True, exist_ok=True)
     agent = Agent(backend, DiskCache(enabled=cache))
     print(f"model: {agent.model} · verifier: {agent.verifier_model} · backend: {backend}")
-    annotate("notice", "Model", f"{agent.model} (verifier {agent.verifier_model}), backend {backend}, {os.getenv('GEMINI_RPM', '8')} RPM")
+    annotate("notice", "Model", f"chain {agent.chain} (verifier {agent.verifier_model}), backend {backend}, {os.getenv('GEMINI_RPM', '8')} RPM")
     sem = asyncio.Semaphore(concurrency)
     results = []
 
