@@ -23,6 +23,9 @@ on:
         options: [gemini, composio]
         default: gemini
 
+permissions:
+  contents: write
+
 jobs:
   research:
     runs-on: ubuntu-latest
@@ -49,6 +52,31 @@ jobs:
         run: |
           f=$(ls runs/*/eval_report.json 2>/dev/null | head -1)
           if [ -n "$f" ]; then python -c "import json,sys;r=json.load(open('$f'));print(f\"### Eval ({r['sample']}): {r['accuracy']}% ({r['correct']}/{r['checked']} fields), verifier agreement {r['mean_verifier_agreement']}, routed to human {r['routed_to_human']}\")" >> $GITHUB_STEP_SUMMARY; fi
+      - name: Commit eval report into the repo (feeds the case-study page)
+        if: inputs.mode == 'eval'
+        run: |
+          mkdir -p data/llm_eval
+          cp runs/eval-${{ inputs.sample }}/eval_report.json data/llm_eval/${{ inputs.sample }}.json
+          python - <<'PY'
+          import json, glob, pathlib
+          s = "${{ inputs.sample }}"
+          recs = []
+          for f in sorted(glob.glob(f"runs/eval-{s}/[0-9]*.json")):
+              r = json.load(open(f)); res = r.get("result") or {}
+              recs.append({"id": r["id"], "app": r["app"], "needs_human": r.get("needs_human"), "human_reasons": r.get("human_reasons"),
+                           "verifier": r.get("verifier"), "result": {k: res.get(k) for k in ("auth", "access", "api", "mcp", "verdict", "confidence", "note")},
+                           "claims": [{k: c.get(k) for k in ("field", "value", "url", "quote", "supported")} for c in res.get("claims", [])],
+                           "judge": [{k: j.get(k) for k in ("field", "value", "verdict")} for j in r.get("judge", [])],
+                           "model": r.get("model"), "run_at": r.get("run_at")})
+          rep = json.load(open(f"data/llm_eval/{s}.json"))
+          rep.update({"apps": recs, "run_url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"})
+          json.dump(rep, open(f"data/llm_eval/{s}.json", "w"), indent=1)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/llm_eval/
+          git commit -m "research-agent: live Gemini eval on ${{ inputs.sample }}" || exit 0
+          git pull --rebase origin main && git push
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: research-output, path: runs/ }

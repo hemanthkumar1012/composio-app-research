@@ -3,9 +3,11 @@
     python scripts/pipeline.py      # writes data/apps_final.json, data/scores.json, data/patterns.json
 
 Needs no network or API keys. Every number on the case-study page comes out of this file."""
-import csv, json, collections, pathlib
+import csv, json, collections, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from agent.tools import vendor_namespace  # noqa: E402  (pure function, no network)
 D = ROOT / "data"
 FIELDS = ["auth", "access", "api", "mcp", "verdict"]
 
@@ -80,7 +82,7 @@ RULES = [
     ("CLI without wrap verdict", lambda r: r["api"] == "CLI" and r["verdict"] != "wrap"),
     ("review access marked ready", lambda r: r["access"] == "review" and r["verdict"] == "ready"),
     ("official MCP not confirmed by a source read this run", lambda r: r["mcp"] == "official" and not r.get("mcp_confirmed")),
-    ("evidence link broken in live sweep", lambda r: any(not (200 <= l["status"] < 400 or l.get("browser_chars")) for l in r.get("links") or [])),
+    ("evidence link broken in live sweep", lambda r: any(l.get("robots_ok", True) and not (200 <= (l.get("status") or 0) < 400 or l.get("browser_chars")) for l in r.get("links") or [])),
     ("registry lists a vendor MCP the row does not call official", lambda r: bool(r.get("registry_vendor")) and r["mcp"] != "official"),
 ]
 # Official-MCP claims that a vendor page / vendor-namespaced registry entry read in this run actually confirmed.
@@ -174,20 +176,22 @@ def merge_sweep(final):
         if r["composio"] and r["composio"]["found"]:
             stats["catalog"].append({"id": i, "app": r["app"], "slug": r["composio"]["found"], "kind": r["composio"]["kind"]})
         reg = s.get("registry") or {}
-        r["registry_vendor"] = reg.get("vendor_entries", [])
+        # recompute vendor ownership from ALL names with the current matcher, so matcher fixes apply without a re-run
+        names = sorted(set(reg.get("vendor_entries", []) + reg.get("other_entries", [])))
+        r["registry_vendor"] = [n for n in names if vendor_namespace(n, r["hint"].split(" ")[0], r["app"])]
         if r["registry_vendor"] and r["mcp"] == "official" and not r["mcp_confirmed"]:
             r["mcp_confirmed"] = True; stats["registry_confirmed"].append({"id": i, "app": r["app"], "entries": r["registry_vendor"]})
         if r["registry_vendor"] and r["mcp"] != "official":
             stats["registry_vendor_mismatch"].append({"id": i, "app": r["app"], "mcp": r["mcp"], "entries": r["registry_vendor"]})
         r["links"] = s.get("links", [])
         for l in r["links"]:
+            if not l.get("robots_ok", True):   # not fetched: robots.txt disallows agents
+                stats["robots_blocked"].append({"id": i, "app": r["app"], "url": l["url"]}); continue
             stats["links_total"] += 1
-            ok = 200 <= l["status"] < 400 or bool(l.get("browser_chars"))
+            ok = 200 <= (l.get("status") or 0) < 400 or bool(l.get("browser_chars"))
             stats["links_ok"] += ok
             if not ok:
-                stats["broken"].append({"id": i, "app": r["app"], "url": l["url"], "status": l["status"]})
-            if not l.get("robots_ok", True):
-                stats["robots_blocked"].append({"id": i, "app": r["app"], "url": l["url"]})
+                stats["broken"].append({"id": i, "app": r["app"], "url": l["url"], "status": l.get("status")})
             if l.get("browser_chars"):
                 stats["browser_read"].append({"id": i, "app": r["app"], "url": l["url"], "chars": l["browser_chars"]})
         r["corroboration"] = s.get("corroboration", {})

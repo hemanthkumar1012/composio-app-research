@@ -110,12 +110,20 @@ CATALOG_ALIASES = {
     "Twilio": ["twilio"], "Jira": ["jira"],
 }
 def robots_allows(url: str) -> bool:
+    """robots.txt per RFC 9309: fetched with our own User-Agent; 4xx means no rules (allowed); 5xx or no answer means
+    assume disallowed. (urllib's built-in reader treats a 401/403 on robots.txt as 'disallow all', which wrongly
+    blocked 30 docs sites in the first live sweep, mostly bot protection answering 403.)"""
     parts = urllib.parse.urlsplit(url)
-    rp = urllib.robotparser.RobotFileParser(f"{parts.scheme}://{parts.netloc}/robots.txt")
     try:
-        rp.read()
-    except Exception:
+        r = requests.get(f"{parts.scheme}://{parts.netloc}/robots.txt", timeout=10, headers={"User-Agent": UA})
+    except requests.RequestException:
+        return False
+    if 400 <= r.status_code < 500:
         return True
+    if r.status_code >= 500:
+        return False
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(r.text.splitlines())
     return rp.can_fetch(UA, url)
 
 
@@ -136,24 +144,46 @@ def fetch(url: str, backend: str = "gemini", max_chars: int = 30000) -> str:
 
 
 # ---------------- MCP Registry ----------------
+# Shared hosting / docs platforms: a namespace under these is whoever rented the subdomain, never the vendor.
+SHARED_HOSTS = {"github.io", "github.com", "netlify.app", "vercel.app", "pages.dev", "workers.dev", "web.app", "firebaseapp.com",
+                "herokuapp.com", "onrender.com", "fly.dev", "readme.io", "stoplight.io", "gitbook.io", "glitch.me", "replit.app"}
+ORG_SUFFIXES = ("", "hq", "inc", "labs", "ai", "dev", "js", "contrib", "official", "io", "app", "api", "team")
+ORG_ALIASES = {"MongoDB Atlas": ["mongodbjs"], "Neo4j": ["neo4jcontrib", "neo4jlabs"], "Lark (Larksuite)": ["larksuite"],
+               "Google Ads": ["googleads"], "Mermaid CLI": ["mermaidjs"], "Shopify": ["shopify"], "Atlassian": ["atlassian"],
+               "Jira": ["atlassian"], "Bright Data": ["brightdata", "luminati"], "QuickBooks": ["intuit"], "Twilio": ["twiliolabs"]}
+
+
 def vendor_namespace(server_name: str, domain: str, app: str) -> bool:
-    """True if a registry namespace is owned by the vendor: reverse-DNS of its domain (com.airtable/...)
-    or the vendor's GitHub org (io.github.mongodb-js/...). Registry namespaces are domain/org-verified."""
+    """True only if a registry namespace is plausibly owned by the vendor. Registry namespaces are domain- or
+    GitHub-org-verified, so the question is whether that domain/org is the vendor's:
+      * reverse-DNS of the vendor's own domain (com.airtable/..., app.linear/... for linear.app)
+      * the vendor's GitHub org, matched EXACTLY (brand + a known suffix like -js, -labs, -contrib, or an alias)
+      * the vendor's brand on another TLD (ai.fathom while the brief lists fathom.video), never under a shared host
+    The first live sweep showed prefix matching was wrong (io.github.Xerolo44 is not Xero; app.netlify.<user> is not
+    Netlify); tests/test_offline.py keeps every one of those as a regression case."""
     ns = server_name.split("/")[0].lower()
     host = domain.lower().split("/")[0]
     labels = host.split(".")
     root = ".".join(labels[-2:]) if len(labels) >= 2 else host
-    rev = ".".join(reversed(root.split(".")))
-    if ns == rev or ns.startswith(rev + "."):
-        return True
-    brand = labels[-2] if len(labels) >= 2 else host                     # mongodb.com -> "mongodb"
-    first = re.sub(r"[^a-z0-9]", "", app.lower().split()[0])            # "MongoDB Atlas" -> "mongodb"
-    if ns.startswith("io.github."):
-        org = re.sub(r"[^a-z0-9]", "", ns[len("io.github."):])
-        return any(k and org.startswith(k) for k in (brand, first))
     ns_labels = ns.split(".")
-    # same brand on another TLD, e.g. ai.fathom.api while the brief lists fathom.video
-    return len(ns_labels) >= 2 and ns_labels[1] in (brand, first)
+    ns_root = ".".join(reversed(ns_labels[:2])) if len(ns_labels) >= 2 else ns
+    if ns_root in SHARED_HOSTS - {"github.io"}:          # e.g. app.netlify.<anyone>
+        return False
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
+    first = norm(re.sub(r"\(.*?\)", "", app).split()[0]) if app.strip() else ""
+    shared = root in SHARED_HOSTS
+    brand = "" if shared else norm(labels[-2] if len(labels) >= 2 else host)
+    keys = {k for k in (brand, first) if k}
+    if ns.startswith("io.github."):
+        org = norm(ns[len("io.github."):])
+        allowed = {k + suf for k in keys for suf in ORG_SUFFIXES} | set(ORG_ALIASES.get(app, []))
+        return org in allowed
+    if not shared:
+        rev = ".".join(reversed(root.split(".")))
+        if ns == rev or ns.startswith(rev + "."):
+            return True
+        return len(ns_labels) >= 2 and ns_labels[1] == brand   # same brand, other TLD (brand from the vendor's domain only)
+    return False
 
 
 def mcp_registry(app: str, domain: str) -> dict:

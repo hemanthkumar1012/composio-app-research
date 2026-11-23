@@ -680,11 +680,6 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 9,
-    "app": "Copper",
-    "rule": "registry lists a vendor MCP the row does not call official"
-   },
-   {
     "id": 12,
     "app": "Intercom",
     "rule": "official MCP not confirmed by a source read this run"
@@ -725,11 +720,6 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 39,
-    "app": "Threads (Meta)",
-    "rule": "registry lists a vendor MCP the row does not call official"
-   },
-   {
     "id": 41,
     "app": "Shopify",
     "rule": "official MCP not confirmed by a source read this run"
@@ -738,11 +728,6 @@
     "id": 42,
     "app": "WooCommerce",
     "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 45,
-    "app": "Magento (Adobe Commerce)",
-    "rule": "registry lists a vendor MCP the row does not call official"
    },
    {
     "id": 57,
@@ -755,9 +740,9 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 66,
-    "app": "Neo4j",
-    "rule": "evidence link broken in live sweep"
+    "id": 63,
+    "app": "Netlify",
+    "rule": "official MCP not confirmed by a source read this run"
    },
    {
     "id": 69,
@@ -780,24 +765,9 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 78,
-    "app": "Coda",
-    "rule": "registry lists a vendor MCP the row does not call official"
-   },
-   {
     "id": 82,
     "app": "Plaid",
     "rule": "official MCP not confirmed by a source read this run"
-   },
-   {
-    "id": 83,
-    "app": "Binance",
-    "rule": "registry lists a vendor MCP the row does not call official"
-   },
-   {
-    "id": 85,
-    "app": "iPayX",
-    "rule": "registry lists a vendor MCP the row does not call official"
    },
    {
     "id": 86,
@@ -805,9 +775,14 @@
     "rule": "official MCP not confirmed by a source read this run"
    },
    {
-    "id": 90,
-    "app": "PitchBook",
-    "rule": "evidence link broken in live sweep"
+    "id": 87,
+    "app": "Xero",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "rule": "official MCP not confirmed by a source read this run"
    }
   ]
  },
@@ -1148,22 +1123,9 @@
    "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45163176382",
    "browser_rendered": 5
   },
-  "links_total": 132,
-  "links_ok": 130,
-  "broken": [
-   {
-    "id": 66,
-    "app": "Neo4j",
-    "url": "https://neo4j.com/docs/api",
-    "status": 404
-   },
-   {
-    "id": 90,
-    "app": "PitchBook",
-    "url": "https://pitchbook.com",
-    "status": 403
-   }
-  ],
+  "links_total": 102,
+  "links_ok": 102,
+  "broken": [],
   "robots_blocked": [
    {
     "id": 2,
@@ -1853,29 +1815,6 @@
     ]
    },
    {
-    "id": 63,
-    "app": "Netlify",
-    "entries": [
-     "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
-     "app.netlify.agent-kb-y83q/kb",
-     "app.netlify.agent-rescue-desk/production-triage",
-     "app.netlify.automatom-x402/web-data-toolkit",
-     "app.netlify.chaincheck-api/chaincheck",
-     "app.netlify.clify-dev/clify",
-     "app.netlify.gleaming-cassata-d41682/lion-mcp",
-     "app.netlify.japan-data-mcp/japan-data-mcp",
-     "app.netlify.kitchen-pass/chef",
-     "app.netlify.meinlem/nexo",
-     "app.netlify.meinlem2/nexo",
-     "app.netlify.micropay-test-suite/micropay-test-suite",
-     "app.netlify.shigoto-dogu/order-eval",
-     "app.netlify.tenderdelta/tenders",
-     "app.netlify.thechesscoach/chess-coach",
-     "app.netlify.uncork/uncork",
-     "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
-    ]
-   },
-   {
     "id": 64,
     "app": "Cloudflare",
     "entries": [
@@ -1921,82 +1860,15 @@
     "entries": [
      "com.monday/monday.com"
     ]
-   },
-   {
-    "id": 87,
-    "app": "Xero",
-    "entries": [
-     "io.github.Xerolo44/rpgmaker-mv-mcp"
-    ]
-   },
-   {
-    "id": 89,
-    "app": "Ramp",
-    "entries": [
-     "io.github.Ramp-Jet/mothermachine"
-    ]
    }
   ],
   "registry_vendor_mismatch": [
-   {
-    "id": 9,
-    "app": "Copper",
-    "mcp": "none",
-    "entries": [
-     "io.github.copperline-labs/rendex-mcp"
-    ]
-   },
    {
     "id": 30,
     "app": "Vonage",
     "mcp": "docs-only",
     "entries": [
      "io.github.Vonage/vonage-documentation-mcp"
-    ]
-   },
-   {
-    "id": 39,
-    "app": "Threads (Meta)",
-    "mcp": "none",
-    "entries": [
-     "io.github.threadsnoop/reddit"
-    ]
-   },
-   {
-    "id": 45,
-    "app": "Magento (Adobe Commerce)",
-    "mcp": "none",
-    "entries": [
-     "watch.magento/magento-watch"
-    ]
-   },
-   {
-    "id": 78,
-    "app": "Coda",
-    "mcp": "none",
-    "entries": [
-     "io.github.codapult/guard"
-    ]
-   },
-   {
-    "id": 83,
-    "app": "Binance",
-    "mcp": "none",
-    "entries": [
-     "io.github.Alejandrehl/kainext-binance-mcp",
-     "io.github.Evozim/binance-orderbook-mcp",
-     "io.github.KumailQazi/krmaazha-binance-mcp",
-     "io.github.junct-bot/binance-mcp",
-     "io.github.mrfentmen/binance-market-mcp"
-    ]
-   },
-   {
-    "id": 85,
-    "app": "iPayX",
-    "mcp": "none",
-    "entries": [
-     "io.github.Ipayx-stellar/fx-audit",
-     "io.github.iPAYX-Technologies/mcp-fx-audit"
     ]
    }
   ],

@@ -85,9 +85,9 @@ def sweep_app(app, row):
     except Exception as e:  # noqa: BLE001
         out["catalog"] = {"error": str(e)}
     for u in row["evidence"]:
-        status, text = _text(u)
-        out["links"].append({"url": u, "status": status, "robots_ok": tools.robots_allows(u),
-                             "chars": len(text), "_text": text})
+        ok = tools.robots_allows(u)
+        status, text = _text(u) if ok else (None, "")   # robots-disallowed pages are not fetched at all
+        out["links"].append({"url": u, "status": status, "robots_ok": ok, "chars": len(text), "_text": text})
     return out
 
 
@@ -105,7 +105,7 @@ def run(out_path=None, workers=8, ids=None):
         for l in res["links"]:
             if "registry.modelcontextprotocol.io" in l["url"]:
                 continue
-            if (l["chars"] < 600 or l["status"] in (401, 403)) and l["robots_ok"]:
+            if l["robots_ok"] and (l["chars"] < 600 or l["status"] in (401, 403)):
                 txt = br.render(l["url"])
                 if txt and not txt.startswith("ERROR"):
                     l["browser_chars"] = len(txt); l["_text"] = txt; rendered += 1
@@ -128,8 +128,9 @@ def run(out_path=None, workers=8, ids=None):
     out = {"meta": meta, "apps": {r["id"]: r for r in results}}
     path = pathlib.Path(out_path or ROOT / "data" / "sweep.json")
     path.write_text(json.dumps(out, indent=1))
-    ok = sum(bool(200 <= l["status"] < 400 or l.get("browser_chars")) for r in results for l in r["links"])
-    tot = sum(len(r["links"]) for r in results)
+    checked = [l for r in results for l in r["links"] if l["robots_ok"]]
+    ok = sum(bool(200 <= (l["status"] or 0) < 400 or l.get("browser_chars")) for l in checked)
+    tot = len(checked)
     cat = sum(bool((r.get("catalog") or {}).get("found")) for r in results)
     print(f"sweep: {len(results)} apps · links readable {ok}/{tot} · browser-rendered {rendered} · in Composio catalogue {cat}")
     return out

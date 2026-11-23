@@ -66,7 +66,7 @@ id	one_liner	breadth	note	evidence	fetched
 63	Web hosting and deploy platform	broad	Free; PAT or OAuth app	https://docs.netlify.com/api	0
 64	CDN, security, DNS and Workers	broad	Free; scoped API tokens	https://developers.cloudflare.com/api	0
 65	Postgres backend-as-a-service	broad	Free; Management API PAT or OAuth app	https://supabase.com/docs	0
-66	Graph database (AuraDB cloud)	moderate	Free AuraDB tier; DB Basic auth plus Aura API client credentials	https://neo4j.com/docs/api	0
+66	Graph database (AuraDB cloud)	moderate	Free AuraDB tier; DB Basic auth plus Aura API client credentials. The brief's hint URL neo4j.com/docs/api returns 404 (live sweep)	https://neo4j.com/docs/	0
 67	Cloud data warehouse	broad	Trial; key-pair JWT, OAuth or PAT; Snowflake-managed MCP	https://docs.snowflake.com/en/developer-guide/sql-api/authenticating https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp	1
 68	Managed MongoDB cloud	broad	Free M0; service-account OAuth or legacy Digest keys; official MCP	https://www.mongodb.com/docs/atlas/api/api-authentication/ https://registry.modelcontextprotocol.io/v0/servers?search=mongodb	1
 69	Observability: metrics, logs, APM	broad	Trial; API key + application key headers	https://docs.datadoghq.com/api	0

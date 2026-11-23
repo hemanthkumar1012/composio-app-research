@@ -18,6 +18,23 @@ def test_vendor_namespace():
     assert not vendor_namespace("com.insightfulpipe/klaviyo", "developers.klaviyo.com", "Klaviyo")
 
 
+def test_live_sweep_false_positives_stay_fixed():
+    # each of these was wrongly accepted as "vendor-owned" in the first live sweep (2026-11-23)
+    assert not vendor_namespace("app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist", "docs.netlify.com/api", "Netlify")
+    assert not vendor_namespace("io.github.Xerolo44/rpgmaker-mv-mcp".lower(), "developer.xero.com", "Xero")
+    assert not vendor_namespace("io.github.ramp-jet/mothermachine", "docs.ramp.com", "Ramp")
+    assert not vendor_namespace("io.github.copperline-labs/rendex-mcp", "copper.com", "Copper")
+    assert not vendor_namespace("io.github.threadsnoop/reddit", "developers.facebook.com/docs/threads", "Threads (Meta)")
+    assert not vendor_namespace("watch.magento/magento-watch", "developer.adobe.com/commerce", "Magento (Adobe Commerce)")
+    assert not vendor_namespace("io.github.codapult/guard", "coda.io/developers", "Coda")
+    assert not vendor_namespace("io.github.alejandrehl/kainext-binance-mcp", "binance-docs.github.io", "Binance")
+    # and the genuine ones still pass
+    for ns, dom, app in [("com.apify/apify-mcp-server", "docs.apify.com", "Apify"), ("io.github.firecrawl/firecrawl-mcp-server", "firecrawl.dev", "Firecrawl"),
+                         ("com.cloudflare.mcp/mcp", "developers.cloudflare.com/api", "Cloudflare"), ("app.linear/linear", "developers.linear.app", "Linear"),
+                         ("io.github.neo4j-contrib/gds-agent", "neo4j.com/docs/api", "Neo4j"), ("com.monday/monday.com", "developer.monday.com", "Monday.com")]:
+        assert vendor_namespace(ns, dom, app), ns
+
+
 def test_quote_supported():
     page = "Basic authentication is the only way to access DataForSEO API. Credentials are Base64-encoded."
     assert quote_supported("Basic authentication is the only way to access DataForSEO API", page)

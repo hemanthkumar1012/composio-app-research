@@ -310,18 +310,7 @@
   },
   "registry_vendor": [
    "city.close/close-api",
-   "com.close/close-mcp",
-   "io.github.closedloop-ai-org/closedloop-ai",
-   "io.github.closelookventure/closelook-intelligence",
-   "io.github.closermethod/content-hooks-mcp",
-   "io.github.closermethod/content-repurposing-mcp",
-   "io.github.closermethod/creator-deals-mcp",
-   "io.github.closermethod/newsletter-growth-mcp",
-   "io.github.closermethod/outbound-engine-mcp",
-   "io.github.closermethod/outreach-deliverability-mcp",
-   "io.github.closermethod/personal-brand-mcp",
-   "io.github.closermethod/social-media-manager-mcp",
-   "io.github.closermethod/ugc-brief-mcp"
+   "com.close/close-mcp"
   ],
   "links": [
    {
@@ -366,9 +355,7 @@
    "url": "https://composio.dev/toolkits/copper",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.copperline-labs/rendex-mcp"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://developer.copper.com/introduction/authentication.html",
@@ -1595,9 +1582,7 @@
    "url": "https://composio.dev/toolkits/threads",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.threadsnoop/reddit"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://developers.facebook.com/docs/threads/get-started",
@@ -1829,9 +1814,7 @@
    "url": null,
    "kind": null
   },
-  "registry_vendor": [
-   "watch.magento/magento-watch"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://developer.adobe.com/commerce/webapi/",
@@ -2177,9 +2160,7 @@
    "url": "https://composio.dev/toolkits/mrscraper",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.mrscraper-com/mrscraper-mcp"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://docs.mrscraper.com/",
@@ -2404,14 +2385,7 @@
    "url": "https://composio.dev/toolkits/clay",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.clay-swartz/pennyrail",
-   "io.github.claymore666/ccu-mcp",
-   "io.github.claymore666/debmatic-mcp",
-   "io.github.clayseal/clayseal",
-   "io.github.clayton/docdiffai",
-   "io.github.claytono/go-unifi-mcp"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://www.clay.com/pricing",
@@ -2488,40 +2462,7 @@
    "url": "https://composio.dev/toolkits/vercel",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "app.vercel.agent-permissions-index/agent-permissions-index",
-   "app.vercel.agent-shopping-tracker/feed",
-   "app.vercel.agent-svg-registry/mcp",
-   "app.vercel.agentready-rho/agentready",
-   "app.vercel.aididwhat/aididwhat",
-   "app.vercel.auditflag-lac/auditflag",
-   "app.vercel.automaton-tx-explainer/base-tools",
-   "app.vercel.axiom-risk-mcp/solana-token-risk",
-   "app.vercel.baselens-api/baselens",
-   "app.vercel.chainshift-preview/korea-sets",
-   "app.vercel.cleanmarket/marketplace",
-   "app.vercel.clearpage-x402/clearpage",
-   "app.vercel.cloakcheck-wheat/cloakcheck",
-   "app.vercel.codigo07/human-verification-peru",
-   "app.vercel.control-your-tesla/control-your-tesla",
-   "app.vercel.exploitwatch-kappa/exploitwatch",
-   "app.vercel.filingcheck-bot/filingcheck",
-   "app.vercel.flightsweeper-webmcp/public",
-   "app.vercel.fork-for-agents/fork",
-   "app.vercel.gouda-studios-agent-tools/gouda-studios-agent-tools",
-   "app.vercel.groundtruth-ruby/groundtruth",
-   "app.vercel.humancard-registry/human-registry",
-   "app.vercel.indo-news-api/indonesia-news",
-   "app.vercel.indo-news-api/news",
-   "app.vercel.interesting-concepts-ventures/threadkeep",
-   "app.vercel.jestsprout/jestsprout",
-   "app.vercel.krankenkasse-copilot/krankenkasse-copilot",
-   "app.vercel.mare-liberum/sea",
-   "app.vercel.olothea-research/olothea",
-   "app.vercel.ora-x402-gateway/sensations-mergulho",
-   "app.vercel.pass-through-tax-rules/pass-through-tax-rules",
-   "app.vercel.personalized-gifts-guide/gift-catalog"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://vercel.com/docs/rest-api",
@@ -2559,31 +2500,13 @@
    "https://docs.netlify.com/api"
   ],
   "fetched": false,
-  "mcp_confirmed": true,
+  "mcp_confirmed": false,
   "composio": {
    "found": "netlify_mcp",
    "url": "https://composio.dev/toolkits/netlify_mcp",
    "kind": "mcp-wrapper"
   },
-  "registry_vendor": [
-   "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
-   "app.netlify.agent-kb-y83q/kb",
-   "app.netlify.agent-rescue-desk/production-triage",
-   "app.netlify.automatom-x402/web-data-toolkit",
-   "app.netlify.chaincheck-api/chaincheck",
-   "app.netlify.clify-dev/clify",
-   "app.netlify.gleaming-cassata-d41682/lion-mcp",
-   "app.netlify.japan-data-mcp/japan-data-mcp",
-   "app.netlify.kitchen-pass/chef",
-   "app.netlify.meinlem/nexo",
-   "app.netlify.meinlem2/nexo",
-   "app.netlify.micropay-test-suite/micropay-test-suite",
-   "app.netlify.shigoto-dogu/order-eval",
-   "app.netlify.tenderdelta/tenders",
-   "app.netlify.thechesscoach/chess-coach",
-   "app.netlify.uncork/uncork",
-   "app.netlify.x402-preflight-grokbot/usdc-rpc-reference"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://docs.netlify.com/api",
@@ -2689,9 +2612,9 @@
   "hint": "neo4j.com/docs/api",
   "one_liner": "Graph database (AuraDB cloud)",
   "breadth": "moderate",
-  "note": "Free AuraDB tier; DB Basic auth plus Aura API client credentials",
+  "note": "Free AuraDB tier; DB Basic auth plus Aura API client credentials. The brief's hint URL neo4j.com/docs/api returns 404 (live sweep)",
   "evidence": [
-   "https://neo4j.com/docs/api"
+   "https://neo4j.com/docs/"
   ],
   "fetched": false,
   "mcp_confirmed": true,
@@ -3081,10 +3004,7 @@
    "url": "https://composio.dev/toolkits/asana",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.asanabrial/estigia",
-   "io.github.asanabrial/leteo"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://developers.asana.com/docs/authentication",
@@ -3207,9 +3127,7 @@
    "url": "https://composio.dev/toolkits/coda",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.codapult/guard"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://coda.io/developers/apis/v1",
@@ -3420,13 +3338,7 @@
    "url": null,
    "kind": null
   },
-  "registry_vendor": [
-   "io.github.Alejandrehl/kainext-binance-mcp",
-   "io.github.Evozim/binance-orderbook-mcp",
-   "io.github.KumailQazi/krmaazha-binance-mcp",
-   "io.github.junct-bot/binance-mcp",
-   "io.github.mrfentmen/binance-market-mcp"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
@@ -3501,10 +3413,7 @@
    "url": null,
    "kind": null
   },
-  "registry_vendor": [
-   "io.github.Ipayx-stellar/fx-audit",
-   "io.github.iPAYX-Technologies/mcp-fx-audit"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://ipayx.ai/docs",
@@ -3571,15 +3480,13 @@
    "https://developer.xero.com"
   ],
   "fetched": false,
-  "mcp_confirmed": true,
+  "mcp_confirmed": false,
   "composio": {
    "found": "xero",
    "url": "https://composio.dev/toolkits/xero",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.Xerolo44/rpgmaker-mv-mcp"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://developer.xero.com",
@@ -3648,15 +3555,13 @@
    "https://docs.ramp.com"
   ],
   "fetched": true,
-  "mcp_confirmed": true,
+  "mcp_confirmed": false,
   "composio": {
    "found": "ramp",
    "url": "https://composio.dev/toolkits/ramp",
    "kind": "toolkit"
   },
-  "registry_vendor": [
-   "io.github.Ramp-Jet/mothermachine"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://docs.ramp.com",
@@ -3814,8 +3719,7 @@
    "kind": "toolkit"
   },
   "registry_vendor": [
-   "ai.fathom.api/mcp",
-   "io.github.fathomise/mailfathom"
+   "ai.fathom.api/mcp"
   ],
   "links": [
    {
@@ -3935,15 +3839,7 @@
    "url": "https://composio.dev/toolkits/devin_mcp",
    "kind": "mcp-wrapper"
   },
-  "registry_vendor": [
-   "io.github.DevInder1/tridentchain-security",
-   "io.github.DevinoSolutions/upapi-mcp",
-   "io.github.devin-lemcke/canusign-mcp-server",
-   "io.github.devinmlowe/engram",
-   "io.github.devinwang/app-store-connect-mcp",
-   "io.github.devinwang/cloak-browser-mcp",
-   "io.github.devinwang/google-play-developer-mcp"
-  ],
+  "registry_vendor": [],
   "links": [
    {
     "url": "https://docs.devin.ai/api-reference/overview",

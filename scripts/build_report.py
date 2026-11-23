@@ -121,18 +121,28 @@ def _list(items, fmt, limit=12):
         return "<p class='small muted'>None.</p>"
     more = f"<li class='muted'>+{len(items)-limit} more in data.json</li>" if len(items) > limit else ""
     return "<ul class='small'>" + "".join(f"<li>{fmt(x)}</li>" for x in items[:limit]) + more + "</ul>"
+CAUGHT = ("<div class='card' style='margin-top:14px'><h3>What the first live run caught (all fixed, with regression tests)</h3><ul class='small'>"
+          "<li><strong>False 'vendor-owned' MCP matches.</strong> Prefix matching on GitHub org names accepted <code>io.github.Xerolo44</code> as Xero, <code>io.github.Ramp-Jet</code> as Ramp and "
+          "<code>io.github.copperline-labs</code> as Copper; a stranger's <code>app.netlify.&lt;user&gt;</code> site passed as Netlify; Binance's <code>github.io</code> docs host made every "
+          "<code>io.github.*</code> entry look like Binance's. Fixed: exact org match, shared-hosting denylist; vendor matches are now recomputed from raw registry names on every build.</li>"
+          "<li><strong>robots.txt over-blocking.</strong> Python's built-in reader treats a 403 on robots.txt as 'disallow everything', which flagged 30 docs sites (mostly bot protection). "
+          "Replaced with RFC 9309 behaviour (4xx = no rules, 5xx = disallow); disallowed pages are now not fetched at all.</li>"
+          "<li><strong>A broken link in the brief.</strong> The Neo4j hint <code>neo4j.com/docs/api</code> returns 404; the evidence now points at the docs root.</li></ul></div>")
 if SW:
     a_ = lambda x: f"<a href='#app-{x['id']}'>{e(x['app'])}</a>"
+    canon = lambda app: __import__("re").findall(r"[a-z0-9]+", __import__("re").sub(r"\(.*?\)", "", app).lower())
+    alias = [x for x in SW["catalog"] if x["slug"] not in ("_".join(canon(x["app"])), "".join(canon(x["app"])))]
     SWEEP = (f"<div class='grid g3'>"
       f"<div class='card'><h3>Evidence links</h3><div class='bigacc' style='font-size:40px'>{pct(SW['links_ok'], SW['links_total'])}%</div>"
-      f"<p class='small muted'>{SW['links_ok']} of {SW['links_total']} evidence URLs readable · {len(SW['browser_read'])} needed the headless browser</p>"
+      f"<p class='small muted'>{SW['links_ok']} of {SW['links_total']} fetched evidence URLs readable · {len(SW['browser_read'])} needed the headless browser · {len(SW['robots_blocked'])} not fetched (robots.txt)</p>"
       f"<h3>Not readable</h3>{_list(SW['broken'], lambda x: a_(x) + f' <span class="pill p-bad">{x["status"] or "no response"}</span>')}</div>"
       f"<div class='card'><h3>MCP Registry</h3><p class='small'>{len(SW['registry_confirmed'])} official-MCP claims confirmed by a vendor-owned namespace.</p>{_list(SW['registry_confirmed'], lambda x: a_(x) + ' · <code>' + e(x['entries'][0]) + '</code>')}"
       f"<h3>Vendor entry, row says otherwise</h3>{_list(SW['registry_vendor_mismatch'], lambda x: a_(x) + f' ({e(x["mcp"])}) · <code>' + e(x['entries'][0]) + '</code>')}</div>"
       f"<div class='card'><h3>Composio catalogue</h3><p class='small'>{len(SW['catalog'])} of 100 have a toolkit page.</p>{_list(SW['catalog'], lambda x: a_(x) + ' · <code>' + e(x['slug']) + '</code>' + (' <span class="pill p-docs-only">MCP wrapper</span>' if x['kind']=='mcp-wrapper' else ''), 40)}"
-      f"<h3>robots.txt blocks agents</h3>{_list(SW['robots_blocked'], a_)}"
+      f"<h3>Matched via an alias slug (check)</h3>{_list(alias, lambda x: a_(x) + ' → <code>' + e(x['slug']) + '</code>')}"
+      f"<h3>robots.txt disallows agents (not fetched)</h3>{_list(SW['robots_blocked'], a_)}"
       f"<h3>Auth claims corroborated by evidence text</h3><p class='small'>{SW['corr_hits']} of {SW['corr_claims']} ({pct(SW['corr_hits'], SW['corr_claims'])}%)</p></div></div>"
-      f"<p class='small muted'>Run {e(SW['meta']['generated'])} on {e(SW['meta']['runner'])}" + (f" · <a href='{e(SW['meta']['run_url'])}'>run log</a>" if SW['meta'].get('run_url') else "") + ".</p>")
+      f"<p class='small muted'>Run {e(SW['meta']['generated'])} on {e(SW['meta']['runner'])}" + (f" · <a href='{e(SW['meta']['run_url'])}'>run log</a>" if SW['meta'].get('run_url') else "") + ".</p>" + CAUGHT)
 else:
     SWEEP = "<div class='card'><p class='small'>The live sweep has not run yet. In the repo: Actions → <code>pipeline</code> → Run workflow (no keys needed), or <code>python -m agent sweep</code> anywhere with internet.</p></div>"
 schema = [("auth", "OAuth2, API key (incl. PATs, bot tokens), Basic, Other (signed keys, JWT, OAuth1, Digest), None, Unknown"),

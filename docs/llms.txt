@@ -5,7 +5,7 @@
 - 74 vs 65 apps take a static key or Basic auth vs OAuth2. 44 offer both, 30 are key-only and 21 OAuth-only. A toolkit factory needs both schemes first-class; key-only apps are the fastest builds.
 - 20/20 Developer and Productivity apps are ready; Finance is the hard category. Finance has 1 ready app and 5 needing outreach (customer-only spend platforms, enterprise data, merchant gateways). Marketing and Ecommerce are mostly buildable with caveats.
 - 3 × 11 blockers tie for most common. App review / platform policy, paid plan needed for credentials and customer, enterprise or vetted-partner only each block 11 apps, and cluster by category: review hits big consumer platforms, paid plans hit AI-native and SEO tools, customer-only hits fintech and enterprise data.
-- 56/100 already run an official MCP server. 35 were confirmed by a page read this run; the rest are queued pass-1 claims. 3 vendor MCPs (Twilio, BigCommerce, Vonage) only search docs. AI-native apps are MCP-first (9/10): Otter's MCP works on any plan while its REST API is Enterprise-only.
+- 56/100 already run an official MCP server. 32 were confirmed by a page read this run; the rest are queued pass-1 claims. 3 vendor MCPs (Twilio, BigCommerce, Vonage) only search docs. AI-native apps are MCP-first (9/10): Otter's MCP works on any plan while its REST API is Enterprise-only.
 - 90.3% → 100.0% field accuracy, closed-book draft → verified holdout. Half the closed-book misses (6/12) were the MCP field. The agent's confidence was calibrated: 68% of low-confidence rows needed a fix vs 6% of high-confidence ones, so research is routed by confidence.
 - 81/100 already have a Composio toolkit page. Checked live against composio.dev/toolkits in GitHub Actions. 5 apps are buildable today and not yet in the catalogue: that is the real easy-win queue, not the raw 58.
 
@@ -75,7 +75,7 @@
 63 | Netlify | API key;OAuth2 | free | REST | official | ready | Free; PAT or OAuth app
 64 | Cloudflare | API key | free | REST | official | ready | Free; scoped API tokens
 65 | Supabase | API key;OAuth2 | free | REST | official | ready | Free; Management API PAT or OAuth app
-66 | Neo4j | Basic;OAuth2 | free | REST | official | ready | Free AuraDB tier; DB Basic auth plus Aura API client credentials
+66 | Neo4j | Basic;OAuth2 | free | REST | official | ready | Free AuraDB tier; DB Basic auth plus Aura API client credentials. The brief's hint URL neo4j.com/docs/api returns 404 (live sweep)
 67 | Snowflake | Other;OAuth2;API key | trial | REST | official | ready | Trial; key-pair JWT, OAuth or PAT; Snowflake-managed MCP
 68 | MongoDB Atlas | Other;OAuth2 | free | REST | official | ready | Free M0; service-account OAuth or legacy Digest keys; official MCP
 69 | Datadog | API key;OAuth2 | trial | REST | official | ready | Trial; API key + application key headers
