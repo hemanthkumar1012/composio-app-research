@@ -1,0 +1,29 @@
+# PASS 2 — corrections made by the web-grounded research pass (search + fetch of vendor docs / MCP registry).
+# Every row = one field changed from pass 1, with the evidence URL that justified it.
+id	field	new	evidence	note
+5	auth	API key;OAuth2	https://docs.twenty.com/developers/introduction	Docs name OAuth app connections in addition to workspace API keys
+9	auth	API key;OAuth2	https://developer.copper.com/	Dev docs have an OAuth2.0 section (partner apps) besides API-key headers
+10	mcp	official	https://api.docs.dealcloud.com/	DealCloud API docs ship an MCP section (getting started, auth, tools)
+25	verdict	ready	https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/	API add-on + key "available on all plans"; nothing blocks a toolkit
+52	access	trial	https://seranking.com/api.html	"API access is included in every SE Ranking plan"; testable on free trial
+52	verdict	ready	https://seranking.com/api.html	Trial is enough to build and test
+54	mcp	official	https://docs.mrscraper.com/	Official MCP server (mrscraper-com/mrscraper-mcp)
+60	auth	API key	https://www.clay.com/pricing	CLI/API listed on every tier (key-based); exact scheme not documented publicly
+60	access	free	https://www.clay.com/pricing	Free plan exists; CLI/API quota 100 search results/30 days on Free
+60	api	REST	https://www.clay.com/pricing	"Build with Clay via CLI / API"; webhooks + HTTP API only on Growth+
+60	mcp	official	https://www.clay.com/pricing	"Clay MCP for Reps" included on every plan
+60	verdict	caveat	https://www.clay.com/pricing	Buildable but API scope is narrow and pricing page contradicts itself (FAQ says API = Enterprise)
+72	mcp	official	https://registry.modelcontextprotocol.io/v0/servers?search=airtable	com.airtable/mcp in the official MCP Registry (remote mcp.airtable.com/mcp)
+85	auth	Unknown	https://ipayx.ai/docs	Docs page describes an FX-verification protocol; no auth scheme published
+85	api	None	https://ipayx.ai/docs	No endpoints documented publicly
+92	auth	OAuth2;API key	https://www.scalekit.com/blog/otter-mcp-vs-api	MCP = OAuth 2.1 on any Otter plan; Public API = Bearer API key, Enterprise only
+92	access	free	https://claude.com/marketplace/connectors/otter-ai	Official remote MCP (mcp.otter.ai/mcp) works from a standard account
+93	auth	API key;OAuth2	https://developers.fathom.ai/	API key quickstart + OAuth for integrations other users install
+94	auth	API key	https://consensus.app/home/api/	Self-serve "Create API key" page; OAuth not documented for the API
+94	access	paid	https://consensus.app/home/api/	API "Included on every paid plan"; no application gate
+95	mcp	official	https://docs.reducto.ai/	Reducto MCP server for Claude Code / Cursor / Codex
+97	auth	API key;OAuth2	https://higgsfield.ai/cli	API console keys; CLI + MCP use browser account login ("No API keys to manage")
+97	mcp	official	https://higgsfield.ai/cli	Official Higgsfield MCP server
+99	auth	API key;OAuth2	https://transcriptapi.com/	Bearer API key; MCP clients may use OAuth
+99	mcp	official	https://transcriptapi.com/	MCP server at transcriptapi.com/mcp
+100	mcp	official	https://developers.grain.com/	Developer site links MCP docs (developers.grain.com/mcp/)

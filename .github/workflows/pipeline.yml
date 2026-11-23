@@ -1,0 +1,63 @@
+name: pipeline
+# Live sweep of all 100 apps (no API keys) -> rebuild data + page -> run every test -> commit -> deploy GitHub Pages.
+# Trigger: Actions -> pipeline -> Run workflow. Also runs weekly, and on pushes (tests + deploy, without the sweep).
+on:
+  workflow_dispatch:
+    inputs:
+      sweep:
+        description: "Run the live sweep (registry, Composio catalogue, links, headless browser)"
+        type: boolean
+        default: true
+  schedule:
+    - cron: "17 3 * * 1"   # Mondays 03:17 UTC: catches pricing/MCP/link drift
+  push:
+    branches: [main]
+    paths: ["agent/**", "scripts/**", "web/**", "data/**", "tests/**", "apps.csv"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency: { group: pipeline, cancel-in-progress: false }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install
+        run: |
+          pip install requests beautifulsoup4 pydantic playwright
+          python -m playwright install --with-deps chromium
+      - name: Live sweep (all 100 apps)
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.sweep)
+        run: python -m agent sweep --workers 8
+      - name: Rebuild data + page
+        run: python -m agent build
+      - name: Tests (offline logic, agent loop with fakes, headless UI)
+        run: |
+          python tests/test_offline.py
+          python tests/test_agent_loop.py
+          python tests/test_ui_smoke.py
+      - name: Commit sweep + rebuilt page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          git diff --cached --quiet || (git commit -m "pipeline: live sweep + rebuild ($(date -u +%F))" && git push)
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: docs }
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

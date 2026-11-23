@@ -1,0 +1,6411 @@
+{
+ "meta": {
+  "generated": "2026-11-23",
+  "author": "V. Hemanth Kumar",
+  "repo": "https://github.com/hemanthkumar1012/composio-app-research"
+ },
+ "labels": {
+  "verdict": {
+   "ready": "Build now",
+   "caveat": "Build with caveat",
+   "outreach": "Needs outreach",
+   "wrap": "Wrap CLI as skill"
+  },
+  "access": {
+   "free": "Free / dev account",
+   "trial": "Trial or credits",
+   "review": "Self-serve, then app review",
+   "paid": "Paid plan",
+   "gated": "Customer / partner / sales",
+   "na": "No API"
+  }
+ },
+ "apps": [
+  {
+   "app": "Salesforce",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST+SOAP+GraphQL",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "CRM & Sales",
+   "id": 1,
+   "hint": "salesforce.com",
+   "one_liner": "Enterprise CRM: accounts, leads, opportunities, cases, custom objects",
+   "breadth": "broad",
+   "note": "Free Developer Edition org; OAuth via a connected / external client app",
+   "evidence": [
+    "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST+SOAP+GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "HubSpot",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "CRM & Sales",
+   "id": 2,
+   "hint": "hubspot.com",
+   "one_liner": "CRM plus marketing, sales and service hubs",
+   "breadth": "broad",
+   "note": "Free developer account; private-app token or OAuth public app (legacy API keys sunset)",
+   "evidence": [
+    "https://developers.hubspot.com/docs/api/overview",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=hubspot"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "2",
+    "app": "HubSpot",
+    "field": "mcp",
+    "question": "Does HubSpot run an official MCP server that acts on CRM data?",
+    "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Pipedrive",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "community",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "CRM & Sales",
+   "id": 3,
+   "hint": "pipedrive.com",
+   "one_liner": "Pipeline-focused sales CRM for SMBs",
+   "breadth": "broad",
+   "note": "Free developer sandbox; API token or OAuth app. Only community MCP servers in the registry",
+   "evidence": [
+    "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=pipedrive"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Attio",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "CRM & Sales",
+   "id": 4,
+   "hint": "attio.com",
+   "one_liner": "Data-model-first CRM for startups",
+   "breadth": "moderate",
+   "note": "Free plan; workspace API key or OAuth app",
+   "evidence": [
+    "https://docs.attio.com",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=attio"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Twenty",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST+GraphQL",
+   "mcp": "community",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "CRM & Sales",
+   "id": 5,
+   "hint": "twenty.com",
+   "one_liner": "Open-source CRM (Salesforce alternative), cloud or self-hosted",
+   "breadth": "broad",
+   "note": "REST + GraphQL; self-hosted installs mean a per-instance base URL",
+   "evidence": [
+    "https://docs.twenty.com/developers/introduction"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST+GraphQL",
+    "mcp": "community",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Self-hosted / per-instance base URL",
+   "history": [
+    {
+     "id": 5,
+     "app": "Twenty",
+     "field": "auth",
+     "old": "API key",
+     "new": "API key;OAuth2",
+     "evidence": "https://docs.twenty.com/developers/introduction",
+     "note": "Docs name OAuth app connections in addition to workspace API keys",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Podio",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "CRM & Sales",
+   "id": 6,
+   "hint": "podio.com",
+   "one_liner": "Configurable workspace apps and workflows (Progress Podio)",
+   "breadth": "moderate",
+   "note": "Free client ID/secret from account settings; ageing platform",
+   "evidence": [
+    "https://developers.podio.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Zoho CRM",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "CRM & Sales",
+   "id": 7,
+   "hint": "zoho.com/crm",
+   "one_liner": "CRM inside the Zoho suite",
+   "breadth": "broad",
+   "note": "Zoho OAuth; must handle data-centre domains (.com/.eu/.in)",
+   "evidence": [
+    "https://www.zoho.com/crm/developer/docs/"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Close",
+   "auth": "API key;OAuth2",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "CRM & Sales",
+   "id": 8,
+   "hint": "close.com",
+   "one_liner": "Inside-sales CRM with built-in calling and email",
+   "breadth": "broad",
+   "note": "No free plan, 14-day trial; high-volume API not on the Solo plan",
+   "evidence": [
+    "https://developer.close.com/",
+    "https://www.close.com/pricing"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "API key;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://developer.close.com/",
+     "https://www.close.com/pricing"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Copper",
+   "auth": "API key;OAuth2",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "CRM & Sales",
+   "id": 9,
+   "hint": "copper.com",
+   "one_liner": "CRM built for Google Workspace",
+   "breadth": "moderate",
+   "note": "API key + user email per request; OAuth preferred for partners; plan gating not documented",
+   "evidence": [
+    "https://developer.copper.com/introduction/authentication.html"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [
+    {
+     "id": 9,
+     "app": "Copper",
+     "field": "auth",
+     "old": "API key",
+     "new": "API key;OAuth2",
+     "evidence": "https://developer.copper.com/",
+     "note": "Dev docs have an OAuth2.0 section (partner apps) besides API-key headers",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": "holdout",
+   "truth": {
+    "auth": "API key;OAuth2",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "X",
+    "src": [
+     "https://developer.copper.com/introduction/authentication.html"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "DealCloud",
+   "auth": "OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "CRM & Sales",
+   "id": 10,
+   "hint": "api.docs.dealcloud.com",
+   "one_liner": "Intapp deal and relationship platform for private capital and banks",
+   "breadth": "broad",
+   "note": "OAuth2 client credentials against the customer's own site URL; customer-only, has an MCP section",
+   "evidence": [
+    "https://api.docs.dealcloud.com/docs/token",
+    "https://api.docs.dealcloud.com/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [
+    {
+     "id": 10,
+     "app": "DealCloud",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://api.docs.dealcloud.com/",
+     "note": "DealCloud API docs ship an MCP section (getting started, auth, tools)",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "outreach",
+    "src": [
+     "https://api.docs.dealcloud.com/docs/token",
+     "https://api.docs.dealcloud.com/"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Zendesk",
+   "auth": "OAuth2;Basic",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "community",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Support & Helpdesk",
+   "id": 11,
+   "hint": "zendesk.com",
+   "one_liner": "Ticketing and help-centre platform",
+   "breadth": "broad",
+   "note": "Trial account; email/API-token Basic or OAuth. Only community MCP servers in the registry",
+   "evidence": [
+    "https://developer.zendesk.com/api-reference/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=zendesk"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Intercom",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Support & Helpdesk",
+   "id": 12,
+   "hint": "intercom.com",
+   "one_liner": "AI-first customer messaging and support",
+   "breadth": "broad",
+   "note": "Free developer workspace; access token or OAuth",
+   "evidence": [
+    "https://developers.intercom.com/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=intercom"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "12",
+    "app": "Intercom",
+    "field": "mcp",
+    "question": "Does Intercom run an official MCP server?",
+    "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Freshdesk",
+   "auth": "Basic",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Support & Helpdesk",
+   "id": 13,
+   "hint": "freshdesk.com",
+   "one_liner": "Freshworks helpdesk",
+   "breadth": "broad",
+   "note": "API key as Basic username; trial capped at 50 calls/min",
+   "evidence": [
+    "https://developers.freshdesk.com/api/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=freshdesk"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "src": [
+     "https://developers.freshdesk.com/api/"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Front",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "community",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Support & Helpdesk",
+   "id": 14,
+   "hint": "front.com",
+   "one_liner": "Shared-inbox customer communication hub",
+   "breadth": "broad",
+   "note": "Developer environment; API token or OAuth",
+   "evidence": [
+    "https://dev.frontapp.com",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=front"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Pylon",
+   "auth": "API key",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "low",
+   "category": "Support & Helpdesk",
+   "id": 15,
+   "hint": "usepylon.com",
+   "one_liner": "B2B support platform (Slack/Teams-native ticketing)",
+   "breadth": "moderate",
+   "note": "Admin-only API tokens; no self-serve signup found (demo-led), so a customer workspace is needed",
+   "evidence": [
+    "https://docs.usepylon.com/pylon-docs/developer/api.md"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "low"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "LiveAgent",
+   "auth": "API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Support & Helpdesk",
+   "id": 16,
+   "hint": "liveagent.com",
+   "one_liner": "Multichannel helpdesk with live chat",
+   "breadth": "moderate",
+   "note": "Trial account; API key",
+   "evidence": [
+    "https://www.liveagent.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Plain",
+   "auth": "API key",
+   "access": "trial",
+   "api": "GraphQL",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "Support & Helpdesk",
+   "id": 17,
+   "hint": "plain.com",
+   "one_liner": "API-first B2B support platform",
+   "breadth": "broad",
+   "note": "GraphQL with Bearer API key; 7-day trial, no free plan; official MCP",
+   "evidence": [
+    "https://www.plain.com/docs/graphql/introduction.md",
+    "https://www.plain.com/pricing"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://www.plain.com/docs/graphql/introduction.md",
+     "https://www.plain.com/pricing"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Help Scout",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Support & Helpdesk",
+   "id": 18,
+   "hint": "helpscout.com",
+   "one_liner": "Shared inbox and docs for support teams",
+   "breadth": "broad",
+   "note": "OAuth2 only (auth code, or client credentials for your own account)",
+   "evidence": [
+    "https://developer.helpscout.com/mailbox-api/overview/authentication/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Gorgias",
+   "auth": "Basic;OAuth2",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Support & Helpdesk",
+   "id": 19,
+   "hint": "gorgias.com",
+   "one_liner": "Ecommerce helpdesk (Shopify-centric)",
+   "breadth": "broad",
+   "note": "Private app = email + API key; public apps must use OAuth2",
+   "evidence": [
+    "https://developers.gorgias.com/docs/authentication"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Gladly",
+   "auth": "Basic",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "Support & Helpdesk",
+   "id": 20,
+   "hint": "gladly.com",
+   "one_liner": "Customer service platform built around people, not tickets",
+   "breadth": "broad",
+   "note": "Admin must grant \"API User\" permission; customer-only",
+   "evidence": [
+    "https://developer.gladly.com/rest/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "Basic",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://developer.gladly.com/rest/"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Slack",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "high",
+   "category": "Communications",
+   "id": 21,
+   "hint": "slack.com",
+   "one_liner": "Team messaging",
+   "breadth": "broad",
+   "note": "Unlisted commercial apps get conversations.history at 1 req/min (since May 2025); Marketplace listing needed",
+   "evidence": [
+    "https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "high"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Twilio",
+   "auth": "Basic",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "docs-only",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Communications",
+   "id": 22,
+   "hint": "twilio.com",
+   "one_liner": "Programmable SMS, voice, WhatsApp and email",
+   "breadth": "broad",
+   "note": "Trial credit; Basic with SID/token or API key; official MCP is docs-only",
+   "evidence": [
+    "https://www.twilio.com/docs/usage/requests-to-twilio",
+    "https://www.twilio.com/docs/ai/mcp"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 22,
+     "app": "Twilio",
+     "field": "mcp",
+     "old": "official",
+     "new": "docs-only",
+     "evidence": "https://www.twilio.com/docs/ai/mcp",
+     "note": "Loop 1: Twilio's official MCP (mcp.twilio.com/docs) is docs search only - \"No Account SID, API key, or other credential is required or accepted\"; it can't act on an account",
+     "stage": "verify-loops"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "Basic",
+    "access": "X",
+    "api": "REST",
+    "mcp": "docs-only",
+    "verdict": "ready",
+    "src": [
+     "https://www.twilio.com/docs/usage/requests-to-twilio",
+     "https://www.twilio.com/docs/ai/mcp"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Zoho Cliq",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Communications",
+   "id": 23,
+   "hint": "zoho.com/cliq",
+   "one_liner": "Zoho's team chat",
+   "breadth": "moderate",
+   "note": "Zoho OAuth; data-centre domains",
+   "evidence": [
+    "https://www.zoho.com/cliq/help/restapi/v2/"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Lark",
+   "auth": "Other;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Communications",
+   "id": 24,
+   "hint": "open.larksuite.com",
+   "one_liner": "All-in-one collaboration suite (chat, docs, base) from ByteDance",
+   "breadth": "broad",
+   "note": "App ID/secret to tenant token, or user OAuth; custom apps need tenant admin approval",
+   "evidence": [
+    "https://open.larksuite.com/document/"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Pumble",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "Communications",
+   "id": 25,
+   "hint": "pumble.com",
+   "one_liner": "Free Slack alternative by CAKE.com",
+   "breadth": "narrow",
+   "note": "API add-on keys on all plans; already a Composio toolkit",
+   "evidence": [
+    "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 25,
+     "app": "Pumble",
+     "field": "verdict",
+     "old": "caveat",
+     "new": "ready",
+     "evidence": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "note": "API add-on + key \"available on all plans\"; nothing blocks a toolkit",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Discord",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "community",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Communications",
+   "id": 26,
+   "hint": "discord.com",
+   "one_liner": "Community chat with bots and apps",
+   "breadth": "broad",
+   "note": "Bot token or OAuth2; privileged intents need verification at scale",
+   "evidence": [
+    "https://docs.discord.com/developers/reference"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "src": [
+     "https://docs.discord.com/developers/reference"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Telegram",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "community",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Communications",
+   "id": 27,
+   "hint": "core.telegram.org",
+   "one_liner": "Messaging app with a free Bot API",
+   "breadth": "broad",
+   "note": "BotFather token, free",
+   "evidence": [
+    "https://core.telegram.org/bots/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "WhatsApp Business",
+   "auth": "OAuth2;API key",
+   "access": "review",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Communications",
+   "id": 28,
+   "hint": "developers.facebook.com/docs/whatsapp",
+   "one_liner": "WhatsApp Cloud API for business messaging",
+   "breadth": "moderate",
+   "note": "Free test number; production needs business verification and Meta App Review; per-message pricing",
+   "evidence": [
+    "https://developers.facebook.com/docs/whatsapp"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "review",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Aircall",
+   "auth": "Basic;OAuth2",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Communications",
+   "id": 29,
+   "hint": "aircall.io",
+   "one_liner": "Cloud phone system for sales and support",
+   "breadth": "moderate",
+   "note": "Basic auth for your own account; OAuth requires an Aircall Marketplace listing",
+   "evidence": [
+    "https://developers.aircall.io/api-references",
+    "https://aircall.io/pricing/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "Basic;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://developers.aircall.io/api-references",
+     "https://aircall.io/pricing/"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Vonage",
+   "auth": "Basic;Other",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "docs-only",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Communications",
+   "id": 30,
+   "hint": "developer.vonage.com",
+   "one_liner": "Communications APIs (SMS, voice, video, verify)",
+   "breadth": "broad",
+   "note": "Free credit; key/secret or JWT apps; vendor MCP is docs-only",
+   "evidence": [
+    "https://developer.vonage.com",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=vonage"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic;Other",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 30,
+     "app": "Vonage",
+     "field": "mcp",
+     "old": "none",
+     "new": "docs-only",
+     "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=vonage",
+     "note": "Loop 3 sweep: io.github.Vonage/vonage-documentation-mcp is docs-only",
+     "stage": "verify-loops"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Google Ads",
+   "auth": "OAuth2",
+   "access": "review",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "high",
+   "category": "Marketing & Social",
+   "id": 31,
+   "hint": "developers.google.com/google-ads",
+   "one_liner": "Google's ads platform",
+   "breadth": "broad",
+   "note": "Developer token must pass Google review before production (test accounts only until then)",
+   "evidence": [
+    "https://developers.google.com/google-ads/api/docs/start"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "high"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Meta Ads",
+   "auth": "OAuth2",
+   "access": "review",
+   "api": "REST",
+   "mcp": "community",
+   "verdict": "caveat",
+   "conf": "high",
+   "category": "Marketing & Social",
+   "id": 32,
+   "hint": "developers.facebook.com/docs/marketing-apis",
+   "one_liner": "Facebook and Instagram Marketing API",
+   "breadth": "broad",
+   "note": "ads_management Advanced Access needs App Review and Business Verification",
+   "evidence": [
+    "https://developers.facebook.com/docs/marketing-apis"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "caveat",
+    "conf": "high"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "LinkedIn Ads",
+   "auth": "OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "high",
+   "category": "Marketing & Social",
+   "id": 33,
+   "hint": "learn.microsoft.com/linkedin/marketing",
+   "one_liner": "LinkedIn Advertising API",
+   "breadth": "broad",
+   "note": "Even Development tier needs an application reviewed by LinkedIn; Standard tier is a second application",
+   "evidence": [
+    "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+    "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "high"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+     "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "GoHighLevel",
+   "auth": "OAuth2;API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Marketing & Social",
+   "id": 34,
+   "hint": "highlevel.stoplight.io",
+   "one_liner": "All-in-one white-label agency CRM and marketing",
+   "breadth": "broad",
+   "note": "OAuth marketplace app or Private Integration Token; needs a paid sub-account (trial exists); MCP not confirmed in docs",
+   "evidence": [
+    "https://marketplace.gohighlevel.com/docs/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=gohighlevel"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "34",
+    "app": "GoHighLevel",
+    "field": "mcp",
+    "question": "Does HighLevel run an official MCP server?",
+    "why_agent_could_not_close_it": "pass-1 claim; not in docs home or registry",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Mailchimp",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Marketing & Social",
+   "id": 35,
+   "hint": "mailchimp.com/developer",
+   "one_liner": "Email marketing",
+   "breadth": "broad",
+   "note": "Free plan; API key or OAuth; Transactional (Mandrill) is a paid add-on",
+   "evidence": [
+    "https://mailchimp.com/developer/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=mailchimp"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Klaviyo",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Marketing & Social",
+   "id": 36,
+   "hint": "developers.klaviyo.com",
+   "one_liner": "Ecommerce email and SMS marketing",
+   "breadth": "broad",
+   "note": "Free plan; private API key or OAuth app",
+   "evidence": [
+    "https://developers.klaviyo.com",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=klaviyo"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "36",
+    "app": "Klaviyo",
+    "field": "mcp",
+    "question": "Does Klaviyo run an official MCP server?",
+    "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "systeme.io",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "Marketing & Social",
+   "id": 37,
+   "hint": "systeme.io",
+   "one_liner": "All-in-one funnel, course and email builder",
+   "breadth": "moderate",
+   "note": "Public API key (X-API-Key, max 3); developer docs block automated fetches (robots.txt), so plan access needs a human check",
+   "evidence": [
+    "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 37,
+     "app": "systeme.io",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+     "note": "Loop 1: keys are created under Settings > \"MCP & API keys\"",
+     "stage": "verify-loops"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api"
+    ],
+    "note": "developer.systeme.io blocks agents (robots.txt); help-centre article used"
+   },
+   "human": {
+    "id": "37",
+    "app": "systeme.io",
+    "field": "access",
+    "question": "Can a free-plan account create a public API key?",
+    "why_agent_could_not_close_it": "developer.systeme.io blocks agents via robots.txt",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": []
+  },
+  {
+   "app": "Pinterest",
+   "auth": "OAuth2",
+   "access": "review",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Marketing & Social",
+   "id": 38,
+   "hint": "developers.pinterest.com",
+   "one_liner": "Visual discovery: Pins, boards, ads",
+   "breadth": "moderate",
+   "note": "Trial access on app creation; Standard access needs review",
+   "evidence": [
+    "https://developers.pinterest.com",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=pinterest"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Threads (Meta)",
+   "auth": "OAuth2",
+   "access": "review",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Marketing & Social",
+   "id": 39,
+   "hint": "developers.facebook.com/docs/threads",
+   "one_liner": "Meta's text-based social network",
+   "breadth": "moderate",
+   "note": "Testers work without review; public users need App Review and a published app",
+   "evidence": [
+    "https://developers.facebook.com/docs/threads/get-started"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://developers.facebook.com/docs/threads/get-started"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "SendGrid",
+   "auth": "API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Marketing & Social",
+   "id": 40,
+   "hint": "sendgrid.com",
+   "one_liner": "Email delivery API (Twilio SendGrid)",
+   "breadth": "broad",
+   "note": "API key; free trial (no permanent free tier)",
+   "evidence": [
+    "https://sendgrid.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Shopify",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "GraphQL",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Ecommerce",
+   "id": 41,
+   "hint": "shopify.dev",
+   "one_liner": "Commerce platform",
+   "breadth": "broad",
+   "note": "Free Partner account + dev stores; new public apps must use the GraphQL Admin API",
+   "evidence": [
+    "https://shopify.dev/docs/api/admin-graphql"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "WooCommerce",
+   "auth": "Basic;Other",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Ecommerce",
+   "id": 42,
+   "hint": "woocommerce.com/document/woocommerce-rest-api",
+   "one_liner": "Open-source WordPress commerce plugin",
+   "breadth": "broad",
+   "note": "Consumer key/secret per store and per-site base URL; no vendor MCP in the registry",
+   "evidence": [
+    "https://woocommerce.com/document/woocommerce-rest-api/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic;Other",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Self-hosted / per-instance base URL",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "BigCommerce",
+   "auth": "API key;OAuth2",
+   "access": "trial",
+   "api": "REST+GraphQL",
+   "mcp": "docs-only",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Ecommerce",
+   "id": 43,
+   "hint": "developer.bigcommerce.com",
+   "one_liner": "SaaS ecommerce platform",
+   "breadth": "broad",
+   "note": "Store API account token or OAuth app; REST + GraphQL; vendor MCP is docs-only",
+   "evidence": [
+    "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "trial",
+    "api": "REST+GraphQL",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 43,
+     "app": "BigCommerce",
+     "field": "mcp",
+     "old": "none",
+     "new": "docs-only",
+     "evidence": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+     "note": "Loop 1: BigCommerce's MCP is a \"Docs MCP Server\" - label refined (still no data MCP)",
+     "stage": "verify-loops"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "API key;OAuth2",
+    "access": "X",
+    "api": "REST+GraphQL",
+    "mcp": "docs-only",
+    "verdict": "ready",
+    "src": [
+     "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Salesforce Commerce Cloud",
+   "auth": "OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "Ecommerce",
+   "id": 44,
+   "hint": "developer.salesforce.com/docs/commerce",
+   "one_liner": "Salesforce B2C Commerce (enterprise storefronts)",
+   "breadth": "broad",
+   "note": "Needs a B2C Commerce instance + Account Manager API client: customer or partner only",
+   "evidence": [
+    "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Magento (Adobe Commerce)",
+   "auth": "Other;API key",
+   "access": "free",
+   "api": "REST+GraphQL",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Ecommerce",
+   "id": 45,
+   "hint": "developer.adobe.com/commerce",
+   "one_liner": "Adobe Commerce / Magento Open Source",
+   "breadth": "broad",
+   "note": "Self-hosted per merchant; integration (OAuth 1.0a) or admin bearer tokens",
+   "evidence": [
+    "https://developer.adobe.com/commerce/webapi/"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other;API key",
+    "access": "free",
+    "api": "REST+GraphQL",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Self-hosted / per-instance base URL",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Squarespace",
+   "auth": "API key;OAuth2",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Ecommerce",
+   "id": 46,
+   "hint": "developers.squarespace.com",
+   "one_liner": "Website builder with commerce",
+   "breadth": "moderate",
+   "note": "API keys only on Commerce Advanced; OAuth credentials need Squarespace review",
+   "evidence": [
+    "https://developers.squarespace.com/commerce-apis/authentication-and-permissions"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Ecwid",
+   "auth": "OAuth2;API key",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "Ecommerce",
+   "id": 47,
+   "hint": "api-docs.ecwid.com",
+   "one_liner": "Embeddable ecommerce (Lightspeed)",
+   "breadth": "broad",
+   "note": "Only stores on paid plans can access API; free dev upgrade on request to support",
+   "evidence": [
+    "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "OAuth2;API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+     "https://docs.ecwid.com/sitemap.md"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Gumroad",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Ecommerce",
+   "id": 48,
+   "hint": "gumroad.com/api",
+   "one_liner": "Storefront for creators selling digital products",
+   "breadth": "narrow",
+   "note": "Register an OAuth app and generate your own token",
+   "evidence": [
+    "https://gumroad.com/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Amazon Selling Partner",
+   "auth": "OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "high",
+   "category": "Ecommerce",
+   "id": 49,
+   "hint": "developer-docs.amazon.com/sp-api",
+   "one_liner": "Amazon seller and vendor data and operations",
+   "breadth": "broad",
+   "note": "Needs a Professional seller account + developer profile review; PII roles need extra approval",
+   "evidence": [
+    "https://developer-docs.amazon.com/sp-api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "high"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "fanbasis",
+   "auth": "API key",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "low",
+   "category": "Ecommerce",
+   "id": 50,
+   "hint": "fanbasis.com",
+   "one_liner": "Creator payments and checkout platform (per brief)",
+   "breadth": "none",
+   "note": "No public developer docs found and the site refused automated fetch: needs a human or outreach",
+   "evidence": [
+    "https://fanbasis.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "low"
+   },
+   "blocker": "No public API docs found",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "50",
+    "app": "fanbasis",
+    "field": "all",
+    "question": "Does fanbasis publish any developer API or webhooks?",
+    "why_agent_could_not_close_it": "site refused automated fetch; search found no docs",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": []
+  },
+  {
+   "app": "DataForSEO",
+   "auth": "Basic",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Data/SEO/Scraping",
+   "id": 51,
+   "hint": "docs.dataforseo.com",
+   "one_liner": "Pay-as-you-go SEO data APIs (SERP, keywords, backlinks)",
+   "breadth": "broad",
+   "note": "Free account; Basic with API login/password; official hosted MCP",
+   "evidence": [
+    "https://docs.dataforseo.com/v3/auth/",
+    "https://github.com/dataforseo/mcp-server-typescript"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://docs.dataforseo.com/v3/auth/",
+     "https://github.com/dataforseo/mcp-server-typescript"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "SE Ranking",
+   "auth": "API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "Data/SEO/Scraping",
+   "id": 52,
+   "hint": "seranking.com/api",
+   "one_liner": "SEO platform: rank tracking, audits, backlinks",
+   "breadth": "moderate",
+   "note": "API included in every plan and testable on the free trial; official MCP",
+   "evidence": [
+    "https://seranking.com/api.html"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 52,
+     "app": "SE Ranking",
+     "field": "access",
+     "old": "paid",
+     "new": "trial",
+     "evidence": "https://seranking.com/api.html",
+     "note": "API access is included in every SE Ranking plan; testable on free trial",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 52,
+     "app": "SE Ranking",
+     "field": "verdict",
+     "old": "caveat",
+     "new": "ready",
+     "evidence": "https://seranking.com/api.html",
+     "note": "Trial is enough to build and test",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://seranking.com/api.html"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Ahrefs",
+   "auth": "API key",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Data/SEO/Scraping",
+   "id": 53,
+   "hint": "ahrefs.com/api",
+   "one_liner": "SEO toolset: backlinks and keywords",
+   "breadth": "moderate",
+   "note": "API v3 needs Enterprise (free test queries only); official MCP",
+   "evidence": [
+    "https://docs.ahrefs.com/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "X",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "src": [
+     "https://docs.ahrefs.com/"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "MrScraper",
+   "auth": "API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "Data/SEO/Scraping",
+   "id": 54,
+   "hint": "docs.mrscraper.com",
+   "one_liner": "AI web-scraping API",
+   "breadth": "narrow",
+   "note": "API token; official MCP (mrscraper-com/mrscraper-mcp)",
+   "evidence": [
+    "https://docs.mrscraper.com/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 54,
+     "app": "MrScraper",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://docs.mrscraper.com/",
+     "note": "Official MCP server (mrscraper-com/mrscraper-mcp)",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Apify",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Data/SEO/Scraping",
+   "id": 55,
+   "hint": "docs.apify.com",
+   "one_liner": "Web scraping and automation platform (Actors)",
+   "breadth": "broad",
+   "note": "Free plan with monthly credit; official MCP",
+   "evidence": [
+    "https://docs.apify.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Firecrawl",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Data/SEO/Scraping",
+   "id": 56,
+   "hint": "firecrawl.dev",
+   "one_liner": "Crawl and scrape the web into LLM-ready markdown",
+   "breadth": "moderate",
+   "note": "Free credits; official MCP",
+   "evidence": [
+    "https://firecrawl.dev"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Bright Data",
+   "auth": "API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Data/SEO/Scraping",
+   "id": 57,
+   "hint": "brightdata.com",
+   "one_liner": "Proxy network plus web-data and scraper APIs",
+   "breadth": "broad",
+   "note": "Trial; official MCP",
+   "evidence": [
+    "https://brightdata.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Sherlock",
+   "auth": "None",
+   "access": "na",
+   "api": "CLI",
+   "mcp": "community",
+   "verdict": "wrap",
+   "conf": "high",
+   "category": "Data/SEO/Scraping",
+   "id": 58,
+   "hint": "github.com/sherlock-project/sherlock",
+   "one_liner": "OSS CLI that hunts a username across 400+ sites",
+   "breadth": "none",
+   "note": "No API: wrap as a sandboxed CLI skill; OSINT use needs a policy review",
+   "evidence": [
+    "https://github.com/sherlock-project/sherlock"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "None",
+    "access": "na",
+    "api": "CLI",
+    "mcp": "community",
+    "verdict": "wrap",
+    "conf": "high"
+   },
+   "blocker": "Not an API (local CLI)",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Waterfall.io",
+   "auth": "API key",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "low",
+   "category": "Data/SEO/Scraping",
+   "id": 59,
+   "hint": "waterfall.io",
+   "one_liner": "B2B contact enrichment across 30+ data vendors",
+   "breadth": "narrow",
+   "note": "x-api-key; no self-serve signup on the site (\"Book a Call\")",
+   "evidence": [
+    "https://www.waterfall.io/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "low"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Clay",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "Data/SEO/Scraping",
+   "id": 60,
+   "hint": "clay.com",
+   "one_liner": "GTM enrichment and workflow spreadsheet",
+   "breadth": "narrow",
+   "note": "Free plan and MCP exist, but the API quota is tiny on Free, webhooks/HTTP API are Growth+, and the pricing FAQ contradicts the table",
+   "evidence": [
+    "https://www.clay.com/pricing"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other",
+    "access": "gated",
+    "api": "None",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [
+    {
+     "id": 60,
+     "app": "Clay",
+     "field": "auth",
+     "old": "Other",
+     "new": "API key",
+     "evidence": "https://www.clay.com/pricing",
+     "note": "CLI/API listed on every tier (key-based); exact scheme not documented publicly",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 60,
+     "app": "Clay",
+     "field": "access",
+     "old": "gated",
+     "new": "free",
+     "evidence": "https://www.clay.com/pricing",
+     "note": "Free plan exists; CLI/API quota 100 search results/30 days on Free",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 60,
+     "app": "Clay",
+     "field": "api",
+     "old": "None",
+     "new": "REST",
+     "evidence": "https://www.clay.com/pricing",
+     "note": "Build with Clay via CLI / API; webhooks + HTTP API only on Growth+",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 60,
+     "app": "Clay",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://www.clay.com/pricing",
+     "note": "Clay MCP for Reps included on every plan",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 60,
+     "app": "Clay",
+     "field": "verdict",
+     "old": "outreach",
+     "new": "caveat",
+     "evidence": "https://www.clay.com/pricing",
+     "note": "Buildable but API scope is narrow and pricing page contradicts itself (FAQ says API = Enterprise)",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "GitHub",
+   "auth": "OAuth2;API key;Other",
+   "access": "free",
+   "api": "REST+GraphQL",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 61,
+   "hint": "docs.github.com/rest",
+   "one_liner": "Code hosting and collaboration",
+   "breadth": "broad",
+   "note": "Free; PAT, OAuth app or GitHub App",
+   "evidence": [
+    "https://docs.github.com/rest"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key;Other",
+    "access": "free",
+    "api": "REST+GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Vercel",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 62,
+   "hint": "vercel.com/docs/rest-api",
+   "one_liner": "Frontend cloud and hosting",
+   "breadth": "broad",
+   "note": "Free Hobby; access token or integration OAuth; official MCP on all plans",
+   "evidence": [
+    "https://vercel.com/docs/rest-api",
+    "https://vercel.com/docs/mcp/vercel-mcp"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "X",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://vercel.com/docs/rest-api",
+     "https://vercel.com/docs/mcp/vercel-mcp"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Netlify",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 63,
+   "hint": "docs.netlify.com/api",
+   "one_liner": "Web hosting and deploy platform",
+   "breadth": "broad",
+   "note": "Free; PAT or OAuth app",
+   "evidence": [
+    "https://docs.netlify.com/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Cloudflare",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 64,
+   "hint": "developers.cloudflare.com/api",
+   "one_liner": "CDN, security, DNS and Workers",
+   "breadth": "broad",
+   "note": "Free; scoped API tokens",
+   "evidence": [
+    "https://developers.cloudflare.com/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Supabase",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 65,
+   "hint": "supabase.com/docs",
+   "one_liner": "Postgres backend-as-a-service",
+   "breadth": "broad",
+   "note": "Free; Management API PAT or OAuth app",
+   "evidence": [
+    "https://supabase.com/docs"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Neo4j",
+   "auth": "Basic;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Developer & Infra",
+   "id": 66,
+   "hint": "neo4j.com/docs/api",
+   "one_liner": "Graph database (AuraDB cloud)",
+   "breadth": "moderate",
+   "note": "Free AuraDB tier; DB Basic auth plus Aura API client credentials",
+   "evidence": [
+    "https://neo4j.com/docs/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Basic;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Snowflake",
+   "auth": "Other;OAuth2;API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Developer & Infra",
+   "id": 67,
+   "hint": "docs.snowflake.com",
+   "one_liner": "Cloud data warehouse",
+   "breadth": "broad",
+   "note": "Trial; key-pair JWT, OAuth or PAT; Snowflake-managed MCP",
+   "evidence": [
+    "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+    "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other;OAuth2;API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "Other;OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "MongoDB Atlas",
+   "auth": "Other;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 68,
+   "hint": "mongodb.com/docs/atlas/api",
+   "one_liner": "Managed MongoDB cloud",
+   "breadth": "broad",
+   "note": "Free M0; service-account OAuth or legacy Digest keys; official MCP",
+   "evidence": [
+    "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "Other;OAuth2",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Datadog",
+   "auth": "API key;OAuth2",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Developer & Infra",
+   "id": 69,
+   "hint": "docs.datadoghq.com/api",
+   "one_liner": "Observability: metrics, logs, APM",
+   "breadth": "broad",
+   "note": "Trial; API key + application key headers",
+   "evidence": [
+    "https://docs.datadoghq.com/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Sentry",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Developer & Infra",
+   "id": 70,
+   "hint": "docs.sentry.io/api",
+   "one_liner": "Error tracking and performance monitoring",
+   "breadth": "broad",
+   "note": "Free developer plan; auth token or OAuth integration",
+   "evidence": [
+    "https://docs.sentry.io/api"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Notion",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Productivity & PM",
+   "id": 71,
+   "hint": "developers.notion.com",
+   "one_liner": "Docs, wiki and databases workspace",
+   "breadth": "moderate",
+   "note": "Free; internal integration token or public OAuth",
+   "evidence": [
+    "https://developers.notion.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Airtable",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Productivity & PM",
+   "id": 72,
+   "hint": "airtable.com/developers",
+   "one_liner": "Spreadsheet-database hybrid",
+   "breadth": "moderate",
+   "note": "PAT or OAuth (legacy keys removed Feb 2024); official MCP",
+   "evidence": [
+    "https://airtable.com/developers/web/api/authentication",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=airtable"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "community",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 72,
+     "app": "Airtable",
+     "field": "mcp",
+     "old": "community",
+     "new": "official",
+     "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=airtable",
+     "note": "com.airtable/mcp in the official MCP Registry (remote mcp.airtable.com/mcp)",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://airtable.com/developers/web/api/authentication",
+     "https://registry.modelcontextprotocol.io/v0/servers?search=airtable"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Linear",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "GraphQL",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Productivity & PM",
+   "id": 73,
+   "hint": "developers.linear.app",
+   "one_liner": "Issue tracking for software teams",
+   "breadth": "broad",
+   "note": "Free; personal API key or OAuth; GraphQL",
+   "evidence": [
+    "https://developers.linear.app"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Jira",
+   "auth": "OAuth2;Basic",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Productivity & PM",
+   "id": 74,
+   "hint": "developer.atlassian.com",
+   "one_liner": "Atlassian issue and project tracking",
+   "breadth": "broad",
+   "note": "Free plan; API token (Basic) or OAuth 2.0 3LO",
+   "evidence": [
+    "https://developer.atlassian.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;Basic",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Asana",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Productivity & PM",
+   "id": 75,
+   "hint": "developers.asana.com",
+   "one_liner": "Work management",
+   "breadth": "broad",
+   "note": "PAT or OAuth; service accounts are Enterprise-only; official MCP",
+   "evidence": [
+    "https://developers.asana.com/docs/authentication"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://developers.asana.com/docs/authentication"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Monday.com",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "GraphQL",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Productivity & PM",
+   "id": 76,
+   "hint": "developer.monday.com",
+   "one_liner": "Work OS boards",
+   "breadth": "broad",
+   "note": "Free dev account; personal token or OAuth; GraphQL",
+   "evidence": [
+    "https://developer.monday.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "ClickUp",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Productivity & PM",
+   "id": 77,
+   "hint": "clickup.com/api",
+   "one_liner": "All-in-one tasks and docs",
+   "breadth": "broad",
+   "note": "Free; personal token or OAuth. No vendor entry in the MCP registry",
+   "evidence": [
+    "https://clickup.com/api",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=clickup"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "77",
+    "app": "ClickUp",
+    "field": "mcp",
+    "question": "Does ClickUp run an official MCP server?",
+    "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Coda",
+   "auth": "API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Productivity & PM",
+   "id": 78,
+   "hint": "coda.io/developers",
+   "one_liner": "Doc-as-app platform",
+   "breadth": "moderate",
+   "note": "Bearer token only; free on all workspaces",
+   "evidence": [
+    "https://coda.io/developers/apis/v1"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Smartsheet",
+   "auth": "OAuth2;API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Productivity & PM",
+   "id": 79,
+   "hint": "smartsheet.com/developers",
+   "one_liner": "Enterprise spreadsheet-style work management",
+   "breadth": "broad",
+   "note": "Trial; token or OAuth. Only community MCP in the registry",
+   "evidence": [
+    "https://www.smartsheet.com/developers",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=smartsheet"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Harvest",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "Productivity & PM",
+   "id": 80,
+   "hint": "help.getharvest.com/api-v2",
+   "one_liner": "Time tracking and invoicing",
+   "breadth": "moderate",
+   "note": "PAT or OAuth2 plus Harvest-Account-Id header",
+   "evidence": [
+    "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "src": [
+     "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Stripe",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "high",
+   "category": "Finance & Fintech",
+   "id": 81,
+   "hint": "stripe.com/docs/api",
+   "one_liner": "Payments infrastructure",
+   "breadth": "broad",
+   "note": "Free test mode/sandboxes; official MCP (OAuth or agent API keys)",
+   "evidence": [
+    "https://stripe.com/docs/api",
+    "https://docs.stripe.com/mcp"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "conf": "high"
+   },
+   "blocker": null,
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://docs.stripe.com/mcp"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Plaid",
+   "auth": "Other",
+   "access": "review",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Finance & Fintech",
+   "id": 82,
+   "hint": "plaid.com/docs",
+   "one_liner": "Bank-account data aggregation (Link)",
+   "breadth": "broad",
+   "note": "Free Sandbox; production needs Plaid approval; end-user Link flow, not standard OAuth",
+   "evidence": [
+    "https://plaid.com/docs",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=plaid"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other",
+    "access": "review",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Binance",
+   "auth": "Other",
+   "access": "free",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Finance & Fintech",
+   "id": 83,
+   "hint": "binance-docs.github.io",
+   "one_liner": "Crypto exchange",
+   "breadth": "broad",
+   "note": "HMAC/RSA/Ed25519-signed keys; needs a KYC'd account, geo-restricted; trading is financial risk",
+   "evidence": [
+    "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "Other",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Regulatory / financial risk",
+   "history": [],
+   "sample": "holdout",
+   "truth": {
+    "auth": "Other",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+     "https://registry.modelcontextprotocol.io/v0/servers?search=binance"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Paygent Connect",
+   "auth": "API key",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "low",
+   "category": "Finance & Fintech",
+   "id": 84,
+   "hint": "paygent (NMI-powered)",
+   "one_liner": "NMI-powered payment gateway reseller (per brief)",
+   "breadth": "narrow",
+   "note": "No public Paygent docs found; NMI uses merchant security keys, so a merchant account via the reseller is needed",
+   "evidence": [
+    "https://docs.nmi.com"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "low"
+   },
+   "blocker": "No public API docs found",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "84",
+    "app": "Paygent Connect",
+    "field": "all",
+    "question": "Is there a Paygent-branded API or only the NMI gateway?",
+    "why_agent_could_not_close_it": "no public Paygent site or docs found",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": []
+  },
+  {
+   "app": "iPayX",
+   "auth": "Unknown",
+   "access": "gated",
+   "api": "None",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "low",
+   "category": "Finance & Fintech",
+   "id": 85,
+   "hint": "ipayx.ai/docs",
+   "one_liner": "FX-rate verification protocol (bank/card rate vs mid-market)",
+   "breadth": "none",
+   "note": "No API, endpoints or auth published; contact the team",
+   "evidence": [
+    "https://ipayx.ai/docs"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "low"
+   },
+   "blocker": "No public API docs found",
+   "history": [
+    {
+     "id": 85,
+     "app": "iPayX",
+     "field": "auth",
+     "old": "API key",
+     "new": "Unknown",
+     "evidence": "https://ipayx.ai/docs",
+     "note": "Docs page describes an FX-verification protocol; no auth scheme published",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 85,
+     "app": "iPayX",
+     "field": "api",
+     "old": "REST",
+     "new": "None",
+     "evidence": "https://ipayx.ai/docs",
+     "note": "No endpoints documented publicly",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "Unknown",
+    "access": "gated",
+    "api": "None",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://ipayx.ai/docs"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "QuickBooks",
+   "auth": "OAuth2",
+   "access": "review",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "high",
+   "category": "Finance & Fintech",
+   "id": 86,
+   "hint": "developer.intuit.com",
+   "one_liner": "Intuit small-business accounting",
+   "breadth": "broad",
+   "note": "Free dev account + sandbox; production keys need an app assessment; usage is metered",
+   "evidence": [
+    "https://developer.intuit.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "high"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Xero",
+   "auth": "OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "Finance & Fintech",
+   "id": 87,
+   "hint": "developer.xero.com",
+   "one_liner": "Cloud accounting",
+   "breadth": "broad",
+   "note": "Free dev account + demo company; certification needed beyond connection limits",
+   "evidence": [
+    "https://developer.xero.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "App review / platform policy",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "Brex",
+   "auth": "API key;OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "Finance & Fintech",
+   "id": 88,
+   "hint": "developer.brex.com",
+   "one_liner": "Corporate cards and spend management",
+   "breadth": "moderate",
+   "note": "Admin-generated user tokens; requires a Brex business account; partner OAuth is separate",
+   "evidence": [
+    "https://developer.brex.com/docs/authentication/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key;OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Ramp",
+   "auth": "OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "Finance & Fintech",
+   "id": 89,
+   "hint": "docs.ramp.com",
+   "one_liner": "Corporate cards and spend management",
+   "breadth": "moderate",
+   "note": "OAuth2; needs a Ramp customer account or a sandbox on request (docs need JS, not machine-readable)",
+   "evidence": [
+    "https://docs.ramp.com"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "89",
+    "app": "Ramp",
+    "field": "access",
+    "question": "Can a non-customer get a sandbox?",
+    "why_agent_could_not_close_it": "docs.ramp.com renders only with JavaScript",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": [
+    "official MCP not confirmed by a source read this run"
+   ]
+  },
+  {
+   "app": "PitchBook",
+   "auth": "API key",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "Finance & Fintech",
+   "id": 90,
+   "hint": "pitchbook.com",
+   "one_liner": "Private-market data: companies, deals, investors",
+   "breadth": "moderate",
+   "note": "API is an enterprise add-on to a subscription (contact sales); site refused automated fetch",
+   "evidence": [
+    "https://pitchbook.com"
+   ],
+   "fetched": false,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": {
+    "id": "90",
+    "app": "PitchBook",
+    "field": "access",
+    "question": "Is the API sold only as an enterprise add-on?",
+    "why_agent_could_not_close_it": "pitchbook.com refused automated fetch",
+    "status": "pending",
+    "result": "",
+    "checked_by": ""
+   },
+   "flags": []
+  },
+  {
+   "app": "NotebookLM",
+   "auth": "OAuth2",
+   "access": "gated",
+   "api": "REST",
+   "mcp": "none",
+   "verdict": "outreach",
+   "conf": "med",
+   "category": "AI & Media-native",
+   "id": 91,
+   "hint": "cloud.google.com/gemini",
+   "one_liner": "Google AI research notebooks",
+   "breadth": "narrow",
+   "note": "Only the NotebookLM Enterprise API (Preview): Google Cloud project + Enterprise licence; consumer app has no API",
+   "evidence": [
+    "https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks"
+   ],
+   "fetched": true,
+   "mcp_confirmed": false,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "conf": "med"
+   },
+   "blocker": "Customer, enterprise or vetted-partner only",
+   "history": [],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Otter AI",
+   "auth": "OAuth2;API key",
+   "access": "free",
+   "api": "MCP-only",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "AI & Media-native",
+   "id": 92,
+   "hint": "help.otter.ai",
+   "one_liner": "AI meeting transcription",
+   "breadth": "narrow",
+   "note": "Official read-only MCP (OAuth) on any plan; the full Public API is Enterprise-only",
+   "evidence": [
+    "https://www.scalekit.com/blog/otter-mcp-vs-api",
+    "https://claude.com/marketplace/connectors/otter-ai"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2",
+    "access": "paid",
+    "api": "MCP-only",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [
+    {
+     "id": 92,
+     "app": "Otter AI",
+     "field": "auth",
+     "old": "OAuth2",
+     "new": "OAuth2;API key",
+     "evidence": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+     "note": "MCP = OAuth 2.1 on any Otter plan; Public API = Bearer API key, Enterprise only",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 92,
+     "app": "Otter AI",
+     "field": "access",
+     "old": "paid",
+     "new": "free",
+     "evidence": "https://claude.com/marketplace/connectors/otter-ai",
+     "note": "Official remote MCP (mcp.otter.ai/mcp) works from a standard account",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Fathom",
+   "auth": "API key;OAuth2",
+   "access": "free",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "AI & Media-native",
+   "id": 93,
+   "hint": "fathom.video",
+   "one_liner": "AI meeting notetaker",
+   "breadth": "narrow",
+   "note": "API key or OAuth; official MCP (ai.fathom.api/mcp)",
+   "evidence": [
+    "https://developers.fathom.ai/",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=fathom"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "free",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 93,
+     "app": "Fathom",
+     "field": "auth",
+     "old": "API key",
+     "new": "API key;OAuth2",
+     "evidence": "https://developers.fathom.ai/",
+     "note": "API key quickstart + OAuth for integrations other users install",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 93,
+     "app": "Fathom",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=fathom",
+     "note": "Loop 3 sweep: ai.fathom.api/mcp is under Fathom's own domain",
+     "stage": "verify-loops"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Consensus",
+   "auth": "API key",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "AI & Media-native",
+   "id": 94,
+   "hint": "consensus.app",
+   "one_liner": "AI search engine over academic papers",
+   "breadth": "narrow",
+   "note": "Self-serve API key on any paid plan; official MCP",
+   "evidence": [
+    "https://consensus.app/home/api/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "OAuth2;API key",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [
+    {
+     "id": 94,
+     "app": "Consensus",
+     "field": "auth",
+     "old": "OAuth2;API key",
+     "new": "API key",
+     "evidence": "https://consensus.app/home/api/",
+     "note": "Self-serve \"Create API key\" page; OAuth not documented for the API",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 94,
+     "app": "Consensus",
+     "field": "access",
+     "old": "gated",
+     "new": "paid",
+     "evidence": "https://consensus.app/home/api/",
+     "note": "API \"Included on every paid plan\"; no application gate",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Reducto",
+   "auth": "API key",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "med",
+   "category": "AI & Media-native",
+   "id": 95,
+   "hint": "reducto.ai",
+   "one_liner": "Document parsing and extraction API for LLMs",
+   "breadth": "narrow",
+   "note": "API key; official MCP",
+   "evidence": [
+    "https://docs.reducto.ai/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "med"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 95,
+     "app": "Reducto",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://docs.reducto.ai/",
+     "note": "Reducto MCP server for Claude Code / Cursor / Codex",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Devin",
+   "auth": "API key",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "med",
+   "category": "AI & Media-native",
+   "id": 96,
+   "hint": "docs.devin.ai",
+   "one_liner": "Cognition's autonomous AI software engineer",
+   "breadth": "moderate",
+   "note": "Bearer service-user keys; needs a paid Devin account; official MCP",
+   "evidence": [
+    "https://docs.devin.ai/api-reference/overview",
+    "https://docs.devin.ai/work-with-devin/devin-mcp"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "conf": "med"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [],
+   "sample": "round1",
+   "truth": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "src": [
+     "https://docs.devin.ai/api-reference/overview",
+     "https://docs.devin.ai/work-with-devin/devin-mcp"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "higgsfield",
+   "auth": "API key;OAuth2",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "AI & Media-native",
+   "id": 97,
+   "hint": "higgsfield.ai/cli",
+   "one_liner": "AI image and video generation suite (30+ models)",
+   "breadth": "narrow",
+   "note": "Paid credits; CLI and official MCP use account login; API console keys",
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "field": "auth",
+     "old": "API key",
+     "new": "API key;OAuth2",
+     "evidence": "https://higgsfield.ai/cli",
+     "note": "API console keys; CLI + MCP use browser account login (\"No API keys to manage\")",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://higgsfield.ai/cli",
+     "note": "Official Higgsfield MCP server",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": "holdout",
+   "truth": {
+    "auth": "API key;OAuth2",
+    "access": "paid",
+    "api": "X",
+    "mcp": "official",
+    "verdict": "caveat",
+    "src": [
+     "https://higgsfield.ai/cli"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Mermaid CLI",
+   "auth": "None",
+   "access": "na",
+   "api": "CLI",
+   "mcp": "official",
+   "verdict": "wrap",
+   "conf": "high",
+   "category": "AI & Media-native",
+   "id": 98,
+   "hint": "github.com/mermaid-js/mermaid-cli",
+   "one_liner": "OSS CLI that renders Mermaid diagrams to SVG/PNG/PDF",
+   "breadth": "none",
+   "note": "No API: wrap mmdc as a sandboxed skill; Mermaid Chart publishes an MCP",
+   "evidence": [
+    "https://github.com/mermaid-js/mermaid-cli",
+    "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "None",
+    "access": "na",
+    "api": "CLI",
+    "mcp": "none",
+    "verdict": "wrap",
+    "conf": "high"
+   },
+   "blocker": "Not an API (local CLI)",
+   "history": [
+    {
+     "id": 98,
+     "app": "Mermaid CLI",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
+     "note": "Loop 1: com.mermaidchart/mermaid-mcp published by Mermaid Chart (company behind Mermaid)",
+     "stage": "verify-loops"
+    }
+   ],
+   "sample": "round1",
+   "truth": {
+    "auth": "None",
+    "access": "na",
+    "api": "CLI",
+    "mcp": "official",
+    "verdict": "wrap",
+    "src": [
+     "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid"
+    ]
+   },
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "YouTube Transcript",
+   "auth": "API key;OAuth2",
+   "access": "trial",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "ready",
+   "conf": "low",
+   "category": "AI & Media-native",
+   "id": 99,
+   "hint": "transcriptapi.com",
+   "one_liner": "YouTube transcripts and search API (TranscriptAPI.com)",
+   "breadth": "narrow",
+   "note": "100 free credits; Bearer key; official MCP",
+   "evidence": [
+    "https://transcriptapi.com/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "conf": "low"
+   },
+   "blocker": null,
+   "history": [
+    {
+     "id": 99,
+     "app": "YouTube Transcript",
+     "field": "auth",
+     "old": "API key",
+     "new": "API key;OAuth2",
+     "evidence": "https://transcriptapi.com/",
+     "note": "Bearer API key; MCP clients may use OAuth",
+     "stage": "pass2-research"
+    },
+    {
+     "id": 99,
+     "app": "YouTube Transcript",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://transcriptapi.com/",
+     "note": "MCP server at transcriptapi.com/mcp",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  },
+  {
+   "app": "Grain",
+   "auth": "API key",
+   "access": "paid",
+   "api": "REST",
+   "mcp": "official",
+   "verdict": "caveat",
+   "conf": "low",
+   "category": "AI & Media-native",
+   "id": 100,
+   "hint": "grain.com",
+   "one_liner": "AI meeting recorder and notes",
+   "breadth": "narrow",
+   "note": "Personal access tokens; official MCP docs; plan gating not documented",
+   "evidence": [
+    "https://developers.grain.com/"
+   ],
+   "fetched": true,
+   "mcp_confirmed": true,
+   "composio": null,
+   "links": null,
+   "corroboration": null,
+   "registry_vendor": [],
+   "pass1": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "conf": "low"
+   },
+   "blocker": "Paid plan needed for credentials",
+   "history": [
+    {
+     "id": 100,
+     "app": "Grain",
+     "field": "mcp",
+     "old": "none",
+     "new": "official",
+     "evidence": "https://developers.grain.com/",
+     "note": "Developer site links MCP docs (developers.grain.com/mcp/)",
+     "stage": "pass2-research"
+    }
+   ],
+   "sample": null,
+   "truth": null,
+   "human": null,
+   "flags": []
+  }
+ ],
+ "patterns": {
+  "n": 100,
+  "auth_support": {
+   "OAuth2": 65,
+   "API key": 63,
+   "Basic": 11,
+   "Other": 9
+  },
+  "auth_mix": {
+   "OAuth2 + static key/Basic": 44,
+   "OAuth2 only": 21,
+   "Static key / Basic only": 30,
+   "Other only (signed keys, JWT)": 2,
+   "None / unknown": 3
+  },
+  "access": {
+   "free": 48,
+   "trial": 22,
+   "gated": 14,
+   "review": 7,
+   "paid": 7,
+   "na": 2
+  },
+  "verdict": {
+   "ready": 58,
+   "caveat": 26,
+   "outreach": 14,
+   "wrap": 2
+  },
+  "mcp": {
+   "official": 56,
+   "community": 8,
+   "none": 33,
+   "docs-only": 3
+  },
+  "by_category": {
+   "CRM & Sales": {
+    "verdict": {
+     "ready": 7,
+     "caveat": 2,
+     "outreach": 1
+    },
+    "access": {
+     "free": 7,
+     "trial": 2,
+     "gated": 1
+    },
+    "self_serve": 9,
+    "official_mcp": 6,
+    "oauth": 10
+   },
+   "Support & Helpdesk": {
+    "verdict": {
+     "ready": 8,
+     "outreach": 2
+    },
+    "access": {
+     "trial": 5,
+     "free": 3,
+     "gated": 2
+    },
+    "self_serve": 8,
+    "official_mcp": 2,
+    "oauth": 5
+   },
+   "Communications": {
+    "verdict": {
+     "caveat": 4,
+     "ready": 6
+    },
+    "access": {
+     "free": 6,
+     "trial": 3,
+     "review": 1
+    },
+    "self_serve": 9,
+    "official_mcp": 3,
+    "oauth": 6
+   },
+   "Marketing & Social": {
+    "verdict": {
+     "caveat": 5,
+     "outreach": 1,
+     "ready": 4
+    },
+    "access": {
+     "review": 4,
+     "gated": 1,
+     "trial": 2,
+     "free": 3
+    },
+    "self_serve": 5,
+    "official_mcp": 4,
+    "oauth": 8
+   },
+   "Ecommerce": {
+    "verdict": {
+     "ready": 3,
+     "caveat": 4,
+     "outreach": 3
+    },
+    "access": {
+     "free": 4,
+     "trial": 1,
+     "gated": 3,
+     "paid": 2
+    },
+    "self_serve": 5,
+    "official_mcp": 2,
+    "oauth": 7
+   },
+   "Data/SEO/Scraping": {
+    "verdict": {
+     "ready": 6,
+     "caveat": 2,
+     "wrap": 1,
+     "outreach": 1
+    },
+    "access": {
+     "trial": 4,
+     "paid": 1,
+     "free": 3,
+     "na": 1,
+     "gated": 1
+    },
+    "self_serve": 7,
+    "official_mcp": 8,
+    "oauth": 1
+   },
+   "Developer & Infra": {
+    "verdict": {
+     "ready": 10
+    },
+    "access": {
+     "free": 8,
+     "trial": 2
+    },
+    "self_serve": 10,
+    "official_mcp": 10,
+    "oauth": 9
+   },
+   "Productivity & PM": {
+    "verdict": {
+     "ready": 10
+    },
+    "access": {
+     "free": 9,
+     "trial": 1
+    },
+    "self_serve": 10,
+    "official_mcp": 7,
+    "oauth": 9
+   },
+   "Finance & Fintech": {
+    "verdict": {
+     "ready": 1,
+     "caveat": 4,
+     "outreach": 5
+    },
+    "access": {
+     "free": 3,
+     "review": 2,
+     "gated": 5
+    },
+    "self_serve": 3,
+    "official_mcp": 5,
+    "oauth": 5
+   },
+   "AI & Media-native": {
+    "verdict": {
+     "outreach": 1,
+     "caveat": 5,
+     "ready": 3,
+     "wrap": 1
+    },
+    "access": {
+     "gated": 1,
+     "free": 2,
+     "paid": 4,
+     "trial": 2,
+     "na": 1
+    },
+    "self_serve": 4,
+    "official_mcp": 9,
+    "oauth": 5
+   }
+  },
+  "blockers": {
+   "App review / platform policy": [
+    {
+     "id": 21,
+     "app": "Slack"
+    },
+    {
+     "id": 24,
+     "app": "Lark"
+    },
+    {
+     "id": 28,
+     "app": "WhatsApp Business"
+    },
+    {
+     "id": 29,
+     "app": "Aircall"
+    },
+    {
+     "id": 31,
+     "app": "Google Ads"
+    },
+    {
+     "id": 32,
+     "app": "Meta Ads"
+    },
+    {
+     "id": 38,
+     "app": "Pinterest"
+    },
+    {
+     "id": 39,
+     "app": "Threads (Meta)"
+    },
+    {
+     "id": 82,
+     "app": "Plaid"
+    },
+    {
+     "id": 86,
+     "app": "QuickBooks"
+    },
+    {
+     "id": 87,
+     "app": "Xero"
+    }
+   ],
+   "Paid plan needed for credentials": [
+    {
+     "id": 9,
+     "app": "Copper"
+    },
+    {
+     "id": 34,
+     "app": "GoHighLevel"
+    },
+    {
+     "id": 46,
+     "app": "Squarespace"
+    },
+    {
+     "id": 47,
+     "app": "Ecwid"
+    },
+    {
+     "id": 53,
+     "app": "Ahrefs"
+    },
+    {
+     "id": 60,
+     "app": "Clay"
+    },
+    {
+     "id": 92,
+     "app": "Otter AI"
+    },
+    {
+     "id": 94,
+     "app": "Consensus"
+    },
+    {
+     "id": 96,
+     "app": "Devin"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield"
+    },
+    {
+     "id": 100,
+     "app": "Grain"
+    }
+   ],
+   "Customer, enterprise or vetted-partner only": [
+    {
+     "id": 10,
+     "app": "DealCloud"
+    },
+    {
+     "id": 15,
+     "app": "Pylon"
+    },
+    {
+     "id": 20,
+     "app": "Gladly"
+    },
+    {
+     "id": 33,
+     "app": "LinkedIn Ads"
+    },
+    {
+     "id": 44,
+     "app": "Salesforce Commerce Cloud"
+    },
+    {
+     "id": 49,
+     "app": "Amazon Selling Partner"
+    },
+    {
+     "id": 59,
+     "app": "Waterfall.io"
+    },
+    {
+     "id": 88,
+     "app": "Brex"
+    },
+    {
+     "id": 89,
+     "app": "Ramp"
+    },
+    {
+     "id": 90,
+     "app": "PitchBook"
+    },
+    {
+     "id": 91,
+     "app": "NotebookLM"
+    }
+   ],
+   "No public API docs found": [
+    {
+     "id": 50,
+     "app": "fanbasis"
+    },
+    {
+     "id": 84,
+     "app": "Paygent Connect"
+    },
+    {
+     "id": 85,
+     "app": "iPayX"
+    }
+   ],
+   "Self-hosted / per-instance base URL": [
+    {
+     "id": 5,
+     "app": "Twenty"
+    },
+    {
+     "id": 42,
+     "app": "WooCommerce"
+    },
+    {
+     "id": 45,
+     "app": "Magento (Adobe Commerce)"
+    }
+   ],
+   "Not an API (local CLI)": [
+    {
+     "id": 58,
+     "app": "Sherlock"
+    },
+    {
+     "id": 98,
+     "app": "Mermaid CLI"
+    }
+   ],
+   "Regulatory / financial risk": [
+    {
+     "id": 83,
+     "app": "Binance"
+    }
+   ]
+  },
+  "easy_wins": [
+   {
+    "id": 1,
+    "app": "Salesforce"
+   },
+   {
+    "id": 2,
+    "app": "HubSpot"
+   },
+   {
+    "id": 3,
+    "app": "Pipedrive"
+   },
+   {
+    "id": 4,
+    "app": "Attio"
+   },
+   {
+    "id": 6,
+    "app": "Podio"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM"
+   },
+   {
+    "id": 8,
+    "app": "Close"
+   },
+   {
+    "id": 11,
+    "app": "Zendesk"
+   },
+   {
+    "id": 12,
+    "app": "Intercom"
+   },
+   {
+    "id": 13,
+    "app": "Freshdesk"
+   },
+   {
+    "id": 14,
+    "app": "Front"
+   },
+   {
+    "id": 16,
+    "app": "LiveAgent"
+   },
+   {
+    "id": 17,
+    "app": "Plain"
+   },
+   {
+    "id": 18,
+    "app": "Help Scout"
+   },
+   {
+    "id": 19,
+    "app": "Gorgias"
+   },
+   {
+    "id": 22,
+    "app": "Twilio"
+   },
+   {
+    "id": 23,
+    "app": "Zoho Cliq"
+   },
+   {
+    "id": 25,
+    "app": "Pumble"
+   },
+   {
+    "id": 26,
+    "app": "Discord"
+   },
+   {
+    "id": 27,
+    "app": "Telegram"
+   },
+   {
+    "id": 30,
+    "app": "Vonage"
+   },
+   {
+    "id": 35,
+    "app": "Mailchimp"
+   },
+   {
+    "id": 36,
+    "app": "Klaviyo"
+   },
+   {
+    "id": 37,
+    "app": "systeme.io"
+   },
+   {
+    "id": 40,
+    "app": "SendGrid"
+   },
+   {
+    "id": 41,
+    "app": "Shopify"
+   },
+   {
+    "id": 43,
+    "app": "BigCommerce"
+   },
+   {
+    "id": 48,
+    "app": "Gumroad"
+   },
+   {
+    "id": 51,
+    "app": "DataForSEO"
+   },
+   {
+    "id": 52,
+    "app": "SE Ranking"
+   },
+   {
+    "id": 54,
+    "app": "MrScraper"
+   },
+   {
+    "id": 55,
+    "app": "Apify"
+   },
+   {
+    "id": 56,
+    "app": "Firecrawl"
+   },
+   {
+    "id": 57,
+    "app": "Bright Data"
+   },
+   {
+    "id": 61,
+    "app": "GitHub"
+   },
+   {
+    "id": 62,
+    "app": "Vercel"
+   },
+   {
+    "id": 63,
+    "app": "Netlify"
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare"
+   },
+   {
+    "id": 65,
+    "app": "Supabase"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j"
+   },
+   {
+    "id": 67,
+    "app": "Snowflake"
+   },
+   {
+    "id": 68,
+    "app": "MongoDB Atlas"
+   },
+   {
+    "id": 69,
+    "app": "Datadog"
+   },
+   {
+    "id": 70,
+    "app": "Sentry"
+   },
+   {
+    "id": 71,
+    "app": "Notion"
+   },
+   {
+    "id": 72,
+    "app": "Airtable"
+   },
+   {
+    "id": 73,
+    "app": "Linear"
+   },
+   {
+    "id": 74,
+    "app": "Jira"
+   },
+   {
+    "id": 75,
+    "app": "Asana"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com"
+   },
+   {
+    "id": 77,
+    "app": "ClickUp"
+   },
+   {
+    "id": 78,
+    "app": "Coda"
+   },
+   {
+    "id": 79,
+    "app": "Smartsheet"
+   },
+   {
+    "id": 80,
+    "app": "Harvest"
+   },
+   {
+    "id": 81,
+    "app": "Stripe"
+   },
+   {
+    "id": 93,
+    "app": "Fathom"
+   },
+   {
+    "id": 95,
+    "app": "Reducto"
+   },
+   {
+    "id": 99,
+    "app": "YouTube Transcript"
+   }
+  ],
+  "outreach": [
+   {
+    "id": 10,
+    "app": "DealCloud"
+   },
+   {
+    "id": 15,
+    "app": "Pylon"
+   },
+   {
+    "id": 20,
+    "app": "Gladly"
+   },
+   {
+    "id": 33,
+    "app": "LinkedIn Ads"
+   },
+   {
+    "id": 44,
+    "app": "Salesforce Commerce Cloud"
+   },
+   {
+    "id": 49,
+    "app": "Amazon Selling Partner"
+   },
+   {
+    "id": 50,
+    "app": "fanbasis"
+   },
+   {
+    "id": 59,
+    "app": "Waterfall.io"
+   },
+   {
+    "id": 84,
+    "app": "Paygent Connect"
+   },
+   {
+    "id": 85,
+    "app": "iPayX"
+   },
+   {
+    "id": 88,
+    "app": "Brex"
+   },
+   {
+    "id": 89,
+    "app": "Ramp"
+   },
+   {
+    "id": 90,
+    "app": "PitchBook"
+   },
+   {
+    "id": 91,
+    "app": "NotebookLM"
+   }
+  ]
+ },
+ "findings": [
+  {
+   "big": "70/100",
+   "claim": "are self-serve.",
+   "filter": {
+    "access": [
+     "free",
+     "trial"
+    ]
+   },
+   "why": "48 give free credentials (free plan, dev account, sandbox or open source) and 22 a trial or credits. 58 can be built today with no human gate."
+  },
+  {
+   "big": "74 vs 65",
+   "claim": "apps take a static key or Basic auth vs OAuth2.",
+   "filter": {
+    "auth": [
+     "API key",
+     "Basic"
+    ]
+   },
+   "why": "44 offer both, 30 are key-only and 21 OAuth-only. A toolkit factory needs both schemes first-class; key-only apps are the fastest builds."
+  },
+  {
+   "big": "20/20",
+   "claim": "Developer and Productivity apps are ready; Finance is the hard category.",
+   "filter": {
+    "category": [
+     "Finance & Fintech"
+    ]
+   },
+   "why": "Finance has 1 ready app and 5 needing outreach (customer-only spend platforms, enterprise data, merchant gateways). Marketing and Ecommerce are mostly buildable with caveats."
+  },
+  {
+   "big": "3 \u00d7 11",
+   "claim": "blockers tie for most common.",
+   "filter": {
+    "blocker": [
+     "App review / platform policy",
+     "Paid plan needed for credentials",
+     "Customer, enterprise or vetted-partner only"
+    ]
+   },
+   "why": "App review / platform policy, paid plan needed for credentials and customer, enterprise or vetted-partner only each block 11 apps, and cluster by category: review hits big consumer platforms, paid plans hit AI-native and SEO tools, customer-only hits fintech and enterprise data."
+  },
+  {
+   "big": "56/100",
+   "claim": "already run an official MCP server.",
+   "filter": {
+    "mcp": [
+     "official"
+    ]
+   },
+   "why": "24 were confirmed by a page read this run; the rest are queued pass-1 claims. 3 vendor MCPs (Twilio, BigCommerce, Vonage) only search docs. AI-native apps are MCP-first (9/10): Otter's MCP works on any plan while its REST API is Enterprise-only."
+  },
+  {
+   "big": "90.3% \u2192 100.0%",
+   "claim": "field accuracy, closed-book draft \u2192 verified holdout.",
+   "filter": null,
+   "why": "Half the closed-book misses (6/12) were the MCP field. The agent's confidence was calibrated: 68% of low-confidence rows needed a fix vs 6% of high-confidence ones, so research is routed by confidence."
+  }
+ ],
+ "scores": {
+  "round1": {
+   "pass1": {
+    "correct": 84,
+    "checked": 93,
+    "acc": 90.3,
+    "per_field": {
+     "auth": {
+      "correct": 18,
+      "checked": 19
+     },
+     "access": {
+      "correct": 13,
+      "checked": 14
+     },
+     "api": {
+      "correct": 19,
+      "checked": 20
+     },
+     "mcp": {
+      "correct": 15,
+      "checked": 20
+     },
+     "verdict": {
+      "correct": 19,
+      "checked": 20
+     }
+    },
+    "misses": [
+     {
+      "id": 10,
+      "app": "DealCloud",
+      "field": "mcp",
+      "said": "none",
+      "truth": "official"
+     },
+     {
+      "id": 22,
+      "app": "Twilio",
+      "field": "mcp",
+      "said": "official",
+      "truth": "docs-only"
+     },
+     {
+      "id": 37,
+      "app": "systeme.io",
+      "field": "mcp",
+      "said": "none",
+      "truth": "official"
+     },
+     {
+      "id": 52,
+      "app": "SE Ranking",
+      "field": "access",
+      "said": "paid",
+      "truth": "trial"
+     },
+     {
+      "id": 52,
+      "app": "SE Ranking",
+      "field": "verdict",
+      "said": "caveat",
+      "truth": "ready"
+     },
+     {
+      "id": 72,
+      "app": "Airtable",
+      "field": "mcp",
+      "said": "community",
+      "truth": "official"
+     },
+     {
+      "id": 85,
+      "app": "iPayX",
+      "field": "auth",
+      "said": "API key",
+      "truth": "Unknown"
+     },
+     {
+      "id": 85,
+      "app": "iPayX",
+      "field": "api",
+      "said": "REST",
+      "truth": "None"
+     },
+     {
+      "id": 98,
+      "app": "Mermaid CLI",
+      "field": "mcp",
+      "said": "none",
+      "truth": "official"
+     }
+    ]
+   },
+   "pass2": {
+    "correct": 90,
+    "checked": 93,
+    "acc": 96.8,
+    "per_field": {
+     "auth": {
+      "correct": 19,
+      "checked": 19
+     },
+     "access": {
+      "correct": 14,
+      "checked": 14
+     },
+     "api": {
+      "correct": 20,
+      "checked": 20
+     },
+     "mcp": {
+      "correct": 17,
+      "checked": 20
+     },
+     "verdict": {
+      "correct": 20,
+      "checked": 20
+     }
+    },
+    "misses": [
+     {
+      "id": 22,
+      "app": "Twilio",
+      "field": "mcp",
+      "said": "official",
+      "truth": "docs-only"
+     },
+     {
+      "id": 37,
+      "app": "systeme.io",
+      "field": "mcp",
+      "said": "none",
+      "truth": "official"
+     },
+     {
+      "id": 98,
+      "app": "Mermaid CLI",
+      "field": "mcp",
+      "said": "none",
+      "truth": "official"
+     }
+    ]
+   },
+   "final": {
+    "correct": 93,
+    "checked": 93,
+    "acc": 100.0,
+    "per_field": {
+     "auth": {
+      "correct": 19,
+      "checked": 19
+     },
+     "access": {
+      "correct": 14,
+      "checked": 14
+     },
+     "api": {
+      "correct": 20,
+      "checked": 20
+     },
+     "mcp": {
+      "correct": 20,
+      "checked": 20
+     },
+     "verdict": {
+      "correct": 20,
+      "checked": 20
+     }
+    },
+    "misses": []
+   }
+  },
+  "holdout": {
+   "pass1": {
+    "correct": 39,
+    "checked": 42,
+    "acc": 92.9,
+    "per_field": {
+     "auth": {
+      "correct": 7,
+      "checked": 9
+     },
+     "access": {
+      "correct": 5,
+      "checked": 5
+     },
+     "api": {
+      "correct": 9,
+      "checked": 9
+     },
+     "mcp": {
+      "correct": 9,
+      "checked": 10
+     },
+     "verdict": {
+      "correct": 9,
+      "checked": 9
+     }
+    },
+    "misses": [
+     {
+      "id": 9,
+      "app": "Copper",
+      "field": "auth",
+      "said": "API key",
+      "truth": "API key;OAuth2"
+     },
+     {
+      "id": 97,
+      "app": "higgsfield",
+      "field": "auth",
+      "said": "API key",
+      "truth": "API key;OAuth2"
+     },
+     {
+      "id": 97,
+      "app": "higgsfield",
+      "field": "mcp",
+      "said": "none",
+      "truth": "official"
+     }
+    ]
+   },
+   "pass2": {
+    "correct": 42,
+    "checked": 42,
+    "acc": 100.0,
+    "per_field": {
+     "auth": {
+      "correct": 9,
+      "checked": 9
+     },
+     "access": {
+      "correct": 5,
+      "checked": 5
+     },
+     "api": {
+      "correct": 9,
+      "checked": 9
+     },
+     "mcp": {
+      "correct": 10,
+      "checked": 10
+     },
+     "verdict": {
+      "correct": 9,
+      "checked": 9
+     }
+    },
+    "misses": []
+   },
+   "final": {
+    "correct": 42,
+    "checked": 42,
+    "acc": 100.0,
+    "per_field": {
+     "auth": {
+      "correct": 9,
+      "checked": 9
+     },
+     "access": {
+      "correct": 5,
+      "checked": 5
+     },
+     "api": {
+      "correct": 9,
+      "checked": 9
+     },
+     "mcp": {
+      "correct": 10,
+      "checked": 10
+     },
+     "verdict": {
+      "correct": 9,
+      "checked": 9
+     }
+    },
+    "misses": []
+   }
+  },
+  "excluded_fields": {
+   "round1": 7,
+   "holdout": 8
+  },
+  "conf_vs_corrected": {
+   "high": {
+    "rows": 36,
+    "corrected": 2
+   },
+   "med": {
+    "rows": 45,
+    "corrected": 6
+   },
+   "low": {
+    "rows": 19,
+    "corrected": 13
+   }
+  },
+  "fetched_rows": 66,
+  "sweep": null
+ },
+ "verification": {
+  "round1": {
+   "8": {
+    "auth": "API key;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://developer.close.com/",
+     "https://www.close.com/pricing"
+    ]
+   },
+   "10": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "outreach",
+    "src": [
+     "https://api.docs.dealcloud.com/docs/token",
+     "https://api.docs.dealcloud.com/"
+    ]
+   },
+   "13": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "src": [
+     "https://developers.freshdesk.com/api/"
+    ]
+   },
+   "20": {
+    "auth": "Basic",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://developer.gladly.com/rest/"
+    ]
+   },
+   "22": {
+    "auth": "Basic",
+    "access": "X",
+    "api": "REST",
+    "mcp": "docs-only",
+    "verdict": "ready",
+    "src": [
+     "https://www.twilio.com/docs/usage/requests-to-twilio",
+     "https://www.twilio.com/docs/ai/mcp"
+    ]
+   },
+   "29": {
+    "auth": "Basic;OAuth2",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://developers.aircall.io/api-references",
+     "https://aircall.io/pricing/"
+    ]
+   },
+   "37": {
+    "auth": "API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api"
+    ],
+    "note": "developer.systeme.io blocks agents (robots.txt); help-centre article used"
+   },
+   "39": {
+    "auth": "OAuth2",
+    "access": "review",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://developers.facebook.com/docs/threads/get-started"
+    ]
+   },
+   "43": {
+    "auth": "API key;OAuth2",
+    "access": "X",
+    "api": "REST+GraphQL",
+    "mcp": "docs-only",
+    "verdict": "ready",
+    "src": [
+     "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    ]
+   },
+   "47": {
+    "auth": "OAuth2;API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md",
+     "https://docs.ecwid.com/sitemap.md"
+    ]
+   },
+   "51": {
+    "auth": "Basic",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://docs.dataforseo.com/v3/auth/",
+     "https://github.com/dataforseo/mcp-server-typescript"
+    ]
+   },
+   "52": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://seranking.com/api.html"
+    ]
+   },
+   "62": {
+    "auth": "X",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://vercel.com/docs/rest-api",
+     "https://vercel.com/docs/mcp/vercel-mcp"
+    ]
+   },
+   "67": {
+    "auth": "Other;OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+     "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+    ]
+   },
+   "72": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://airtable.com/developers/web/api/authentication",
+     "https://registry.modelcontextprotocol.io/v0/servers?search=airtable"
+    ]
+   },
+   "75": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://developers.asana.com/docs/authentication"
+    ]
+   },
+   "81": {
+    "auth": "API key;OAuth2",
+    "access": "free",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://docs.stripe.com/mcp"
+    ]
+   },
+   "85": {
+    "auth": "Unknown",
+    "access": "gated",
+    "api": "None",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://ipayx.ai/docs"
+    ]
+   },
+   "96": {
+    "auth": "API key",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "src": [
+     "https://docs.devin.ai/api-reference/overview",
+     "https://docs.devin.ai/work-with-devin/devin-mcp"
+    ]
+   },
+   "98": {
+    "auth": "None",
+    "access": "na",
+    "api": "CLI",
+    "mcp": "official",
+    "verdict": "wrap",
+    "src": [
+     "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid"
+    ]
+   }
+  },
+  "holdout": {
+   "9": {
+    "auth": "API key;OAuth2",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "X",
+    "src": [
+     "https://developer.copper.com/introduction/authentication.html"
+    ]
+   },
+   "17": {
+    "auth": "API key",
+    "access": "trial",
+    "api": "GraphQL",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://www.plain.com/docs/graphql/introduction.md",
+     "https://www.plain.com/pricing"
+    ]
+   },
+   "26": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "src": [
+     "https://docs.discord.com/developers/reference"
+    ]
+   },
+   "33": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+     "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers"
+    ]
+   },
+   "44": {
+    "auth": "OAuth2",
+    "access": "gated",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "outreach",
+    "src": [
+     "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html"
+    ]
+   },
+   "53": {
+    "auth": "X",
+    "access": "paid",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "caveat",
+    "src": [
+     "https://docs.ahrefs.com/"
+    ]
+   },
+   "68": {
+    "auth": "Other;OAuth2",
+    "access": "X",
+    "api": "REST",
+    "mcp": "official",
+    "verdict": "ready",
+    "src": [
+     "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb"
+    ]
+   },
+   "80": {
+    "auth": "OAuth2;API key",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "ready",
+    "src": [
+     "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+    ]
+   },
+   "83": {
+    "auth": "Other",
+    "access": "X",
+    "api": "REST",
+    "mcp": "none",
+    "verdict": "caveat",
+    "src": [
+     "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security",
+     "https://registry.modelcontextprotocol.io/v0/servers?search=binance"
+    ]
+   },
+   "97": {
+    "auth": "API key;OAuth2",
+    "access": "paid",
+    "api": "X",
+    "mcp": "official",
+    "verdict": "caveat",
+    "src": [
+     "https://higgsfield.ai/cli"
+    ]
+   }
+  }
+ },
+ "human": [
+  {
+   "id": "37",
+   "app": "systeme.io",
+   "field": "access",
+   "question": "Can a free-plan account create a public API key?",
+   "why_agent_could_not_close_it": "developer.systeme.io blocks agents via robots.txt",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "50",
+   "app": "fanbasis",
+   "field": "all",
+   "question": "Does fanbasis publish any developer API or webhooks?",
+   "why_agent_could_not_close_it": "site refused automated fetch; search found no docs",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "84",
+   "app": "Paygent Connect",
+   "field": "all",
+   "question": "Is there a Paygent-branded API or only the NMI gateway?",
+   "why_agent_could_not_close_it": "no public Paygent site or docs found",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "90",
+   "app": "PitchBook",
+   "field": "access",
+   "question": "Is the API sold only as an enterprise add-on?",
+   "why_agent_could_not_close_it": "pitchbook.com refused automated fetch",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "89",
+   "app": "Ramp",
+   "field": "access",
+   "question": "Can a non-customer get a sandbox?",
+   "why_agent_could_not_close_it": "docs.ramp.com renders only with JavaScript",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "2",
+   "app": "HubSpot",
+   "field": "mcp",
+   "question": "Does HubSpot run an official MCP server that acts on CRM data?",
+   "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "12",
+   "app": "Intercom",
+   "field": "mcp",
+   "question": "Does Intercom run an official MCP server?",
+   "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "34",
+   "app": "GoHighLevel",
+   "field": "mcp",
+   "question": "Does HighLevel run an official MCP server?",
+   "why_agent_could_not_close_it": "pass-1 claim; not in docs home or registry",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "36",
+   "app": "Klaviyo",
+   "field": "mcp",
+   "question": "Does Klaviyo run an official MCP server?",
+   "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  },
+  {
+   "id": "77",
+   "app": "ClickUp",
+   "field": "mcp",
+   "question": "Does ClickUp run an official MCP server?",
+   "why_agent_could_not_close_it": "pass-1 claim; no vendor entry in MCP Registry",
+   "status": "pending",
+   "result": "",
+   "checked_by": ""
+  }
+ ],
+ "changes": [
+  {
+   "id": 5,
+   "app": "Twenty",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://docs.twenty.com/developers/introduction",
+   "note": "Docs name OAuth app connections in addition to workspace API keys",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 9,
+   "app": "Copper",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://developer.copper.com/",
+   "note": "Dev docs have an OAuth2.0 section (partner apps) besides API-key headers",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://api.docs.dealcloud.com/",
+   "note": "DealCloud API docs ship an MCP section (getting started, auth, tools)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 25,
+   "app": "Pumble",
+   "field": "verdict",
+   "old": "caveat",
+   "new": "ready",
+   "evidence": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+   "note": "API add-on + key \"available on all plans\"; nothing blocks a toolkit",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 52,
+   "app": "SE Ranking",
+   "field": "access",
+   "old": "paid",
+   "new": "trial",
+   "evidence": "https://seranking.com/api.html",
+   "note": "API access is included in every SE Ranking plan; testable on free trial",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 52,
+   "app": "SE Ranking",
+   "field": "verdict",
+   "old": "caveat",
+   "new": "ready",
+   "evidence": "https://seranking.com/api.html",
+   "note": "Trial is enough to build and test",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://docs.mrscraper.com/",
+   "note": "Official MCP server (mrscraper-com/mrscraper-mcp)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "auth",
+   "old": "Other",
+   "new": "API key",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "CLI/API listed on every tier (key-based); exact scheme not documented publicly",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "access",
+   "old": "gated",
+   "new": "free",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Free plan exists; CLI/API quota 100 search results/30 days on Free",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "api",
+   "old": "None",
+   "new": "REST",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Build with Clay via CLI / API; webhooks + HTTP API only on Growth+",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Clay MCP for Reps included on every plan",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "verdict",
+   "old": "outreach",
+   "new": "caveat",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Buildable but API scope is narrow and pricing page contradicts itself (FAQ says API = Enterprise)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 72,
+   "app": "Airtable",
+   "field": "mcp",
+   "old": "community",
+   "new": "official",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=airtable",
+   "note": "com.airtable/mcp in the official MCP Registry (remote mcp.airtable.com/mcp)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 85,
+   "app": "iPayX",
+   "field": "auth",
+   "old": "API key",
+   "new": "Unknown",
+   "evidence": "https://ipayx.ai/docs",
+   "note": "Docs page describes an FX-verification protocol; no auth scheme published",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 85,
+   "app": "iPayX",
+   "field": "api",
+   "old": "REST",
+   "new": "None",
+   "evidence": "https://ipayx.ai/docs",
+   "note": "No endpoints documented publicly",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "auth",
+   "old": "OAuth2",
+   "new": "OAuth2;API key",
+   "evidence": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+   "note": "MCP = OAuth 2.1 on any Otter plan; Public API = Bearer API key, Enterprise only",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "access",
+   "old": "paid",
+   "new": "free",
+   "evidence": "https://claude.com/marketplace/connectors/otter-ai",
+   "note": "Official remote MCP (mcp.otter.ai/mcp) works from a standard account",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 93,
+   "app": "Fathom",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://developers.fathom.ai/",
+   "note": "API key quickstart + OAuth for integrations other users install",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 94,
+   "app": "Consensus",
+   "field": "auth",
+   "old": "OAuth2;API key",
+   "new": "API key",
+   "evidence": "https://consensus.app/home/api/",
+   "note": "Self-serve \"Create API key\" page; OAuth not documented for the API",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 94,
+   "app": "Consensus",
+   "field": "access",
+   "old": "gated",
+   "new": "paid",
+   "evidence": "https://consensus.app/home/api/",
+   "note": "API \"Included on every paid plan\"; no application gate",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 95,
+   "app": "Reducto",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://docs.reducto.ai/",
+   "note": "Reducto MCP server for Claude Code / Cursor / Codex",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://higgsfield.ai/cli",
+   "note": "API console keys; CLI + MCP use browser account login (\"No API keys to manage\")",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://higgsfield.ai/cli",
+   "note": "Official Higgsfield MCP server",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://transcriptapi.com/",
+   "note": "Bearer API key; MCP clients may use OAuth",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://transcriptapi.com/",
+   "note": "MCP server at transcriptapi.com/mcp",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 100,
+   "app": "Grain",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://developers.grain.com/",
+   "note": "Developer site links MCP docs (developers.grain.com/mcp/)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 22,
+   "app": "Twilio",
+   "field": "mcp",
+   "old": "official",
+   "new": "docs-only",
+   "evidence": "https://www.twilio.com/docs/ai/mcp",
+   "note": "Loop 1: Twilio's official MCP (mcp.twilio.com/docs) is docs search only - \"No Account SID, API key, or other credential is required or accepted\"; it can't act on an account",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+   "note": "Loop 1: keys are created under Settings > \"MCP & API keys\"",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "mcp",
+   "old": "none",
+   "new": "docs-only",
+   "evidence": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+   "note": "Loop 1: BigCommerce's MCP is a \"Docs MCP Server\" - label refined (still no data MCP)",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 98,
+   "app": "Mermaid CLI",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
+   "note": "Loop 1: com.mermaidchart/mermaid-mcp published by Mermaid Chart (company behind Mermaid)",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 93,
+   "app": "Fathom",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=fathom",
+   "note": "Loop 3 sweep: ai.fathom.api/mcp is under Fathom's own domain",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 30,
+   "app": "Vonage",
+   "field": "mcp",
+   "old": "none",
+   "new": "docs-only",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=vonage",
+   "note": "Loop 3 sweep: io.github.Vonage/vonage-documentation-mcp is docs-only",
+   "stage": "verify-loops"
+  }
+ ],
+ "mcp_confirmed": 24
+}

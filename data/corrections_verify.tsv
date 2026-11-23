@@ -1,0 +1,9 @@
+# VERIFICATION LOOPS — corrections that only surfaced when sampled rows were checked against primary docs (loop 1),
+# and from the systemic MCP sweep that loop 1 triggered (loop 3: pass 1 kept missing vendor MCP servers).
+id	field	new	evidence	note
+22	mcp	docs-only	https://www.twilio.com/docs/ai/mcp	Loop 1: Twilio's official MCP (mcp.twilio.com/docs) is docs search only - "No Account SID, API key, or other credential is required or accepted"; it can't act on an account
+37	mcp	official	https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api	Loop 1: keys are created under Settings > "MCP & API keys"
+43	mcp	docs-only	https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts	Loop 1: BigCommerce's MCP is a "Docs MCP Server" - label refined (still no data MCP)
+98	mcp	official	https://registry.modelcontextprotocol.io/v0/servers?search=mermaid	Loop 1: com.mermaidchart/mermaid-mcp published by Mermaid Chart (company behind Mermaid)
+93	mcp	official	https://registry.modelcontextprotocol.io/v0/servers?search=fathom	Loop 3 sweep: ai.fathom.api/mcp is under Fathom's own domain
+30	mcp	docs-only	https://registry.modelcontextprotocol.io/v0/servers?search=vonage	Loop 3 sweep: io.github.Vonage/vonage-documentation-mcp is docs-only

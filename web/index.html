@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toolkit Readiness Atlas</title>
+<meta name="description" content="Agent-researched, sample-verified study of auth, credential access, API surface and MCP for 100 apps, with an interactive explorer, build-queue planner and research-trace replay.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>{{CSS}}</style></head>
+<body>
+<header class="bar"><div class="wrap">
+<div class="brand">Toolkit Readiness Atlas<small>100 APPS · COMPOSIO TAKE-HOME · {{AUTHOR}} · {{DATE}}</small></div>
+<nav class="tabs" role="tablist" aria-label="Views">
+<button class="tab" role="tab" data-view="overview">Overview<kbd>1</kbd></button><button class="tab" role="tab" data-view="explorer">Explorer<kbd>2</kbd></button>
+<button class="tab" role="tab" data-view="planner">Planner<kbd>3</kbd></button><button class="tab" role="tab" data-view="verification">Verification<kbd>4</kbd></button>
+<button class="tab" role="tab" data-view="agent">Agent<kbd>5</kbd></button><button class="tab" role="tab" data-view="data">Data<kbd>6</kbd></button></nav>
+<button class="iconbtn" id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+</div></header>
+
+<main class="wrap">
+<section class="view" id="v-overview" aria-label="Overview">
+<h1>Which of 100 apps can become agent toolkits today?</h1>
+<p class="lede">{{OVERVIEW_LEDE}}</p>
+<div class="kpis" id="kpis"></div>
+<h2>Six patterns across the 100</h2>
+<p class="lede">Each number is computed from the final dataset by <code>scripts/pipeline.py</code>. "Show these apps" opens them in the explorer.</p>
+<ol class="findings" id="findings"></ol>
+<h2>How the 100 flow from category to verdict</h2>
+<p class="lede">Band width is the number of apps. Hover a node to trace its flows; click a node or a band to list those apps.</p>
+<div class="card flowwrap"><svg class="flow" id="flow" role="img" aria-label="Flow of the 100 apps from category, through how credentials are obtained, to verdict"></svg></div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card"><h3>Category × verdict <span class="muted small">click a cell</span></h3><div style="overflow-x:auto"><table class="heat" id="heat"></table></div></div>
+<div class="card"><h3>Auth mix <span class="muted small">apps of 100 · click to filter</span></h3><div id="authbars"></div>
+<h3 style="margin-top:16px">How credentials are obtained</h3><div id="accessbars"></div></div></div>
+<h2>What blocks the other {{NOT_READY}}</h2>
+<p class="lede">Every app that is not "build now" sits under exactly one main blocker (the pipeline asserts this). Click an app for its evidence, a draft auth config and, for gated apps, an outreach email.</p>
+<div class="grid g3" id="blockers"></div>
+</section>
+
+<section class="view" id="v-explorer" aria-label="Explorer">
+<h1>App explorer</h1>
+<p class="lede">Facet counts update as you filter. Click a row for the full record: how each field changed from the closed-book draft, its evidence, verification status, a draft Composio auth config and an outreach draft. Tick up to three rows to compare.</p>
+<div class="explorer"><aside class="facets card" id="facets" aria-label="Filters"></aside>
+<div><div class="toolbar"><input type="search" id="q" placeholder="Search apps, auth, notes…  ( / )" aria-label="Search apps">
+<div class="seg" id="layout"><button type="button" data-l="table" aria-pressed="true">Table</button><button type="button" data-l="cards" aria-pressed="false">Cards</button></div>
+<button class="btn" id="csv" type="button">Export filtered CSV</button><span id="count" class="muted small mono"></span></div>
+<div class="active-filters" id="active"></div><div id="results"></div></div></div>
+</section>
+
+<section class="view" id="v-planner" aria-label="Planner">
+<h1>Build-queue planner</h1>
+<p class="lede">Turns the research into an order of work. Move the weights and the queue re-ranks live; arrows show movement against the default weights. Apps that need outreach are left out unless you include them, because no amount of engineering unblocks them.</p>
+<div class="planner"><aside class="card"><h3>Presets</h3><div class="chips" id="presets" style="margin-bottom:14px"></div><h3>Weights</h3><div id="sliders"></div></aside>
+<div class="card"><p id="plansum" class="small"></p><div id="ranked"></div></div></div>
+</section>
+
+<section class="view" id="v-verification" aria-label="Verification">
+<h1>How accurate is it, and how do we know?</h1>
+<p class="lede">{{VER_LEDE}}</p>
+<div class="stagebar"><div class="seg" id="sampleseg"><button type="button" data-s="round1">Round 1 · 20 apps</button><button type="button" data-s="holdout">Holdout · 10 fresh apps</button></div>
+<div class="seg" id="stageseg"><button type="button" data-st="pass1">Pass 1</button><button type="button" data-st="pass2">Pass 2</button><button type="button" data-st="final">Final</button></div>
+<button class="btn primary" id="vplay" type="button">▶ Play the loops</button></div>
+<div class="grid g2"><div class="card"><div class="bigacc" id="bigacc"></div><p class="small muted" id="accsub"></p><div id="stagepath"></div>
+<h3 style="margin-top:14px">By field</h3><div id="perfield"></div></div>
+<div class="card" style="overflow-x:auto"><h3>Every checked field <span class="muted small">✓ matches docs · ✕ miss · – docs silent (hover)</span></h3><table class="vgrid" id="vgrid"></table></div></div>
+<h2>The verification loops</h2><div class="flowsteps">{{LOOPS}}</div>
+<h2>Loop F: live sweep of all 100</h2><p class="lede">The agent's deterministic tools, run against the live web from GitHub Actions: every evidence link, the official MCP Registry, Composio's catalogue, robots.txt, and a headless browser for docs that only render with JavaScript.</p>
+{{SWEEP}}
+<div class="grid g2" style="margin-top:14px">
+<div class="card"><h3>Was the agent's own confidence honest?</h3><div id="calib"></div>
+<p class="small muted">Share of pass-1 rows later corrected, by the confidence the agent gave itself. Low-confidence rows were wrong far more often, which justified routing research effort to them first.</p></div>
+<div class="card"><h3>Known limits</h3><ul class="small">{{LIMITS}}</ul></div></div>
+<h2>Human spot-check queue</h2><p class="lede">Items the agent could not close. Filled in by hand in <code>data/human_checks.csv</code>; rebuilding updates this table.</p>
+<div class="card" style="overflow-x:auto"><table id="humanq"></table></div>
+</section>
+
+<section class="view" id="v-agent" aria-label="Agent">
+<h1>The agent</h1>
+<p class="lede">A researcher, a blind verifier and a claim judge per app, run concurrently with caching and retries. Anything they cannot settle goes to a human queue. Replay the recorded run for any app below; with the local server running, you can stream a live run.</p>
+<div class="flowsteps" id="agentflow">
+<div class="step" data-step="draft"><span class="k">1 · Draft</span><h4>Closed-book pass</h4><p>All fields from model knowledge plus a self-rated confidence, recorded before any search.</p></div>
+<div class="step" data-step="discover"><span class="k">2 · Discover</span><h4>Find vendor docs</h4><p>Gemini grounding or Composio Tavily search; vendor domains ranked first.</p></div>
+<div class="step" data-step="read"><span class="k">3 · Read</span><h4>robots-aware fetch</h4><p>Disk-cached, retried with backoff; robots.txt blocks go to a human.</p></div>
+<div class="step" data-step="registry"><span class="k">4 · Lookups</span><h4>MCP Registry + catalogue</h4><p>Deterministic: domain-verified registry namespaces and Composio slug pages.</p></div>
+<div class="step" data-step="extract"><span class="k">5 · Extract</span><h4>Schema-locked record</h4><p>Pydantic schema; every claim carries a URL and a verbatim quote.</p></div>
+<div class="step" data-step="check"><span class="k">6 · Verify</span><h4>Quote · blind · judge</h4><p>Quote must be on the page; a second model re-extracts blind; a judge grades each claim.</p></div>
+<div class="step human" data-step="human"><span class="k">7 · Route</span><h4>Final or human</h4><p>Disagreement, contradiction, blocked page or low confidence → human queue.</p></div></div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card"><h3>Replay a recorded research trace</h3>
+<div class="toolbar"><input list="tracelist" id="tracepick" aria-label="Choose an app" style="flex:1 1 200px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface)"><datalist id="tracelist"></datalist>
+<button class="btn primary" id="tplay" type="button">▶ Replay</button><button class="btn" id="tstep" type="button">Step</button><button class="btn" id="tall" type="button">Show all</button>
+<label class="small" for="speed">Speed</label><select id="speed"><option value="900">Slow</option><option value="500" selected>Normal</option><option value="150">Fast</option></select></div>
+<p class="small muted" id="tracehead">Pick an app and press Replay. Try #37 systeme.io, #22 Twilio or #60 Clay.</p><ol class="timeline" id="tracelog"></ol></div>
+<div class="card"><h3>Live research</h3>
+<p id="livestatus" class="small muted">Live mode needs the local server. Run <code>python -m agent serve</code> and open <code>http://localhost:8787</code> (add <code>--mock</code> to replay without keys).</p>
+<button class="btn" id="livego" type="button" disabled>Stream the chosen app from the server</button>
+<h3 style="margin-top:18px">Where a human was needed in this run</h3><ul class="small">{{HUMAN_LIST}}</ul>
+<h3>Run it</h3><pre>pip install -r requirements.txt
+export GEMINI_API_KEY=...                 # Gemini only
+python -m agent run --ids 25,37,50 --concurrency 6
+python -m agent run --backend composio --ids 25
+python -m agent eval --sample holdout     # score vs ground truth
+python -m agent serve                     # this app + live stream
+python -m agent catalog "Pumble"          # already a Composio toolkit?
+python -m agent build                     # offline rebuild</pre></div></div>
+<p class="note-box" style="margin-top:14px">{{RUNTIME_NOTE}}</p>
+</section>
+
+<section class="view" id="v-data" aria-label="Data">
+<h1>Data</h1>
+<p class="lede">The full dataset is embedded in this page (<code>#data</code>) and published beside it as <code>data.json</code> with a plain-text <code>llms.txt</code>, so agents can read it without running the app. Downloads may be blocked inside some viewers; the copy buttons always work.</p>
+<div class="toolbar"><button class="btn primary" id="djson" type="button">Download JSON</button><button class="btn" id="dcsv" type="button">Download CSV</button>
+<button class="btn" id="cjson" type="button">Copy JSON</button><button class="btn" id="ccsv" type="button">Copy CSV</button></div>
+<div class="grid g2"><div class="card" style="overflow-x:auto"><h3>Fields</h3><table>{{SCHEMA}}</table></div>
+<div class="card"><h3>Where every number comes from</h3><ul class="small">
+<li><code>data/pass1_closed_book.tsv</code>: closed-book draft, written before any search</li>
+<li><code>data/corrections_pass2.tsv</code>, <code>corrections_verify.tsv</code>: every change, one row per field, with source</li>
+<li><code>data/samples.json</code>: seeded samples (drawn before checking)</li><li><code>data/verification.json</code>: ground truth read from vendor docs</li>
+<li><code>data/human_checks.csv</code>: human queue</li><li><code>scripts/pipeline.py</code> → scores, rules, patterns · <code>scripts/build_report.py</code> → this page</li>
+<li>Source: <a href="{{REPO}}">{{REPO_SHORT}}</a></li></ul></div></div>
+<h2>Corrections log</h2><div class="tablewrap" style="max-height:none"><table id="changes"></table></div>
+</section>
+</main>
+<footer class="wrap">Built by {{AUTHOR}} for Composio's AI Product Ops take-home · keyboard: 1–6 switch views, / search, Esc closes · <a href="{{REPO}}">source</a></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" tabindex="-1" aria-label="App details"></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Compare apps"><button class="iconbtn close" id="mclose" type="button" aria-label="Close">✕</button><div id="modalbody"></div></div>
+<div class="tray" id="tray"><span class="small">Compare</span><span id="traylist"></span><button class="btn primary" id="cmpgo" type="button">Compare</button><button class="btn" id="cmpclear" type="button">Clear</button></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><div class="tip" id="tip"></div>
+<noscript><div class="wrap">{{NOSCRIPT}}</div></noscript>
+<script type="application/json" id="data">{{DATA}}</script>
+<script>{{JS}}</script>
+</body></html>

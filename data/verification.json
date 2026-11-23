@@ -1,0 +1,38 @@
+{
+  "_readme": "Ground truth for the seeded samples, read from primary docs. 'X' = the primary docs I could reach did not state this field, so it is excluded from scoring (never guessed). mcp is scored as a yes/no question: does an official MCP that acts on account data exist? (docs-only and community count as no).",
+  "fields": ["auth", "access", "api", "mcp", "verdict"],
+  "round1": {
+    "8":  {"auth": "API key;OAuth2", "access": "trial", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://developer.close.com/", "https://www.close.com/pricing"]},
+    "10": {"auth": "OAuth2", "access": "gated", "api": "REST", "mcp": "official", "verdict": "outreach", "src": ["https://api.docs.dealcloud.com/docs/token", "https://api.docs.dealcloud.com/"]},
+    "13": {"auth": "Basic", "access": "trial", "api": "REST", "mcp": "none", "verdict": "ready", "src": ["https://developers.freshdesk.com/api/"]},
+    "20": {"auth": "Basic", "access": "gated", "api": "REST", "mcp": "none", "verdict": "outreach", "src": ["https://developer.gladly.com/rest/"]},
+    "22": {"auth": "Basic", "access": "X", "api": "REST", "mcp": "docs-only", "verdict": "ready", "src": ["https://www.twilio.com/docs/usage/requests-to-twilio", "https://www.twilio.com/docs/ai/mcp"]},
+    "29": {"auth": "Basic;OAuth2", "access": "trial", "api": "REST", "mcp": "none", "verdict": "caveat", "src": ["https://developers.aircall.io/api-references", "https://aircall.io/pricing/"]},
+    "37": {"auth": "API key", "access": "X", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api"], "note": "developer.systeme.io blocks agents (robots.txt); help-centre article used"},
+    "39": {"auth": "OAuth2", "access": "review", "api": "REST", "mcp": "none", "verdict": "caveat", "src": ["https://developers.facebook.com/docs/threads/get-started"]},
+    "43": {"auth": "API key;OAuth2", "access": "X", "api": "REST+GraphQL", "mcp": "docs-only", "verdict": "ready", "src": ["https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"]},
+    "47": {"auth": "OAuth2;API key", "access": "paid", "api": "REST", "mcp": "none", "verdict": "caveat", "src": ["https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md", "https://docs.ecwid.com/sitemap.md"]},
+    "51": {"auth": "Basic", "access": "trial", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://docs.dataforseo.com/v3/auth/", "https://github.com/dataforseo/mcp-server-typescript"]},
+    "52": {"auth": "API key", "access": "trial", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://seranking.com/api.html"]},
+    "62": {"auth": "X", "access": "free", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://vercel.com/docs/rest-api", "https://vercel.com/docs/mcp/vercel-mcp"]},
+    "67": {"auth": "Other;OAuth2;API key", "access": "X", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://docs.snowflake.com/en/developer-guide/sql-api/authenticating", "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"]},
+    "72": {"auth": "OAuth2;API key", "access": "X", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://airtable.com/developers/web/api/authentication", "https://registry.modelcontextprotocol.io/v0/servers?search=airtable"]},
+    "75": {"auth": "OAuth2;API key", "access": "X", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://developers.asana.com/docs/authentication"]},
+    "81": {"auth": "API key;OAuth2", "access": "free", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://docs.stripe.com/mcp"]},
+    "85": {"auth": "Unknown", "access": "gated", "api": "None", "mcp": "none", "verdict": "outreach", "src": ["https://ipayx.ai/docs"]},
+    "96": {"auth": "API key", "access": "paid", "api": "REST", "mcp": "official", "verdict": "caveat", "src": ["https://docs.devin.ai/api-reference/overview", "https://docs.devin.ai/work-with-devin/devin-mcp"]},
+    "98": {"auth": "None", "access": "na", "api": "CLI", "mcp": "official", "verdict": "wrap", "src": ["https://registry.modelcontextprotocol.io/v0/servers?search=mermaid"]}
+  },
+  "holdout": {
+    "9":  {"auth": "API key;OAuth2", "access": "X", "api": "REST", "mcp": "none", "verdict": "X", "src": ["https://developer.copper.com/introduction/authentication.html"]},
+    "17": {"auth": "API key", "access": "trial", "api": "GraphQL", "mcp": "official", "verdict": "ready", "src": ["https://www.plain.com/docs/graphql/introduction.md", "https://www.plain.com/pricing"]},
+    "26": {"auth": "OAuth2;API key", "access": "X", "api": "REST", "mcp": "none", "verdict": "ready", "src": ["https://docs.discord.com/developers/reference"]},
+    "33": {"auth": "OAuth2", "access": "gated", "api": "REST", "mcp": "none", "verdict": "outreach", "src": ["https://developer.linkedin.com/product-catalog/marketing/advertising-api", "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers"]},
+    "44": {"auth": "OAuth2", "access": "gated", "api": "REST", "mcp": "none", "verdict": "outreach", "src": ["https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html"]},
+    "53": {"auth": "X", "access": "paid", "api": "REST", "mcp": "official", "verdict": "caveat", "src": ["https://docs.ahrefs.com/"]},
+    "68": {"auth": "Other;OAuth2", "access": "X", "api": "REST", "mcp": "official", "verdict": "ready", "src": ["https://www.mongodb.com/docs/atlas/api/api-authentication/", "https://registry.modelcontextprotocol.io/v0/servers?search=mongodb"]},
+    "80": {"auth": "OAuth2;API key", "access": "X", "api": "REST", "mcp": "none", "verdict": "ready", "src": ["https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"]},
+    "83": {"auth": "Other", "access": "X", "api": "REST", "mcp": "none", "verdict": "caveat", "src": ["https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security", "https://registry.modelcontextprotocol.io/v0/servers?search=binance"]},
+    "97": {"auth": "API key;OAuth2", "access": "paid", "api": "X", "mcp": "official", "verdict": "caveat", "src": ["https://higgsfield.ai/cli"]}
+  }
+}

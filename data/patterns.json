@@ -1,0 +1,664 @@
+{
+ "n": 100,
+ "auth_support": {
+  "OAuth2": 65,
+  "API key": 63,
+  "Basic": 11,
+  "Other": 9
+ },
+ "auth_mix": {
+  "OAuth2 + static key/Basic": 44,
+  "OAuth2 only": 21,
+  "Static key / Basic only": 30,
+  "Other only (signed keys, JWT)": 2,
+  "None / unknown": 3
+ },
+ "access": {
+  "free": 48,
+  "trial": 22,
+  "gated": 14,
+  "review": 7,
+  "paid": 7,
+  "na": 2
+ },
+ "verdict": {
+  "ready": 58,
+  "caveat": 26,
+  "outreach": 14,
+  "wrap": 2
+ },
+ "mcp": {
+  "official": 56,
+  "community": 8,
+  "none": 33,
+  "docs-only": 3
+ },
+ "by_category": {
+  "CRM & Sales": {
+   "verdict": {
+    "ready": 7,
+    "caveat": 2,
+    "outreach": 1
+   },
+   "access": {
+    "free": 7,
+    "trial": 2,
+    "gated": 1
+   },
+   "self_serve": 9,
+   "official_mcp": 6,
+   "oauth": 10
+  },
+  "Support & Helpdesk": {
+   "verdict": {
+    "ready": 8,
+    "outreach": 2
+   },
+   "access": {
+    "trial": 5,
+    "free": 3,
+    "gated": 2
+   },
+   "self_serve": 8,
+   "official_mcp": 2,
+   "oauth": 5
+  },
+  "Communications": {
+   "verdict": {
+    "caveat": 4,
+    "ready": 6
+   },
+   "access": {
+    "free": 6,
+    "trial": 3,
+    "review": 1
+   },
+   "self_serve": 9,
+   "official_mcp": 3,
+   "oauth": 6
+  },
+  "Marketing & Social": {
+   "verdict": {
+    "caveat": 5,
+    "outreach": 1,
+    "ready": 4
+   },
+   "access": {
+    "review": 4,
+    "gated": 1,
+    "trial": 2,
+    "free": 3
+   },
+   "self_serve": 5,
+   "official_mcp": 4,
+   "oauth": 8
+  },
+  "Ecommerce": {
+   "verdict": {
+    "ready": 3,
+    "caveat": 4,
+    "outreach": 3
+   },
+   "access": {
+    "free": 4,
+    "trial": 1,
+    "gated": 3,
+    "paid": 2
+   },
+   "self_serve": 5,
+   "official_mcp": 2,
+   "oauth": 7
+  },
+  "Data/SEO/Scraping": {
+   "verdict": {
+    "ready": 6,
+    "caveat": 2,
+    "wrap": 1,
+    "outreach": 1
+   },
+   "access": {
+    "trial": 4,
+    "paid": 1,
+    "free": 3,
+    "na": 1,
+    "gated": 1
+   },
+   "self_serve": 7,
+   "official_mcp": 8,
+   "oauth": 1
+  },
+  "Developer & Infra": {
+   "verdict": {
+    "ready": 10
+   },
+   "access": {
+    "free": 8,
+    "trial": 2
+   },
+   "self_serve": 10,
+   "official_mcp": 10,
+   "oauth": 9
+  },
+  "Productivity & PM": {
+   "verdict": {
+    "ready": 10
+   },
+   "access": {
+    "free": 9,
+    "trial": 1
+   },
+   "self_serve": 10,
+   "official_mcp": 7,
+   "oauth": 9
+  },
+  "Finance & Fintech": {
+   "verdict": {
+    "ready": 1,
+    "caveat": 4,
+    "outreach": 5
+   },
+   "access": {
+    "free": 3,
+    "review": 2,
+    "gated": 5
+   },
+   "self_serve": 3,
+   "official_mcp": 5,
+   "oauth": 5
+  },
+  "AI & Media-native": {
+   "verdict": {
+    "outreach": 1,
+    "caveat": 5,
+    "ready": 3,
+    "wrap": 1
+   },
+   "access": {
+    "gated": 1,
+    "free": 2,
+    "paid": 4,
+    "trial": 2,
+    "na": 1
+   },
+   "self_serve": 4,
+   "official_mcp": 9,
+   "oauth": 5
+  }
+ },
+ "blockers": {
+  "App review / platform policy": [
+   {
+    "id": 21,
+    "app": "Slack"
+   },
+   {
+    "id": 24,
+    "app": "Lark"
+   },
+   {
+    "id": 28,
+    "app": "WhatsApp Business"
+   },
+   {
+    "id": 29,
+    "app": "Aircall"
+   },
+   {
+    "id": 31,
+    "app": "Google Ads"
+   },
+   {
+    "id": 32,
+    "app": "Meta Ads"
+   },
+   {
+    "id": 38,
+    "app": "Pinterest"
+   },
+   {
+    "id": 39,
+    "app": "Threads (Meta)"
+   },
+   {
+    "id": 82,
+    "app": "Plaid"
+   },
+   {
+    "id": 86,
+    "app": "QuickBooks"
+   },
+   {
+    "id": 87,
+    "app": "Xero"
+   }
+  ],
+  "Paid plan needed for credentials": [
+   {
+    "id": 9,
+    "app": "Copper"
+   },
+   {
+    "id": 34,
+    "app": "GoHighLevel"
+   },
+   {
+    "id": 46,
+    "app": "Squarespace"
+   },
+   {
+    "id": 47,
+    "app": "Ecwid"
+   },
+   {
+    "id": 53,
+    "app": "Ahrefs"
+   },
+   {
+    "id": 60,
+    "app": "Clay"
+   },
+   {
+    "id": 92,
+    "app": "Otter AI"
+   },
+   {
+    "id": 94,
+    "app": "Consensus"
+   },
+   {
+    "id": 96,
+    "app": "Devin"
+   },
+   {
+    "id": 97,
+    "app": "higgsfield"
+   },
+   {
+    "id": 100,
+    "app": "Grain"
+   }
+  ],
+  "Customer, enterprise or vetted-partner only": [
+   {
+    "id": 10,
+    "app": "DealCloud"
+   },
+   {
+    "id": 15,
+    "app": "Pylon"
+   },
+   {
+    "id": 20,
+    "app": "Gladly"
+   },
+   {
+    "id": 33,
+    "app": "LinkedIn Ads"
+   },
+   {
+    "id": 44,
+    "app": "Salesforce Commerce Cloud"
+   },
+   {
+    "id": 49,
+    "app": "Amazon Selling Partner"
+   },
+   {
+    "id": 59,
+    "app": "Waterfall.io"
+   },
+   {
+    "id": 88,
+    "app": "Brex"
+   },
+   {
+    "id": 89,
+    "app": "Ramp"
+   },
+   {
+    "id": 90,
+    "app": "PitchBook"
+   },
+   {
+    "id": 91,
+    "app": "NotebookLM"
+   }
+  ],
+  "No public API docs found": [
+   {
+    "id": 50,
+    "app": "fanbasis"
+   },
+   {
+    "id": 84,
+    "app": "Paygent Connect"
+   },
+   {
+    "id": 85,
+    "app": "iPayX"
+   }
+  ],
+  "Self-hosted / per-instance base URL": [
+   {
+    "id": 5,
+    "app": "Twenty"
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce"
+   },
+   {
+    "id": 45,
+    "app": "Magento (Adobe Commerce)"
+   }
+  ],
+  "Not an API (local CLI)": [
+   {
+    "id": 58,
+    "app": "Sherlock"
+   },
+   {
+    "id": 98,
+    "app": "Mermaid CLI"
+   }
+  ],
+  "Regulatory / financial risk": [
+   {
+    "id": 83,
+    "app": "Binance"
+   }
+  ]
+ },
+ "easy_wins": [
+  {
+   "id": 1,
+   "app": "Salesforce"
+  },
+  {
+   "id": 2,
+   "app": "HubSpot"
+  },
+  {
+   "id": 3,
+   "app": "Pipedrive"
+  },
+  {
+   "id": 4,
+   "app": "Attio"
+  },
+  {
+   "id": 6,
+   "app": "Podio"
+  },
+  {
+   "id": 7,
+   "app": "Zoho CRM"
+  },
+  {
+   "id": 8,
+   "app": "Close"
+  },
+  {
+   "id": 11,
+   "app": "Zendesk"
+  },
+  {
+   "id": 12,
+   "app": "Intercom"
+  },
+  {
+   "id": 13,
+   "app": "Freshdesk"
+  },
+  {
+   "id": 14,
+   "app": "Front"
+  },
+  {
+   "id": 16,
+   "app": "LiveAgent"
+  },
+  {
+   "id": 17,
+   "app": "Plain"
+  },
+  {
+   "id": 18,
+   "app": "Help Scout"
+  },
+  {
+   "id": 19,
+   "app": "Gorgias"
+  },
+  {
+   "id": 22,
+   "app": "Twilio"
+  },
+  {
+   "id": 23,
+   "app": "Zoho Cliq"
+  },
+  {
+   "id": 25,
+   "app": "Pumble"
+  },
+  {
+   "id": 26,
+   "app": "Discord"
+  },
+  {
+   "id": 27,
+   "app": "Telegram"
+  },
+  {
+   "id": 30,
+   "app": "Vonage"
+  },
+  {
+   "id": 35,
+   "app": "Mailchimp"
+  },
+  {
+   "id": 36,
+   "app": "Klaviyo"
+  },
+  {
+   "id": 37,
+   "app": "systeme.io"
+  },
+  {
+   "id": 40,
+   "app": "SendGrid"
+  },
+  {
+   "id": 41,
+   "app": "Shopify"
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce"
+  },
+  {
+   "id": 48,
+   "app": "Gumroad"
+  },
+  {
+   "id": 51,
+   "app": "DataForSEO"
+  },
+  {
+   "id": 52,
+   "app": "SE Ranking"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper"
+  },
+  {
+   "id": 55,
+   "app": "Apify"
+  },
+  {
+   "id": 56,
+   "app": "Firecrawl"
+  },
+  {
+   "id": 57,
+   "app": "Bright Data"
+  },
+  {
+   "id": 61,
+   "app": "GitHub"
+  },
+  {
+   "id": 62,
+   "app": "Vercel"
+  },
+  {
+   "id": 63,
+   "app": "Netlify"
+  },
+  {
+   "id": 64,
+   "app": "Cloudflare"
+  },
+  {
+   "id": 65,
+   "app": "Supabase"
+  },
+  {
+   "id": 66,
+   "app": "Neo4j"
+  },
+  {
+   "id": 67,
+   "app": "Snowflake"
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas"
+  },
+  {
+   "id": 69,
+   "app": "Datadog"
+  },
+  {
+   "id": 70,
+   "app": "Sentry"
+  },
+  {
+   "id": 71,
+   "app": "Notion"
+  },
+  {
+   "id": 72,
+   "app": "Airtable"
+  },
+  {
+   "id": 73,
+   "app": "Linear"
+  },
+  {
+   "id": 74,
+   "app": "Jira"
+  },
+  {
+   "id": 75,
+   "app": "Asana"
+  },
+  {
+   "id": 76,
+   "app": "Monday.com"
+  },
+  {
+   "id": 77,
+   "app": "ClickUp"
+  },
+  {
+   "id": 78,
+   "app": "Coda"
+  },
+  {
+   "id": 79,
+   "app": "Smartsheet"
+  },
+  {
+   "id": 80,
+   "app": "Harvest"
+  },
+  {
+   "id": 81,
+   "app": "Stripe"
+  },
+  {
+   "id": 93,
+   "app": "Fathom"
+  },
+  {
+   "id": 95,
+   "app": "Reducto"
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript"
+  }
+ ],
+ "outreach": [
+  {
+   "id": 10,
+   "app": "DealCloud"
+  },
+  {
+   "id": 15,
+   "app": "Pylon"
+  },
+  {
+   "id": 20,
+   "app": "Gladly"
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads"
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud"
+  },
+  {
+   "id": 49,
+   "app": "Amazon Selling Partner"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis"
+  },
+  {
+   "id": 59,
+   "app": "Waterfall.io"
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect"
+  },
+  {
+   "id": 85,
+   "app": "iPayX"
+  },
+  {
+   "id": 88,
+   "app": "Brex"
+  },
+  {
+   "id": 89,
+   "app": "Ramp"
+  },
+  {
+   "id": 90,
+   "app": "PitchBook"
+  },
+  {
+   "id": 91,
+   "app": "NotebookLM"
+  }
+ ]
+}

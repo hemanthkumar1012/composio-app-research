@@ -1,0 +1,105 @@
+# PASS 1 — closed-book agent draft (LLM prior knowledge only, NO web access). Written before any search.
+# access: free=self-serve free | trial=self-serve trial/credits | paid=paid plan needed | review=self-serve dev access, production needs app review | gated=partner/enterprise/contact-sales | na=no API (OSS/CLI)
+# verdict: ready=build now | caveat=build now with a caveat | outreach=needs partnership/outreach | wrap=no API, wrap as local CLI skill
+# mcp: official | community | none
+id	app	auth	access	api	mcp	verdict	conf
+1	Salesforce	OAuth2	free	REST+SOAP+GraphQL	official	ready	high
+2	HubSpot	OAuth2;API key	free	REST	official	ready	high
+3	Pipedrive	OAuth2;API key	free	REST	community	ready	med
+4	Attio	OAuth2;API key	free	REST	official	ready	med
+5	Twenty	API key	free	REST+GraphQL	community	caveat	med
+6	Podio	OAuth2	free	REST	none	ready	med
+7	Zoho CRM	OAuth2	free	REST	official	ready	high
+8	Close	API key;OAuth2	trial	REST	official	ready	med
+9	Copper	API key	trial	REST	none	caveat	low
+10	DealCloud	OAuth2	gated	REST	none	outreach	med
+11	Zendesk	OAuth2;Basic	trial	REST	community	ready	high
+12	Intercom	OAuth2;API key	free	REST	official	ready	high
+13	Freshdesk	Basic	trial	REST	none	ready	med
+14	Front	OAuth2;API key	free	REST	community	ready	med
+15	Pylon	API key	gated	REST	none	outreach	low
+16	LiveAgent	API key	trial	REST	none	ready	med
+17	Plain	API key	trial	GraphQL	official	ready	low
+18	Help Scout	OAuth2	free	REST	none	ready	med
+19	Gorgias	Basic;OAuth2	trial	REST	none	ready	med
+20	Gladly	Basic	gated	REST	none	outreach	med
+21	Slack	OAuth2	free	REST	official	caveat	high
+22	Twilio	Basic	trial	REST	official	ready	high
+23	Zoho Cliq	OAuth2	free	REST	official	ready	med
+24	Lark	Other;OAuth2	free	REST	official	caveat	med
+25	Pumble	API key	free	REST	none	caveat	low
+26	Discord	OAuth2;API key	free	REST	community	ready	high
+27	Telegram	API key	free	REST	community	ready	high
+28	WhatsApp Business	OAuth2;API key	review	REST	none	caveat	med
+29	Aircall	Basic;OAuth2	trial	REST	none	caveat	med
+30	Vonage	Basic;Other	trial	REST	none	ready	med
+31	Google Ads	OAuth2	review	REST	official	caveat	high
+32	Meta Ads	OAuth2	review	REST	community	caveat	high
+33	LinkedIn Ads	OAuth2	gated	REST	none	outreach	high
+34	GoHighLevel	OAuth2;API key	trial	REST	official	caveat	med
+35	Mailchimp	OAuth2;API key	free	REST	none	ready	high
+36	Klaviyo	API key;OAuth2	free	REST	official	ready	med
+37	systeme.io	API key	free	REST	none	ready	low
+38	Pinterest	OAuth2	review	REST	none	caveat	med
+39	Threads (Meta)	OAuth2	review	REST	none	caveat	med
+40	SendGrid	API key	trial	REST	none	ready	high
+41	Shopify	OAuth2;API key	free	GraphQL	official	ready	high
+42	WooCommerce	Basic;Other	free	REST	official	caveat	med
+43	BigCommerce	API key;OAuth2	trial	REST+GraphQL	none	ready	med
+44	Salesforce Commerce Cloud	OAuth2	gated	REST	none	outreach	med
+45	Magento (Adobe Commerce)	Other;API key	free	REST+GraphQL	none	caveat	med
+46	Squarespace	API key;OAuth2	paid	REST	none	caveat	med
+47	Ecwid	OAuth2;API key	paid	REST	none	caveat	low
+48	Gumroad	OAuth2	free	REST	none	ready	med
+49	Amazon Selling Partner	OAuth2	gated	REST	none	outreach	high
+50	fanbasis	API key	gated	REST	none	outreach	low
+51	DataForSEO	Basic	trial	REST	official	ready	high
+52	SE Ranking	API key	paid	REST	official	caveat	low
+53	Ahrefs	API key	paid	REST	official	caveat	med
+54	MrScraper	API key	trial	REST	none	ready	low
+55	Apify	API key;OAuth2	free	REST	official	ready	high
+56	Firecrawl	API key	free	REST	official	ready	high
+57	Bright Data	API key	trial	REST	official	ready	high
+58	Sherlock	None	na	CLI	community	wrap	high
+59	Waterfall.io	API key	gated	REST	none	outreach	low
+60	Clay	Other	gated	None	none	outreach	low
+61	GitHub	OAuth2;API key;Other	free	REST+GraphQL	official	ready	high
+62	Vercel	API key;OAuth2	free	REST	official	ready	high
+63	Netlify	API key;OAuth2	free	REST	official	ready	high
+64	Cloudflare	API key	free	REST	official	ready	high
+65	Supabase	API key;OAuth2	free	REST	official	ready	high
+66	Neo4j	Basic;OAuth2	free	REST	official	ready	med
+67	Snowflake	Other;OAuth2;API key	trial	REST	official	ready	med
+68	MongoDB Atlas	Other;OAuth2	free	REST	official	ready	high
+69	Datadog	API key;OAuth2	trial	REST	official	ready	med
+70	Sentry	API key;OAuth2	free	REST	official	ready	high
+71	Notion	OAuth2;API key	free	REST	official	ready	high
+72	Airtable	OAuth2;API key	free	REST	community	ready	med
+73	Linear	OAuth2;API key	free	GraphQL	official	ready	high
+74	Jira	OAuth2;Basic	free	REST	official	ready	high
+75	Asana	OAuth2;API key	free	REST	official	ready	high
+76	Monday.com	OAuth2;API key	free	GraphQL	official	ready	high
+77	ClickUp	OAuth2;API key	free	REST	official	ready	med
+78	Coda	API key	free	REST	none	ready	med
+79	Smartsheet	OAuth2;API key	trial	REST	none	ready	med
+80	Harvest	OAuth2;API key	free	REST	none	ready	med
+81	Stripe	API key;OAuth2	free	REST	official	ready	high
+82	Plaid	Other	review	REST	official	caveat	med
+83	Binance	Other	free	REST	none	caveat	med
+84	Paygent Connect	API key	gated	REST	none	outreach	low
+85	iPayX	API key	gated	REST	none	outreach	low
+86	QuickBooks	OAuth2	review	REST	official	caveat	high
+87	Xero	OAuth2	free	REST	official	caveat	med
+88	Brex	API key;OAuth2	gated	REST	none	outreach	med
+89	Ramp	OAuth2	gated	REST	official	outreach	med
+90	PitchBook	API key	gated	REST	none	outreach	med
+91	NotebookLM	OAuth2	gated	REST	none	outreach	med
+92	Otter AI	OAuth2	paid	MCP-only	official	caveat	low
+93	Fathom	API key	free	REST	none	ready	low
+94	Consensus	OAuth2;API key	gated	REST	official	caveat	low
+95	Reducto	API key	trial	REST	none	ready	med
+96	Devin	API key	paid	REST	official	caveat	med
+97	higgsfield	API key	paid	REST	none	caveat	low
+98	Mermaid CLI	None	na	CLI	none	wrap	high
+99	YouTube Transcript	API key	trial	REST	none	ready	low
+100	Grain	API key	paid	REST	none	caveat	low

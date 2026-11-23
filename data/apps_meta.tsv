@@ -1,0 +1,103 @@
+# Per-app description, API breadth, the one-line "what to know" note (main blocker or caveat), and evidence URLs.
+# fetched=1: at least one evidence URL was actually retrieved and read in this run. fetched=0: evidence is the vendor docs root from the brief, not re-read in this run (link-check it with `python -m agent links`).
+id	one_liner	breadth	note	evidence	fetched
+1	Enterprise CRM: accounts, leads, opportunities, cases, custom objects	broad	Free Developer Edition org; OAuth via a connected / external client app	https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm	0
+2	CRM plus marketing, sales and service hubs	broad	Free developer account; private-app token or OAuth public app (legacy API keys sunset)	https://developers.hubspot.com/docs/api/overview https://registry.modelcontextprotocol.io/v0/servers?search=hubspot	1
+3	Pipeline-focused sales CRM for SMBs	broad	Free developer sandbox; API token or OAuth app. Only community MCP servers in the registry	https://pipedrive.readme.io/docs/core-api-concepts-authentication https://registry.modelcontextprotocol.io/v0/servers?search=pipedrive	1
+4	Data-model-first CRM for startups	moderate	Free plan; workspace API key or OAuth app	https://docs.attio.com https://registry.modelcontextprotocol.io/v0/servers?search=attio	1
+5	Open-source CRM (Salesforce alternative), cloud or self-hosted	broad	REST + GraphQL; self-hosted installs mean a per-instance base URL	https://docs.twenty.com/developers/introduction	1
+6	Configurable workspace apps and workflows (Progress Podio)	moderate	Free client ID/secret from account settings; ageing platform	https://developers.podio.com	0
+7	CRM inside the Zoho suite	broad	Zoho OAuth; must handle data-centre domains (.com/.eu/.in)	https://www.zoho.com/crm/developer/docs/	0
+8	Inside-sales CRM with built-in calling and email	broad	No free plan, 14-day trial; high-volume API not on the Solo plan	https://developer.close.com/ https://www.close.com/pricing	1
+9	CRM built for Google Workspace	moderate	API key + user email per request; OAuth preferred for partners; plan gating not documented	https://developer.copper.com/introduction/authentication.html	1
+10	Intapp deal and relationship platform for private capital and banks	broad	OAuth2 client credentials against the customer's own site URL; customer-only, has an MCP section	https://api.docs.dealcloud.com/docs/token https://api.docs.dealcloud.com/	1
+11	Ticketing and help-centre platform	broad	Trial account; email/API-token Basic or OAuth. Only community MCP servers in the registry	https://developer.zendesk.com/api-reference/ https://registry.modelcontextprotocol.io/v0/servers?search=zendesk	1
+12	AI-first customer messaging and support	broad	Free developer workspace; access token or OAuth	https://developers.intercom.com/ https://registry.modelcontextprotocol.io/v0/servers?search=intercom	1
+13	Freshworks helpdesk	broad	API key as Basic username; trial capped at 50 calls/min	https://developers.freshdesk.com/api/ https://registry.modelcontextprotocol.io/v0/servers?search=freshdesk	1
+14	Shared-inbox customer communication hub	broad	Developer environment; API token or OAuth	https://dev.frontapp.com https://registry.modelcontextprotocol.io/v0/servers?search=front	1
+15	B2B support platform (Slack/Teams-native ticketing)	moderate	Admin-only API tokens; no self-serve signup found (demo-led), so a customer workspace is needed	https://docs.usepylon.com/pylon-docs/developer/api.md	1
+16	Multichannel helpdesk with live chat	moderate	Trial account; API key	https://www.liveagent.com	0
+17	API-first B2B support platform	broad	GraphQL with Bearer API key; 7-day trial, no free plan; official MCP	https://www.plain.com/docs/graphql/introduction.md https://www.plain.com/pricing	1
+18	Shared inbox and docs for support teams	broad	OAuth2 only (auth code, or client credentials for your own account)	https://developer.helpscout.com/mailbox-api/overview/authentication/	1
+19	Ecommerce helpdesk (Shopify-centric)	broad	Private app = email + API key; public apps must use OAuth2	https://developers.gorgias.com/docs/authentication	1
+20	Customer service platform built around people, not tickets	broad	Admin must grant "API User" permission; customer-only	https://developer.gladly.com/rest/	1
+21	Team messaging	broad	Unlisted commercial apps get conversations.history at 1 req/min (since May 2025); Marketplace listing needed	https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps	1
+22	Programmable SMS, voice, WhatsApp and email	broad	Trial credit; Basic with SID/token or API key; official MCP is docs-only	https://www.twilio.com/docs/usage/requests-to-twilio https://www.twilio.com/docs/ai/mcp	1
+23	Zoho's team chat	moderate	Zoho OAuth; data-centre domains	https://www.zoho.com/cliq/help/restapi/v2/	0
+24	All-in-one collaboration suite (chat, docs, base) from ByteDance	broad	App ID/secret to tenant token, or user OAuth; custom apps need tenant admin approval	https://open.larksuite.com/document/	0
+25	Free Slack alternative by CAKE.com	narrow	API add-on keys on all plans; already a Composio toolkit	https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/	1
+26	Community chat with bots and apps	broad	Bot token or OAuth2; privileged intents need verification at scale	https://docs.discord.com/developers/reference	1
+27	Messaging app with a free Bot API	broad	BotFather token, free	https://core.telegram.org/bots/api	0
+28	WhatsApp Cloud API for business messaging	moderate	Free test number; production needs business verification and Meta App Review; per-message pricing	https://developers.facebook.com/docs/whatsapp	0
+29	Cloud phone system for sales and support	moderate	Basic auth for your own account; OAuth requires an Aircall Marketplace listing	https://developers.aircall.io/api-references https://aircall.io/pricing/	1
+30	Communications APIs (SMS, voice, video, verify)	broad	Free credit; key/secret or JWT apps; vendor MCP is docs-only	https://developer.vonage.com https://registry.modelcontextprotocol.io/v0/servers?search=vonage	1
+31	Google's ads platform	broad	Developer token must pass Google review before production (test accounts only until then)	https://developers.google.com/google-ads/api/docs/start	0
+32	Facebook and Instagram Marketing API	broad	ads_management Advanced Access needs App Review and Business Verification	https://developers.facebook.com/docs/marketing-apis	0
+33	LinkedIn Advertising API	broad	Even Development tier needs an application reviewed by LinkedIn; Standard tier is a second application	https://developer.linkedin.com/product-catalog/marketing/advertising-api https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers	1
+34	All-in-one white-label agency CRM and marketing	broad	OAuth marketplace app or Private Integration Token; needs a paid sub-account (trial exists); MCP not confirmed in docs	https://marketplace.gohighlevel.com/docs/ https://registry.modelcontextprotocol.io/v0/servers?search=gohighlevel	1
+35	Email marketing	broad	Free plan; API key or OAuth; Transactional (Mandrill) is a paid add-on	https://mailchimp.com/developer/ https://registry.modelcontextprotocol.io/v0/servers?search=mailchimp	1
+36	Ecommerce email and SMS marketing	broad	Free plan; private API key or OAuth app	https://developers.klaviyo.com https://registry.modelcontextprotocol.io/v0/servers?search=klaviyo	1
+37	All-in-one funnel, course and email builder	moderate	Public API key (X-API-Key, max 3); developer docs block automated fetches (robots.txt), so plan access needs a human check	https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api	1
+38	Visual discovery: Pins, boards, ads	moderate	Trial access on app creation; Standard access needs review	https://developers.pinterest.com https://registry.modelcontextprotocol.io/v0/servers?search=pinterest	1
+39	Meta's text-based social network	moderate	Testers work without review; public users need App Review and a published app	https://developers.facebook.com/docs/threads/get-started	1
+40	Email delivery API (Twilio SendGrid)	broad	API key; free trial (no permanent free tier)	https://sendgrid.com	0
+41	Commerce platform	broad	Free Partner account + dev stores; new public apps must use the GraphQL Admin API	https://shopify.dev/docs/api/admin-graphql	0
+42	Open-source WordPress commerce plugin	broad	Consumer key/secret per store and per-site base URL; no vendor MCP in the registry	https://woocommerce.com/document/woocommerce-rest-api/ https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce	1
+43	SaaS ecommerce platform	broad	Store API account token or OAuth app; REST + GraphQL; vendor MCP is docs-only	https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts	1
+44	Salesforce B2C Commerce (enterprise storefronts)	broad	Needs a B2C Commerce instance + Account Manager API client: customer or partner only	https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html	1
+45	Adobe Commerce / Magento Open Source	broad	Self-hosted per merchant; integration (OAuth 1.0a) or admin bearer tokens	https://developer.adobe.com/commerce/webapi/	0
+46	Website builder with commerce	moderate	API keys only on Commerce Advanced; OAuth credentials need Squarespace review	https://developers.squarespace.com/commerce-apis/authentication-and-permissions	1
+47	Embeddable ecommerce (Lightspeed)	broad	"Only stores on paid plans can access API"; free dev upgrade on request to support	https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid.md	1
+48	Storefront for creators selling digital products	narrow	Register an OAuth app and generate your own token	https://gumroad.com/api	0
+49	Amazon seller and vendor data and operations	broad	Needs a Professional seller account + developer profile review; PII roles need extra approval	https://developer-docs.amazon.com/sp-api	0
+50	Creator payments and checkout platform (per brief)	none	No public developer docs found and the site refused automated fetch: needs a human or outreach	https://fanbasis.com	0
+51	Pay-as-you-go SEO data APIs (SERP, keywords, backlinks)	broad	Free account; Basic with API login/password; official hosted MCP	https://docs.dataforseo.com/v3/auth/ https://github.com/dataforseo/mcp-server-typescript	1
+52	SEO platform: rank tracking, audits, backlinks	moderate	API included in every plan and testable on the free trial; official MCP	https://seranking.com/api.html	1
+53	SEO toolset: backlinks and keywords	moderate	API v3 needs Enterprise (free test queries only); official MCP	https://docs.ahrefs.com/	1
+54	AI web-scraping API	narrow	API token; official MCP (mrscraper-com/mrscraper-mcp)	https://docs.mrscraper.com/	1
+55	Web scraping and automation platform (Actors)	broad	Free plan with monthly credit; official MCP	https://docs.apify.com	0
+56	Crawl and scrape the web into LLM-ready markdown	moderate	Free credits; official MCP	https://firecrawl.dev	0
+57	Proxy network plus web-data and scraper APIs	broad	Trial; official MCP	https://brightdata.com	0
+58	OSS CLI that hunts a username across 400+ sites	none	No API: wrap as a sandboxed CLI skill; OSINT use needs a policy review	https://github.com/sherlock-project/sherlock	0
+59	B2B contact enrichment across 30+ data vendors	narrow	x-api-key; no self-serve signup on the site ("Book a Call")	https://www.waterfall.io/	1
+60	GTM enrichment and workflow spreadsheet	narrow	Free plan and MCP exist, but the API quota is tiny on Free, webhooks/HTTP API are Growth+, and the pricing FAQ contradicts the table	https://www.clay.com/pricing	1
+61	Code hosting and collaboration	broad	Free; PAT, OAuth app or GitHub App	https://docs.github.com/rest	0
+62	Frontend cloud and hosting	broad	Free Hobby; access token or integration OAuth; official MCP on all plans	https://vercel.com/docs/rest-api https://vercel.com/docs/mcp/vercel-mcp	1
+63	Web hosting and deploy platform	broad	Free; PAT or OAuth app	https://docs.netlify.com/api	0
+64	CDN, security, DNS and Workers	broad	Free; scoped API tokens	https://developers.cloudflare.com/api	0
+65	Postgres backend-as-a-service	broad	Free; Management API PAT or OAuth app	https://supabase.com/docs	0
+66	Graph database (AuraDB cloud)	moderate	Free AuraDB tier; DB Basic auth plus Aura API client credentials	https://neo4j.com/docs/api	0
+67	Cloud data warehouse	broad	Trial; key-pair JWT, OAuth or PAT; Snowflake-managed MCP	https://docs.snowflake.com/en/developer-guide/sql-api/authenticating https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp	1
+68	Managed MongoDB cloud	broad	Free M0; service-account OAuth or legacy Digest keys; official MCP	https://www.mongodb.com/docs/atlas/api/api-authentication/ https://registry.modelcontextprotocol.io/v0/servers?search=mongodb	1
+69	Observability: metrics, logs, APM	broad	Trial; API key + application key headers	https://docs.datadoghq.com/api	0
+70	Error tracking and performance monitoring	broad	Free developer plan; auth token or OAuth integration	https://docs.sentry.io/api	0
+71	Docs, wiki and databases workspace	moderate	Free; internal integration token or public OAuth	https://developers.notion.com	0
+72	Spreadsheet-database hybrid	moderate	PAT or OAuth (legacy keys removed Feb 2024); official MCP	https://airtable.com/developers/web/api/authentication https://registry.modelcontextprotocol.io/v0/servers?search=airtable	1
+73	Issue tracking for software teams	broad	Free; personal API key or OAuth; GraphQL	https://developers.linear.app	0
+74	Atlassian issue and project tracking	broad	Free plan; API token (Basic) or OAuth 2.0 3LO	https://developer.atlassian.com	0
+75	Work management	broad	PAT or OAuth; service accounts are Enterprise-only; official MCP	https://developers.asana.com/docs/authentication	1
+76	Work OS boards	broad	Free dev account; personal token or OAuth; GraphQL	https://developer.monday.com	0
+77	All-in-one tasks and docs	broad	Free; personal token or OAuth. No vendor entry in the MCP registry	https://clickup.com/api https://registry.modelcontextprotocol.io/v0/servers?search=clickup	1
+78	Doc-as-app platform	moderate	Bearer token only; free on all workspaces	https://coda.io/developers/apis/v1	1
+79	Enterprise spreadsheet-style work management	broad	Trial; token or OAuth. Only community MCP in the registry	https://www.smartsheet.com/developers https://registry.modelcontextprotocol.io/v0/servers?search=smartsheet	1
+80	Time tracking and invoicing	moderate	PAT or OAuth2 plus Harvest-Account-Id header	https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/	1
+81	Payments infrastructure	broad	Free test mode/sandboxes; official MCP (OAuth or agent API keys)	https://stripe.com/docs/api https://docs.stripe.com/mcp	1
+82	Bank-account data aggregation (Link)	broad	Free Sandbox; production needs Plaid approval; end-user Link flow, not standard OAuth	https://plaid.com/docs https://registry.modelcontextprotocol.io/v0/servers?search=plaid	1
+83	Crypto exchange	broad	HMAC/RSA/Ed25519-signed keys; needs a KYC'd account, geo-restricted; trading is financial risk	https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security	1
+84	NMI-powered payment gateway reseller (per brief)	narrow	No public Paygent docs found; NMI uses merchant security keys, so a merchant account via the reseller is needed	https://docs.nmi.com	1
+85	FX-rate verification protocol (bank/card rate vs mid-market)	none	No API, endpoints or auth published; contact the team	https://ipayx.ai/docs	1
+86	Intuit small-business accounting	broad	Free dev account + sandbox; production keys need an app assessment; usage is metered	https://developer.intuit.com	0
+87	Cloud accounting	broad	Free dev account + demo company; certification needed beyond connection limits	https://developer.xero.com	0
+88	Corporate cards and spend management	moderate	Admin-generated user tokens; requires a Brex business account; partner OAuth is separate	https://developer.brex.com/docs/authentication/	1
+89	Corporate cards and spend management	moderate	OAuth2; needs a Ramp customer account or a sandbox on request (docs need JS, not machine-readable)	https://docs.ramp.com	1
+90	Private-market data: companies, deals, investors	moderate	API is an enterprise add-on to a subscription (contact sales); site refused automated fetch	https://pitchbook.com	0
+91	Google AI research notebooks	narrow	Only the NotebookLM Enterprise API (Preview): Google Cloud project + Enterprise licence; consumer app has no API	https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks	1
+92	AI meeting transcription	narrow	Official read-only MCP (OAuth) on any plan; the full Public API is Enterprise-only	https://www.scalekit.com/blog/otter-mcp-vs-api https://claude.com/marketplace/connectors/otter-ai	1
+93	AI meeting notetaker	narrow	API key or OAuth; official MCP (ai.fathom.api/mcp)	https://developers.fathom.ai/ https://registry.modelcontextprotocol.io/v0/servers?search=fathom	1
+94	AI search engine over academic papers	narrow	Self-serve API key on any paid plan; official MCP	https://consensus.app/home/api/	1
+95	Document parsing and extraction API for LLMs	narrow	API key; official MCP	https://docs.reducto.ai/	1
+96	Cognition's autonomous AI software engineer	moderate	Bearer service-user keys; needs a paid Devin account; official MCP	https://docs.devin.ai/api-reference/overview https://docs.devin.ai/work-with-devin/devin-mcp	1
+97	AI image and video generation suite (30+ models)	narrow	Paid credits; CLI and official MCP use account login; API console keys	https://higgsfield.ai/cli	1
+98	OSS CLI that renders Mermaid diagrams to SVG/PNG/PDF	none	No API: wrap mmdc as a sandboxed skill; Mermaid Chart publishes an MCP	https://github.com/mermaid-js/mermaid-cli https://registry.modelcontextprotocol.io/v0/servers?search=mermaid	1
+99	YouTube transcripts and search API (TranscriptAPI.com)	narrow	100 free credits; Bearer key; official MCP	https://transcriptapi.com/	1
+100	AI meeting recorder and notes	narrow	Personal access tokens; official MCP docs; plan gating not documented	https://developers.grain.com/	1

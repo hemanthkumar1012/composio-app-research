@@ -1,0 +1,6 @@
+google-genai>=1.20
+pydantic>=2.6
+requests>=2.31
+beautifulsoup4>=4.12
+# optional: Composio search/fetch backend (python -m agent run --backend composio)
+composio>=0.8

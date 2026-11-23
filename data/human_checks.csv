@@ -1,0 +1,11 @@
+id,app,field,question,why_agent_could_not_close_it,status,result,checked_by
+37,systeme.io,access,Can a free-plan account create a public API key?,developer.systeme.io blocks agents via robots.txt,pending,,
+50,fanbasis,all,Does fanbasis publish any developer API or webhooks?,site refused automated fetch; search found no docs,pending,,
+84,Paygent Connect,all,Is there a Paygent-branded API or only the NMI gateway?,no public Paygent site or docs found,pending,,
+90,PitchBook,access,Is the API sold only as an enterprise add-on?,pitchbook.com refused automated fetch,pending,,
+89,Ramp,access,Can a non-customer get a sandbox?,docs.ramp.com renders only with JavaScript,pending,,
+2,HubSpot,mcp,Does HubSpot run an official MCP server that acts on CRM data?,pass-1 claim; no vendor entry in MCP Registry,pending,,
+12,Intercom,mcp,Does Intercom run an official MCP server?,pass-1 claim; no vendor entry in MCP Registry,pending,,
+34,GoHighLevel,mcp,Does HighLevel run an official MCP server?,pass-1 claim; not in docs home or registry,pending,,
+36,Klaviyo,mcp,Does Klaviyo run an official MCP server?,pass-1 claim; no vendor entry in MCP Registry,pending,,
+77,ClickUp,mcp,Does ClickUp run an official MCP server?,pass-1 claim; no vendor entry in MCP Registry,pending,,

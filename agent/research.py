@@ -1,0 +1,182 @@
+"""Per-app research loop (multi-agent), run concurrently across apps.
+
+  researcher  pass 1 closed-book draft + confidence  ->  discover docs  ->  robots-aware fetch
+              ->  MCP Registry + Composio catalogue lookups  ->  schema-locked extraction with verbatim quotes
+  verifier    blind re-extraction from the SAME pages by a second model that never sees the researcher's answer
+  judge       claim-level SUPPORT / CONTRADICT / SILENT on each cited page
+  router      disagreement, unsupported quote, blocked page, contradiction or low confidence -> human queue
+
+Every step is written to runs/<date>/traces/<id>.jsonl and can be streamed live (python -m agent serve).
+"""
+import asyncio
+import csv
+import datetime as dt
+import json
+import os
+import pathlib
+
+from . import tools
+from .infra import DiskCache, Tracer, retry
+from .prompts import RUBRIC, PASS1, DISCOVER, EXTRACT, JUDGE, BLIND
+from .schema import AppResearch
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+VERIFIER_MODEL = os.getenv("GEMINI_VERIFIER_MODEL", MODEL)
+KEY_FIELDS = ("access", "mcp", "verdict")
+
+
+def client():
+    from google import genai
+    return genai.Client()  # reads GEMINI_API_KEY
+
+
+def load_apps(ids=None):
+    rows = list(csv.DictReader(open(ROOT / "apps.csv", encoding="utf-8")))
+    return [r for r in rows if not ids or int(r["id"]) in ids]
+
+
+class Agent:
+    def __init__(self, backend="gemini", cache=None, gc=None):
+        self.backend, self.cache = backend, cache or DiskCache()
+        self.gc = gc or client()
+
+    # ---- model calls (cached + retried) ----
+    @retry()
+    def _gen(self, model, contents, json_mode=False, schema=None):
+        from google.genai import types
+        cfg = types.GenerateContentConfig(temperature=0, response_mime_type="application/json" if json_mode or schema else None,
+                                          response_schema=schema)
+        resp = self.gc.models.generate_content(model=model, contents=contents, config=cfg)
+        return resp.text
+
+    def llm(self, contents, model=MODEL, json_mode=False, schema=None):
+        return self.cache.memo("llm", lambda: self._gen(model, contents, json_mode, schema), model, contents, bool(schema))
+
+    def search(self, q):
+        return self.cache.memo("search", lambda: tools.search(q, self.backend, self.gc, MODEL), self.backend, q)
+
+    def fetch(self, url):
+        return self.cache.memo("fetch", lambda: tools.fetch(url, self.backend), self.backend, url)
+
+    # ---- one app ----
+    def research(self, app, tracer):
+        rec = {"id": int(app["id"]), "app": app["app"], "run_at": dt.datetime.utcnow().isoformat() + "Z",
+               "model": MODEL, "verifier_model": VERIFIER_MODEL, "backend": self.backend, "human_reasons": []}
+        fmt = dict(app=app["app"], hint=app["hint"], category=app["category"], id=app["id"], rubric=RUBRIC)
+
+        with tracer.span("draft", "Closed-book draft"):
+            rec["pass1"] = json.loads(self.llm(PASS1.format(**fmt), json_mode=True))
+        tracer.event("draft", f"Draft confidence: {rec['pass1'].get('confidence')}", values=rec["pass1"])
+
+        hint = app["hint"].split(" ")[0]
+        urls = [f"https://{hint}"] if "." in hint else []
+        for q in (DISCOVER.format(**fmt), f"{app['app']} API pricing plan required for API access", f"{app['app']} official MCP server"):
+            hits = self.search(q)
+            urls += [h["url"] for h in hits]
+            tracer.event("discover", f"Search: {q[:70]}", hits=len(hits))
+        brand = hint.split("/")[0].split(".")[-2] if hint.count(".") else app["app"].lower()
+        urls = sorted(dict.fromkeys(urls), key=lambda u: brand not in u)[:6]
+
+        pages, blocked = {}, []
+        for u in urls:
+            try:
+                text = self.fetch(u)
+            except Exception as e:  # noqa: BLE001
+                tracer.event("read", f"Fetch failed: {u}", "warn", error=str(e)); continue
+            if text == tools.BLOCKED:
+                blocked.append(u); tracer.event("read", f"robots.txt blocks agents: {u}", "human")
+            elif len(text) > 400:
+                pages[u] = text; tracer.event("read", f"Read {u}", chars=len(text))
+        if blocked:
+            rec["human_reasons"].append(f"robots.txt blocks agents on {blocked}")
+
+        for name, fn in (("registry", lambda: tools.mcp_registry(app["app"], hint)),
+                         ("catalog", lambda: tools.composio_catalog(app["app"]))):
+            try:
+                rec[name] = self.cache.memo(name, fn, app["app"])
+            except Exception as e:  # noqa: BLE001
+                rec[name] = {"error": str(e)}
+            tracer.event("registry" if name == "registry" else "catalog",
+                         "MCP Registry lookup" if name == "registry" else "Composio catalogue lookup", result=rec[name])
+
+        joined = "\n\n".join(f"### {u}\n{t}" for u, t in pages.items())[:120000] or "(no pages could be fetched)"
+        with tracer.span("extract", "Schema-locked extraction"):
+            raw = self.llm(EXTRACT.format(**fmt, registry=json.dumps(rec.get("registry")), pages=joined), schema=AppResearch)
+            res = AppResearch.model_validate_json(raw).model_dump(mode="json")
+
+        # loop A: deterministic quote check
+        for c in res["claims"]:
+            c["supported"] = tools.quote_supported(c["quote"], pages.get(c["url"], ""))
+        bad = sorted({c["field"] for c in res["claims"] if not c["supported"]})
+        tracer.event("check", "Quote check", "human" if bad else "ok", unsupported=bad)
+        if bad:
+            rec["human_reasons"].append(f"quote not found on cited page for: {bad}")
+
+        # loop B: independent blind verifier on the same pages
+        with tracer.span("verify", "Blind re-extraction by verifier model"):
+            blind = json.loads(self.llm(BLIND.format(**fmt, pages=joined), model=VERIFIER_MODEL, json_mode=True))
+        disagree = [f for f in KEY_FIELDS if str(blind.get(f)) != str(res.get(f))]
+        if set(map(str, blind.get("auth", []))) != set(res["auth"]):
+            disagree.append("auth")
+        rec["verifier"] = {"answer": blind, "disagreements": disagree, "agreement": round(1 - len(disagree) / 4, 2)}
+        tracer.event("verify", f"Researcher vs verifier agreement {rec['verifier']['agreement']:.0%}",
+                     "human" if disagree else "ok", disagreements=disagree)
+        if disagree:
+            rec["human_reasons"].append(f"researcher and verifier disagree on {disagree}")
+
+        # loop C: claim-level judge
+        rec["judge"] = []
+        for c in res["claims"]:
+            text = pages.get(c["url"]) or ""
+            if not text:
+                continue
+            ans = self.llm(JUDGE.format(app=app["app"], field=c["field"], value=c["value"], url=c["url"], text=text[:30000])).strip()
+            rec["judge"].append({"field": c["field"], "value": c["value"], "verdict": ans.split()[0].upper().strip(".,:"), "why": ans})
+        contra = [j["field"] for j in rec["judge"] if j["verdict"] == "CONTRADICT"]
+        tracer.event("judge", f"Judge: {len(rec['judge'])} claims graded", "human" if contra else "ok", contradicted=contra)
+        if contra:
+            rec["human_reasons"].append(f"judge contradicted: {contra}")
+        if res["confidence"] == "low":
+            rec["human_reasons"].append("agent confidence low")
+        if not pages:
+            rec["human_reasons"].append("no vendor page could be fetched")
+
+        rec["result"] = res
+        rec["needs_human"] = bool(rec["human_reasons"])
+        tracer.event("final", f"Final: {res['verdict']} · access {res['access']} · MCP {res['mcp']}",
+                     "human" if rec["needs_human"] else "ok", values={k: res[k] for k in ("auth", "access", "api", "mcp", "verdict")},
+                     human_reasons=rec["human_reasons"])
+        return rec
+
+
+async def run_async(ids=None, backend="gemini", out_dir=None, concurrency=4, emit=None, cache=True):
+    out = pathlib.Path(out_dir or ROOT / "runs" / dt.date.today().isoformat())
+    (out / "traces").mkdir(parents=True, exist_ok=True)
+    agent = Agent(backend, DiskCache(enabled=cache))
+    sem = asyncio.Semaphore(concurrency)
+    results = []
+
+    async def one(app):
+        async with sem:
+            tr = Tracer(out / "traces" / f"{int(app['id']):03d}.jsonl",
+                        emit=(lambda ev, i=int(app["id"]): emit({"id": i, **ev})) if emit else None)
+            try:
+                rec = await asyncio.to_thread(agent.research, app, tr)
+            except Exception as e:  # noqa: BLE001
+                tr.event("final", f"Agent error: {e}", "human")
+                rec = {"id": int(app["id"]), "app": app["app"], "error": str(e), "needs_human": True, "human_reasons": [f"agent error: {e}"]}
+            (out / f"{int(app['id']):03d}.json").write_text(json.dumps(rec, indent=1))
+            print(f"[{rec['id']:>3}] {rec['app']:<28} {'HUMAN: ' + '; '.join(rec['human_reasons']) if rec['needs_human'] else 'ok'}")
+            results.append(rec)
+
+    await asyncio.gather(*(one(a) for a in load_apps(ids)))
+    queue = [{"id": r["id"], "app": r["app"], "reasons": " | ".join(r["human_reasons"])} for r in results if r["needs_human"]]
+    with open(out / "human_queue.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["id", "app", "reasons"]); w.writeheader(); w.writerows(sorted(queue, key=lambda q: q["id"]))
+    print(f"\n{len(results)} researched, {len(queue)} need a human. Cache hits {agent.cache.hits}, misses {agent.cache.misses}.")
+    return results
+
+
+def run(ids=None, backend="gemini", out_dir=None, concurrency=4, cache=True):
+    return asyncio.run(run_async(ids, backend, out_dir, concurrency, cache=cache))

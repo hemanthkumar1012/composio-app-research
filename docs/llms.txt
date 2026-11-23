@@ -1,0 +1,111 @@
+# Toolkit Readiness Atlas: 100 apps (2026-11-23)
+
+## Findings
+- 70/100 are self-serve. 48 give free credentials (free plan, dev account, sandbox or open source) and 22 a trial or credits. 58 can be built today with no human gate.
+- 74 vs 65 apps take a static key or Basic auth vs OAuth2. 44 offer both, 30 are key-only and 21 OAuth-only. A toolkit factory needs both schemes first-class; key-only apps are the fastest builds.
+- 20/20 Developer and Productivity apps are ready; Finance is the hard category. Finance has 1 ready app and 5 needing outreach (customer-only spend platforms, enterprise data, merchant gateways). Marketing and Ecommerce are mostly buildable with caveats.
+- 3 × 11 blockers tie for most common. App review / platform policy, paid plan needed for credentials and customer, enterprise or vetted-partner only each block 11 apps, and cluster by category: review hits big consumer platforms, paid plans hit AI-native and SEO tools, customer-only hits fintech and enterprise data.
+- 56/100 already run an official MCP server. 24 were confirmed by a page read this run; the rest are queued pass-1 claims. 3 vendor MCPs (Twilio, BigCommerce, Vonage) only search docs. AI-native apps are MCP-first (9/10): Otter's MCP works on any plan while its REST API is Enterprise-only.
+- 90.3% → 100.0% field accuracy, closed-book draft → verified holdout. Half the closed-book misses (6/12) were the MCP field. The agent's confidence was calibrated: 68% of low-confidence rows needed a fix vs 6% of high-confidence ones, so research is routed by confidence.
+
+## Apps (id | app | auth | access | api | mcp | verdict | note)
+1 | Salesforce | OAuth2 | free | REST+SOAP+GraphQL | official | ready | Free Developer Edition org; OAuth via a connected / external client app
+2 | HubSpot | OAuth2;API key | free | REST | official | ready | Free developer account; private-app token or OAuth public app (legacy API keys sunset)
+3 | Pipedrive | OAuth2;API key | free | REST | community | ready | Free developer sandbox; API token or OAuth app. Only community MCP servers in the registry
+4 | Attio | OAuth2;API key | free | REST | official | ready | Free plan; workspace API key or OAuth app
+5 | Twenty | API key;OAuth2 | free | REST+GraphQL | community | caveat | REST + GraphQL; self-hosted installs mean a per-instance base URL
+6 | Podio | OAuth2 | free | REST | none | ready | Free client ID/secret from account settings; ageing platform
+7 | Zoho CRM | OAuth2 | free | REST | official | ready | Zoho OAuth; must handle data-centre domains (.com/.eu/.in)
+8 | Close | API key;OAuth2 | trial | REST | official | ready | No free plan, 14-day trial; high-volume API not on the Solo plan
+9 | Copper | API key;OAuth2 | trial | REST | none | caveat | API key + user email per request; OAuth preferred for partners; plan gating not documented
+10 | DealCloud | OAuth2 | gated | REST | official | outreach | OAuth2 client credentials against the customer's own site URL; customer-only, has an MCP section
+11 | Zendesk | OAuth2;Basic | trial | REST | community | ready | Trial account; email/API-token Basic or OAuth. Only community MCP servers in the registry
+12 | Intercom | OAuth2;API key | free | REST | official | ready | Free developer workspace; access token or OAuth
+13 | Freshdesk | Basic | trial | REST | none | ready | API key as Basic username; trial capped at 50 calls/min
+14 | Front | OAuth2;API key | free | REST | community | ready | Developer environment; API token or OAuth
+15 | Pylon | API key | gated | REST | none | outreach | Admin-only API tokens; no self-serve signup found (demo-led), so a customer workspace is needed
+16 | LiveAgent | API key | trial | REST | none | ready | Trial account; API key
+17 | Plain | API key | trial | GraphQL | official | ready | GraphQL with Bearer API key; 7-day trial, no free plan; official MCP
+18 | Help Scout | OAuth2 | free | REST | none | ready | OAuth2 only (auth code, or client credentials for your own account)
+19 | Gorgias | Basic;OAuth2 | trial | REST | none | ready | Private app = email + API key; public apps must use OAuth2
+20 | Gladly | Basic | gated | REST | none | outreach | Admin must grant "API User" permission; customer-only
+21 | Slack | OAuth2 | free | REST | official | caveat | Unlisted commercial apps get conversations.history at 1 req/min (since May 2025); Marketplace listing needed
+22 | Twilio | Basic | trial | REST | docs-only | ready | Trial credit; Basic with SID/token or API key; official MCP is docs-only
+23 | Zoho Cliq | OAuth2 | free | REST | official | ready | Zoho OAuth; data-centre domains
+24 | Lark | Other;OAuth2 | free | REST | official | caveat | App ID/secret to tenant token, or user OAuth; custom apps need tenant admin approval
+25 | Pumble | API key | free | REST | none | ready | API add-on keys on all plans; already a Composio toolkit
+26 | Discord | OAuth2;API key | free | REST | community | ready | Bot token or OAuth2; privileged intents need verification at scale
+27 | Telegram | API key | free | REST | community | ready | BotFather token, free
+28 | WhatsApp Business | OAuth2;API key | review | REST | none | caveat | Free test number; production needs business verification and Meta App Review; per-message pricing
+29 | Aircall | Basic;OAuth2 | trial | REST | none | caveat | Basic auth for your own account; OAuth requires an Aircall Marketplace listing
+30 | Vonage | Basic;Other | trial | REST | docs-only | ready | Free credit; key/secret or JWT apps; vendor MCP is docs-only
+31 | Google Ads | OAuth2 | review | REST | official | caveat | Developer token must pass Google review before production (test accounts only until then)
+32 | Meta Ads | OAuth2 | review | REST | community | caveat | ads_management Advanced Access needs App Review and Business Verification
+33 | LinkedIn Ads | OAuth2 | gated | REST | none | outreach | Even Development tier needs an application reviewed by LinkedIn; Standard tier is a second application
+34 | GoHighLevel | OAuth2;API key | trial | REST | official | caveat | OAuth marketplace app or Private Integration Token; needs a paid sub-account (trial exists); MCP not confirmed in docs
+35 | Mailchimp | OAuth2;API key | free | REST | none | ready | Free plan; API key or OAuth; Transactional (Mandrill) is a paid add-on
+36 | Klaviyo | API key;OAuth2 | free | REST | official | ready | Free plan; private API key or OAuth app
+37 | systeme.io | API key | free | REST | official | ready | Public API key (X-API-Key, max 3); developer docs block automated fetches (robots.txt), so plan access needs a human check
+38 | Pinterest | OAuth2 | review | REST | none | caveat | Trial access on app creation; Standard access needs review
+39 | Threads (Meta) | OAuth2 | review | REST | none | caveat | Testers work without review; public users need App Review and a published app
+40 | SendGrid | API key | trial | REST | none | ready | API key; free trial (no permanent free tier)
+41 | Shopify | OAuth2;API key | free | GraphQL | official | ready | Free Partner account + dev stores; new public apps must use the GraphQL Admin API
+42 | WooCommerce | Basic;Other | free | REST | official | caveat | Consumer key/secret per store and per-site base URL; no vendor MCP in the registry
+43 | BigCommerce | API key;OAuth2 | trial | REST+GraphQL | docs-only | ready | Store API account token or OAuth app; REST + GraphQL; vendor MCP is docs-only
+44 | Salesforce Commerce Cloud | OAuth2 | gated | REST | none | outreach | Needs a B2C Commerce instance + Account Manager API client: customer or partner only
+45 | Magento (Adobe Commerce) | Other;API key | free | REST+GraphQL | none | caveat | Self-hosted per merchant; integration (OAuth 1.0a) or admin bearer tokens
+46 | Squarespace | API key;OAuth2 | paid | REST | none | caveat | API keys only on Commerce Advanced; OAuth credentials need Squarespace review
+47 | Ecwid | OAuth2;API key | paid | REST | none | caveat | Only stores on paid plans can access API; free dev upgrade on request to support
+48 | Gumroad | OAuth2 | free | REST | none | ready | Register an OAuth app and generate your own token
+49 | Amazon Selling Partner | OAuth2 | gated | REST | none | outreach | Needs a Professional seller account + developer profile review; PII roles need extra approval
+50 | fanbasis | API key | gated | REST | none | outreach | No public developer docs found and the site refused automated fetch: needs a human or outreach
+51 | DataForSEO | Basic | trial | REST | official | ready | Free account; Basic with API login/password; official hosted MCP
+52 | SE Ranking | API key | trial | REST | official | ready | API included in every plan and testable on the free trial; official MCP
+53 | Ahrefs | API key | paid | REST | official | caveat | API v3 needs Enterprise (free test queries only); official MCP
+54 | MrScraper | API key | trial | REST | official | ready | API token; official MCP (mrscraper-com/mrscraper-mcp)
+55 | Apify | API key;OAuth2 | free | REST | official | ready | Free plan with monthly credit; official MCP
+56 | Firecrawl | API key | free | REST | official | ready | Free credits; official MCP
+57 | Bright Data | API key | trial | REST | official | ready | Trial; official MCP
+58 | Sherlock | None | na | CLI | community | wrap | No API: wrap as a sandboxed CLI skill; OSINT use needs a policy review
+59 | Waterfall.io | API key | gated | REST | none | outreach | x-api-key; no self-serve signup on the site ("Book a Call")
+60 | Clay | API key | free | REST | official | caveat | Free plan and MCP exist, but the API quota is tiny on Free, webhooks/HTTP API are Growth+, and the pricing FAQ contradicts the table
+61 | GitHub | OAuth2;API key;Other | free | REST+GraphQL | official | ready | Free; PAT, OAuth app or GitHub App
+62 | Vercel | API key;OAuth2 | free | REST | official | ready | Free Hobby; access token or integration OAuth; official MCP on all plans
+63 | Netlify | API key;OAuth2 | free | REST | official | ready | Free; PAT or OAuth app
+64 | Cloudflare | API key | free | REST | official | ready | Free; scoped API tokens
+65 | Supabase | API key;OAuth2 | free | REST | official | ready | Free; Management API PAT or OAuth app
+66 | Neo4j | Basic;OAuth2 | free | REST | official | ready | Free AuraDB tier; DB Basic auth plus Aura API client credentials
+67 | Snowflake | Other;OAuth2;API key | trial | REST | official | ready | Trial; key-pair JWT, OAuth or PAT; Snowflake-managed MCP
+68 | MongoDB Atlas | Other;OAuth2 | free | REST | official | ready | Free M0; service-account OAuth or legacy Digest keys; official MCP
+69 | Datadog | API key;OAuth2 | trial | REST | official | ready | Trial; API key + application key headers
+70 | Sentry | API key;OAuth2 | free | REST | official | ready | Free developer plan; auth token or OAuth integration
+71 | Notion | OAuth2;API key | free | REST | official | ready | Free; internal integration token or public OAuth
+72 | Airtable | OAuth2;API key | free | REST | official | ready | PAT or OAuth (legacy keys removed Feb 2024); official MCP
+73 | Linear | OAuth2;API key | free | GraphQL | official | ready | Free; personal API key or OAuth; GraphQL
+74 | Jira | OAuth2;Basic | free | REST | official | ready | Free plan; API token (Basic) or OAuth 2.0 3LO
+75 | Asana | OAuth2;API key | free | REST | official | ready | PAT or OAuth; service accounts are Enterprise-only; official MCP
+76 | Monday.com | OAuth2;API key | free | GraphQL | official | ready | Free dev account; personal token or OAuth; GraphQL
+77 | ClickUp | OAuth2;API key | free | REST | official | ready | Free; personal token or OAuth. No vendor entry in the MCP registry
+78 | Coda | API key | free | REST | none | ready | Bearer token only; free on all workspaces
+79 | Smartsheet | OAuth2;API key | trial | REST | none | ready | Trial; token or OAuth. Only community MCP in the registry
+80 | Harvest | OAuth2;API key | free | REST | none | ready | PAT or OAuth2 plus Harvest-Account-Id header
+81 | Stripe | API key;OAuth2 | free | REST | official | ready | Free test mode/sandboxes; official MCP (OAuth or agent API keys)
+82 | Plaid | Other | review | REST | official | caveat | Free Sandbox; production needs Plaid approval; end-user Link flow, not standard OAuth
+83 | Binance | Other | free | REST | none | caveat | HMAC/RSA/Ed25519-signed keys; needs a KYC'd account, geo-restricted; trading is financial risk
+84 | Paygent Connect | API key | gated | REST | none | outreach | No public Paygent docs found; NMI uses merchant security keys, so a merchant account via the reseller is needed
+85 | iPayX | Unknown | gated | None | none | outreach | No API, endpoints or auth published; contact the team
+86 | QuickBooks | OAuth2 | review | REST | official | caveat | Free dev account + sandbox; production keys need an app assessment; usage is metered
+87 | Xero | OAuth2 | free | REST | official | caveat | Free dev account + demo company; certification needed beyond connection limits
+88 | Brex | API key;OAuth2 | gated | REST | none | outreach | Admin-generated user tokens; requires a Brex business account; partner OAuth is separate
+89 | Ramp | OAuth2 | gated | REST | official | outreach | OAuth2; needs a Ramp customer account or a sandbox on request (docs need JS, not machine-readable)
+90 | PitchBook | API key | gated | REST | none | outreach | API is an enterprise add-on to a subscription (contact sales); site refused automated fetch
+91 | NotebookLM | OAuth2 | gated | REST | none | outreach | Only the NotebookLM Enterprise API (Preview): Google Cloud project + Enterprise licence; consumer app has no API
+92 | Otter AI | OAuth2;API key | free | MCP-only | official | caveat | Official read-only MCP (OAuth) on any plan; the full Public API is Enterprise-only
+93 | Fathom | API key;OAuth2 | free | REST | official | ready | API key or OAuth; official MCP (ai.fathom.api/mcp)
+94 | Consensus | API key | paid | REST | official | caveat | Self-serve API key on any paid plan; official MCP
+95 | Reducto | API key | trial | REST | official | ready | API key; official MCP
+96 | Devin | API key | paid | REST | official | caveat | Bearer service-user keys; needs a paid Devin account; official MCP
+97 | higgsfield | API key;OAuth2 | paid | REST | official | caveat | Paid credits; CLI and official MCP use account login; API console keys
+98 | Mermaid CLI | None | na | CLI | official | wrap | No API: wrap mmdc as a sandboxed skill; Mermaid Chart publishes an MCP
+99 | YouTube Transcript | API key;OAuth2 | trial | REST | official | ready | 100 free credits; Bearer key; official MCP
+100 | Grain | API key | paid | REST | official | caveat | Personal access tokens; official MCP docs; plan gating not documented

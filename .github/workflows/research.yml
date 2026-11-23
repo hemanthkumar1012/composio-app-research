@@ -1,0 +1,54 @@
+name: research-agent
+# LLM research agent (Gemini). Actions -> research-agent -> Run workflow.
+# One-time setup: Settings -> Secrets and variables -> Actions -> New repository secret: GEMINI_API_KEY
+# (optional COMPOSIO_API_KEY for --backend composio).
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run = research the IDs below; eval = score the agent against the hand-verified sample"
+        type: choice
+        options: [eval, run]
+        default: eval
+      ids:
+        description: "Comma-separated app IDs from apps.csv (blank = all 100); used by mode=run"
+        default: "25,37,50"
+      sample:
+        description: "eval sample"
+        type: choice
+        options: [holdout, round1]
+        default: holdout
+      backend:
+        type: choice
+        options: [gemini, composio]
+        default: gemini
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Check secret
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::error::Add the GEMINI_API_KEY repository secret (Settings -> Secrets and variables -> Actions), then re-run."; exit 1; fi
+      - run: pip install -r requirements.txt
+      - name: Research
+        if: inputs.mode == 'run'
+        run: python -m agent run --ids "${{ inputs.ids }}" --backend "${{ inputs.backend }}" --out runs/ci --concurrency 6
+      - name: Eval against ground truth
+        if: inputs.mode == 'eval'
+        run: python -m agent eval --sample "${{ inputs.sample }}" --backend "${{ inputs.backend }}"
+      - name: Summary
+        if: always()
+        run: |
+          f=$(ls runs/*/eval_report.json 2>/dev/null | head -1)
+          if [ -n "$f" ]; then python -c "import json,sys;r=json.load(open('$f'));print(f\"### Eval ({r['sample']}): {r['accuracy']}% ({r['correct']}/{r['checked']} fields), verifier agreement {r['mean_verifier_agreement']}, routed to human {r['routed_to_human']}\")" >> $GITHUB_STEP_SUMMARY; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: research-output, path: runs/ }

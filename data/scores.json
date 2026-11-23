@@ -1,0 +1,1169 @@
+{
+ "round1": {
+  "pass1": {
+   "correct": 84,
+   "checked": 93,
+   "acc": 90.3,
+   "per_field": {
+    "auth": {
+     "correct": 18,
+     "checked": 19
+    },
+    "access": {
+     "correct": 13,
+     "checked": 14
+    },
+    "api": {
+     "correct": 19,
+     "checked": 20
+    },
+    "mcp": {
+     "correct": 15,
+     "checked": 20
+    },
+    "verdict": {
+     "correct": 19,
+     "checked": 20
+    }
+   },
+   "misses": [
+    {
+     "id": 10,
+     "app": "DealCloud",
+     "field": "mcp",
+     "said": "none",
+     "truth": "official"
+    },
+    {
+     "id": 22,
+     "app": "Twilio",
+     "field": "mcp",
+     "said": "official",
+     "truth": "docs-only"
+    },
+    {
+     "id": 37,
+     "app": "systeme.io",
+     "field": "mcp",
+     "said": "none",
+     "truth": "official"
+    },
+    {
+     "id": 52,
+     "app": "SE Ranking",
+     "field": "access",
+     "said": "paid",
+     "truth": "trial"
+    },
+    {
+     "id": 52,
+     "app": "SE Ranking",
+     "field": "verdict",
+     "said": "caveat",
+     "truth": "ready"
+    },
+    {
+     "id": 72,
+     "app": "Airtable",
+     "field": "mcp",
+     "said": "community",
+     "truth": "official"
+    },
+    {
+     "id": 85,
+     "app": "iPayX",
+     "field": "auth",
+     "said": "API key",
+     "truth": "Unknown"
+    },
+    {
+     "id": 85,
+     "app": "iPayX",
+     "field": "api",
+     "said": "REST",
+     "truth": "None"
+    },
+    {
+     "id": 98,
+     "app": "Mermaid CLI",
+     "field": "mcp",
+     "said": "none",
+     "truth": "official"
+    }
+   ]
+  },
+  "pass2": {
+   "correct": 90,
+   "checked": 93,
+   "acc": 96.8,
+   "per_field": {
+    "auth": {
+     "correct": 19,
+     "checked": 19
+    },
+    "access": {
+     "correct": 14,
+     "checked": 14
+    },
+    "api": {
+     "correct": 20,
+     "checked": 20
+    },
+    "mcp": {
+     "correct": 17,
+     "checked": 20
+    },
+    "verdict": {
+     "correct": 20,
+     "checked": 20
+    }
+   },
+   "misses": [
+    {
+     "id": 22,
+     "app": "Twilio",
+     "field": "mcp",
+     "said": "official",
+     "truth": "docs-only"
+    },
+    {
+     "id": 37,
+     "app": "systeme.io",
+     "field": "mcp",
+     "said": "none",
+     "truth": "official"
+    },
+    {
+     "id": 98,
+     "app": "Mermaid CLI",
+     "field": "mcp",
+     "said": "none",
+     "truth": "official"
+    }
+   ]
+  },
+  "final": {
+   "correct": 93,
+   "checked": 93,
+   "acc": 100.0,
+   "per_field": {
+    "auth": {
+     "correct": 19,
+     "checked": 19
+    },
+    "access": {
+     "correct": 14,
+     "checked": 14
+    },
+    "api": {
+     "correct": 20,
+     "checked": 20
+    },
+    "mcp": {
+     "correct": 20,
+     "checked": 20
+    },
+    "verdict": {
+     "correct": 20,
+     "checked": 20
+    }
+   },
+   "misses": []
+  }
+ },
+ "holdout": {
+  "pass1": {
+   "correct": 39,
+   "checked": 42,
+   "acc": 92.9,
+   "per_field": {
+    "auth": {
+     "correct": 7,
+     "checked": 9
+    },
+    "access": {
+     "correct": 5,
+     "checked": 5
+    },
+    "api": {
+     "correct": 9,
+     "checked": 9
+    },
+    "mcp": {
+     "correct": 9,
+     "checked": 10
+    },
+    "verdict": {
+     "correct": 9,
+     "checked": 9
+    }
+   },
+   "misses": [
+    {
+     "id": 9,
+     "app": "Copper",
+     "field": "auth",
+     "said": "API key",
+     "truth": "API key;OAuth2"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "field": "auth",
+     "said": "API key",
+     "truth": "API key;OAuth2"
+    },
+    {
+     "id": 97,
+     "app": "higgsfield",
+     "field": "mcp",
+     "said": "none",
+     "truth": "official"
+    }
+   ]
+  },
+  "pass2": {
+   "correct": 42,
+   "checked": 42,
+   "acc": 100.0,
+   "per_field": {
+    "auth": {
+     "correct": 9,
+     "checked": 9
+    },
+    "access": {
+     "correct": 5,
+     "checked": 5
+    },
+    "api": {
+     "correct": 9,
+     "checked": 9
+    },
+    "mcp": {
+     "correct": 10,
+     "checked": 10
+    },
+    "verdict": {
+     "correct": 9,
+     "checked": 9
+    }
+   },
+   "misses": []
+  },
+  "final": {
+   "correct": 42,
+   "checked": 42,
+   "acc": 100.0,
+   "per_field": {
+    "auth": {
+     "correct": 9,
+     "checked": 9
+    },
+    "access": {
+     "correct": 5,
+     "checked": 5
+    },
+    "api": {
+     "correct": 9,
+     "checked": 9
+    },
+    "mcp": {
+     "correct": 10,
+     "checked": 10
+    },
+    "verdict": {
+     "correct": 9,
+     "checked": 9
+    }
+   },
+   "misses": []
+  }
+ },
+ "excluded_fields": {
+  "round1": 7,
+  "holdout": 8
+ },
+ "samples": {
+  "sample_round1": [
+   8,
+   10,
+   13,
+   20,
+   22,
+   29,
+   37,
+   39,
+   43,
+   47,
+   51,
+   52,
+   62,
+   67,
+   72,
+   75,
+   81,
+   85,
+   96,
+   98
+  ],
+  "holdout_round2": [
+   9,
+   17,
+   26,
+   33,
+   44,
+   53,
+   68,
+   80,
+   83,
+   97
+  ],
+  "seeds": [
+   20261123,
+   9
+  ]
+ },
+ "consistency": {
+  "pass1": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 2,
+    "app": "HubSpot",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 4,
+    "app": "Attio",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 12,
+    "app": "Intercom",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 21,
+    "app": "Slack",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 22,
+    "app": "Twilio",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 23,
+    "app": "Zoho Cliq",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 24,
+    "app": "Lark",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 31,
+    "app": "Google Ads",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 34,
+    "app": "GoHighLevel",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 36,
+    "app": "Klaviyo",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 41,
+    "app": "Shopify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 55,
+    "app": "Apify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 56,
+    "app": "Firecrawl",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 57,
+    "app": "Bright Data",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 63,
+    "app": "Netlify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 65,
+    "app": "Supabase",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 69,
+    "app": "Datadog",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 70,
+    "app": "Sentry",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 71,
+    "app": "Notion",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 73,
+    "app": "Linear",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 77,
+    "app": "ClickUp",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 82,
+    "app": "Plaid",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 86,
+    "app": "QuickBooks",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 87,
+    "app": "Xero",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "rule": "official MCP not confirmed by a source read this run"
+   }
+  ],
+  "pass2": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 2,
+    "app": "HubSpot",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 4,
+    "app": "Attio",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 12,
+    "app": "Intercom",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 21,
+    "app": "Slack",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 22,
+    "app": "Twilio",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 23,
+    "app": "Zoho Cliq",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 24,
+    "app": "Lark",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 31,
+    "app": "Google Ads",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 34,
+    "app": "GoHighLevel",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 36,
+    "app": "Klaviyo",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 41,
+    "app": "Shopify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 55,
+    "app": "Apify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 56,
+    "app": "Firecrawl",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 57,
+    "app": "Bright Data",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 63,
+    "app": "Netlify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 65,
+    "app": "Supabase",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 69,
+    "app": "Datadog",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 70,
+    "app": "Sentry",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 71,
+    "app": "Notion",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 73,
+    "app": "Linear",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 77,
+    "app": "ClickUp",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 82,
+    "app": "Plaid",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 86,
+    "app": "QuickBooks",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 87,
+    "app": "Xero",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "rule": "official MCP not confirmed by a source read this run"
+   }
+  ],
+  "final": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 2,
+    "app": "HubSpot",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 4,
+    "app": "Attio",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 7,
+    "app": "Zoho CRM",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 12,
+    "app": "Intercom",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 21,
+    "app": "Slack",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 23,
+    "app": "Zoho Cliq",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 24,
+    "app": "Lark",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 31,
+    "app": "Google Ads",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 34,
+    "app": "GoHighLevel",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 36,
+    "app": "Klaviyo",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 41,
+    "app": "Shopify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 42,
+    "app": "WooCommerce",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 55,
+    "app": "Apify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 56,
+    "app": "Firecrawl",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 57,
+    "app": "Bright Data",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 63,
+    "app": "Netlify",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 64,
+    "app": "Cloudflare",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 65,
+    "app": "Supabase",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 66,
+    "app": "Neo4j",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 69,
+    "app": "Datadog",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 70,
+    "app": "Sentry",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 71,
+    "app": "Notion",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 73,
+    "app": "Linear",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 74,
+    "app": "Jira",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 76,
+    "app": "Monday.com",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 77,
+    "app": "ClickUp",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 82,
+    "app": "Plaid",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 86,
+    "app": "QuickBooks",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 87,
+    "app": "Xero",
+    "rule": "official MCP not confirmed by a source read this run"
+   },
+   {
+    "id": 89,
+    "app": "Ramp",
+    "rule": "official MCP not confirmed by a source read this run"
+   }
+  ]
+ },
+ "changes": [
+  {
+   "id": 5,
+   "app": "Twenty",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://docs.twenty.com/developers/introduction",
+   "note": "Docs name OAuth app connections in addition to workspace API keys",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 9,
+   "app": "Copper",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://developer.copper.com/",
+   "note": "Dev docs have an OAuth2.0 section (partner apps) besides API-key headers",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://api.docs.dealcloud.com/",
+   "note": "DealCloud API docs ship an MCP section (getting started, auth, tools)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 25,
+   "app": "Pumble",
+   "field": "verdict",
+   "old": "caveat",
+   "new": "ready",
+   "evidence": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+   "note": "API add-on + key \"available on all plans\"; nothing blocks a toolkit",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 52,
+   "app": "SE Ranking",
+   "field": "access",
+   "old": "paid",
+   "new": "trial",
+   "evidence": "https://seranking.com/api.html",
+   "note": "API access is included in every SE Ranking plan; testable on free trial",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 52,
+   "app": "SE Ranking",
+   "field": "verdict",
+   "old": "caveat",
+   "new": "ready",
+   "evidence": "https://seranking.com/api.html",
+   "note": "Trial is enough to build and test",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://docs.mrscraper.com/",
+   "note": "Official MCP server (mrscraper-com/mrscraper-mcp)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "auth",
+   "old": "Other",
+   "new": "API key",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "CLI/API listed on every tier (key-based); exact scheme not documented publicly",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "access",
+   "old": "gated",
+   "new": "free",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Free plan exists; CLI/API quota 100 search results/30 days on Free",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "api",
+   "old": "None",
+   "new": "REST",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Build with Clay via CLI / API; webhooks + HTTP API only on Growth+",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Clay MCP for Reps included on every plan",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 60,
+   "app": "Clay",
+   "field": "verdict",
+   "old": "outreach",
+   "new": "caveat",
+   "evidence": "https://www.clay.com/pricing",
+   "note": "Buildable but API scope is narrow and pricing page contradicts itself (FAQ says API = Enterprise)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 72,
+   "app": "Airtable",
+   "field": "mcp",
+   "old": "community",
+   "new": "official",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=airtable",
+   "note": "com.airtable/mcp in the official MCP Registry (remote mcp.airtable.com/mcp)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 85,
+   "app": "iPayX",
+   "field": "auth",
+   "old": "API key",
+   "new": "Unknown",
+   "evidence": "https://ipayx.ai/docs",
+   "note": "Docs page describes an FX-verification protocol; no auth scheme published",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 85,
+   "app": "iPayX",
+   "field": "api",
+   "old": "REST",
+   "new": "None",
+   "evidence": "https://ipayx.ai/docs",
+   "note": "No endpoints documented publicly",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "auth",
+   "old": "OAuth2",
+   "new": "OAuth2;API key",
+   "evidence": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+   "note": "MCP = OAuth 2.1 on any Otter plan; Public API = Bearer API key, Enterprise only",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "access",
+   "old": "paid",
+   "new": "free",
+   "evidence": "https://claude.com/marketplace/connectors/otter-ai",
+   "note": "Official remote MCP (mcp.otter.ai/mcp) works from a standard account",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 93,
+   "app": "Fathom",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://developers.fathom.ai/",
+   "note": "API key quickstart + OAuth for integrations other users install",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 94,
+   "app": "Consensus",
+   "field": "auth",
+   "old": "OAuth2;API key",
+   "new": "API key",
+   "evidence": "https://consensus.app/home/api/",
+   "note": "Self-serve \"Create API key\" page; OAuth not documented for the API",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 94,
+   "app": "Consensus",
+   "field": "access",
+   "old": "gated",
+   "new": "paid",
+   "evidence": "https://consensus.app/home/api/",
+   "note": "API \"Included on every paid plan\"; no application gate",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 95,
+   "app": "Reducto",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://docs.reducto.ai/",
+   "note": "Reducto MCP server for Claude Code / Cursor / Codex",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://higgsfield.ai/cli",
+   "note": "API console keys; CLI + MCP use browser account login (\"No API keys to manage\")",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://higgsfield.ai/cli",
+   "note": "Official Higgsfield MCP server",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "field": "auth",
+   "old": "API key",
+   "new": "API key;OAuth2",
+   "evidence": "https://transcriptapi.com/",
+   "note": "Bearer API key; MCP clients may use OAuth",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 99,
+   "app": "YouTube Transcript",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://transcriptapi.com/",
+   "note": "MCP server at transcriptapi.com/mcp",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 100,
+   "app": "Grain",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://developers.grain.com/",
+   "note": "Developer site links MCP docs (developers.grain.com/mcp/)",
+   "stage": "pass2-research"
+  },
+  {
+   "id": 22,
+   "app": "Twilio",
+   "field": "mcp",
+   "old": "official",
+   "new": "docs-only",
+   "evidence": "https://www.twilio.com/docs/ai/mcp",
+   "note": "Loop 1: Twilio's official MCP (mcp.twilio.com/docs) is docs search only - \"No Account SID, API key, or other credential is required or accepted\"; it can't act on an account",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api",
+   "note": "Loop 1: keys are created under Settings > \"MCP & API keys\"",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 43,
+   "app": "BigCommerce",
+   "field": "mcp",
+   "old": "none",
+   "new": "docs-only",
+   "evidence": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+   "note": "Loop 1: BigCommerce's MCP is a \"Docs MCP Server\" - label refined (still no data MCP)",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 98,
+   "app": "Mermaid CLI",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
+   "note": "Loop 1: com.mermaidchart/mermaid-mcp published by Mermaid Chart (company behind Mermaid)",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 93,
+   "app": "Fathom",
+   "field": "mcp",
+   "old": "none",
+   "new": "official",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=fathom",
+   "note": "Loop 3 sweep: ai.fathom.api/mcp is under Fathom's own domain",
+   "stage": "verify-loops"
+  },
+  {
+   "id": 30,
+   "app": "Vonage",
+   "field": "mcp",
+   "old": "none",
+   "new": "docs-only",
+   "evidence": "https://registry.modelcontextprotocol.io/v0/servers?search=vonage",
+   "note": "Loop 3 sweep: io.github.Vonage/vonage-documentation-mcp is docs-only",
+   "stage": "verify-loops"
+  }
+ ],
+ "changed_rows_pass2": 16,
+ "changed_rows_verify": 6,
+ "fetched_rows": 66,
+ "pass1_conf": {
+  "high": 36,
+  "med": 45,
+  "low": 19
+ },
+ "sweep": null,
+ "conf_vs_corrected": {
+  "high": {
+   "rows": 36,
+   "corrected": 2
+  },
+  "med": {
+   "rows": 45,
+   "corrected": 6
+  },
+  "low": {
+   "rows": 19,
+   "corrected": 13
+  }
+ }
+}
