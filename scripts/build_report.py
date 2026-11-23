@@ -21,6 +21,9 @@ S, V, P1 = b["scores"], b["verification"], b["pass1"]
 P = json.load(open(D / "patterns.json"))
 apps = [b["apps"][i] for i in sorted(b["apps"])]
 human = list(csv.DictReader(open(D / "human_checks.csv", encoding="utf-8")))
+LE_PATH = D / "llm_eval" / "holdout.json"
+LE = json.load(open(LE_PATH)) if LE_PATH.exists() else None
+LE = LE if LE and LE.get("valid") else None
 VERDICT = {"ready": "Build now", "caveat": "Build with caveat", "outreach": "Needs outreach", "wrap": "Wrap CLI as skill"}
 ACCESS = {"free": "Free / dev account", "trial": "Trial or credits", "review": "Self-serve, then app review",
           "paid": "Paid plan", "gated": "Customer / partner / sales", "na": "No API"}
@@ -105,12 +108,13 @@ HUMAN_LIST = "".join(f"<li>{x}</li>" for x in [
     "<strong>No findable docs:</strong> fanbasis, Paygent Connect, iPayX. Recorded as 'no public API docs', not guessed.",
     "<strong>Rubric calls:</strong> what counts as self-serve (one-off credits = trial) and as an official MCP (docs-only does not count). Decided by a human, then encoded in the prompt.",
     f"<strong>Sign-off:</strong> {len(human)} items in the human queue; {sum(h['status'] not in ('', 'pending') for h in human)} closed."])
+RUNTIME_LLM = (f" The Gemini runner was then executed live on the holdout ({LE['accuracy']}% of {LE['checked']} fields, model {LE.get('model')})." if LE else "")
 RUNTIME_SWEEP = (f" The agent's network tools (MCP Registry, Composio catalogue, link checks, headless-browser reads) were executed live across all 100 apps in GitHub Actions on {SW['meta']['generated'][:10]}"
                  + (f" (<a href=\"{SW['meta']['run_url']}\">run log</a>)." if SW['meta'].get('run_url') else ".")) if SW else ""
 RUNTIME = ("<strong>Runtime used for this run.</strong> The published 100-app run was executed by an LLM agent (Claude, Anthropic) with web search and page fetch, "
            "following the protocol and rubric in <code>agent/prompts.py</code>. The repo's runner executes the same protocol on Gemini (optional Composio search tools) "
            "with a blind verifier and judge; it was not executed in the build sandbox, which had no outbound network. Its loop is covered by offline tests with a fake model. "
-           "All ground truth was read from vendor pages." + RUNTIME_SWEEP)
+           "All ground truth was read from vendor pages." + RUNTIME_SWEEP + RUNTIME_LLM)
 OVERVIEW_LEDE = (f"An agent researched auth, credential access, API surface and existing MCP servers for all 100 apps; a seeded sample and an untouched holdout were then "
                  f"checked against vendors' own docs ({ho['final']['correct']}/{ho['final']['checked']} holdout fields correct). Click anything to drill in.")
 VER_LEDE = (f"Samples were drawn by a seeded script before any checking: two apps per category for round 1, then one fresh app per category as a holdout checked only after "
@@ -121,6 +125,19 @@ def _list(items, fmt, limit=12):
         return "<p class='small muted'>None.</p>"
     more = f"<li class='muted'>+{len(items)-limit} more in data.json</li>" if len(items) > limit else ""
     return "<ul class='small'>" + "".join(f"<li>{fmt(x)}</li>" for x in items[:limit]) + more + "</ul>"
+if LE:
+    pf = LE["per_field"]
+    LLMEVAL = ("<h2>Loop G: the Gemini agent, run live on the holdout</h2><p class='lede'>The repo's own multi-agent runner (researcher, blind verifier, judge) "
+               f"executed in GitHub Actions with <code>{e(LE.get('model'))}</code> on the 10 holdout apps, scored by the same scorer against the hand-verified ground truth.</p>"
+               "<div class='grid g3'>"
+               f"<div class='card'><div class='bigacc' style='font-size:44px'>{LE['accuracy']}%</div><p class='small muted'>{LE['correct']} of {LE['checked']} checkable fields correct, "
+               f"without any human input</p><p class='small'>Verifier agreement {LE['mean_verifier_agreement']} · routed to human: {LE['routed_to_human']} of {len(LE.get('apps', []))}</p>"
+               + (f"<p class='small'><a href='{e(LE['run_url'])}'>run log</a></p>" if LE.get('run_url') else "") + "</div>"
+               "<div class='card'><h3>By field</h3>" + "".join(f"<div class='hbar' style='cursor:default'><span>{e(k)} <span class='muted small'>{v['correct']}/{v['checked']}</span></span>"
+               f"<div class='track'><div class='fill c-acc' style='width:{pct(v['correct'], v['checked'])}%'></div></div><span class='num mono'>{pct(v['correct'], v['checked'])}%</span></div>" for k, v in pf.items()) + "</div>"
+               "<div class='card'><h3>Its misses</h3>" + (_list(LE["misses"], lambda m: f"<a href='#app-{m['id']}'>{e(m['app'])}</a> · {e(m['field'])}: said <del>{e(str(m['said']))}</del>, docs say <ins>{e(str(m['truth']))}</ins>", 15) if LE["misses"] else "<p class='small'>None.</p>") + "</div></div>")
+else:
+    LLMEVAL = ""
 CAUGHT = ("<div class='card' style='margin-top:14px'><h3>What the first live run caught (all fixed, with regression tests)</h3><ul class='small'>"
           "<li><strong>False 'vendor-owned' MCP matches.</strong> Prefix matching on GitHub org names accepted <code>io.github.Xerolo44</code> as Xero, <code>io.github.Ramp-Jet</code> as Ramp and "
           "<code>io.github.copperline-labs</code> as Copper; a stranger's <code>app.netlify.&lt;user&gt;</code> site passed as Netlify; Binance's <code>github.io</code> docs host made every "
@@ -164,7 +181,7 @@ vals = {"CSS":(WEB / "app.css").read_text(), "JS": (WEB / "app.js").read_text(),
              "DATA": json.dumps(data, separators=(",", ":")).replace("</", "<\\/"),
              "AUTHOR": e(AUTHOR), "DATE": today.strftime("%d %b %Y").upper(), "REPO": REPO, "REPO_SHORT": REPO.replace("https://", ""),
              "OVERVIEW_LEDE": e(OVERVIEW_LEDE), "VER_LEDE": e(VER_LEDE), "NOT_READY": str(100 - ver.get("ready", 0)),
-             "LOOPS": LOOPS, "LIMITS": LIMITS, "HUMAN_LIST": HUMAN_LIST, "RUNTIME_NOTE": RUNTIME, "SCHEMA": SCHEMA, "NOSCRIPT": NOSCRIPT, "SWEEP": SWEEP}
+             "LOOPS": LOOPS, "LIMITS": LIMITS, "HUMAN_LIST": HUMAN_LIST, "RUNTIME_NOTE": RUNTIME, "SCHEMA": SCHEMA, "NOSCRIPT": NOSCRIPT, "SWEEP": SWEEP, "LLMEVAL": LLMEVAL}
 import re  # noqa: E402
 missing = set(re.findall(r"\{\{([A-Z_]+)\}\}", template)) - set(vals)
 assert not missing, f"unfilled placeholders: {missing}"

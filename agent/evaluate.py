@@ -7,6 +7,7 @@
 import importlib.util
 import json
 import pathlib
+import sys
 
 from .research import run
 
@@ -35,9 +36,14 @@ def evaluate(sample="holdout", backend="gemini", out_dir=None):
     report = {"sample": sample, "accuracy": score["acc"], "correct": score["correct"], "checked": score["checked"],
               "per_field": score["per_field"], "misses": score["misses"],
               "mean_verifier_agreement": round(sum(agree) / len(agree), 3) if agree else None,
-              "routed_to_human": sum(r["needs_human"] for r in recs)}
+              "routed_to_human": sum(r["needs_human"] for r in recs),
+              "errors": sum("error" in r for r in recs), "model": next((r.get("model") for r in recs if r.get("model")), None)}
+    report["valid"] = report["errors"] == 0
     (pathlib.Path(out_dir) / "eval_report.json").write_text(json.dumps(report, indent=1))
-    print(f"\n{sample}: {score['acc']}% ({score['correct']}/{score['checked']} fields)")
+    if not report["valid"]:
+        print(f"\nEVAL INVALID: {report['errors']} of {len(recs)} apps errored (first: {next(r['error'] for r in recs if 'error' in r)[:200]})")
+        sys.exit(1)   # never publish a score made of errors
+    print(f"\n{sample}: {score['acc']}% ({score['correct']}/{score['checked']} fields) with {report['model']}")
     for m in score["misses"]:
         print(f"  miss  {m['app']:<24} {m['field']:<8} said {m['said']!r:<22} truth {m['truth']!r}")
     return report

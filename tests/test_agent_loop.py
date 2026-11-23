@@ -80,6 +80,20 @@ def test_server_mock_stream():
     srv.shutdown()
 
 
+def test_resolve_model_picks_newest_stable_flash():
+    class M:
+        def __init__(self, n, acts=("generateContent",)): self.name, self.supported_actions = "models/" + n, list(acts)
+    class FakeModels:
+        def list(self): return [M("gemini-2.5-flash"), M("gemini-3.8-flash"), M("gemini-3.8-flash-lite"), M("gemini-4.0-flash-preview-0901"),
+                                M("gemini-3.8-pro"), M("text-embedding-005", ("embedContent",))]
+    class FakeClient: models = FakeModels()
+    import os
+    os.environ.pop("GEMINI_MODEL", None)
+    assert research.resolve_model(FakeClient()) == "gemini-3.8-flash"
+    os.environ["GEMINI_MODEL"] = "gemini-x"; assert research.resolve_model(FakeClient()) == "gemini-x"; os.environ.pop("GEMINI_MODEL")
+    assert research.resolve_model(object()) == research.FALLBACK_MODEL
+
+
 def test_sweep_logic_with_fake_web(tmp=pathlib.Path("/tmp/sweep_test.json")):
     from agent import sweep
     tools.mcp_registry = lambda app, domain: {"vendor_entries": ["com.example/mcp"] if app == "GitHub" else [], "other_entries": []}

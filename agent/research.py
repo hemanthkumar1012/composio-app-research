@@ -10,6 +10,7 @@ Every step is written to runs/<date>/traces/<id>.jsonl and can be streamed live 
 """
 import asyncio
 import csv
+import re
 import datetime as dt
 import json
 import os
@@ -21,8 +22,29 @@ from .prompts import RUBRIC, PASS1, DISCOVER, EXTRACT, JUDGE, BLIND
 from .schema import AppResearch
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+FALLBACK_MODEL = "gemini-2.5-flash"
+MODEL = os.getenv("GEMINI_MODEL", FALLBACK_MODEL)   # resolved per run by resolve_model()
 VERIFIER_MODEL = os.getenv("GEMINI_VERIFIER_MODEL", MODEL)
+_SKIP = ("lite", "image", "tts", "live", "audio", "embedding", "exp", "preview", "thinking", "robotics")
+
+
+def resolve_model(gc):
+    """GEMINI_MODEL if set; otherwise the newest generally available Gemini *Flash* model this key can call.
+    (The first live eval failed because gemini-2.5-flash was retired for new keys; never hard-code a model again.)"""
+    if os.getenv("GEMINI_MODEL"):
+        return os.environ["GEMINI_MODEL"]
+    try:
+        names = []
+        for m in gc.models.list():
+            acts = getattr(m, "supported_actions", None) or ["generateContent"]
+            if "generateContent" in acts:
+                names.append(m.name.split("/")[-1])
+    except Exception:  # noqa: BLE001
+        return FALLBACK_MODEL
+    ver = lambda n: tuple(float(x) for x in re.findall(r"\d+(?:\.\d+)?", n)[:1]) or (0.0,)
+    stable = [n for n in names if re.fullmatch(r"gemini-\d+(?:\.\d+)?-flash", n)]
+    pool = stable or [n for n in names if "flash" in n and not any(t in n for t in _SKIP)]
+    return max(pool, key=ver) if pool else FALLBACK_MODEL
 KEY_FIELDS = ("access", "mcp", "verdict")
 
 
@@ -37,9 +59,11 @@ def load_apps(ids=None):
 
 
 class Agent:
-    def __init__(self, backend="gemini", cache=None, gc=None):
+    def __init__(self, backend="gemini", cache=None, gc=None, model=None):
         self.backend, self.cache = backend, cache or DiskCache()
         self.gc = gc or client()
+        self.model = model or resolve_model(self.gc)
+        self.verifier_model = os.getenv("GEMINI_VERIFIER_MODEL", self.model)
 
     # ---- model calls (cached + retried) ----
     @retry()
@@ -50,11 +74,12 @@ class Agent:
         resp = self.gc.models.generate_content(model=model, contents=contents, config=cfg)
         return resp.text
 
-    def llm(self, contents, model=MODEL, json_mode=False, schema=None):
+    def llm(self, contents, model=None, json_mode=False, schema=None):
+        model = model or self.model
         return self.cache.memo("llm", lambda: self._gen(model, contents, json_mode, schema), model, contents, bool(schema))
 
     def search(self, q):
-        return self.cache.memo("search", lambda: tools.search(q, self.backend, self.gc, MODEL), self.backend, q)
+        return self.cache.memo("search", lambda: tools.search(q, self.backend, self.gc, self.model), self.backend, q)
 
     def fetch(self, url):
         return self.cache.memo("fetch", lambda: tools.fetch(url, self.backend), self.backend, url)
@@ -62,7 +87,7 @@ class Agent:
     # ---- one app ----
     def research(self, app, tracer):
         rec = {"id": int(app["id"]), "app": app["app"], "run_at": dt.datetime.utcnow().isoformat() + "Z",
-               "model": MODEL, "verifier_model": VERIFIER_MODEL, "backend": self.backend, "human_reasons": []}
+               "model": self.model, "verifier_model": self.verifier_model, "backend": self.backend, "human_reasons": []}
         fmt = dict(app=app["app"], hint=app["hint"], category=app["category"], id=app["id"], rubric=RUBRIC)
 
         with tracer.span("draft", "Closed-book draft"):
@@ -115,7 +140,7 @@ class Agent:
 
         # loop B: independent blind verifier on the same pages
         with tracer.span("verify", "Blind re-extraction by verifier model"):
-            blind = json.loads(self.llm(BLIND.format(**fmt, pages=joined), model=VERIFIER_MODEL, json_mode=True))
+            blind = json.loads(self.llm(BLIND.format(**fmt, pages=joined), model=self.verifier_model, json_mode=True))
         disagree = [f for f in KEY_FIELDS if str(blind.get(f)) != str(res.get(f))]
         if set(map(str, blind.get("auth", []))) != set(res["auth"]):
             disagree.append("auth")
@@ -154,6 +179,7 @@ async def run_async(ids=None, backend="gemini", out_dir=None, concurrency=4, emi
     out = pathlib.Path(out_dir or ROOT / "runs" / dt.date.today().isoformat())
     (out / "traces").mkdir(parents=True, exist_ok=True)
     agent = Agent(backend, DiskCache(enabled=cache))
+    print(f"model: {agent.model} · verifier: {agent.verifier_model} · backend: {backend}")
     sem = asyncio.Semaphore(concurrency)
     results = []
 
