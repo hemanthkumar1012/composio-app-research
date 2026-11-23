@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-23T11:42:15Z",
+  "generated": "2026-11-23T12:16:29Z",
   "runner": "github-actions",
-  "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45167215834",
+  "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45172072741",
   "browser_rendered": 5
  },
  "apps": {
@@ -1815,7 +1815,7 @@
      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
      "status": 200,
      "robots_ok": true,
-     "chars": 5870
+     "chars": 5866
     },
     {
      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
@@ -1855,7 +1855,7 @@
     "Basic": false,
     "Other": false
    },
-   "evidence_chars": 29907
+   "evidence_chars": 29903
   },
   "43": {
    "id": 43,
@@ -3987,10 +3987,10 @@
      "chars": 18506
     },
     {
-     "url": "https://claude.com/marketplace/connectors/otter-ai",
+     "url": "https://mcpservers.org/remote-mcp-servers/otter-ai",
      "status": 200,
      "robots_ok": true,
-     "chars": 6034
+     "chars": 4321
     }
    ],
    "registry": {
@@ -4021,7 +4021,7 @@
     "OAuth2": true,
     "API key": true
    },
-   "evidence_chars": 24541
+   "evidence_chars": 22828
   },
   "93": {
    "id": 93,
@@ -4255,7 +4255,7 @@
      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
      "status": 200,
      "robots_ok": true,
-     "chars": 19452
+     "chars": 20470
     }
    ],
    "registry": {
@@ -4283,7 +4283,7 @@
     ]
    },
    "corroboration": {},
-   "evidence_chars": 29376
+   "evidence_chars": 30394
   },
   "99": {
    "id": 99,

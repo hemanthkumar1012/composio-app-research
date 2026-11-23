@@ -1701,7 +1701,7 @@
     "url": "https://woocommerce.com/document/woocommerce-rest-api/",
     "status": 200,
     "robots_ok": true,
-    "chars": 5870
+    "chars": 5866
    },
    {
     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
@@ -3683,10 +3683,10 @@
     "chars": 18506
    },
    {
-    "url": "https://claude.com/marketplace/connectors/otter-ai",
+    "url": "https://mcpservers.org/remote-mcp-servers/otter-ai",
     "status": 200,
     "robots_ok": true,
-    "chars": 6034
+    "chars": 4321
    }
   ],
   "corroboration": {
@@ -3937,7 +3937,7 @@
     "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
     "status": 200,
     "robots_ok": true,
-    "chars": 19452
+    "chars": 20470
    }
   ],
   "corroboration": {}

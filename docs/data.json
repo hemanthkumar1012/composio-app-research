@@ -2560,7 +2560,7 @@
      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
      "status": 200,
      "robots_ok": true,
-     "chars": 5870
+     "chars": 5866
     },
     {
      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=woocommerce",
@@ -5581,10 +5581,10 @@
      "chars": 18506
     },
     {
-     "url": "https://claude.com/marketplace/connectors/otter-ai",
+     "url": "https://mcpservers.org/remote-mcp-servers/otter-ai",
      "status": 200,
      "robots_ok": true,
-     "chars": 6034
+     "chars": 4321
     }
    ],
    "corroboration": {
@@ -6033,7 +6033,7 @@
      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mermaid",
      "status": 200,
      "robots_ok": true,
-     "chars": 19452
+     "chars": 20470
     }
    ],
    "corroboration": {},
@@ -7284,9 +7284,9 @@
   "fetched_rows": 66,
   "sweep": {
    "meta": {
-    "generated": "2026-11-23T11:42:15Z",
+    "generated": "2026-11-23T12:16:29Z",
     "runner": "github-actions",
-    "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45167215834",
+    "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45172072741",
     "browser_rendered": 5
    },
    "links_total": 132,
