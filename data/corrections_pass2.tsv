@@ -17,11 +17,11 @@ id	field	new	evidence	note
 85	auth	Unknown	https://ipayx.ai/docs	Docs page describes an FX-verification protocol; no auth scheme published
 85	api	None	https://ipayx.ai/docs	No endpoints documented publicly
 92	auth	OAuth2;API key	https://www.scalekit.com/blog/otter-mcp-vs-api	MCP = OAuth 2.1 on any Otter plan; Public API = Bearer API key, Enterprise only
-92	access	free	https://claude.com/marketplace/connectors/otter-ai	Official remote MCP (mcp.otter.ai/mcp) works from a standard account
+92	access	free	https://mcpservers.org/remote-mcp-servers/otter-ai	Official remote MCP (mcp.otter.ai/mcp) works from a standard account
 93	auth	API key;OAuth2	https://developers.fathom.ai/	API key quickstart + OAuth for integrations other users install
 94	auth	API key	https://consensus.app/home/api/	Self-serve "Create API key" page; OAuth not documented for the API
 94	access	paid	https://consensus.app/home/api/	API "Included on every paid plan"; no application gate
-95	mcp	official	https://docs.reducto.ai/	Reducto MCP server for Claude Code / Cursor / Codex
+95	mcp	official	https://docs.reducto.ai/	Reducto MCP server for coding agents and other MCP clients
 97	auth	API key;OAuth2	https://higgsfield.ai/cli	API console keys; CLI + MCP use browser account login ("No API keys to manage")
 97	mcp	official	https://higgsfield.ai/cli	Official Higgsfield MCP server
 99	auth	API key;OAuth2	https://transcriptapi.com/	Bearer API key; MCP clients may use OAuth

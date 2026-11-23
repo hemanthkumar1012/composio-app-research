@@ -20,12 +20,7 @@ function toast(msg){ toastEl.textContent = msg; toastEl.classList.add('on'); cle
 function tip(e, html){ if (!html){ tipEl.classList.remove('on'); return; } tipEl.innerHTML = html; tipEl.classList.add('on');
   tipEl.style.left = Math.min(e.clientX + 14, innerWidth - 290) + 'px'; tipEl.style.top = (e.clientY + 14) + 'px'; }
 async function copy(text, what){ try { await navigator.clipboard.writeText(text); toast(`${what} copied`); } catch { toast('Copy was blocked by the browser: select the text instead'); } }
-// Inside the claude.ai viewer, files go through the platform's downloads capability (viewer confirms);
-// anywhere else (GitHub Pages, local server, file://) a normal blob download is used.
-const dlCap = (window.claude && typeof window.claude.use === 'function') ? window.claude.use('downloads').catch(() => null) : Promise.resolve(null);
 async function download(name, text, type){
-  const dl = await dlCap;
-  if (dl) { try { await dl.save({filename: name, data: text}); toast(`Saved ${name}`); } catch { toast('Save declined or blocked: use Copy instead'); } return; }
   try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], {type})); a.download = name; document.body.appendChild(a); a.click(); a.remove(); toast(`Downloading ${name}`); }
   catch { copy(text, name); } }
 

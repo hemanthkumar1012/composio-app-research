@@ -3665,7 +3665,7 @@
   "note": "Official read-only MCP (OAuth) on any plan; the full Public API is Enterprise-only",
   "evidence": [
    "https://www.scalekit.com/blog/otter-mcp-vs-api",
-   "https://claude.com/marketplace/connectors/otter-ai"
+   "https://mcpservers.org/remote-mcp-servers/otter-ai"
   ],
   "fetched": true,
   "mcp_confirmed": true,

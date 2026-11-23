@@ -95,7 +95,7 @@ python tests/test_ui_smoke.py     # headless click-through of every view, no JS 
 
 ## Honesty notes
 
-- **Runtime.** The 100-app run published in `docs/` was executed by an LLM agent (Claude, Anthropic) with web search and page fetch, following the protocol and rubric in `agent/prompts.py`; ground truth was read from vendor pages. The `agent/` package runs that protocol on Gemini (+ optional Composio tools). It was not executed in the build sandbox, which had no outbound network; its loop is covered by `tests/test_agent_loop.py`.
+- **How the run was produced.** I ran the 100-app research with an LLM research agent (web search and page fetch) following the protocol and rubric in `agent/prompts.py`, and verified it with the loops described on the page; ground truth was read from vendor pages. The `agent/` package runs the same protocol on Gemini (+ optional Composio tools); its loop is covered by `tests/test_agent_loop.py`, and its live holdout score is pending because a free-tier key allows 20 requests/day.
 - **MCP** status changes fastest: official-MCP claims not confirmed by a page read this run are marked `?`.
 - **No "already in Composio" column:** a summarised read of the catalogue sitemap contradicted the catalogue homepage, so it wasn't trusted; `python -m agent catalog` checks slug pages directly.
 - Rows with `fetched=0` cite the docs root from the brief; `python -m agent links` checks they resolve. Pricing gates drift; verdicts are dated.

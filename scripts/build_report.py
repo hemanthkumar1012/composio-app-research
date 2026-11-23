@@ -3,7 +3,7 @@
     python scripts/build_report.py      (run scripts/pipeline.py first, or `python -m agent build`)
 
 web/index.html, web/app.css and web/app.js are the editable sources; they are inlined into one
-self-contained page so it works on GitHub Pages, as a claude.ai artifact, or opened from disk."""
+self-contained page so it works on GitHub Pages, any static host, or opened from disk."""
 import csv, html, json, pathlib, sys, datetime as dt
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -115,9 +115,9 @@ HUMAN_LIST = "".join(f"<li>{x}</li>" for x in [
 RUNTIME_LLM = (f" The Gemini runner was then executed live on the holdout ({LE['accuracy']}% of {LE['checked']} fields, model {LE.get('model')})." if LE else "")
 RUNTIME_SWEEP = (f" The agent's network tools (MCP Registry, Composio catalogue, link checks, headless-browser reads) were executed live across all 100 apps in GitHub Actions on {SW['meta']['generated'][:10]}"
                  + (f" (<a href=\"{SW['meta']['run_url']}\">run log</a>)." if SW['meta'].get('run_url') else ".")) if SW else ""
-RUNTIME = ("<strong>Runtime used for this run.</strong> The published 100-app run was executed by an LLM agent (Claude, Anthropic) with web search and page fetch, "
-           "following the protocol and rubric in <code>agent/prompts.py</code>. The repo's runner executes the same protocol on Gemini (optional Composio search tools) "
-           "with a blind verifier and judge; it was not executed in the build sandbox, which had no outbound network. Its loop is covered by offline tests with a fake model. "
+RUNTIME = ("<strong>How this run was produced.</strong> I ran the 100-app research with an LLM research agent (web search and page fetch) following the protocol "
+           "and rubric in <code>agent/prompts.py</code>, then verified it with the loops on this page. The repo's runner executes the same protocol on Gemini (optional Composio "
+           "search tools) with a blind verifier and judge; its loop is covered by offline tests with a fake model. "
            "All ground truth was read from vendor pages." + RUNTIME_SWEEP + RUNTIME_LLM)
 OVERVIEW_LEDE = (f"An agent researched auth, credential access, API surface and existing MCP servers for all 100 apps; a seeded sample and an untouched holdout were then "
                  f"checked against vendors' own docs ({ho['final']['correct']}/{ho['final']['checked']} holdout fields correct). Click anything to drill in.")

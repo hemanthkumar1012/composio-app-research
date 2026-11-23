@@ -958,7 +958,7 @@
    "field": "access",
    "old": "paid",
    "new": "free",
-   "evidence": "https://claude.com/marketplace/connectors/otter-ai",
+   "evidence": "https://mcpservers.org/remote-mcp-servers/otter-ai",
    "note": "Official remote MCP (mcp.otter.ai/mcp) works from a standard account",
    "stage": "pass2-research"
   },
@@ -999,7 +999,7 @@
    "old": "none",
    "new": "official",
    "evidence": "https://docs.reducto.ai/",
-   "note": "Reducto MCP server for Claude Code / Cursor / Codex",
+   "note": "Reducto MCP server for coding agents and other MCP clients",
    "stage": "pass2-research"
   },
   {

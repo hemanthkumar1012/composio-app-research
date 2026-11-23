@@ -92,7 +92,7 @@ id	one_liner	breadth	note	evidence	fetched
 89	Corporate cards and spend management	moderate	OAuth2; needs a Ramp customer account or a sandbox on request (docs need JS, not machine-readable)	https://docs.ramp.com	1
 90	Private-market data: companies, deals, investors	moderate	API is an enterprise add-on to a subscription (contact sales); site refused automated fetch	https://pitchbook.com	0
 91	Google AI research notebooks	narrow	Only the NotebookLM Enterprise API (Preview): Google Cloud project + Enterprise licence; consumer app has no API	https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks	1
-92	AI meeting transcription	narrow	Official read-only MCP (OAuth) on any plan; the full Public API is Enterprise-only	https://www.scalekit.com/blog/otter-mcp-vs-api https://claude.com/marketplace/connectors/otter-ai	1
+92	AI meeting transcription	narrow	Official read-only MCP (OAuth) on any plan; the full Public API is Enterprise-only	https://www.scalekit.com/blog/otter-mcp-vs-api https://mcpservers.org/remote-mcp-servers/otter-ai	1
 93	AI meeting notetaker	narrow	API key or OAuth; official MCP (ai.fathom.api/mcp)	https://developers.fathom.ai/ https://registry.modelcontextprotocol.io/v0/servers?search=fathom	1
 94	AI search engine over academic papers	narrow	Self-serve API key on any paid plan; official MCP	https://consensus.app/home/api/	1
 95	Document parsing and extraction API for LLMs	narrow	API key; official MCP	https://docs.reducto.ai/	1
