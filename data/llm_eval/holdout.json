@@ -1,0 +1,507 @@
+{
+ "sample": "holdout",
+ "accuracy": 14.3,
+ "correct": 6,
+ "checked": 42,
+ "per_field": {
+  "auth": {
+   "correct": 0,
+   "checked": 9
+  },
+  "access": {
+   "correct": 0,
+   "checked": 5
+  },
+  "api": {
+   "correct": 0,
+   "checked": 9
+  },
+  "mcp": {
+   "correct": 6,
+   "checked": 10
+  },
+  "verdict": {
+   "correct": 0,
+   "checked": 9
+  }
+ },
+ "misses": [
+  {
+   "id": 9,
+   "app": "Copper",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "API key;OAuth2"
+  },
+  {
+   "id": 9,
+   "app": "Copper",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "API key"
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "field": "access",
+   "said": "?",
+   "truth": "trial"
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "field": "api",
+   "said": "?",
+   "truth": "GraphQL"
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "field": "mcp",
+   "said": "?",
+   "truth": "official"
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "field": "verdict",
+   "said": "?",
+   "truth": "ready"
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "OAuth2;API key"
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "field": "verdict",
+   "said": "?",
+   "truth": "ready"
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "OAuth2"
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "field": "access",
+   "said": "?",
+   "truth": "gated"
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "field": "verdict",
+   "said": "?",
+   "truth": "outreach"
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "OAuth2"
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "access",
+   "said": "?",
+   "truth": "gated"
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "field": "verdict",
+   "said": "?",
+   "truth": "outreach"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "access",
+   "said": "?",
+   "truth": "paid"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "mcp",
+   "said": "?",
+   "truth": "official"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "verdict",
+   "said": "?",
+   "truth": "caveat"
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "Other;OAuth2"
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "field": "mcp",
+   "said": "?",
+   "truth": "official"
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "field": "verdict",
+   "said": "?",
+   "truth": "ready"
+  },
+  {
+   "id": 80,
+   "app": "Harvest",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "OAuth2;API key"
+  },
+  {
+   "id": 80,
+   "app": "Harvest",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 80,
+   "app": "Harvest",
+   "field": "verdict",
+   "said": "?",
+   "truth": "ready"
+  },
+  {
+   "id": 83,
+   "app": "Binance",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "Other"
+  },
+  {
+   "id": 83,
+   "app": "Binance",
+   "field": "api",
+   "said": "?",
+   "truth": "REST"
+  },
+  {
+   "id": 83,
+   "app": "Binance",
+   "field": "verdict",
+   "said": "?",
+   "truth": "caveat"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "auth",
+   "said": "Unknown",
+   "truth": "API key;OAuth2"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "access",
+   "said": "?",
+   "truth": "paid"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "mcp",
+   "said": "?",
+   "truth": "official"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "verdict",
+   "said": "?",
+   "truth": "caveat"
+  }
+ ],
+ "mean_verifier_agreement": null,
+ "routed_to_human": 10,
+ "apps": [
+  {
+   "id": 9,
+   "app": "Copper",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 17,
+   "app": "Plain",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 26,
+   "app": "Discord",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 33,
+   "app": "LinkedIn Ads",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 44,
+   "app": "Salesforce Commerce Cloud",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 68,
+   "app": "MongoDB Atlas",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 80,
+   "app": "Harvest",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 83,
+   "app": "Binance",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "needs_human": true,
+   "human_reasons": [
+    "agent error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).', 'status': 'NOT_FOUND'}}"
+   ],
+   "verifier": null,
+   "result": {
+    "auth": null,
+    "access": null,
+    "api": null,
+    "mcp": null,
+    "verdict": null,
+    "confidence": null,
+    "note": null
+   },
+   "claims": [],
+   "judge": [],
+   "model": null,
+   "run_at": null
+  }
+ ],
+ "run_url": "https://github.com/hemanthkumar1012/composio-app-research/actions/runs/45164024620"
+}
